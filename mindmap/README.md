@@ -1,3 +1,5 @@
+[在线思维导图进阶 课程视频] (http://edu.51cto.com/course/course_id-7126.html)
+
 # 在线思维导图进阶
 
 ## 第一部分 课程缘起
