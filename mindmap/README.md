@@ -1,4 +1,6 @@
-[在线思维导图进阶 课程视频] (http://edu.51cto.com/course/course_id-7126.html)
+[ProcessOn思维导图入门 课程视频](http://edu.51cto.com/course/course_id-6453.html)
+
+[在线思维导图进阶 课程视频](http://edu.51cto.com/course/course_id-7126.html)
 
 # 在线思维导图进阶
 
