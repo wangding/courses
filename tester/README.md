@@ -4,9 +4,8 @@
 * 需要先完成[ 新手上路 ](https://github.com/wangding/courses/blob/master/newer/README.md)内容的学习
 
 ** 说明 **
-* 思维导图工具可以用来设计测试案例，以及对产品角色和功能进行梳理，所以测试工程师需要掌握此工具的使用
-
-* firefox 火狐浏览器结合selenium ide以及selenium框架，可以对网站做自动化测试，所以测试工程师需要掌握此工具的使用
+* 思维导图工具可以用来设计测试案例，以及对产品角色和功能进行梳理
+* firefox 火狐浏览器结合selenium ide以及selenium框架，可以对网站做自动化测试
 
 ## 初级
 ### 目标
@@ -31,16 +30,24 @@
 
 ---
 第一单元
-* 第一章 软件测试的背景
-* 第二章 软件开发的过程
-* 视频课程：
+* 第1章 软件测试的背景
+* 第2章 软件开发的过程
+* 视频课程：[测试理论概述](http://edu.51cto.com/lesson/id-20600.html)
 * 作业任务：
 
 ---
 第二单元
-* 第一章
-* 第二章
-* 视频课程：
-* 作业任务：
+* 补充：redmine项目管理工具的使用
+* 视频课程1：
+   * [基于redmine的项目管理](http://edu.51cto.com/lesson/id-20784.html)
+   * [基于redmine的敏捷项目管理](http://edu.51cto.com/lesson/id-20819.html)
+* 作业任务1：
+* 视频课程2：
+   * [项目管理平台redmine使用入门](http://edu.51cto.com/course/course_id-6554.html)
+* 作业任务2：
 
 ---
+第三单元
+* 第3章 软件测试的实质
+* 视频课程：[测试原则与术语](http://edu.51cto.com/lesson/id-20603.html)
+* 作业任务：
