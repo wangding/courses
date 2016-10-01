@@ -21,7 +21,7 @@
 
 * firefox浏览器及插件
   * 意义：拥有丰富的插件，对HTML 5的有效支持
-  * 课程：
+  * 课程：[firefox 高效上网指南](http://edu.51cto.com/course/course_id-1842.html)
   * 作业：
 
 * 双拼输入法
@@ -31,5 +31,5 @@
 
 * gravatar
   * 意义：互联网全局头像，很多知名网站支持
-  * 课程：
+  * 课程：[点亮redmine头像](http://edu.51cto.com/lesson/id-127536.html)
   * 作业：
