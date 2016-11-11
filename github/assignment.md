@@ -6,7 +6,7 @@
 
 ## 维护进度
 
-- 在 Github 上维护进度任务，具体方法请阅读[这里]()
+- 在 Github 上维护进度任务，具体方法请阅读[这里](spec.md)
 
 ## 课程学习
 
@@ -20,6 +20,7 @@
 - [ ] 任务5. Follow（关注）[王顶](https://github.com/wangding/)
 - [ ] 任务6. Star（收藏）[courses 项目](https://github.com/wangding/courses/)
 - [ ] 任务7. Star（收藏）[SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)
-- [ ] 任务8. 浏览王顶关注的人，或者自行在 Github 上浏览搜索，选择你感兴趣的人关注他
-- [ ] 任务9. 浏览王顶收藏的项目，或者自行在 Github 上浏览搜索，选择你感兴趣的项目收藏起来
+- [ ] 任务8. 浏览王顶关注的人，或者自行在 Github 上浏览搜索，选择你感兴趣的人关注他。
+- [ ] 任务9. 浏览王顶收藏的项目，或者自行在 Github 上浏览搜索，选择你感兴趣的项目收藏起来。
+- [ ] 任务10. 浏览 [SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)，对文档做检查测试，如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目上提交 bug。
 
