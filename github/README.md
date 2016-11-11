@@ -1,15 +1,18 @@
 # Github
 
-Github 课程资料。
+Github 视频课程：
 
-- [GitHub 技术交流 视频课程](http://pan.baidu.com/s/1miz0M3u)
-- [苏勇 Git 版本控制 视频课程](http://edu.51cto.com/course/course_id-1412.html)
-- [深入理解 Git 视频课程](http://edu.51cto.com/course/course_id-1838.html)
+- [GitHub 技术交流](http://pan.baidu.com/s/1miz0M3u)
+- [苏勇 Git 版本控制](http://edu.51cto.com/course/course_id-1412.html)
+- [深入理解 Git](http://edu.51cto.com/course/course_id-1838.html)
+
+Github 相关教程：
+
 - [ProGit 电子书](https://git-scm.com/book/zh/v2)
 - [廖雪峰的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
 - [极客学院 Git 相关教程](http://wiki.jikexueyuan.com/list/code/)
 
-Github 相关的文章：
+Github 相关文章：
 
 - [全栈必备：Git](http://blog.jobbole.com/107027/)
 - [我泡在 GitHub 的 504 天](http://blog.jobbole.com/104464/)
