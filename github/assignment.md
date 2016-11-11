@@ -37,5 +37,15 @@
 - [ ] 任务10. 测试 [SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)
     - 要求如下：
     - 对该文档做静态检查
-    - 如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目的 issues 模块中提交 Labels（标记）为 bug 的 issue 。
+    - 如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目的 [issues 模块](https://github.com/wangding/SeleniumIDEDoc/issues)中提交 Labels（标记）为 bug 的 issue 。
 
+- [ ] 任务11. 安装 Git
+    - 要求如下：
+    - 
+- [ ] 任务12. 创建仓库
+    - 要求如下：
+    - 在 github 中创建自己的仓库（或项目）
+    - 仓库名称为 autoTest 
+    - 仓库是公开的
+    - 仓库中包含 README.md 文件
+    - 
