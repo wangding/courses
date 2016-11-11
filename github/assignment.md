@@ -16,11 +16,26 @@
 
 ## 实践任务
 
-- [ ] 任务4. 实名注册 Github 账户，并点亮头像
+- [ ] 任务4. 注册 Github 账户 
+    - 要求如下：
+    - 实名注册；
+    - 用自己的真实照片，点亮头像；
+
 - [ ] 任务5. Follow（关注）[王顶](https://github.com/wangding/)
 - [ ] 任务6. Star（收藏）[courses 项目](https://github.com/wangding/courses/)
 - [ ] 任务7. Star（收藏）[SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)
-- [ ] 任务8. 浏览王顶关注的人，或者自行在 Github 上浏览搜索，选择你感兴趣的人关注他。
-- [ ] 任务9. 浏览王顶收藏的项目，或者自行在 Github 上浏览搜索，选择你感兴趣的项目收藏起来。
-- [ ] 任务10. 浏览 [SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)，对文档做检查测试，如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目上提交 bug。
+- [ ] 任务8. Follow（关注）其他人
+    - 要求如下：
+    - 浏览并关注王顶关注的人
+    - 或者自行在 Github 上浏览搜索，找到你感兴趣的并关注他
+
+- [ ] 任务9. Star（收藏）其他项目
+    - 要求如下：
+    - 浏览王顶收藏的项目，选择你感兴趣的项目收藏他
+    - 或者自行在 Github 上浏览搜索，选择你感兴趣的项目收藏他
+
+- [ ] 任务10. 测试 [SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)
+    - 要求如下：
+    - 对该文档做静态检查
+    - 如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目的 issues 模块中提交 Labels（标记）为 bug 的 issue 。
 
