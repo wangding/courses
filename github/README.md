@@ -8,12 +8,13 @@ Github 视频课程：
 
 Github 相关教程：
 
-- [ProGit 电子书](https://git-scm.com/book/zh/v2)
+- [ProGit 电子书](https://git-scm.com/book/zh/v2)【重点推荐】
 - [廖雪峰的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
 - [极客学院 Git 相关教程](http://wiki.jikexueyuan.com/list/code/)
 
 Github 相关文章：
 
+- [Git 命令备忘、速查](https://services.github.com/kit/downloads/cn/github-git-cheat-sheet.html)【重点推荐】
 - [全栈必备：Git](http://blog.jobbole.com/107027/)
 - [我泡在 GitHub 的 504 天](http://blog.jobbole.com/104464/)
 - [如何在 Github 打造你的爆款项目](http://blog.jobbole.com/101431/)
