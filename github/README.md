@@ -3,6 +3,7 @@
 Github 视频课程：
 
 - [GitHub 技术交流](http://pan.baidu.com/s/1miz0M3u)
+- [搬进 Git](http://www.imooc.com/learn/390)
 - [苏勇 Git 版本控制](http://edu.51cto.com/course/course_id-1412.html)
 - [深入理解 Git](http://edu.51cto.com/course/course_id-1838.html)
 
