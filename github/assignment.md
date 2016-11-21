@@ -6,7 +6,7 @@
 
 ## 维护进度
 
-- 在 Github 上维护进度任务，具体方法请阅读[这里](spec.md)
+- 在 Github 上维护进度任务，具体方法请阅读[这里](https://github.com/wangding/courses/blob/master/spec.md)
 
 ## 课程学习1
 
