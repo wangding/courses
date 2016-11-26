@@ -8,6 +8,11 @@ Selenium IDE web 自动化测试入门。
 - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
 - [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
 
+## 工具下载
+
+- [Selenium IDE](https://addons.mozilla.org/zh-CN/firefox/addon/selenium-ide/)
+- [Selenium IDE: Flow Control](https://addons.mozilla.org/zh-CN/firefox/addon/flow-control/)
+
 ## 学习资料
 
 - [Selenium IDE 官方资料](http://www.seleniumhq.org/docs/02_selenium_ide.jsp)  
