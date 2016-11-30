@@ -8,6 +8,13 @@ Selenium IDE web 自动化测试入门。
 - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
 - [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
 
+## 作业任务
+
+- [上篇闯关任务](assignment1.md)
+- [中篇闯关任务](assignment2.md)
+- [下篇闯关任务](assignment3.md)
+- [综合实训任务](assignment4.md)
+
 ## 工具下载
 
 - [Selenium IDE](https://addons.mozilla.org/zh-CN/firefox/addon/selenium-ide/)
