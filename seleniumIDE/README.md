@@ -2,25 +2,44 @@
 
 Selenium IDE web 自动化测试入门。
 
-## 课程视频
+## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="30">课程视频
 
 - [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)  
 - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
 - [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
 
-## 作业任务
+## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="30">课程 PPT
+
+- [Selenium IDE web 自动化测试（上）](https://github.com/wangding/courses/blob/master/seleniumIDE/Selenium%20IDE%20WEB%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%8A%EF%BC%89.pptx?raw=true)  
+- [Selenium IDE web 自动化测试（中）](https://github.com/wangding/courses/blob/master/seleniumIDE/Selenium%20IDE%20WEB%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%AD%EF%BC%89.pptx?raw=true)
+- [Selenium IDE web 自动化测试（下）](https://github.com/wangding/courses/blob/master/seleniumIDE/Selenium%20IDE%20WEB%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%8B%EF%BC%89.pptx?raw=true)
+
+## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="30">作业任务
 
 - [上篇闯关任务](assignment1.md)
 - [中篇闯关任务](assignment2.md)
 - [下篇闯关任务](assignment3.md)
 - [综合实训任务](assignment4.md)
 
-## 工具下载
+## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="30">示例代码
+
+- [百度搜索](https://github.com/wangding/seIDE/tree/master/baidu)
+- [51CTO 学院](https://github.com/wangding/seIDE/tree/master/edu51cto)
+- [在线计算器](https://github.com/wangding/seIDE/tree/master/zxjsq)
+- [时间校准网](https://github.com/wangding/seIDE/tree/master/time)
+- [hostedRedmine](https://github.com/wangding/seIDE/tree/master/hostedredmine)
+- [ProcessOn](https://github.com/wangding/seIDE/tree/master/ProcessOn)
+- [ATOOL](https://github.com/wangding/seIDE/tree/master/ATOOL)
+- [定位器示例](https://github.com/wangding/seIDE/tree/master/locator)
+- [弹窗示例](https://github.com/wangding/seIDE/tree/master/alert)
+- [数据驱动示例](https://github.com/wangding/seIDE/tree/master/DDT)
+
+## :hammer:工具下载
 
 - [Selenium IDE](https://addons.mozilla.org/zh-CN/firefox/addon/selenium-ide/)
 - [Selenium IDE: Flow Control](https://addons.mozilla.org/zh-CN/firefox/addon/flow-control/)
 
-## 学习资料
+## :books:学习资料
 
 - [Selenium IDE 官方资料](http://www.seleniumhq.org/docs/02_selenium_ide.jsp)  
   Selenium IDE 最权威的资料。如果英文网站打不开，请点击 [这里](https://github.com/wangding/SeleniumIDEDoc/blob/master/images/seleniumIDEDoc.png)。
@@ -42,6 +61,9 @@ Selenium IDE web 自动化测试入门。
   
 - [HTML + CSS 基础课程](http://www.imooc.com/learn/9)  
   慕课网的闯关课程，主要学习 HTML 和 CSS。
+  
+- [JavaScript 标准参考教程](http://JavaScript。ruanyifeng。com)  
+  比较权威而且全面的资料。
   
 - [freecodecamp](https://freecodecamp.cn/)  
   最火的游戏闯关式学习网站。
