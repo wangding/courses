@@ -1,0 +1,6 @@
+VBGROUP 5.0
+StartupProject=TestUserService\prjTest.vbp
+Project=fcdAdminUser\fcdAdminUser.vbp
+Project=MAINBUSInterface\MainBusInterface.vbp
+Project=MainBusiness\MainBusiness.vbp
+Project=fcdNormalUser\fcdNormalUser.vbp
