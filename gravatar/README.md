@@ -17,6 +17,6 @@ Redmine 点亮头像。
     - Step2：注册 Gravatar 账户；   
     - Step3：上传头像；   
 4. 其他问题      
-    - Gravatar 注册邮箱的问题；  
+    - Gravatar [注册邮箱](pic/sign_up_issue.png)的问题；  
     - Gravatar 再次登录的问题；  
  
