@@ -4,6 +4,10 @@
 ## [课程视频<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="28">](http://edu.51cto.com/lesson/id-127536.html)
 Redmine 点亮头像
 
+## 作业任务<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="28">  
+1. 注册自己的 Gravatar 账户；
+2. 在 Gravatar 账户中，至少上传一张个人真实照片，并和自己常用邮箱绑定；
+
 ## 课程大纲:books:
 1.  缘起
 2.  gravatar 是什么？  http://cn.gravatar.com
