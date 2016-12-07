@@ -12,6 +12,57 @@
 - 制作除法功能的自动化测试脚本；
 - 要求有必要的注释；
 
-## 任务2 【有待补全】
-- 【有待补全，请参考：第10周任务，以及中篇的PPT，PPT请在[这里](https://github.com/wangding/courses/tree/master/seleniumIDE)下载】
+## 任务2 制作百度自动化测试脚本
 
+要求如下：
+- 网站地址 http://www.baidu.com
+- 获取验证百度首页面的信息；
+- 打开百度首页，并验证；
+- 获取首页Title信息，并echo打印；
+- 获取首页文字信息，并echo打印；
+- 获取首页HTML代码，并echo打印；
+
+## 任务3 制作51CTO学习数据统计自动化任务脚本
+
+要求如下
+- 网站地址 http://edu.51cto.com
+- 统计学习记录数据；
+- 打开学生学习记录页面并验证；
+- 获取学习时长数据，并存入变量；
+- 计算所有学生学习时长数据的累加；
+- 计算所有学生学习时长的平均；
+
+## 任务4 制作sample.html页面的定位器自动化脚本
+
+要求如下：
+- 被测对象：sample.html
+- 回放观察定位元素的自动化测试脚本；
+     - 单步执行回放；
+     - 合理布局窗口；
+- 独立完成定位元素的自动化测试脚本；
+    - 参考被测网页及其源代码；
+    - 合理布局窗口，手工完成脚本编写；
+    
+## 任务5 制作ATOOL网站的自动化测试案例脚本
+
+要求如下：
+- 网站地址 http://www.atool.org：
+- 测试 开发者工具-中文汉字相关；
+- 测试并验证该类工具页面；
+- 测试完工具页之后返回首页；
+
+## 任务6 自选网站，制作该网站的自动化测试案例脚本
+
+## 任务7 复习知识
+
+要求如下：
+- 被测对象：无
+- 在Selenium IDE中复习以下命令；
+  - echo；
+  - highlight；
+  - open/openWindow
+           /openWindowAndWait；
+  - click/clickAndWait；
+  - assertTitle/verifyTitle；
+  - verifyText；
+  - verifyElementPresent；
