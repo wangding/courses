@@ -10,7 +10,7 @@
 |  1    | [Gravatar 全球大头贴](./gravatar)  | 开发完成 |  
 |  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | 有待完善 |
 |  3    | [软件测试基础](./testing)  | 有待完善  |
-|  4    | [seIDE 综合案例实战：第1季](./seIDEPraticeCase)  | 正在开发  |
+|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  | 正在开发  |
 |  5    | [redmine 项目管理](./redmine)  |  |
 |  6    | [在线思维导图](./mindmap) |   |
 |  7    | [Github 开源之旅](./github) |  |
@@ -29,7 +29,7 @@
 - [课程开发流程](*)
 - [文档写作规范](*)
 - [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)：  
-![Fork 工作流程](images\forkProcess.png)
+![Fork 工作流程](images/forkProcess.png)
 
 ## 目录结构
 
