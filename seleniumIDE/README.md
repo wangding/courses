@@ -2,26 +2,26 @@
 
 Selenium IDE web 自动化测试入门。
 
-## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="30">课程视频
+## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
 - [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)  
 - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
 - [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
 
-## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="30">课程 PPT
+## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
 
 - [Selenium IDE web 自动化测试（上）](https://github.com/wangding/courses/blob/master/seleniumIDE/Selenium%20IDE%20WEB%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%8A%EF%BC%89.pptx?raw=true)  
 - [Selenium IDE web 自动化测试（中）](https://github.com/wangding/courses/blob/master/seleniumIDE/Selenium%20IDE%20WEB%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%AD%EF%BC%89.pptx?raw=true)
 - [Selenium IDE web 自动化测试（下）](https://github.com/wangding/courses/blob/master/seleniumIDE/Selenium%20IDE%20WEB%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%8B%EF%BC%89.pptx?raw=true)
 
-## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="30">作业任务
+## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="30">作业任务
 
 - [上篇闯关任务](assignment1.md)
 - [中篇闯关任务](assignment2.md)
 - [下篇闯关任务](assignment3.md)
 - [综合实训任务](assignment4.md)
 
-## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="30">示例代码
+## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="30">示例代码
 
 - [百度搜索](https://github.com/wangding/seIDE/tree/master/baidu)
 - [51CTO 学院](https://github.com/wangding/seIDE/tree/master/edu51cto)

@@ -2,11 +2,11 @@
 
 vimperator 高效上网。
 
-## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="30">课程视频
+## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
 - [有待补充](*)  
 
-## <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="30">课程 PPT
+## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">课程 PPT
 
 - [有待补充](*)
 
