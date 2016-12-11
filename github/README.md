@@ -10,6 +10,8 @@ Github 开源社区新手入门系列课程。
     - [任务一：待续](TaskS01.md#任务一待续)  
     - [任务二：待续](TaskS01.md#任务二待续)  
     - [任务三：注册 Github 账户](TaskS01.md#任务三注册-github-账户)
+- 参考资料:books:  
+    - [Github 使用手册](http://wiki.jikexueyuan.com/project/github-basics/)    
     
 ## 第二季：【待续】
 
