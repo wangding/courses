@@ -20,16 +20,14 @@
 【简单介绍，有待补充】
 
 
-##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch03 Realities/03.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/01. CSS-Overview/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/01. CSS-Overview/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos](/Topics/01. CSS-Overview/VIDEOS.md)
-（http://edu.51cto.com/lesson/id-20603.html）
+##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch03 Realities/03.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/01. CSS-Overview/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/01. CSS-Overview/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos](http://edu.51cto.com/lesson/id-20603.html)
 
 ### [04. 检查产品说明书](/Topics/02. CSS-Presentation)
 
 【简单介绍，有待补充】
 
 
-##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch04 Specification/04.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/02. CSS-Presentation/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/02. CSS-Presentation/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos]
-（http://edu.51cto.com/lesson/id-20608.html）
+##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch04 Specification/04.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/02. CSS-Presentation/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/02. CSS-Presentation/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos](http://edu.51cto.com/lesson/id-20608.html)
 
 ### [05. 带上眼罩测试软件](./Topics/03. CSS-Layout)
 
@@ -90,8 +88,7 @@
 
 【简单介绍，有待补充】
 
-##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch17 Planning/17.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/04. SASS/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/04. SASS/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos]
-(http://edu.51cto.com/lesson/id-20631.html)
+##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch17 Planning/17.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/04. SASS/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/04. SASS/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos](http://edu.51cto.com/lesson/id-20631.html)
 
 ### [21. 软件质量保证](./Topics/04. SASS)<br />[22. 软件测试员的职业](./Topics/04. SASS)
 
