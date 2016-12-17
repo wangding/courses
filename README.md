@@ -26,10 +26,10 @@
 
 ## 参与项目  
 
-- [课程开发流程](*)
-- [文档写作规范](*)
+- [课程开发流程<有待完善>](README.md)
+- [文档写作规范](https://github.com/wangding/wiki-editors-guidelines)
 - [课程开发计划](plan.md)
-- [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)：  
+- [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)  
 ![Fork 工作流程](images/forkProcess.png)
 
 ## 目录结构
