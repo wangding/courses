@@ -2,6 +2,8 @@
 
 Contents临时禁用Vimperator打开网页导航重新载入停止写入退出当前目录
 
+## 临时禁用 Vimperator
+
 ignoring临时禁用Vimperator为了让Vim用户更愉快地浏览网页，Vimperator几乎覆盖了Firefox所有按键。在某些情况下您可能需要把键击传给Firefox或网页，即让这些按键执行原本的功能，此时可使用下列方法：ignore-all-keys<S-Esc><Insert><S-Esc><Insert>
         禁用Vimperator所有按键，并把它们传递给下一个事件处理器。在JavaScript控制的表单（例如Gmail的RichEdit表单字段）表现异常或您想使用像Google Reader这样带大量快捷键的web程序时，这种模式可派上用场。要退出此模式，请再次按<S-Esc>。<Esc>是一种特殊情况，虽然它仍发送给网页，但仍然处理输入字段的失焦。
     
@@ -11,6 +13,7 @@ ignore-keyii
         如果您只需要传递一个键击给JavaScript表单或另一个扩展时，请在该键击前先按i键。这种方法同样适用于被Vimperator覆盖的其他Firefox快捷键，例如<C-o>。
     
 
+## 打开网页
 
 opening打开网页
 
@@ -93,7 +96,7 @@ gPgP
     
 
 
-navigating导航
+## 导航
 
 H<C-o>CTRL-O:ba:back:[count]ba[ck] [url]:ba[ck]!CTRL-o
         在浏览历史中后退[count]页。如果给出了[url]，则后退到首个匹配的网址。特别形式:back!则后退到浏览历史中首个页面。
@@ -146,7 +149,7 @@ gUgU
     
 
 
-reloading重新载入
+## 重新载入
 
 rr
         强制重新载入当前页。
@@ -168,7 +171,7 @@ RR
     
 
 
-stopping停止
+## 停止
 
 <C-c><C-c>
         停止载入当前页。仅在未选择文本时才有效，否则复制选择的文本到剪贴板。通常这都不是问题，在加载页面时一般都不会有需要复制的文本。
@@ -192,49 +195,20 @@ writingsave-file写入
     
 
 
-quittingsave-session退出
+## 退出
 
-:q:quit:q[uit]
-        退出当前标签页。如果这是当前窗口中唯一的标签页，则关闭此窗口。如果这是最后一个窗口，则关闭Vimperator。退出Vimperator时，会话不保存。
-    
+### ZQ
+不保存会话而退出。与 :qall 作用相同。
 
+### ZZ
+保存会话后退出。无论打开了多少个标签页/窗口，都退出 Vimperator。会话被保存。与 :xall 作用相同。
 
-:qa:qall:quita:quitall:quita[ll]
-        退出Vimperator。无论打开了多少个标签页/窗口，都退出Vimperator。会话不保存。
-    
+## 当前目录
 
+【什么时候用呢？跟网页的资源管理器结合使用会比较好用。】
 
-:wc:wclose:winc:winclose:winc[lose]
-        关闭窗口。
-    
+### :cd [-|path]
+改变当前目录。:cd -改变为前一个访问的目录。
 
-
-:winon:winonly:winon[ly]
-        关闭其他所有窗口。
-    
-
-
-:xa:xall:wq:wqa:wqall:wqa[ll]:xa[ll]
-        保存会话并退出。无论打开了多少个标签页/窗口，都退出Vimperator。会话被保存。:wq与Vim中的用途不同，这里是关闭窗口而非平常所见的关闭一个标签页。如果您想改变这种情况，请在邮件列表上发表看法。
-    
-
-
-ZQZQ
-        不保存会话而退出。与:qall作用相同。
-    
-
-
-ZZZZ
-        保存会话后退出。无论打开了多少个标签页/窗口，都退出Vimperator。会话被保存。与:xall作用相同。
-    
-
-
-current-directory当前目录
-
-:chd:chdir:cd:cd [-|path]
-        改变当前目录。:cd -改变为前一个访问的目录。
-    
-
-
-:pw:pwd:pw[d]
-        显示当前目录名。
+### :pwd 
+显示当前目录名。
