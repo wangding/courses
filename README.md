@@ -7,7 +7,7 @@
 
 | 编号       | 课程名称  | 进度  |  
 | :---: | -----  | :-----:|  
-|  1    | [Gravatar 全球大头贴](./gravatar)  | 开发完成 |  
+|  1    | [Gravatar 全球大头贴](./gravatar)  |![]<images/present0.png>|  
 |  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | 有待完善 |
 |  3    | [软件测试基础](./testing)  | 有待完善  |
 |  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  | 正在开发  |
