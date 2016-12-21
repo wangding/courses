@@ -7,29 +7,29 @@
 
 | 编号       | 课程名称  | 进度  |  
 | :---: | -----  | :-----:|  
-|  1    | [Gravatar 全球大头贴](./gravatar)  | 开发完成 |  
-|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | 有待完善 |
-|  3    | [软件测试基础](./testing)  | 有待完善  |
-|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  | 正在开发  |
-|  5    | [redmine 项目管理](./redmine)  |  |
-|  6    | [在线思维导图](./mindmap) |   |
-|  7    | [Github 开源之旅](./github) |  |
-|  8    | [vimperator 高效上网](./vimperator) |  |
+|  1    | [Gravatar 全球大头贴](./gravatar)  |![images](images/present100.png)|  
+|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![images](images/present100.png) |
+|  3    | [软件测试基础](./testing)  | ![images](images/present50.png)  |
+|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  |![images](images/present100.png)  |
+|  5    | [redmine 项目管理](./redmine)  |  ![images](images/present0.png) |
+|  6    | [在线思维导图](./mindmap) | ![images](images/present0.png)  |
+|  7    | [Github 开源之旅](./github) |  ![images](images/present0.png)|
+|  8    | [vimperator 高效上网](./vimperator) | ![images](images/present0.png)|
 
 
 ## 课程路线
 | 编号       | 路线名称  | 进度  |  
 | :---: | -----  | :-----:|  
-|  1    | [IT 新手](./newer)  | 有待完善  |  
-|  2    | [测试工程师](./tester) | 有待完善 |
+|  1    | [IT 新手](./newer)  | ![images](images/present0.png)  |  
+|  2    | [测试工程师](./tester) | ![images](images/present0.png) |
 
 
 ## 参与项目  
 
-- [课程开发流程](*)
-- [文档写作规范](*)
+- [课程开发流程<有待完善>](README.md)
+- [文档写作规范](https://github.com/wangding/course-editors-guidelines)
 - [课程开发计划](plan.md)
-- [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)：  
+- [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)  
 ![Fork 工作流程](images/forkProcess.png)
 
 ## 目录结构

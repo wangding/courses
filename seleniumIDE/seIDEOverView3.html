@@ -7,11 +7,11 @@
 	</head>
 
 	<body>
-		<p style="padding-top: 5px; padding-bottom: 5px;">课程分：上，中，下三篇，本课程为下篇。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">课程分：上，中，下三篇，本课程为上篇。课程资料地址是：&nbsp;<a title="Selenium IDE web 自动化测试入门课程资料地址" href="https://github.com/wangding/courses/tree/master/seleniumIDE" src="https://github.com/wangding/courses/tree/master/seleniumIDE">https://github.com/wangding/courses/tree/master/seleniumIDE</a></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">上篇对自动化测试的基础知识做一些交代，为真正做自动化测试做好铺垫，然后讲解IDE工具的基本用法，学完了可以录制简单的自动化测试脚本。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">上篇对自动化测试的基础知识做一些交代，为真正做自动化测试做好铺垫，然后讲解&nbsp;IDE&nbsp;工具的基本用法，学完了可以录制简单的自动化测试脚本。</p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">中篇和下篇会介绍很多技术细节。基本上中篇会把最常用到的技术细节都讲到。这样上篇和中篇的内容可以应付80%网站的自动化测试任务了。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">中篇和下篇会介绍很多技术细节。基本上中篇会把最常用到的技术细节都讲到。这样上篇和中篇的内容可以应付&nbsp;80%&nbsp;网站的自动化测试任务了。</p>
 		
 		<p style="padding-top: 5px; padding-bottom: 5px;">下篇有些高级话题，不是每个人都会用到的，适合骨灰级玩家。</p>
 
@@ -23,97 +23,70 @@
 
 		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时2：wait 相关命令</strong></p>
 		
-	        <p style="padding-top: 5px; padding-bottom: 5px;">首先，介绍了 andWait 后缀的命令。
-		1. 普通命令（如常见的 click )与 AndWait 后缀命令的区别是，普通命令会执行动作，并以最快的速度继续执行下面的命令，而 AndWait 后缀命令（如 clickAndWait ）告诉 Selenium 在动作完成后等待页面加载完成。
-			
-		2. AndWait 后缀命令经常用在浏览器导航到另一个页面或重新加载当前页面时。
-		
-		3. 请注意，如果您在某个动作上使用一个 AndWait 命令，他不触发导航或者刷新，您的测试将会失败。这是因为 Selenium 达到了 AndWait 超时上限，却没有看到任何导航或刷新，导致 Selenium 抛出超时异常。
-		其次，讲解了 waitFor 前缀的命令。
-		
-		1. 在 AJAX 驱动的 web 应用程序中，应用程序从服务器检索数据，而无需刷新页面。andWait 命令在页面没有真正刷新前不会工作。
-		
-		2. 让当前运行的测试暂停一段时间也不是一个好方法，因为被测的 web 元素可能比预定的暂停时间出现的略晚或稍早，这主要取决于系统的响应能力，负载大小或其他不可控因素，这些都会导致测试失败。最好的方法就是在一个动态的时长内等待所需的元素，一旦找到界面元素，继续执行测试。
-		
-	3. waitFor 命令实现了上述功能，waitForElementPresent 或 waitForVisible，这些命令会动态的等待，每隔一秒会检查所需的条件，一旦条件满足则继续执行脚本中的下一个命令</p>
+	        <p style="padding-top: 5px; padding-bottom: 5px;">首先，介绍了&nbsp;andWait&nbsp;后缀的命令。1.&nbsp;普通命令（如常见的 click&nbsp;命令)与&nbsp;AndWait&nbsp;后缀命令的区别是，普通命令会执行动作，并以最快的速度继续执行下面的命令，而&nbsp;AndWait&nbsp;后缀命令（如 clickAndWait&nbsp;命令）告诉&nbsp;Selenium&nbsp;在动作完成后等待页面加载完成。2.&nbsp;AndWait&nbsp;后缀命令经常用在浏览器导航到另一个页面或重新加载当前页面时。3.&nbsp;请注意，如果在某个动作上使用一个&nbsp;AndWait&nbsp;命令，如果不触发导航或者刷新，您的测试将会失败。这是因为&nbsp;Selenium&nbsp;达到了&nbsp;AndWait&nbsp;超时上限，却没有看到任何导航或刷新，导致&nbsp;Selenium&nbsp;抛出超时异常。其次，讲解了&nbsp;waitFor&nbsp;前缀的命令。1.&nbsp;在&nbsp;AJAX&nbsp;驱动的&nbsp;web&nbsp;应用程序中，应用程序从服务器检索数据，而无需刷新整个页面。andWait&nbsp;命令在页面没有真正刷新前不会工作。2.&nbsp;让当前运行的测试暂停一段时间也不是一个好方法，因为被测的&nbsp;web&nbsp;元素可能比预定的暂停时间出现的略晚或稍早，这主要取决于系统的响应能力，负载大小或其他不可控因素，这些都会导致测试失败。最好的方法就是在一个动态的时长内等待所需的元素，一旦找到界面元素，继续执行测试。3.&nbsp;waitFor&nbsp;命令实现了上述功能，waitForElementPresent&nbsp;或 waitForVisible，这些命令会动态的等待，每隔一秒会检查所需的条件，一旦条件满足则继续执行脚本中的下一个命令</p>
 
-		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时3：JavaScript 弹窗</strong></p>
+		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时3：JavaScript&nbsp;弹窗</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了上次课程的手机归属地查询自动化脚本中的两个问题，一、如何确认脚本运行结果日志中的验证失败为 bug，二、如何增量开发自动化测试脚本。
-		其次，讲解了 JavaScript 弹窗的三种类型，以及处理弹窗常用的 Selenium 相关命令。
-		
-		最后，通过示例页面录制了 Alert 弹窗的自动化测试脚本。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了上次课程的手机归属地查询自动化脚本中的两个问题，一、如何确认脚本运行结果日志中的验证失败为&nbsp;bug，二、如何增量开发自动化测试脚本。其次，讲解了&nbsp;JavaScript&nbsp;弹窗的三种类型，以及处理弹窗常用的&nbsp;Selenium&nbsp;相关命令。最后，通过示例页面录制了&nbsp;Alert&nbsp;弹窗的自动化测试脚本。</p>
 
 			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时4：确认和提示弹窗</strong></p>
 			
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，演示并录制了确认弹窗的自动化测试脚本，并在脚本的录制以及回放过程中，讲解了一些关键技术点。
-		其次，演示并录制了提示弹窗的自动化测试脚本，并在脚本的录制以及回放过程中，讲解了一些关键技术点。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，演示并录制了确认弹窗的自动化测试脚本，并在脚本的录制以及回放过程中，讲解了一些关键技术点。其次，演示并录制了提示弹窗的自动化测试脚本，并在脚本的录制以及回放过程中，讲解了一些关键技术点。</p>
 
-			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时5：Globbing 文本模式</strong></p>
+			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时5：Globbing&nbsp;文本模式</strong></p>
 			
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了文本模式的本质，文本模式使用特殊字符来模糊匹配预期的文本，而不必准确的描述该文本。这样的好处是增强我们脚本的健壮性，减少自动化测试脚本的修改机会。其次，强调了 LinkText 定位器可使用文本模式。因为，LinkText 本身是 locator 参数的一种，参数类型是 locator ，我们可能知道 pattern 参数类型可以使用文本模式，其实 LinkText 也是支持文本模式的。最后，讲解了三种文本模式：Globbing 模式，正则表达式和 exact，其中的 Globbing 模式的特殊字符语法，标记，等细节。通过时间校准网站的案例，讲解了 Globbing 模式的使用。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了文本模式的本质，文本模式使用特殊字符来模糊匹配预期的文本，而不必准确的描述该文本。这样的好处是增强我们脚本的健壮性，减少自动化测试脚本的修改机会。其次，强调了&nbsp;LinkText&nbsp;定位器可使用文本模式。因为，LinkText&nbsp;本身是&nbsp;locator&nbsp;参数的一种，参数类型是&nbsp;locator，我们可能知道&nbsp;pattern&nbsp;参数类型可以使用文本模式，其实 LinkText&nbsp;也是支持文本模式的。最后，讲解了三种文本模式：Globbing&nbsp;模式，正则表达式和&nbsp;exact，其中的&nbsp;Globbing&nbsp;模式的特殊字符语法，标记，等细节。通过时间校准网站的案例，讲解了 Globbing&nbsp;模式的使用。</p>
 
 			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时6：正则表达式文本模式</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了正则表达式的语法，特殊字符的用途以及 regexp: 和 regexpi: 两个标记。
-		其次，通过时间校准网站的案例，制作了正则表达式文本模式的测试案例。通过案例，揭示了文本中编码规律的强弱，以及方案中的模式固有的缺陷，只有数字位数的规则，没有更深入的业务规则。
-		最后，讲解了 exact 文本模式的使用场合和用法。Selenium 的 exact 文本模式只有非常少的使用场合。这种文本模式没有什么特殊字符，所以顾名思义称为准确模式。所以，当你需要匹配一个包含星号的文本时，globbing 和正则表达式都是用星号作为特殊字符，这时 exact 文本模式就派上用场了。实际上正则表达式文本模式通过转义星号可以实现同样的效果。 </p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了正则表达式的语法，特殊字符的用途以及&nbsp;regexp:&nbsp;和&nbsp;regexpi:&nbsp;两个标记。其次，通过时间校准网站的案例，制作了正则表达式文本模式的测试案例。通过案例，揭示了文本中编码规律的强弱，以及方案中的模式固有的缺陷，只有数字位数的规则，没有更深入的业务规则。最后，讲解了&nbsp;exact&nbsp;文本模式的使用场合和用法。Selenium&nbsp;的&nbsp;exact&nbsp;文本模式只有非常少的使用场合。这种文本模式没有什么特殊字符，所以顾名思义称为准确模式。所以，当你需要匹配一个包含星号的文本时，globbing&nbsp;和正则表达式都是用星号作为特殊字符，这时&nbsp;exact&nbsp;文本模式就派上用场了。实际上正则表达式文本模式通过转义星号可以实现同样的效果。 </p>
 
-                <p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时7：JavaScript 参数</strong></p>
+                <p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时7：JavaScript&nbsp;参数</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了 JavaScript 参数的两种类型：显示 JavaScript 参数和隐式 JavaScript 参数，其中的显示 JavaScript 参数。测试用例中的所有变量被存储在 JavaScript 关联数组中。关联数组用字符串来索引而不是用连续的数字索引。存放测试案例变量的关联数组的变量名是 storedVars。当你想在 JavaScript 代码片段中访问或操作变量时，你需要通过 storedVars[&#39;yourVariableName&#39;] 来访问。
-其次，讲解了更为强大的隐式 JavaScript 参数。JavaScript 脚本还可以用于生成参数的值，即使没有指定参数是 script 脚本类型。而且几乎可以用在任何参数上，这是重点（见参数化定位器参数的脚本）。在这种情况下，通过使用特殊的语法，即整个参数值由 javascript 做前缀，在花括号中放置代码片段，例如：javascript { * 这里是你的代码 * }。最后，通过求和计算的案例，演示了显示 JavaScript 参数和隐式 JavaScript 参数的用法，以及 runScript 命令的用法。 </p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了&nbsp;JavaScript&nbsp;参数的两种类型：显示 &nbsp;JavaScript&nbsp;参数和隐式&nbsp;JavaScript&nbsp;参数，其中的显示 &nbsp;JavaScript&nbsp;参数。测试用例中的所有变量被存储在&nbsp;JavaScript&nbsp;关联数组中。关联数组用字符串来索引而不是用连续的数字索引。存放测试案例变量的关联数组的变量名是&nbsp;storedVars。当你想在&nbsp;JavaScript&nbsp;代码片段中访问或操作变量时，你需要通过 &nbsp;storedVars[&#39;yourVariableName&#39;] 来访问。其次，讲解了更为强大的隐式&nbsp;JavaScript&nbsp;参数。JavaScript&nbsp;脚本还可以用于生成参数的值，即使没有指定参数是&nbsp;script&nbsp;脚本类型。而且几乎可以用在任何参数上，这是重点（见参数化定位器参数的脚本）。在这种情况下，通过使用特殊的语法，即整个参数值由&nbsp;javascript&nbsp;做前缀，在花括号中放置代码片段，例如：javascript{*这里是你的代码*}。最后，通过求和计算的案例，演示了显示&nbsp;JavaScript&nbsp;参数和隐式&nbsp;JavaScript&nbsp;参数的用法，以及 runScript 命令的用法。 </p>
 
 		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时8：定位器参数化</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">通过 redmine 登录的案例，演示了用 JavaScript 隐式参数来替代定位器参数的用法。通过这种方式，可以实现定位器参数化，这样可以降低自动化脚本维护的成本。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">通过&nbsp;hostedredmine&nbsp;登录的案例，演示了用 &nbsp;JavaScript&nbsp;隐式参数来替代定位器参数的用法。通过这种方式，可以实现定位器参数化，这样可以降低自动化脚本维护的成本。</p>
 
 		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时9：用户自定义扩展</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">通过时间日期网的案例，首先，提示了捕获页面截图的命令用法。由此，提出问题，希望文件名，在每次运行脚本的时候，能够改变并且唯一，避免捕获的图片文件覆盖之前的文件。
-改进方案里用 JavaScript 隐式参数，实现了用时间参数拼凑出字符串作为文件名，进行文件捕获。最后，为了让自动化脚本更简洁美观，更易维护，自定义了 JavaScript 函数 fileName ，并将 js 脚本文件作为 Selenium IDE 用户扩展进行了设置。在脚本中调用 fileName 函数，完美的解决了问题。 </p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">通过时间日期网的案例，首先，提示了捕获页面截图的命令用法。由此，提出问题，希望文件名，在每次运行脚本的时候，能够改变并且唯一，避免捕获的图片文件覆盖之前的文件。改进方案里用&nbsp;JavaScript&nbsp;隐式参数，实现了用时间参数拼凑出字符串作为文件名，进行文件捕获。最后，为了让自动化脚本更简洁美观，更易维护，自定义了 &nbsp;JavaScript&nbsp;函数&nbsp;fileName&nbsp;，并将&nbsp;js&nbsp;脚本文件作为&nbsp;Selenium IDE&nbsp;用户扩展进行了设置。在脚本中调用&nbsp;fileName&nbsp;函数，完美的解决了问题。 </p>
 
 		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时10：控制流程</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了三种流程控制方案：<br/>1. 使用 Selenium Web Driver 运行脚本结合客户端库，如：Java 或 PHP 库，利用编程语言的流程控制功能。<br/>2. 用 storeEval 命令从脚本中运行一个小的 JavaScript 代码片段。<br/>3. 安装 Selenium IDE: Flow Control 扩展。并对三种方案做了比较，最终选择了第三个方案，给出流程控制扩展插件安装的方法和地址。
-		
-		其次，讲解了流程控制插件增加了流程控制命令。
-		
-		最后，通过一个简单的案例，演示了判断分支和循环的流程控制。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了三种流程控制方案：1.&nbsp;使用&nbsp;Selenium Web Driver &nbsp;运行脚本结合客户端库，如：Java&nbsp;或&nbsp;PHP&nbsp;库，利用编程语言的流程控制功能。2. 用&nbsp;storeEval&nbsp;命令从脚本中运行一个小的&nbsp;JavaScript&nbsp;代码片段。3. 安装&nbsp;Selenium IDE:&nbsp;Flow Control&nbsp;扩展。并对三种方案做了比较，最终选择了第三个方案，给出流程控制扩展插件安装的方法和地址。其次，讲解了流程控制插件增加了流程控制命令。最后，通过一个简单的案例，演示了判断分支和循环的流程控制。</p>
 		
 		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时11：百度登录判断流程控制</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">本测试案例完成以下的操作：首先，判断百度首页的登录状态。
-		其次，如果登录，则退出登录。
-		最后，如果没有登录，直接将百度首页的信息存放到变量中，再用 echo 命令打印变量信息。这个相对实际的案例，演示了流程控制命令的用法，以及分析问题，解决问题的思路和方法。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">本测试案例完成以下的操作：首先，判断百度首页的登录状态。其次，如果登录，则退出登录。最后，如果没有登录，直接将百度首页的信息存放到变量中，再用 echo&nbsp;命令打印变量信息。这个相对实际的案例，演示了流程控制命令的用法，以及分析问题，解决问题的思路和方法。</p>
 
-			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时12：数据驱动测试之 JS 数据文件</strong></p>
+			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时12：数据驱动测试之&nbsp;JS&nbsp;数据文件</strong></p>
 	
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了DDT：Data Driven Test 的思想。给出了 Selenium IDE 支持的三种数据方案，分别是：JS 数据文件、CSV 数据文件和 XML 数据文件。并且给出了每种数据文件下面实现 DDT 的讲解框架，分别是：扩展项、Options 设置、数据格式、相关命令和案例。
-		其次，讲解了 js 数据格式的 DDT 的技术细节：
-			1. 要求 .js 文件中按下面的方式存放测试数据
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了&nbsp;DDT：Data Driven Test&nbsp;的思想。给出了&nbsp;Selenium IDE &nbsp;支持的三种数据方案，分别是：JS&nbsp;数据文件、CSV&nbsp; 数据文件和&nbsp;XML&nbsp;数据文件。并且给出了每种数据文件下面实现&nbsp;DDT&nbsp;的讲解框架，分别是：扩展项、Options&nbsp;设置、数据格式、相关命令和案例。其次，讲解了&nbsp;js&nbsp;数据格式的&nbsp;DDT&nbsp;的技术细节：1.&nbsp;要求&nbsp;.js&nbsp;文件中按下面的方式存放测试数据<br/>
+<pre>
 			varname = &quot;value&quot;
-			2. 安装配置 Options 选项
-			需要把 .js 数据文件，在 Options 对话框中进行设置，如下图所示：
-			
-			最后，讲解了百度搜索案例的 DDT 之 JS 数据文件的实现。</p>
+</pre>
+2.&nbsp;安装配置&nbsp;Options&nbsp;选项，需要把&nbsp;.js&nbsp;数据文件，在&nbsp;Options&nbsp;对话框中进行设置。最后，讲解了百度搜索案例的&nbsp;DDT&nbsp;之&nbsp;JS&nbsp;数据文件的实现。</p>
 
-			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时13：数据驱动测试之 CVS 数据格式</strong></p>
+			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时13：数据驱动测试之&nbsp;CVS&nbsp;数据格式</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，介绍了 CSV 数据文件的数据格式是逗号分隔的方式，每一行代表一条记录，逗号分隔代表不同的列。需要安装加载项：CSVRead_Selenium-IDE.js，并且在 Options 对话框中 设置到 Selenium Core&nbsp; Extensions 项上。
-		
-		其次，演示制作了 redmine 网站登录的 csv 数据文件，并演示制作了 redmine 网站登录的自动化测试脚本，涉及到 CVS 数据文件的读取命令：readCSV、storeCVSValue 命令。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，介绍了&nbsp;CSV&nbsp;数据文件的数据格式是逗号分隔的方式，每一行代表一条记录，逗号分隔代表不同的列。需要安装加载项：CSVRead_Selenium-IDE.js，并且在&nbsp;Options &nbsp;对话框中设置到&nbsp;Selenium Core&nbsp; Extensions&nbsp;项上。其次，演示制作了&nbsp;hostedredmine&nbsp;网站登录的&nbsp;csv&nbsp;数据文件，并演示制作了&nbsp;hostedredmine&nbsp;网站登录的自动化测试脚本，涉及到&nbsp;CVS&nbsp;数据文件的读取命令：readCSV、storeCVSValue&nbsp;命令。</p>
 
-			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时14：数据驱动测试之 XML 数据文件</strong></p>
+			<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时14：数据驱动测试之&nbsp;XML&nbsp;数据文件</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">DDT&nbsp; 之 XML 数据文件需要按顺序使用下面三个 js 扩展，实现对 XML 数据文件载入和读取操作：user-extensions.js，goto_sel_ide.js 和 datadriven.js。
-		XML 数据文件格式如下所示：&lt;testdata&gt;<br/>&nbsp; &lt;test varname=&quot;value&quot; /&gt;<br/>&nbsp; &lt;test varname=&quot;value&quot; /&gt;<br/>&nbsp; &lt;test varname=&quot;value&quot; /&gt;<br/>&lt;/testdata&gt;<br/><br/>通过学生学习时长统计的案例来演示了 XML 数据文件的 DDT 脚本的制作过程。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">DDT&nbsp;之&nbsp;XML&nbsp;数据文件需要按顺序使用下面三个&nbsp;js&nbsp;扩展，实现对&nbsp;XML&nbsp;数据文件载入和读取操作：user-extensions.js，goto_sel_ide.js&nbsp;和&nbsp; datadriven.js。XML&nbsp;数据文件格式如下所示：
+<pre>			
+&lt;testdata&gt;
+&nbsp; &lt;test varname=&quot;value&quot;/&gt;
+&nbsp; &lt;test varname=&quot;value&quot; /&gt;
+&nbsp; &lt;test varname=&quot;value&quot; /&gt;<br/>&lt;/testdata&gt;
+</pre>
+通过学生学习时长统计的案例来演示了&nbsp;XML&nbsp;数据文件的&nbsp;DDT&nbsp;脚本的制作过程。</p>
 
 		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课时15：新的起点</strong></p>
 		
-		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了 DDT 数据驱动测试的循环控制流程的增量开发的思路。然后讲解了如何定计划任务自动运行测试案例脚本。
-		其次，强调了除了技术细节，整个自动化测试流程的重要性。
-		最后，给出了下一步的发展，就是全代码级别的自动化测试，并通过百度搜索的自动化脚本导出成 python 自动化测试脚本，再一次体现了 Selenium IDE 功能的强大之处。</p>
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，讲解了&nbsp;DDT&nbsp;数据驱动测试的循环控制流程的增量开发的思路。然后讲解了如何定计划任务自动运行测试案例脚本。其次，强调了除了技术细节，整个自动化测试流程的重要性。最后，给出了下一步的发展，就是全代码级别的自动化测试，并通过百度搜索的自动化脚本导出成&nbsp;python&nbsp;自动化测试脚本，再一次体现了&nbsp;Selenium IDE&nbsp;功能的强大之处。</p>
 		
 	</body>
 
