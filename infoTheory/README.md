@@ -49,13 +49,13 @@
 
 ##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch07 WhiteBox/07.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos](http://edu.51cto.com/lesson/id-20614.html)
 
-### [07. 限失真信源编码](./Topics/04. SASS)<br />[09. 兼容性测试]()
+### [07. 限失真信源编码](./Topics/04. SASS)<br />
 
 【简单介绍，有待补充】
 
 ##### [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15" />Slides](https://github.com/wangding/courses/blob/master/testing/Ch08 Configuration/08.ppt?raw=true) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="15"> Demos](/Topics/04. SASS/demos) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15">Tasks](/Topics/04. SASS/homework) / [<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="13"> Videos](http://edu.51cto.com/lesson/id-20621.html)
 
-### [08. 连续信源和波形信道](./Topics/04. SASS)<br />[11. 易用性测试]()<br />[13. 安全性测试]()
+### [08. 连续信源和波形信道](./Topics/04. SASS)<br />
 
 【简单介绍，有待补充】
 

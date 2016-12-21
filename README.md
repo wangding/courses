@@ -8,9 +8,9 @@
 | 编号       | 课程名称  | 进度  |  
 | :---: | -----  | :-----:|  
 |  1    | [Gravatar 全球大头贴](./gravatar)  |![images](images/present100.png)|  
-|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![images](images/present87.5.png) |
+|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![images](images/present100.png) |
 |  3    | [软件测试基础](./testing)  | ![images](images/present50.png)  |
-|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  |![images](images/present37.5.png)  |
+|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  |![images](images/present100.png)  |
 |  5    | [redmine 项目管理](./redmine)  |  ![images](images/present0.png) |
 |  6    | [在线思维导图](./mindmap) | ![images](images/present0.png)  |
 |  7    | [Github 开源之旅](./github) |  ![images](images/present0.png)|
