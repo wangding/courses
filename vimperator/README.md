@@ -4,11 +4,11 @@ vimperator 高效上网。
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
-- [有待补充](*)  
+- [Vimperator 黑客的上网工具](http://edu.51cto.com/course/course_id-8023.html)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">课程 PPT
 
-- [有待补充](*)
+- [Vimperator 黑客的上网工具](Vimperator.pptx)
 
 ## :hammer:工具下载
 
