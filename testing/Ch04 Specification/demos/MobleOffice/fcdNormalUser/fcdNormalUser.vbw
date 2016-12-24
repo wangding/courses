@@ -1,9 +1,0 @@
-fcdLogonVerify = 110, 145, 713, 458, C
-fcdSMSSend = 88, 116, 603, 429, C
-fcdContactListMaint = 66, 87, 696, 400, C
-fcdPvtPhrase = 44, 58, 647, 371, C
-fcdEventSub = 110, 145, 691, 458, C
-fcdPvtInfoMaint = 154, 203, 713, 633, C
-fcdMailNotify = 132, 174, 687, 604, C
-fcdSchedule = 0, 0, 515, 313, C
-fcdHistoryView = 22, 29, 603, 342, C
