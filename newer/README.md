@@ -15,7 +15,7 @@
 * 在线思维导图工具的使用
   * 意义：思维导图是一个很好的个人知识管理工具，可以提高学习效率。思维导图也可以用于各类IT专业领域人士的专业应用。
   * 课程1：[ProcessOn在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)
-  * 作业1：[ProcessOn在线思维导图入门 作业](/ProcessOn在线思维导图入门 作业.md)
+  * 作业1：[ProcessOn在线思维导图入门 作业](./ProcessOn在线思维导图入门 作业.md)
   * 课程2：[在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)
   * 作业2：
 
