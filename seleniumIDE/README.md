@@ -1,6 +1,6 @@
 # Selenium IDE web 自动化测试入门
 
-Selenium IDE web 自动化测试入门。
+Selenium IDE web 自动化测试入门。王顶老师的软件测试 QQ 学习交流群：301862163，加群时请报上自己的真实姓名，以及正在学习的课程内容。
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
