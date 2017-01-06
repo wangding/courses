@@ -7,8 +7,8 @@
   - 掌握在线思维导图工具的使用  
   - 掌握思维导图背后的思维方法  
   - 会用思维导图工具梳理知识点，做学习笔记  
-  
-- 视频课程    
+
+- 视频课程  
   - [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)（**只需要学习前五个视频**）  
 
 - 通关任务  
@@ -20,58 +20,100 @@
   - 学习[在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)视频课程  
   - 完成[进阶任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#进阶任务)  
 
-## Day2：项目管理
+## Day2：测试基础
 
-- 视频资料  
+- 学习目标  
+  - 掌握软件测试中的基本概念  
+  - 掌握为什么软件中会出现缺陷以及不同阶段修复缺陷的成本  
+  - 掌握软件工程师必备的素质  
+  - 掌握软件产品的组成  
+  - 掌握软件项目中的团队角色和过程模型  
+  - 掌握软件测试的原则和公理  
+
+- 视频课程    
+  - [软件测试基础：测试理论概述](http://edu.51cto.com/lesson/id-20600.html)  
+  - [软件测试基础：测试原则与术语](http://edu.51cto.com/lesson/id-20603.html)  
+
+- 通关任务
+  - 仔细阅读[软件测试 第二版（Ron Patton）](http://pan.baidu.com/s/1c2zKEWS)教材前三章  
+  - 把课程视频及教材前三章的内容用在线思维导图工具整理出学习笔记并发布  
+  - 思考自己有哪些特质，适合做测试工程师，不具备的特质如何培养，整理成思维导图并发布  
+
+## Day3：项目管理
+
+- 学习目标  
+  - 掌握项目管理工具 redmine 的使用  
+  - 掌握 bug 流程  
+  - 掌握通过 redmine 项目管理工具，如何实现 bug 流程  
+  - 掌握通过 redmine 项目管理工具，如何提交或描述 bug   
+  
+- 视频课程  
   - [项目管理实战（**只需要学习前五个视频**）](http://edu.51cto.com/course/course_id-1055.html)  
   
 - 通关任务
-  - [入门任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#入门任务)
-  - [进阶任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#进阶任务)
+  - 完成[项目管理入门任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#入门任务)
+
+- **选做任务**
+  - 完成[项目管理进阶任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#进阶任务)
   
-## 第三天：产品设计
-- 视频资料
-  - [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)
-  - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)
-- 作业任务
+## Day4：产品设计
+
+- 学习目标  
+  - 掌握产品设计的基本概念  
+  - 掌握界面原型设计的基础概念  
   
-## 第四天：测试基础
-- 视频资料
-  - [软件测试基础：测试理论概述](http://edu.51cto.com/lesson/id-20600.html)
-  - [软件测试基础：测试原则与术语](http://edu.51cto.com/lesson/id-20603.html)
-- 作业任务
-  - 仔细阅读教材的前三章；
-  - 22
+- 视频课程
+  - [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)  
+  - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
   
-## 第五天：黑盒测试
-- 视频资料
-  - [软件测试基础：黑盒测试](http://edu.51cto.com/lesson/id-20610.html)
-  - [软件测试基础：数据测试](http://edu.51cto.com/lesson/id-20611.html)
-  - [软件测试基础：状态测试](http://edu.51cto.com/lesson/id-20612.html)
-- 作业任务
-  - 3
+- 通关任务
   
-## 第六天：自动化测试
-- 视频资料
+
+## Day5：黑盒测试
+
+- 学习目标  
+  - 掌握黑盒测试的基本方法  
+  
+- 视频课程  
+  - [软件测试基础：黑盒测试](http://edu.51cto.com/lesson/id-20610.html)  
+  - [软件测试基础：数据测试](http://edu.51cto.com/lesson/id-20611.html)  
+  - [软件测试基础：状态测试](http://edu.51cto.com/lesson/id-20612.html)  
+  
+- 通关任务  
+  - 待补充
+  
+## Day6：自动化测试
+
+- 学习目标  
+  - 掌握 Selenium IDE web 自动化测试工具的使用  
+  
+- 视频课程  
   - [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)  
-  - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
-  - [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
+  - [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)  
+  - [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)  
 
-- 作业任务
-  - [seIDE web 自动化测试上篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment1.md)
-  - [seIDE web 自动化测试中篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment2.md)
-  - [seIDE web 自动化测试下篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment3.md)
+- 通关任务  
+  - [seIDE web 自动化测试上篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment1.md)  
+  - [seIDE web 自动化测试中篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment2.md)  
+  - [seIDE web 自动化测试下篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment3.md)  
 
   
-## 第七天：案例实战
-- 视频资料
-  - 【待补充】
-- 作业任务
-  - 【待补充】
+## Day7：案例实战
+
+- 学习目标  
+  - 综合运用七天中的知识、技术和工具  
+  
+- 视频课程
+  - 待补充
+  
+- 通关任务
+  - 待补充
 
 ## 进一步的修炼
-关于自动化测试：
-  - [seIDE web 自动化测试综合案例实战第一季](http://edu.51cto.com/course/course_id-7864.htm)
-  - [seIDE 综合案例实战第一季通关任务](https://github.com/wangding/courses/blob/master/seIDEPracticeCase/task01.md)
-  - [seIDE web 自动化测试综合实训任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment4.md)
-关于软件测试基础：
+
+- 完成 Day1：思维导图中的选做任务  
+- 完成[软件测试基础](http://edu.51cto.com/course/course_id-1026.html)课程中其他视频的学习  
+- 深入学习 Selenium IDE web 自动化测试
+  - 学习 [seIDE web 自动化测试综合案例实战第一季](http://edu.51cto.com/course/course_id-7864.htm)视频课程  
+  - 完成 [seIDE 综合案例实战第一季通关任务](https://github.com/wangding/courses/blob/master/seIDEPracticeCase/task01.md)  
+  - 完成 [seIDE web 自动化测试综合实训任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment4.md)  
