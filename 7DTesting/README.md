@@ -111,7 +111,10 @@
   - [seIDE web 自动化测试上篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment1.md)  
 
 - 示例参考  
-  - [SeIDE 自动化测试脚本](https://github.com/wangding/seIDE)
+  - [HelloWorld1 自动化脚本](https://github.com/wangding/seIDE/blob/master/hello/helloWorld1.html)  
+  - [HelloWorld2 自动化测试脚本](https://github.com/wangding/seIDE/blob/master/hello/helloWorld2.html)  
+  - [百度搜索自动化测试脚本](https://github.com/wangding/seIDE/blob/master/baidu/search.html)  
+  - [hostedredmine 自动化测试脚本](https://github.com/wangding/seIDE/tree/master/hostedredmine#%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B)  
 
 ## Day7：综合案例实战
 
