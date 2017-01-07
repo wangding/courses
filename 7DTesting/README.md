@@ -14,6 +14,10 @@
 - 通关任务  
   - [入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)（**只需要完成任务 2 和任务 6**）  
 
+- 示例参考  
+  - [思维导图学习笔记](http://processon.com/view/57ceb4fee4b0942d7a555b18)  
+  - [个人学习计划](http://processon.com/view/584eb7c7e4b031ce5459e95c)  
+
 - **选做任务**  
   - 完成 [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)课程剩余视频的学习  
   - 完成所有[入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)  
@@ -30,15 +34,19 @@
   - 掌握软件项目中的团队角色和过程模型  
   - 掌握软件测试的原则和公理  
 
-- 视频课程    
+- 视频课程  
   - [软件测试基础：测试理论概述](http://edu.51cto.com/lesson/id-20600.html)  
   - [软件测试基础：测试原则与术语](http://edu.51cto.com/lesson/id-20603.html)  
 
-- 通关任务
+- 通关任务  
   - 仔细阅读[软件测试 第二版（Ron Patton）](http://pan.baidu.com/s/1c2zKEWS)教材前三章  
   - 把课程视频及教材前三章的内容用在线思维导图工具整理出学习笔记并发布  
   - 思考自己有哪些特质，适合做测试工程师，不具备的特质如何培养，整理成思维导图并发布  
 
+- 示例参考  
+  - [测试学习笔记](http://processon.com/view/57ce9bdae4b08cbf6cab9f7b)  
+  - [个人特质分析](http://processon.com/view/57ced81ae4b08cbf6cae3498)  
+  
 ## Day3：项目管理
 
 - 学习目标  
@@ -49,10 +57,13 @@
   
 - 视频课程  
   - [项目管理实战（**只需要学习前五个视频**）](http://edu.51cto.com/course/course_id-1055.html)  
-  
-- 通关任务
+
+- 通关任务  
   - 完成[项目管理入门任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#入门任务)
 
+- 示例参考  
+  - 待补充  
+  
 - **选做任务**
   - 完成[项目管理进阶任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#进阶任务)
   
@@ -66,8 +77,8 @@
   - [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)  
   - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
   
-- 通关任务
-  
+- 通关任务  
+  - 待补充  
 
 ## Day5：黑盒测试
 
@@ -81,7 +92,12 @@
   
 - 通关任务  
   - 待补充
-  
+
+- 示例参考  
+  - [手机号归属地查询测试案例设计](http://processon.com/view/581805e0e4b09047a82bd47c)  
+  - [硬件配置测试案例设计](http://processon.com/view/584922eae4b005d48b67a2cd)  
+  - [法老的金字塔测试案例设计](http://processon.com/view/580710e7e4b03c844a2ef0b3)  
+
 ## Day6：自动化测试
 
 - 学习目标  
@@ -97,7 +113,9 @@
   - [seIDE web 自动化测试中篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment2.md)  
   - [seIDE web 自动化测试下篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment3.md)  
 
-  
+- 示例参考  
+  - [SeIDE 自动化测试脚本](https://github.com/wangding/seIDE)
+
 ## Day7：案例实战
 
 - 学习目标  
