@@ -105,12 +105,17 @@
   - [软件测试基础：状态测试](http://edu.51cto.com/lesson/id-20612.html)  
   
 - 通关任务  
-  - 待补充
+  - [对法老的金字塔做手工黑盒测试](triangle.md)  
+  - [对手机号归属地查询做手工黑盒测试](mobile.md)  
 
 - 示例参考  
-  - [手机号归属地查询测试案例设计](http://processon.com/view/581805e0e4b09047a82bd47c)  
-  - [硬件配置测试案例设计](http://processon.com/view/584922eae4b005d48b67a2cd)  
   - [法老的金字塔测试案例设计](http://processon.com/view/580710e7e4b03c844a2ef0b3)  
+  - [法老的金字塔测试案例表格](http://www.hostedredmine.com/issues/599179)  
+  - [法老的金字塔 bug 描述](http://www.hostedredmine.com/issues/599223)  
+  - [手机号归属地查询测试案例设计](http://processon.com/view/581805e0e4b09047a82bd47c)  
+  - [手机号归属地查询测试案例表格](http://www.hostedredmine.com/issues/603133)  
+  - [手机号归属地查询 bug 描述](http://www.hostedredmine.com/issues/604026)  
+  - [硬件配置测试案例设计](http://processon.com/view/584922eae4b005d48b67a2cd)  
 
 ## Day6：web 自动化测试工具
 
