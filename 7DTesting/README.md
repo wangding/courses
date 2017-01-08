@@ -53,7 +53,7 @@
   - 掌握项目管理工具 redmine 的使用  
   - 掌握 bug 流程  
   - 掌握通过 redmine 项目管理工具，如何实现 bug 流程  
-  - 掌握通过 redmine 项目管理工具，如何提交或描述 bug   
+  - 掌握通过 redmine 项目管理工具，如何提交或描述 bug  
   
 - 视频课程  
   - [项目管理实战](http://edu.51cto.com/course/course_id-1055.html)（**只需要学习前三个视频**）  
@@ -62,7 +62,8 @@
   - 完成[项目管理入门任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#入门任务)
 
 - 示例参考  
-  - 待补充  
+  - [我的 HostedRedmine 账户信息](http://www.hostedredmine.com/users/55044)  
+  - [学生团队的实训项目](http://www.hostedredmine.com/projects/lvyou) - [真实提交的 bug](http://www.hostedredmine.com/issues/626704)  
   
 - **选做任务**  
   - 完成[项目管理实战](http://edu.51cto.com/course/course_id-1055.html)其余视频课程的学习  
