@@ -145,6 +145,9 @@
   - [对法老的金字塔做自动化测试](triangle.md)  
   - [对手机号归属地查询做自动化测试](mobile.md)  
 
+- 示例参考  
+  - [手机号归属地查询自动化测试脚本](https://github.com/wangding/seIDE/blob/master/ATOOL/mobile.html)  
+  
 ## 进一步学习
 
 - 在线思维导图工具  
