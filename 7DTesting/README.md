@@ -63,7 +63,8 @@
 
 - 示例参考  
   - [我的 HostedRedmine 账户信息](http://www.hostedredmine.com/users/55044)  
-  - [学生团队的实训项目](http://www.hostedredmine.com/projects/lvyou) - [真实提交的 bug](http://www.hostedredmine.com/issues/626704)  
+  - [学生团队的实训项目](http://www.hostedredmine.com/projects/lvyou)  
+  - [真实提交的 bug](http://www.hostedredmine.com/issues/626704)    
   
 - **选做任务**  
   - 完成[项目管理实战](http://edu.51cto.com/course/course_id-1055.html)其余视频课程的学习  
