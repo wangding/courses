@@ -59,9 +59,11 @@
   - [项目管理实战](http://edu.51cto.com/course/course_id-1055.html)（**只需要学习前三个视频**）  
 
 - 通关任务  
-  - 完成[项目管理入门任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#入门任务)
+ - 把项目管理课程视频的内容用在线思维导图工具整理出学习笔记并发布  
+ - 完成[项目管理入门任务](https://github.com/wangding/courses/blob/master/redmine/task01.md#入门任务)
 
 - 示例参考  
+  - [redmine 课程学习笔记](http://processon.com/view/57e12717e4b0a16a66fee95f)  
   - [我的 HostedRedmine 账户信息](http://www.hostedredmine.com/users/55044)  
   - [学生团队的实训项目](http://www.hostedredmine.com/projects/lvyou)  
   - [真实提交的 bug](http://www.hostedredmine.com/issues/626704)    
@@ -75,18 +77,27 @@
 - 学习目标  
   - 掌握产品设计的基本概念  
   - 掌握界面原型设计的基础概念  
-  
+  - 学会阅读 redmine 平台上的产品需求规格说明书  
+  - 能够根据产品需求规格说明书，对产品功能点进行梳理  
+  - 能够对产品需求规格说明书做静态检查  
+
 - 视频课程
   - [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)  
   - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
-  
+  - [需求测试](http://edu.51cto.com/lesson/id-20608.html)  
+
 - 通关任务  
-  - 待补充  
+  - 把产品设计课程视频的内容用在线思维导图工具整理出学习笔记并发布
+  - 对[若干需求规格说明书](http://www.hostedredmine.com/projects/wd_template/issues?set_filter=1&tracker_id=2)做需求的静态检查，如有 bug 请提交 bug 到第三天创建的 hostedredmine 项目下面  
+
+- 示例参考  
+  - [产品设计简介课程学习笔记](http://processon.com/view/57f101dfe4b009c4af2920f6)  
+  - [界面原型设计课程学习笔记](http://processon.com/view/57f39166e4b009c4af3029bb)  
 
 ## Day5：黑盒测试案例设计
 
 - 学习目标  
-  - 掌握黑盒测试的基本方法  
+  - 掌握黑盒测试案例设计的基本方法  
   
 - 视频课程  
   - [软件测试基础：黑盒测试](http://edu.51cto.com/lesson/id-20610.html)  
