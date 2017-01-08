@@ -10,7 +10,7 @@
 - 任务2. 在 [hostedredmine 网站](http://www.hostedredmine.com/)上注册账户，并用 Gravatar 点亮自己的头像  
 - 任务3. 指导自己的项目团队成员，创建 hostedredmine 账户，并点亮头像    
 - 任务4. 在 hostedredmine 网站上创建一个私有项目，将团队成员加入该项目  
-- 任务5. 在上一步创建的项目中，提交一个 bug，请参考[bug 模板](http://www.hostedredmine.com/issues/598989)和[一个具体的 bug](http://www.hostedredmine.com/users/55044)
+- 任务5. 在上一步创建的项目中，提交一个 bug，请参考[bug 模板](http://www.hostedredmine.com/issues/598989)和[一个具体的 bug](http://www.hostedredmine.com/issues/626704)
 
 ## 进阶任务
 
