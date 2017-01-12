@@ -9,18 +9,18 @@ JMeter 支持的操作系统列表如下：
 | 操作系统  | Java 虚拟机  | 体系结构 |
 | -------  | ------------- | ------- |
 | Free BSD 9.0 | Open JDK 6 | amd64  |
-| Linux 2.4, 2.6, 3.1 |	Sun JDK 5, 6, 7 和 Open JDK 6 | i386, amd64 |
+| Linux 2.4， 2.6， 3.1 |	Sun JDK 5， 6， 7 和 Open JDK 6 | i386， amd64 |
 | Mac OS  | JDK6  | |
-| windows XP | Sun JDK6, Sun JDK 7 | 32/64 位 |
-| windows 7  | Sun JDK 5, 6, 7  | 32 位  |
+| windows XP | Sun JDK6， Sun JDK 7 | 32/64 位 |
+| windows 7  | Sun JDK 5， 6， 7  | 32 位  |
 
 本課程中，我们在 windows 操作系統上运行 JMeter
 
 ## 安装 JMeter 的步骤
 
-步骤一：安装 Java
+### 步骤一：安装 Java
 
-因为 JMeter 是纯 Java 桌面应用程序，它需要一个完全兼容的 JVM 7 或更高。你可以下载并安装最新版本的Java SE 开发工具包。
+因为 JMeter 是纯 Java 桌面应用程序，它需要一个完全兼容的 JVM 7 或更高。你可以下载并安装最新版本的 Java SE 开发工具包。
 
 ![](./images/JavaDownload.png)
 
@@ -28,99 +28,105 @@ JMeter 支持的操作系统列表如下：
 
 安装完成后，你可以使用下面的步驟来检查，Java JDK 是否成功的安裝在你的系统上
 
-- 在 Window/Linux,去终端
-- 输入命令 java -version
+- 在 Window/Linux 系统中打开终端  
+- 输入命令 java -version  
 
 如果 Java 运行环境安装成功，你将看到下图的输出
 
-How to install Jmeter in easy steps
+![](./images/Administrator.png)
 
-如果没有显示,请重新安装Java SE运行时环境
-步骤2)Jmeter下载
+如果没有显示，请重新安装 Java SE 运行时环境
 
-在撰写本文时,最新版本的JMeter是多少 Apache JMeter 2.9 。 你可以下载它 在这里
+### 步骤二：下载 Jmeter
 
-选择二进制文件(zip或tgz)下载如下图所示
+在本课程录制时，最新版本的 JMeter 是3.1。 你可以在 JMeter 的官网下载它。
 
-How to install Jmeter in easy steps
-步骤3)安装
+选择二进制的压缩文件 zip 格式下载，如下图所示
 
-JMeter安装是非常简单和容易的。 只需将zip / tar文件解压缩到您希望JMeter安装的目录。 没有繁琐的安装屏幕处理! 简单的解压缩和你做!
+![](./images/ApacheJmeter.png)
 
-一旦完成了解安装目录结构应该类似于如下图
+### 步骤三：安装
 
-How to install Jmeter in easy steps
+JMeter 安装非常简单容易。只需将 zip 文件解压缩到您希望 JMeter 安装的目录即可。没有繁琐的安装向导，只要简单的解压缩就 OK！
 
-下面的描述是JMeter目录和它的重要性JMeter目录包含很多文件和目录
+一旦完成了解压缩，安装目录结构应该类似下图所示：
 
-    / 本 :包含从JMeter的JMeter脚本文件
-    / 文档 :JMeter文档文件
-    /临时演员 :蚂蚁相关额外的文件
-    / 自由 JMeter /:包含所需的Java库
-    /lib/ext :包含核心JMeter jar文件和协议
-    /lib/junit 用于JMeter:JUnit库
-    / printable_docs :
+![](./images/ApacheJmeter2_9.png)
 
-步骤4)JMeter发射
+下面是 JMeter 安装后文件目录的介绍
 
-你可以开始JMeter 3模式
+- /bin：包含启动 JMeter 的脚本文件  
+- /docs：JMeter 文档文件  
+- /extras：ant 相关的额外文件  
+- /lib/：JMeter 需要调用的所有 Java 库  
+- /lib/ext：包含核心 JMeter jar 文件和协议  
+- /lib/junit 用于 JMeter 的 JUnit 库  
+- /printable_docs：可以打印的文档资料
 
-    GUI模式
-    服务器模式
-    命令行模式
+### 步骤四：启动 JMeter
 
-开始JMeter GUI模式
+有三种启动 JMeter 的模式
 
-如果您使用的是窗口,运行文件 /bin/jmeter.bat 开始JMeter GUI模式如下所示
+- GUI模式
+- 服务器模式
+- 命令行模式
 
- How to install Jmeter in easy steps
+#### 启动 JMeter 进入 GUI 模式
 
-以下图注释JMeter的各种组件的GUI
+如果你使用的是 windows 系统，运行文件 /bin/jmeter.bat 启动 JMeter 进入 GUI 模式，如图所示
 
-How to install Jmeter in easy steps
-在服务器模式开始JMeter
+![](./images/startjmeter.gif)
 
-用于服务器模式 分布式 测试。 这个测试工作 客户机-服务器 模型。 在这个模型中,JMeter服务器计算机上运行 服务器 模式。 客户端电脑上,运行JMeter GUI 模式。
+以图中注释了 JMeter 图形界面中的各个组件
 
-启动服务器模式,运行bat文件本\ jmeter-server.bat 如下图
+![](./images/ApacheJmeterSnap.png)
 
-How to install Jmeter in easy steps
-在命令行模式下JMeter开始
+#### 启动 JMeter 进入服务模式
 
-JMeter GUI模式消耗计算机内存。 为节约资源,您可以选择运行JMeter没有GUI。 为此,使用下面的命令选项
+服务模式用于分布式测试。这种测试以客户机-服务器模式运行。在这种模式下，JMeter 在服务器计算机上以服务模式运行。在客户端电脑上，JMeter 以 GUI 模式运行。
 
-How to install Jmeter in easy steps
+启动服务模式，运行 bin\jmeter-server.bat 如下图所示：
 
-这是一个命令行例子
+![](./images/ApacheJmeterServer.png)
 
-jmeter美元- n - t测试规划。 jmx - l日志。 8000年韩国乐团- h 127.0.0.1 - p
+#### 启动 JMeter 进入命令行模式
 
-How to install Jmeter in easy steps
-额外的包
+JMeter GUI 模式消耗很多计算机内存。为节约资源，可以选择运行 JMeter 没有 GUI。 为此，使用下面的命令行选项
 
-根据你的要求,你需要一个或多个可选包下面列出。
+![](./images/ApacheJmeterCommandLine.png)
 
-    Java编译器
+这是一个命令行的例子
+```bash
+jmeter -n -t testPlan.jmx -l log.jtl -H 127.0.0.1 -P 8000
+```
+![](./images/jmetercommandline_2_2.gif)
 
-一万一千一百一十一Java编译器允许开发者建立JMeter源代码和其他JMeter插件
+## 额外的包
 
-    SAX XML解析器
+根据你的要求，你可能需要以下一个或多个可选包。
 
-         SAX 是简单的API为XML,最初是一个纯java API。 您可以使用SAX XML解析器作为替代在JMeter XML解析器
+- Java 编译器
 
-    电子邮件支持
+  Java 编译器允许开发者编译 JMeter 源代码和其他 JMeter 插件
 
-一万一千一百一十一JMeter有着丰富的电子邮件功能。 它可以根据测试结果发送电子邮件,有一个POP3 / IMAP的取样器。 它也有一个SMTP取样器。
+- SAX XML解析器
 
-    JDBC驱动程序
+  SAX 是简单的 XML API，最初是一个纯 Java API。你可以使用 SAX XML 解析器替代 JMeter 自带的 XML 解析器
 
-一万一千一百一十一如果你想测试数据库服务器,您必须安装JDBC驱动程序
-在Linux中使用JMeter
+- 电子邮件支持
 
-    在Linux中使用JMeter是一样的窗口,只需运行以下 shell脚本 。
-    运行脚本文件 jmeter (这个文件没有扩展名)——运行JMeter(默认在GUI模式)。
-    运行脚本文件 jmeter-server ——开始JMeter服务器模式(与合适的参数调用JMeter脚本)
-    jmeter.sh ——非常基本的JMeter脚本没有JVM选项指定。
-    mirror-server.sh ——在非gui运行JMeter镜像服务器模式
-    shutdown.sh ——非gui运行关闭客户端停止实例优雅
-    stoptest.sh ——运行关闭客户端突然停止非gui实例
+  JMeter 有丰富的电子邮件功能。它可以根据测试结果来发送电子邮件，他有一个 POP3/IMAP 的取样器。还有一个 SMTP 取样器。
+
+- JDBC 驱动程序
+
+  果你想测试数据库服务器，您必须安装 JDBC 驱动程序
+
+## 在 Linux 中使用 JMeter（略）
+
+- 在 Linux 中使用 JMeter 和 Windows 中的窗口相同，只需运行以下 shell 脚本。
+- 运行脚本文件 jmeter (这个文件没有扩展名) 运行 JMeter （默认在 GUI 模式）。
+- 运行脚本文件 jmeter-server 开始 JMeter 服务器模式（与合适的参数调用 JMeter 脚本）
+- jmeter.sh 非常基本的 JMeter 脚本没有 JVM 选项指定。
+- mirror-server.sh 在非 GUI 运行 JMeter 镜像服务器模式
+- shutdown.sh 非 GUI 运行关闭客户端停止实例优雅
+- stoptest.sh 运行关闭客户端突然停止非 GUI 实例
