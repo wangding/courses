@@ -9,7 +9,7 @@
   - 会用思维导图工具梳理知识点，做学习笔记  
 
 - 视频课程  
-  - [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)（**只需要学习前五个视频**）  
+  - [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)（**只需要学习前四个视频**）  
 
 - 通关任务  
   - [入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)（**只需要完成任务 2 和任务 6**）  
