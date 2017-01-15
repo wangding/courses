@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>seIDE 综合案例实战第1季课程简介</title>
+	</head>
+
+	<body>
+
+		<p style="padding-top: 5px; padding-bottom: 5px;">本课程以各种综合案例实战为主线，通过案例讲解来补充&nbsp;Selenium IDE web&nbsp;自动化测试入门课程中没有讲到的技术细节和知识点，通过案例为大家展示如何综合运用前面课程中提到的技术细节或知识点。</p>
+
+		<p style="padding-top: 5px; padding-bottom: 5px;">本课程介绍三个综合案例分别是：DDT HTML&nbsp;数据方案，ProcessOn&nbsp;网站和&nbsp;91abc&nbsp;网站。课程资料地址是：&nbsp;<a title="seIDE综合案例实战课程资料地址" href="https://github.com/wangding/courses/tree/master/seIDEPracticeCase" src="https://github.com/wangding/courses/tree/master/seIDEPracticeCase">https://github.com/wangding/courses/tree/master/seIDEPracticeCase</a></p>
+		
+		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>课程简介</strong> </p>
+		
+		<p style="padding-top: 5px; padding-bottom: 5px;">首先，介绍了课程开讲的背景，在&nbsp;Selenium IDE web&nbsp;自动化测试入门（上、中、下）三篇课程发布后，不少学员反馈自己在实际操作中出现的各种各样问题。这些问题反映出大家对&nbsp;Selenium IDE&nbsp;技术细节的综合运用存在的问题。因此，本课程对学员反馈的问题进行了整理和编排，以这些最接地气来自实践的案例为主线，通过案例讲解来补充之前课程中没有讲到的技术细节和知识点，通过案例为大家展示如何综合运用之前课程中提到的技术细节或知识点。其次，介绍了学习本课程的前提，先要完成&nbsp;Selenium IDE web&nbsp;自动化测试入门课程的学习。</p>
+		
+		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>综合案例一：DDT HTML 数据方案</strong></p>
+		
+		<p style="padding-top: 5px; padding-bottom: 5px;">DDT HTML&nbsp;数据方案的核心思想是通过制作&nbsp;HTML&nbsp;表格的网页，不论将网页放到互联网上还是放到本地，以这个数据表格网页为“被测对象”获取页面中的测试数据，存放到变量数组中，然后再打开真正的被测页面，将变量数组中的测试数据取出进行测试案例的执行。这种方案的优势有三：1.&nbsp;这样的数据文件制作非常容易；2.&nbsp;结合&nbsp;Github&nbsp;和Github Pages&nbsp;这样的数据文件很容易部署到互联网上；3.&nbsp;这也是最重要的一个方面，这种数据文件的读取操作，不需要任何额外的插件支持。课程结合案例详细讲解了&nbsp;HTML DDT&nbsp;数据方案的实现步骤。</p>
+
+		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>综合案例二：ProcessOn&nbsp;网站</strong></p>
+		
+		<p style="padding-top: 5px; padding-bottom: 5px;">问题起源于&nbsp;Selenium IDE web&nbsp;自动化测试入门上中下三篇课程结束时，布置的综合案例实训的任务：对&nbsp;ProcessOn&nbsp;网站的文件和文件夹管理功能做自动化测试。这个期间，学生反馈了很多问题。最重要的有两个问题：一个是弹窗的操作问题，前面课程讲了三种弹窗，分别是：Alert&nbsp;弹窗、Prompt&nbsp;弹窗和&nbsp;Confirmation&nbsp;弹窗。其实，还有一种常见的弹窗就是普通的浏览器窗口，这种弹窗处理的时候需要借助&nbsp;selectWindow&nbsp;命令。这个课程讲解了这个命令的用法。另一个问题，是脚本快速回放不通过。这个问题在案例三中还会再次提及，这种问题频繁出现在现在的网站页面上，因为，现在的网站页面都有很多&nbsp;JavaScript&nbsp;代码来增强页面的交互性。这就导致前后两个操作步骤之间涉及到的界面元素可能是动态出现的，解决的关键点是：操作任何界面元素之前，一定要保证该界面元素出现在网页上（需要调用&nbsp;waitFor&nbsp;类的命令），再进行操作。</p>
+
+		<p style="padding-top: 5px; padding-bottom: 5px; background-color:lightgreen"><strong>综合案例三：913abc&nbsp;网站</strong></p>
+		
+		<p style="padding-top: 5px; padding-bottom: 5px;">问题起源于和网友的聊天记录，网友的自动化测试脚本在慢速播放时一切正常，但是快速播放一定会出现错误。主要问题跟&nbsp;ProcessOn&nbsp;网站类似。问题的关键点已经清楚了，需要通过&nbsp;Firbug&nbsp;工具，分析具体页面，找到被测页面中哪些是静态信息，哪些是动态信息。这个需要结合前端编程的基础和工作经验来进行判断。定位好了动态区域后，只要&nbsp;waiFor&nbsp;动态区域的内容出现，再进行相应的操作，脚本就会正常执行。</p>
+
+		
+	</body>
+
+</html>
