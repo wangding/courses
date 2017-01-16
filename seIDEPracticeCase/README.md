@@ -10,3 +10,4 @@ Selenium IDE web 自动化测试综合实战案例课程。
 - [综合案例一：HTML DDT 数据方案](https://github.com/wangding/seIDE/tree/master/DDT/HTML)
 - [综合案例二：ProcessOn 网站](https://github.com/wangding/seIDE/tree/master/ProcessOn)
 - [综合案例三：913abc 网站](https://github.com/wangding/seIDE/tree/master/913abc)
+- [通关任务](task01.md)

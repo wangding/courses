@@ -11,10 +11,12 @@
 |  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![images](images/present100.png) |
 |  3    | [软件测试基础](./testing)  | ![images](images/present50.png)  |
 |  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  |![images](images/present100.png)  |
-|  5    | [redmine 项目管理](./redmine)  |  ![images](images/present0.png) |
-|  6    | [在线思维导图](./mindmap) | ![images](images/present0.png)  |
-|  7    | [Github 开源之旅](./github) |  ![images](images/present0.png)|
+|  5    | [redmine 项目管理](./redmine)  |  ![images](images/present25.png) |
+|  6    | [在线思维导图](./mindmap) | ![images](images/present100.png)  |
+|  7    | [Github 开源之旅第一季：启程](./github) |  ![images](images/present75.png)|
 |  8    | [vimperator 高效上网](./vimperator) | ![images](images/present100.png)|
+|  9    | [产品设计简介](./productIntro) | ![images](images/present25.png)|
+| 10    | [界面原型设计](./UIPrototype) | ![images](images/present25.png)|
 
 
 ## 课程路线
