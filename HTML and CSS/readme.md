@@ -38,9 +38,3 @@ HTML and CSS
   这同样是慕课网上面的一个课程路径，个人认为这个路径更好学，层次比较分明。
 - [CSS Dinner](http://flukeout.github.io/)  
   这是一个CSS闯关游戏，如果不明白游戏玩法，请参照[这里](http://www.shejidaren.com/css-diner.html)
-- [CSS Dinner](http://flukeout.github.io/)  
-  这是一个CSS闯关游戏，如果不明白游戏玩法，请参照[这里](http://www.shejidaren.com/css-diner.html)
-- [CSS Dinner](http://flukeout.github.io/)  
-  这是一个CSS闯关游戏，如果不明白游戏玩法，请参照[这里](http://www.shejidaren.com/css-diner.html)
-- [CSS Dinner](http://flukeout.github.io/)  
-  这是一个CSS闯关游戏，如果不明白游戏玩法，请参照[这里](http://www.shejidaren.com/css-diner.html)
