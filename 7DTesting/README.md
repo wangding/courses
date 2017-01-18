@@ -155,6 +155,7 @@
 
 - 软件测试基础  
   - 完成[软件测试基础](http://edu.51cto.com/course/course_id-1026.html)中其他视频课程的学习  
+  - 完成[软件测试大全](http://edu.51cto.com/course/course_id-8246.html)课程的学习  
 
 - 在线项目管理工具  
   - 完成 Day3：在线项目管理工具中的选做任务  

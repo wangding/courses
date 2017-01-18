@@ -8,7 +8,7 @@
 
 ## 可用性测试需要
 
- ![](./images/need_of_usability_testing.jpg)
+ ![](./images/need_of_usability_testing.png)
 
 美学和设计是重要的。产品通常看起来越好确定它如何工作越容易。
 
@@ -24,7 +24,7 @@
 
 ## 可用性测试的目标
 
-![](./images/usabilitytesting.jpg)
+![](./images/usabilitytesting.png)
 
  本试验的目标是满足用户，它主要涉及以下参数：
 
@@ -55,7 +55,7 @@
 
 可用性测试过程包括以下几个阶段
 
-![](./images/usuabilitytestingprocess.jpg)
+![](./images/usuabilitytestingprocess.png)
 
 - 计划：在此阶段对可用性测试的目标是确定的。具有志愿者坐在前面的应用程序和记录他们的行动并不是目标。你需要确定目标和关键功能的系统。您需要将任务指派给您的测试人员，行使这些关键功能。在此阶段中，可用性测试，可用性的人口统 数 & 测试人员、测试，确定报告格式都需要确定。
 - 招聘：在这个阶段，你的招募的测试者的数量需要按照你的可用性测试计划。寻找匹配你的人口统计的测试员(年龄、性别等）和教育（专业、工作等）需要时间。
@@ -76,7 +76,7 @@
 
 ## 你需要多少用户?
 
-![](./images/usabilitytestnoofusers.jpg)
+![](./images/usabilitytestnoofusers.png)
 
 研究( virzi，尼尔森在 1992 年 & Landauer 在 1993)表明：5 个用户足够发现 80% 的可用性问题。一些研究者认为是其他数量。
 
