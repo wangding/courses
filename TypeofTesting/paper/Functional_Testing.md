@@ -19,7 +19,7 @@
 
 为了功能测试的应用程序，必须遵循以下步骤：
 
-![](./images/FunctionalTestingProcess.jpg)
+![](./images/FunctionalTestingProcess.png)
 
 - 了解需求
 - 输入数据识别测试（测试）
@@ -40,7 +40,7 @@
 
 ## 功能测试工具：
 
-![](./images/Functional_Testing_Tools.jpg)
+![](./images/Functional_Testing_Tools.png)
 
 有几个标记的工具可用于执行功能测试。他们的解释如下：
 

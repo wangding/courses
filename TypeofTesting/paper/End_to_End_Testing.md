@@ -10,7 +10,7 @@
 
 它使用环境试验和模拟实时设定的实际生产数据等。端对端测试，也称为链测试
 
-![](./images/End-End-Testing(1).png)
+![](./images/End-End-Testing.png)
 
 ## 为什么进行端对端测试?
 
@@ -22,7 +22,7 @@
 
 下图概述了端对端测试过程。
 
-![](./images/End-to_end-testing-process(1).png)
+![](./images/End-to_end-testing-process.png)
 
 端到端测试的主要活动是—
 
@@ -36,7 +36,7 @@
 
 ## 如何创造终端测试案例？
 
-![](./images/End-End-Testing-Test-Cases(1).png)
+![](./images/End-End-Testing-Test-Cases.png)
 
 端对端测试的设计：
 
