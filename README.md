@@ -14,9 +14,10 @@
 |  5    | [redmine 项目管理](./redmine)  |  ![images](images/present25.png) |
 |  6    | [在线思维导图](./mindmap) | ![images](images/present100.png)  |
 |  7    | [Github 开源之旅第一季：启程](./github) |  ![images](images/present75.png)|
-|  8    | [vimperator 高效上网](./vimperator) | ![images](images/present100.png)|
+|  8    | [vimperator黑客的上网工具](./vimperator) | ![images](images/present100.png)|
 |  9    | [产品设计简介](./productIntro) | ![images](images/present25.png)|
 | 10    | [界面原型设计](./UIPrototype) | ![images](images/present25.png)|
+| 11    | [七天软件测试入门](./7DTesting) | ![images](images/present100.png)|
 
 
 ## 课程路线
