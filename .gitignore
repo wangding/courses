@@ -3,3 +3,7 @@
 
 # 忽略 webstorm 创建的文件
 .idea/
+
+# 忽略 GFM Viewer 创建的隐藏文件
+.*.md.html
+
