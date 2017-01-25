@@ -110,8 +110,8 @@ HTML 断言允许用户查看 HTML 语法的响应数据，这意味着响应数
 
 如果你在运行上述方案时面临问题…… 请执行以下操作:
 
-    1. 检查一下你是否通过代理连接到互联网，如果是，删除代理。
-    2. 打开 JMeter 的一个新实例。
-    3. 在 Jmeter 打开 [AssertionTestPlan.jmx](https://drive.google.com/uc?export=download&id=0B_vqvT0ovzHcRkpra0EycUJNWE0)。
-    4. 双击线程组(Thread Group)- >断言结果(Assertion Result)。
-    5. 运行测试。
+   1. 检查一下你是否通过代理连接到互联网，如果是，删除代理。
+   2. 打开 JMeter 的一个新实例。
+   3. 在 Jmeter 打开 [AssertionTestPlan.jmx](https://drive.google.com/uc?export=download&id=0B_vqvT0ovzHcRkpra0EycUJNWE0)。
+   4. 双击线程组(Thread Group)- >断言结果(Assertion Result)。
+   5. 运行测试。
