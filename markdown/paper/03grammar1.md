@@ -1,7 +1,18 @@
 # MarkDown 语法 1
 
+环境准备：
+- 在自己的 Github 个人主页创建 MarkDown 仓库，带 README.md；  
+- 在某个磁盘下面创建一个文件夹（例如：Github），专门放各种 Github 仓库，不放别的文件夹；  
+- git clone 刚创建的 MarkDown 仓库；  
+- MarkDown 文件夹用于创建教学演示的 md 文件；  
+- 在本地 MarkDown 文件夹中创建 images 文件夹，此文件夹用于放置教学演示需要的图片；  
+- 在 HBuilder 中打开 MarkDown 文件夹；  
+- 在 MarkDown 文件夹中新建 demo1.md 文件；  
+- 在 demo1.md 文件放置本次课程讲的段落、标题、强调和列表这些 MarkDown 语法；
+- 内容涉及我的个人信息，包括：各种联系方式，课程信息，希望大家给课程五分评价，等营销信息；  
+- 其他内容参考果冻虾仁的文档：https://github.com/guodongxiaren/README
+
 ## 段落
-恭喜你！你已经用 MarkDown 写出了第一个段落！非常简单，是不是？
 
 如果你了解 HTML。估计你能猜到，刚编写的文档被解释成下面的代码：
 
@@ -40,7 +51,6 @@
 
     标题 2
     ---
-    
 
 ## 强调
 
