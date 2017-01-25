@@ -11,7 +11,7 @@ Github 开源之旅第二季：MarkDown。第一季的课程中已经带着小�
 
 ## [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="28"/>](MarkDown.pptx)
 
-## [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="28"/>](TaskS01.md)
+## [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="28"/>](Task01.md)
 
 - [任务一：了解 MarkDown](Task01.md#任务一了解-markdown)  
 - [任务二：安装 HBuilder 工具](Task01.md#任务二安装-hbuilder-工具)  
