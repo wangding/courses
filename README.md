@@ -7,30 +7,31 @@
 
 | 编号       | 课程名称  | 进度  |  
 | :---: | -----  | :-----:|  
-|  1    | [Gravatar 全球大头贴](./gravatar)  |![images](images/present100.png)|  
-|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![images](images/present100.png) |
-|  3    | [软件测试基础](./testing)  | ![images](images/present50.png)  |
-|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  |![images](images/present100.png)  |
-|  5    | [redmine 项目管理](./redmine)  |  ![images](images/present25.png) |
-|  6    | [在线思维导图](./mindmap) | ![images](images/present100.png)  |
-|  7    | [Github 开源之旅第一季：启程](./github) |  ![images](images/present75.png)|
-|  8    | [vimperator 高效上网](./vimperator) | ![images](images/present100.png)|
-|  9    | [产品设计简介](./productIntro) | ![images](images/present25.png)|
-| 10    | [界面原型设计](./UIPrototype) | ![images](images/present25.png)|
+|  1    | [Gravatar 全球大头贴](./gravatar)  |![](images/present100.png)|  
+|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![](images/present100.png) |
+|  3    | [软件测试基础](./testing)  | ![](images/present50.png)  |
+|  4    | [seIDE 综合案例实战：第1季](./seIDEPracticeCase)  |![](images/present100.png)  |
+|  5    | [redmine 项目管理](./redmine)  |  ![](images/present25.png) |
+|  6    | [在线思维导图](./mindmap) | ![](images/present100.png)  |
+|  7    | [Github 开源之旅第一季：启程](./github) |  ![](images/present100.png)|
+|  8    | [vimperator 高效上网](./vimperator) | ![](images/present100.png)|
+|  9    | [产品设计简介](./productIntro) | ![](images/present25.png)|
+| 10    | [界面原型设计](./UIPrototype) | ![](images/present25.png)|
 
 
 ## 课程路线
 | 编号       | 路线名称  | 进度  |  
 | :---: | -----  | :-----:|  
-|  1    | [IT 新手](./newer)  | ![images](images/present0.png)  |  
-|  2    | [测试工程师](./tester) | ![images](images/present0.png) |
+|  1    | [IT 新手](./newer)   | ![images](images/present0.png)  |  
+|  2    | [测试工程师](./tester) | ![images](images/present0.png) |  
+|  3    | [产品工程师](./PM)     | ![images](images/present0.png) |
 
 
 ## 参与项目  
 
-- [课程开发流程<有待完善>](README.md)
-- [文档写作规范](https://github.com/wangding/course-editors-guidelines)
-- [课程开发计划](plan.md)
+- [课程开发流程<有待完善>](README.md)  
+- [文档写作规范](https://github.com/wangding/course-editors-guidelines)  
+- [课程开发计划](plan.md)  
 - [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)  
 ![Fork 工作流程](images/forkProcess.png)
 
