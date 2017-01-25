@@ -1,5 +1,12 @@
 # MarkDown 语法 3
 
+环境准备：
+- 在 HBuilder 中打开 MarkDown 文件夹；  
+- 在 MarkDown 文件夹中新建 demo3.md 文件；  
+- 在 demo3.md 文件放置本次课程讲的超链接、图片、引用和代码块这些 MarkDown 语法；
+- 内容涉及我的个人信息，包括：各种联系方式，课程信息，希望大家给课程五分评价，等营销信息；  
+- 其他内容参考果冻虾仁的文档：https://github.com/guodongxiaren/README
+
 ## 表格
 
 表格不在 MarkDown 的规范里，但是很多解释器都支持表格。尤其是 Github 使用的 **GFM** 也是支持表格的。
