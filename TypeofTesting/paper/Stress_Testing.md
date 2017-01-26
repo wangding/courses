@@ -40,7 +40,7 @@
 
 ## 负载测试vs压力测试
 
-![](./images/StressTesting1.png)
+![](./images/StressTesting1.jpg)
 
 | 负载测试 | 压力测试 |
 |---------|---------|
