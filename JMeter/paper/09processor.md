@@ -104,5 +104,5 @@
    1. 检查一下你是否通过代理连接到互联网，如果是，删除代理。
    2. 打开 JMeter 的一个新实例。
    3. 在 Jmeter 打开 [ProcessorTestPlan.jmx](https://drive.google.com/uc?export=download&id=0B_vqvT0ovzHccFZlUG96ejE3YWM)。
-   4. 双击线程组(Thread Group)- >视图结果树(View Results Tree)。
+   4. 双击线程组(Thread Group) -> 视图结果树(View Results Tree)。
    5. 运行测试。

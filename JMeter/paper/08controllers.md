@@ -169,5 +169,5 @@ JDBC 请求- > FTP 请求- > HTTP 请求
    1. 检查一下你是否通过代理连接到互联网，如果是，删除代理。
    2. 打开 JMeter 的一个新实例。
    3. 在 Jmeter 打开 [ControllerTestPlan.jmx](https://drive.google.com/uc?export=download&id=0B_vqvT0ovzHcS255MmNOWldQaXc)。
-   4. 双击线程组(Thread Group)- >表中查看结果(View Result in Table)。
+   4. 双击线程组(Thread Group) -> 表中查看结果(View Result in Table)。
    5. 运行测试。
