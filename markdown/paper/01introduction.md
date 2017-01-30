@@ -24,16 +24,26 @@ Markdown 文档可以在最简单的文本编辑器中编写。可以很方便�
 
 而且在互联网上，几乎可以在任何地方使用 Markdown：
 
-* **StackOverflow** 这个网站是大名鼎鼎的技术社区，使用 Markdown 来发帖或者评论。
-* **GitHub** 使用 Markdown 提交 issues 讨论问题或者 pull requests，每个项目的 README.md 文件就是用 MarkDown 语法来编写的。
-* **Reddit** 使用 Markdown 来格式化评论。
-* **Slack**, **Gitter** 和其他的 IM（即时通讯工具）使用 Markdown 来格式化消息。
-* **Jekyll**, **Octopress**, **Hexo** 以及其他静态网站工具使用 Markdown 来发布网站内容。
-* **GitBook** 使用 Markdown 来编写电子书。
-* 很多人用 Markdown 来写博客日志。
-* 很多开源项目的文档用 Markdown 来编写。
+- **StackOverflow** 这个网站是大名鼎鼎的技术社区，使用 Markdown 来发帖或者评论。
+- **GitHub** 使用 Markdown 提交 issues 讨论问题或者 pull requests，每个项目的 README.md 文件就是用 MarkDown 语法来编写的。
+- **Reddit** 使用 Markdown 来格式化评论。
+- **Slack**, **Gitter** 和其他的 IM（即时通讯工具）使用 Markdown 来格式化消息。
+- **Jekyll**, **Octopress**, **Hexo** 以及其他静态网站工具使用 Markdown 来发布网站内容。
+- **GitBook** 使用 Markdown 来编写电子书。
+- 很多人用 Markdown 来写博客日志。
+- 很多开源项目的文档用 Markdown 来编写。
 
-因此，掌握 MarkDown 语法是现代 IT 技术人员必备的一项重要技能。这就是为什么你需要学习她的理由。
+可能很多小伙伴会问，你说的这都是国外的网站，我们平时很少用，好像不能说明什么问题吧。
+这里再给小伙伴们举几个国内网站的例子：
+
+- **博客园** 国内技术人的博客家园，每天活跃上万用户，高质量社区。
+- **CSDN** 号称全球最大中文IT社区，涵盖了多种语言、架构、博客、俱乐部等模块的技术论坛。
+- **图灵社区** 使用markdown语法供用户写作电子书.
+- **简书** 重拾文字的力量，交流故事，沟通想法，一个基于内容分享的社区。
+- **为知笔记** 国内顶尖笔记软件，支持使用Markdown语法编辑笔记。
+- **有道云笔记** 最新版本开始支持，并且支持一些扩展语法。
+
+因此，掌握 MarkDown 语法已经成为现代 IT 技术人员必备的一项重要技能。这就是为什么你需要学习她的理由。
 
 再给大家看一下 Github 2016 年度报告中的这些非常厉害的文档型的开源项目，当然都是英文的，但是也有很多项目被翻译成中文了。【演示】
 
