@@ -5,7 +5,7 @@
 有两种类型的处理器:
 
     1. 预处理器(Pre-processor)
-    2. 后处理器(Post-processor)
+    2. 后置处理器(Post-processor)
 
 **预处理器**：
 
@@ -15,17 +15,17 @@
 
 ![](./images/PreprocessorJMeter.png)
 
-**后处理器**：
+**后置处理器**：
 
-后处理器在执行采样请求后执行某些操作。
+后置处理器在执行采样请求后执行某些操作。
 
-如一个简单的例子：JMeter 发送 HTTP 请求到 Web 服务器下(谷歌等)测试并得到响应，如果 jmeter 服务器响应错误，此时你要停止测试，你可以使用后处理器完成下列任务：
+如一个简单的例子：JMeter 发送 HTTP 请求到 Web 服务器下(谷歌等)测试并得到响应，如果 jmeter 服务器响应错误，此时你要停止测试，你可以使用后置处理器完成下列任务：
 
 ![](./images/PostProccessorJMeter.png)
 
 **手动操作处理器**
 
-本教程将向你逐步演示说明如何使用 JMeter 的后处理器，我们从简单的测试脚本开始。
+本教程将向你逐步演示说明如何使用 JMeter 的后置处理器，我们从简单的测试脚本开始。
 
     1. JMeter 发送 HTTP 请求到 Web 测试服务器谷歌。
     2. JMeter 从谷歌服务器获取响应。
@@ -57,7 +57,7 @@
 
 我们仍然让 JMeter 发送请求到谷歌服务器。
 
-### 步骤 3)添加后处理器元素
+### 步骤 3)添加后置处理器元素
 
 右击 **Thread Group -> Add -> Post Processor -> Result Status Action Handler**
 
@@ -104,5 +104,5 @@
    1. 检查一下你是否通过代理连接到互联网，如果是，删除代理。
    2. 打开 JMeter 的一个新实例。
    3. 在 Jmeter 打开 [ProcessorTestPlan.jmx](https://drive.google.com/uc?export=download&id=0B_vqvT0ovzHccFZlUG96ejE3YWM)。
-   4. 双击线程组(Thread Group)- >视图结果树(View Results Tree)。
+   4. 双击线程组(Thread Group) -> 视图结果树(View Results Tree)。
    5. 运行测试。
