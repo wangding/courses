@@ -75,6 +75,7 @@
 
 要求：
 - 完成[在线通关任务]；  
+- 打通 [how-to-markdown] 12 关；   
 - 根据自己的实际需要，自由选择下面一个或多个任务；  
 - 在 Github 上创建 log 仓库，用 MarkDown 记录自己每天的工作和学习经历；  
 - 在 Github 上创建 study 仓库，用 MarkDown 记录自己平时学习中收藏的学习资料；
@@ -92,3 +93,4 @@
 [TestSuit.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/TestSuite.md
 [JavaScript.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/JavaScript.md
 [在线通关任务]: http://www.markdowntutorial.com/lesson/1/
+[how-to-markdown]: https://github.com/workshopper/how-to-markdown/
