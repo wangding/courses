@@ -12,10 +12,11 @@
 ## 任务二：Git GUI
 
 要求：
-- 百度搜索 source tree 并下载；
-- 安装并注册 source tree；
-- 用 source tree 体验 Git 基本操作；
-- 安装 EGit 插件；
+- 用 Git GUI 体验 Git 基本操作；
+- 百度搜索 SourceTree 并下载；
+- 安装并注册 SourceTree；
+- 用 SourceTree 体验 Git 基本操作；
+- 在 HBuilder 中安装 EGit 插件；
 - 用 EGit 体验 Git 基本操作；
 
 ## 任务三：Git 配置
