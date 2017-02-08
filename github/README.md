@@ -7,7 +7,7 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 大家学完成本课程后，在 Github 上安家落户，可以把本地的文档或者代码，放到 Github 上。自己一个人能玩起来，就达到目标了。先不用说参与别人的项目，或者让别人参与自己的项目，这些目标在第四季课程中再来实现。
 
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-7845.html)
-- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](Github-开源之旅第一季启程.pptx)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](Github.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS01.md)  
     - [任务一：了解 Github](TaskS01.md#任务一了解-github)  
     - [任务二：注册 Github 账户](TaskS01.md#任务二注册-github-账户)  
