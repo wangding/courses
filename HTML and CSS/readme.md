@@ -31,7 +31,7 @@ HTML and CSS
 - [任务七]()（未添加）
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="30">示例代码
-- [demo](demo)
+- [demo](https://github.com/liujinmenghaoren/courses/tree/master/HTML%20and%20CSS/demo)
 
 ## :hammer:工具下载
 - [HBuilder](http://www.dcloud.io/index.html)  
