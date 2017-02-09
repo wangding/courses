@@ -1,0 +1,77 @@
+# 软件测试大全
+
+原计划的课程名称是：每日一测：软件测试类型大全，每日一测，是打算每天讲一种软件测试类型，但是名字太长了。把课程名称改短一点儿吧，简称：软件测试大全，好像立马，高大上起来了，很唬人的样子啊。这样我就干脆把，每日一次：软件测试类型大全，作为课程的小名，软件测试大全作为课程的大名。课程名字就是这样来的，你理解什么意思就行啊。这门课程把所有类型的软件测试都给大家讲一遍，因为大而全嘛，就不能太深入了，我们做的是广度优先，而不是深度优先。整个课程比较偏理论和知识讲解的，你可以根据自己的需要来学习啊。别被课程名字给唬住了，好像这门课程真的什么都讲，不是这样的啊，事先给大家打个预防针。
+
+## 七十种软件测试的类型如下
+
+- User Acceptance Testing（用户验收测试）  
+- Alpha Vs Beta Testing（阿尔法测试和贝塔测试）  
+- Usability Testing（ 可用性测试）  
+- Functional Testing（功能测试）  
+- End to End Testing（端到端测试）  
+- Positive Vs Negative Testing（正面测试和负面测试）  
+- Static Vs Dynamic Testing（静态和动态测试）  
+- Adhoc Testing（随机测试）  
+- Exploratory Testing（探索性测试）  
+- Compatibility Testing（兼容性测试）  
+- GUI Testing（图形用户界面测试）  
+- API Testing（应用程序接口测试）  
+- Security Testing（安全测试）  
+- Model Based Testing（基于模型的测试）  
+- Mutation Testing（突变测试）  
+- Accessibility Testing（可访问性测试）  
+- Stress Testing（压力测试）  
+- Performance Testing（性能测试）  
+- Load Testing（负载测试）  
+- Penetration Testing（渗透测试）  
+- Black Box Testing（黑盒测试）  
+- White Box Testing（白盒测试）  
+- Scrum Testing（Scrum 敏捷测试）  
+- Backend Testing（后台测试）  
+- Context Driven Testing（上下文驱动测试）  
+- Cloud Testing（云测试）  
+- Protocol Testing（协议测试）  
+- Orthogonal Array Testing (OAT)（正交阵列测试）  
+- SOA Testing（面向服务的架构测试）  
+- Conformance Testing（一致性测试）  
+- Stability Testing（稳定性测试）  
+- Vulnerability Testing（脆弱性测试）  
+- Dynamic Testing（动态测试）  
+- Recovery Testing（恢复测试）  
+- Concurrency Testing（并发测试）  
+- Operational Testing（运行测试）
+- Path & Basis Path Testing（路径和基本路径测试）  
+- Pairwise Testing（结对测试）  
+- Storage Testing（存储测试）  
+- Application Testing（应用程序测试）  
+- Component Testing（组件测试）  
+- Risk Based Testing（基于风险的测试）  
+- Beta Testing（贝塔测试）  
+- Smoke Testing（冒烟测试）  
+- Grey Box Testing（灰盒测试）  
+- Configuration Testing（配置测试）  
+- Destructive Testing（破坏性测试）  
+- System Integration Testing（系统集成测试）  
+- Interoperability Testing（互用性测试）  
+- Volume Testing（容量测试）  
+- Soak Testing（浸泡测试）  
+- Module Testing（模块测试）  
+- Thread Testing（线程测试）  
+- Interface Testing（接口测试）  
+- Fuzz Testing（模糊测试）  
+- Unit Test Vs Integration Test（单元测试和集成测试）  
+- Benchmark Testing（基准测试）  
+- Workflow Testing（工作流测试）  
+- Localization Testing（本地化测试）  
+- Endurance Testing（疲劳测试）  
+- Scenario Testing（场景测试）  
+- Reliability Testing（可靠性测试）  
+- Pilot Testing（引导测试）  
+- Scalability Testing（可扩展性测试）  
+- Parallel Testing（并行测试）  
+- Loop Testing（循环测试）  
+- Interrupt Testing（中断测试）  
+- Keyword Driven Testing（关键字驱动测试）  
+- Alpha Testing（阿尔法测试）  
+- Mainframe Testing（大机测试）  Github 开源社区新手入门系列课程。
+
