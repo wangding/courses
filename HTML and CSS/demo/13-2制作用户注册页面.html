@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				font-family: "宋体";
+				font-size: 12px;
+			}
+			form{
+				width: 300px;
+				margin: 0 auto 0 auto;
+				font-size: 12px;
+				color: #999;
+			}
+			form p{
+				margin: 5px 0 0 5px;
+				text-align: center;
+			}
+			.txt{
+				width: 200px;
+				background-color: #ccccff;
+				border: #6666ff 1px solid;
+				color: #0066ff;
+			}
+			.but{
+				border: 0px #93bee2solid;
+				border-bottom: #93bee21pxsolid;
+				border-left: #93bee2 1px solid;
+				border-right: #93bee2 1px solid;
+				border-top: #93bee2 1px solid;
+				background-color: #3399cc;
+				cursor: hand;
+				font-style: normal;
+				color: #cad9ea;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 align="center">用户注册</h1>
+		<form method="post">
+			<p>姓&nbsp;&nbsp;名：<input type="text" class="txt" size="12" maxlength="20" name="username" />
+			</p>
+			<p>性&nbsp;&nbsp;别：&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="male" />男
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="female" />女
+			</p>
+			<p>
+				年&nbsp;&nbsp;龄：<input type="text" class="txt" name="age"/>
+			</p>
+			<p>
+				联系电话：<input type="text" class="txt" name="tel" />
+			</p>
+			<p>
+				电子邮件：<input type="text" class="txt" name="email" />
+			</p>
+			<p>
+				联系地址：<input type="text" class="txt" name="address" />
+			</p>
+			<p>
+				<input type="submit" name="submit" value="提交" class="but" />
+				<input type="reset" name="reset" value="清除" class="but" />
+			</p>
+		</form>
+	</body>
+</html>

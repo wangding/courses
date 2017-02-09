@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>火柴棒人物</title>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="500" height="300" style="border: 1px solid blue">
+			Your browser does support the canvas element.
+		</canvas>
+        <script type="text/javascript">
+            //首先绘制头部轮廓
+        	var c = document.getElementById("myCanvas");
+        	var cxt = c.getContext("2d");
+        	cxt.beginPath();
+        	cxt.arc(100,50,30,0,Math.PI*2,true);
+        	cxt.fill();
+        	//下面绘制笑脸；
+        	cxt.beginPath();
+        	cxt.strokeStyle = '#c00';
+        	cxt.lineWidth = 3;
+        	cxt.arc(100,50,20,0,Math.PI,false);
+        	cxt.stroke();
+        	//下面绘制眼睛；
+        	cxt.beginPath();
+        	cxt.fillStyle = "#cdcdcd";
+        	cxt.arc(90,45,3,0,Math.PI*2,true);
+        	cxt.fill();
+        	cxt.moveTo(113,45);
+        	cxt.arc(110,45,3,0,Math.PI*2,true);
+        	cxt.fill();
+        	cxt.stroke();
+        	//下面绘制身躯
+        	cxt.moveTo(100,80);
+        	cxt.lineTo(100,150);
+        	cxt.moveTo(100,100);
+        	cxt.lineTo(60,120);
+        	cxt.moveTo(100,100);
+        	cxt.lineTo(140,120);
+        	cxt.moveTo(100,150);
+        	cxt.lineTo(80,190);
+        	cxt.moveTo(100,150);
+        	cxt.lineTo(140,190);
+        	cxt.stroke();
+        	
+        	var cu = document.getElementById("myCanvas");
+        	var cx = cu.getContext("2d");
+        	cx.beginPath();
+        	cx.arc(200,50,30,0,Math.PI*2,true);
+        	cx.fill();
+        	//下面绘制笑脸；
+        	cx.beginPath();
+        	cx.strokeStyle = '#cdd';
+        	cx.lineWidth = 3;
+        	cx.arc(200,50,20,0,Math.PI,false);
+        	cx.stroke();
+        	//下面绘制眼睛；
+        	cx.beginPath();
+        	cx.fillStyle = "#78cdae";
+        	cx.arc(190,45,3,0,Math.PI*2,true);
+        	cx.fill();
+        	cx.moveTo(213,45);
+        	cx.arc(210,45,3,0,Math.PI*2,true);
+        	cx.fill();
+        	cx.stroke();
+        	//下面绘制身躯
+        	cx.moveTo(200,80);
+        	cx.lineTo(200,150);
+        	cx.moveTo(200,100);
+        	cx.lineTo(160,120);
+        	cx.moveTo(200,100);
+        	cx.lineTo(240,120);
+        	cx.moveTo(200,150);
+        	cx.lineTo(180,190);
+        	cx.moveTo(200,150);
+        	cx.lineTo(240,190);
+        	cx.stroke();
+        	
+        	var cuu = document.getElementById("myCanvas");
+        	var cxp = cuu.getContext("2d");
+        	cxp.beginPath();
+        	cxp.arc(400,50,30,0,Math.PI*2,true);
+        	cxp.fill();
+        	//下面绘制笑脸；
+        	cxp.beginPath();
+        	cxp.strokeStyle = '#cbb';
+        	cxp.lineWidth = 3;
+        	cxp.arc(400,50,20,0,Math.PI,false);
+        	cxp.stroke();
+        	//下面绘制眼睛；
+        	cxp.beginPath();
+        	cxp.fillStyle = "#cff";
+        	cxp.arc(390,45,3,0,Math.PI*2,true);
+        	cxp.fill();
+        	cxp.moveTo(413,45);
+        	cxp.arc(410,45,3,0,Math.PI*2,true);
+        	cxp.fill();
+        	cxp.stroke();
+        	//下面绘制身躯
+        	cxp.moveTo(400,80);
+        	cxp.lineTo(400,150);
+        	cxp.moveTo(400,100);
+        	cxp.lineTo(360,120);
+        	cxp.moveTo(400,100);
+        	cxp.lineTo(440,120);
+        	cxp.moveTo(400,150);
+        	cxp.lineTo(380,190);
+        	cxp.moveTo(400,150);
+        	cxp.lineTo(440,190);
+        	cxp.stroke();
+        </script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜搜</title>
+		<style>
+			
+			p{margin: 0px; padding: 0px;}
+			#div{
+				margin: 0px auto;
+				font-size: 12px;
+				/*padding: 0px ;*/
+				/*background-color: #009900;*/
+				width: 800px;
+				height: 18px;
+			}
+			div li{
+				float: left;
+				list-style-type: none;
+				margin: 0px auto;
+				padding: 0px 15px;
+				width: 40px;
+				
+			}
+			div li a{
+				display: block;
+				text-decoration: underline;
+				padding: 4px 0px 0px 0px;
+				margin: 0px;
+				font-size: 13px;
+				
+			}
+			div li a:link,div li a:visited{
+				color: #004276;
+			}
+			/*div li#h{
+				width: 150px;
+				height: 18px;
+			}*/
+			div li#more{
+				width: 85px;
+				height: 18px;
+			}
+			#s{
+				background-color: #006eb8;
+				width: 430px;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<center>
+			<
+			<br />
+			<img src="../img/14-1.jpg" />
+			<br /><br /><br /><br />
+			<div id="div">
+				<ul>
+					<li id="h"></li>
+					<li><a href="#">网页</a></li>
+					<li><a href="#">图片</a></li>
+					<li><a href="#">视频</a></li>
+					<li><a href="#">音乐</a></li>
+					<li><a href="#">搜吧</a></li>
+					<li><a href="#">问问</a></li>
+					<li><a href="#">团购</a></li>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">地图</a></li>
+					<li id="more"><a href="#">更多&gt;&gt;</a></li>
+				</ul>
+			</div>
+			<p style="height: 44px;">&nbsp;</p>
+			<div id="s">
+				<form action="/q?" id="flpage" name="flpage">
+					<input type="text" value="" size="50px" />
+					<input type="submit" value="搜搜" />
+				</form>
+			</div>
+		</center>
+	</body>
+</html>
