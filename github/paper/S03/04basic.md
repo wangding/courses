@@ -145,11 +145,6 @@ git commit -am "message"
 
 ### commit message 的书写规范  
 
-- 参考阮一峰老师的仓库  
-- 尽早规范起来，规矩今早养成，会习惯养成了，改起来就困难了  
-- 尽早开始写英文提交信息，Github 是跟全世界接轨的  
-
-
 Git 每次提交代码，都要写 commit message（提交说明），否则就不允许提交。
 
 ```bash
@@ -312,24 +307,41 @@ Closes #123, #245, #992
 
 ## 信息查看
 
-- git 基本操作2  
+对刚才格式化和防范化 commit message 的话题做一个小小的总结：
+- 尽早规范起来，规矩今早养成，会习惯养成了，改起来就困难了  
+- 尽早开始写英文提交信息，Github 是跟全世界接轨的  
 
-    ```bash
-    # diff working directory with repos 
-    git diff
+```bash
+# short and branch
+git status -sb
 
-    # diff staging area with repos
-    git diff --cached
-    
-    # 拿 working directory 和 SHA 比较
-    git diff <SHA>
+# 查看某个提交信息
+git show HEAD
 
-    # ?
-    git diff <SHA 1> <SHA 2>
-    
-    # ?
-    git diff --stat <SHA>
-    ```
+# 显示某个文件的提交记录
+git log <file name>
+
+# 显示符合查询条件的提交
+git log --grep <msg>
+
+# 显示多少条提交日志
+git log -n
+
+# diff working directory with repos 
+git diff
+
+# diff staging area with repos
+git diff --cached
+
+# 拿 working directory 和 SHA 比较
+git diff <SHA>
+
+# ?
+git diff <SHA 1> <SHA 2>
+
+# ?
+git diff --stat <SHA>
+```
 
 ## 回撤操作
 
