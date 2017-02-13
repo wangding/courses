@@ -1,155 +1,21 @@
-# branch
+# Git 分支操作
 
-## 
+各位小伙伴大家好，咱们接着前面的课程，继续讲解 Github 开源之旅第三季：Git 进阶。现在咱们讲解本课程的最后一个话题，也是最重要的一个话题：Git 分支操作。如果使用 Git 而没有掌握 Git 分支操作，我们说这个人使用 Git 的水平还是幼儿园阶段。当然，我们都是从幼儿园过来的，也没有什么好丢人的，大家小时候都穿过开裆裤，没错吧。
+
+这里，我们提一下 Git 的分支。首先，我们前面讲过 Git 存储方式，Git 存储的是快照，而不是版本差异，这就导致 Git 在分支操作上，开销非常低，效率非常高，分支合并的速度非常快。所以，不使用 Git 分支操作，Git 的强大之处，等于没有发挥出来。但是，这貌似不是使用 Git 分支的一个不可辩驳的理由。其实，使用 Git 分支有一个真正不可抗拒的理由，那就是并行开发。在软件开发和项目管理中，为了让项目的工期尽可能短，一般会采用的方式就是并行开发。最常见的并行开发的场景就是，开发和测试的并行。如果版本控制系统不支持分支操作，那么所有的工作就只能串行，这样就非常不方便了。分支操作一般是配合项目的流程控制来灵活使用或规范使用的。而项目的流程控制，我们会在 Github 开源之旅第四季课程中展开讲解，这里面我们只是提一下。我们先给小伙伴们看一个大型项目的 Gitflow 工作流。
+
+![](https://docs.gitlab.com/ee/workflow/gitdashflow.png)  
+
+这里面，关于分支我们分一下类，大致分两类：长期分支和临时分支。以上图为例，长期分支是 master 和 develop，而功能分支、发布分支和缺陷修复分支都是临时分支。临时分支是，需要的时候开一个分支，分支上工作完成后，跟主干分支合并，合并之后，临时分支被删除，所以是临时分支。有了这些分支，项目团队中的开发工作就可以并行开展了，比如当前的开发，不用因为缺陷修复或者版本发布而停滞不前，新功能的开发可以继续进行，因为新功能的开发是在功能分支上独立进行的，功能开发完成后才会合并到开发分支上。而缺陷修复也不会让新功能的开发处于暂停等待状态。因为，缺陷修复也是在独立的分支中开展的。这个流程图是最复杂的一种情况，如果我们能把这个协作流程图搞明白，那么分支的操作自然不在话下，而且，我们后续的课程也很容易就能学会。所以，这个图大家一定要花些时间搞明白。当然，凡事都要一分为二的来看，Git 分支的灵活和方便，必然会导致分支的滥用，如下图所示。已经分不清楚哪个是主干分支了，所以，这里面需要对 Git 团队协作的流程进行规范和约定，具体内容咱们在下一门课程中展开讲解。
+
+![](http://image.beekka.com/blog/201207/bg2012070502.png)  
+
+知道了分支的用途和意义之后，咱们把重点放在学习 Git 的分支操作相关的命令。只有掌握了这些命令的使用，我们才能随心所欲的使用分支，灵活高效的使用分支。我们特别强调一下，Git 本身就支持分支操作，其实 master 本身就是一个分支，只不过我们都把这个分支叫 master，名字固定下来了。
 
 
-分支（重点）
-    创建分支
-    切换分支
-    删除分支
-    本地分支
-    远程分支
-    合并分支
-    stash 操作
-    变基合并
-
-
-## 常见问题
-
-- git 存储凭证  
-  http://www.cnblogs.com/volnet/p/git-credentials.html
-  $ git config --global credential.helper wincred
-  这一行命令搞定，参考网址：https://help.github.com/articles/caching-your-github-password-in-git/
-
-- git 撤销远程仓库的提交  
-  http://www.cnblogs.com/chucklu/p/4661149.html
-
-- Git 文件换行问题  
-  http://www.cnblogs.com/flying_bat/archive/2013/09/16/3324769.html  
-
-- 如何在 Github 的 pull request 中进行 code review
-  参考：
-  https://github.com/wangding/Sample/pull/1
-  https://github.com/wangding/seIDE/pull/6
-  https://github.com/wangding/seIDE/pull/11
-
-- issue 过滤
-
-  ![issue filter.png](http://upload-images.jianshu.io/upload_images/3058932-fbc953aaadb6cdf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-## Git 命令行配置
-
-- 自动记忆凭证  
-- 设置快捷键  
-- 设置换行检查  
-
-## Git 常用命令
-
-- git 教学演示  
+- git 分支基本操作
 
     ```bash
-    # 目的命令简单，快捷，可以制造变更
-    # 快速制造多个提交，看到版本路线
-    # 先看一下命令的效果，然后就不用看了
-
-    touch a
-    touch b
-    touch c
-    
-    echo 11 >> a
-    echo 22 >> a
-    
-    git add .
-
-    git commit -m "11"
-    
-    echo 33 >> a
-    git commit -am "33"
-    ```
-
-- git rebase 操作  
-
-    ```bash
-    # -i 是交互操作
-    git rebase -i <SHA>
-    
-    # 把当前分支在 master 的位置接上
-    git rebase master
-    ```
-
-- git 基本操作1  
-
-    ```bash
-    # add & commit Mothed 1
-    git add .
-    git commit -m "message"
-
-    #Git 假定所有的改变都是针对同一件事情的，因此它把这些都放在了一个块里。你有如下几个选项：
-    #输入 y 来暂存该块
-    #输入 n 不暂存
-    #输入 e 手工编辑该块
-    #输入 d 退出或者转到下一个文件
-    #输入 s 来分割该块
-    git add -p <file name>
-
-    # add & commit Mothed 2
-    git commit -a -m "message"
-
-    # add & commit Mothed 3
-    git commit -am "message"
-    ```
-
-- git 基本操作2  
-
-    ```bash
-    # diff working directory with repos 
-    git diff
-
-    # diff staging area with repos
-    git diff --cached
-    
-    # 拿 working directory 和 SHA 比较
-    git diff <SHA>
-
-    # ?
-    git diff <SHA 1> <SHA 2>
-    
-    # ?
-    git diff --stat <SHA>
-    ```
-
-- git ssh 链接
-
-    ```bash
-    # diff working directory with repos 
-    ssh-Keygen -t rsa -C "your email"
-
-    # 查看用户主目录的 .ssh/ 文件夹中创建的私钥文件（注意备份）
-    ls ~/.ssh
-    # 目录中两个文件：id_rsa （私钥）  和   id_rsa.pub (公钥)
-
-    # 打印公钥文件内容
-    cat ~/.ssh/id_rsa.pub
-    # 把文件内容复制到剪贴板中
-
-    # 在 github.com 的 Settings 中找 SSH and GPG keys, new SSH key
-
-    # 利用 SSH 协议来克隆仓库
-    git clone git@github.com:wangding/test
-    
-    # 利用 SSH 协议来添加远程链接
-    git remote add origin git@github.com:wangding/test
-    ```
-
-- git branch 操作
-
-    ```bash
-    # 删除分支 foo 分支，前提 foo 已经合并过
-    git branch foo -d
-
-    # 强制删除分支 foo
-    git branch foo -D
-
     # 创建分支 foo
     git branch foo
 
@@ -163,14 +29,20 @@
     git branch -m old_name new_name
     git branch -M old_name new_name
 
+    # 删除分支 foo 分支，前提 foo 已经合并过
+    git branch foo -d
+
+    # 强制删除分支 foo
+    git branch foo -D
+
     # 列出远程分支
     git branch -r
 
     # 查看已经合并的分支
-    git checkout --merged
+    git branch --merged
 
     # 查看没有合并的分支
-    git checkout --no-merged
+    git branch --no-merged
 
     # 列出远程合并的分支
     git branch -r --merged
@@ -199,51 +71,6 @@
     git merge --no-ff
     ```
 
-- git blame 逐行查看文档
-
-    ```bash
-    # 逐行查看 <filename> 的历史
-    git blame <filename>
-
-    # 从第 100 行开始查看 10 行
-    git blame -L 100,10 <filename>
-    ```
-
-- git clean 砍掉 untracked 档案
-
-    ```bash
-    # 列出打算要清除的档案
-    git clean -n
-
-    # 真正的删除
-    git clean -f
-
-    # 连 .gitignore 中忽略的档案也清除
-    git clean -x
-    ```
-
-- git tag 操作
-
-    ```bash
-    # 给当前的 HEAD 指针处贴标签 foo
-    git tag foo
-
-    # 给任意的一个提交贴标签 foo
-    git tag foo <SHAI>
-
-    # 给当前的 HEAD 指针处贴标签 foo
-    git tag foo -m "message"
-
-    # 删除标签 foo
-    git tag -d foo
-
-    # 将所有标签推送到远程仓库中
-    git push --tags
-
-    # 将具体某个标签推送到远程仓库中
-    git push origin v0.1
-```
-
 - git stash 操作  
 
     ```bash
@@ -258,24 +85,4 @@
 
     # 删除所有进度
     git stash clear
-    ```
-
-- git 其他操作  
-
-    ```bash
-    # 查看某个文件的提交记录
-    git log <file name>
-
-    # 把 upstream 代表的远程仓库的 master 分支拽到本地
-    git pull upstream master
-
-    # 撤销上一个 commit，前提是没有 push 到远程仓库
-    git add <something>
-    git commit --amend -m "some comment"
-
-    # 弹出 vim 输入多行 message
-    git commit
-
-    # 查看 log 日志，并过滤需要的信息
-    git log --grep <filter word>
     ```
