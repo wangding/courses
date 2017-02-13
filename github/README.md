@@ -29,7 +29,7 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学完本课程后，能够正确的使用 MarkDown 语法编辑带有格式的自然语言文档，可以在 Github 上创建文档型项目仓库，把平时收集的学习资料用 MarkDown 整理出来，放到 Github 上托管起来，就达到目标了。
 
-- 更多内容请移步[这里](../markdown)
+- 更多内容请移步[这里](../markdown/README.md)
 
 
 ## 第三季：Git 进阶
@@ -39,15 +39,15 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8177.html)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](README.md#第三季-Git-进阶)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS02.md)  
-    - [任务一：了解 Git](TaskS02.md#任务一了解-Git)
-    - [任务二：Git GUI](TaskS02.md#任务二Git-GUI)
-    - [任务三：Git 配置](TaskS02.md#任务三Git-配置)
-    - [任务四：Git 基本操作](TaskS02.md#任务四Git-基本操作)
-    - [任务五：Git 协议](TaskS02.md#任务五Git-协议)
+    - [任务一：了解 Git](TaskS02.md#任务一了解-git)
+    - [任务二：Git GUI](TaskS02.md#任务二git-gui)
+    - [任务三：Git 配置](TaskS02.md#任务三git-配置)
+    - [任务四：Git 协议](TaskS02.md#任务四git-协议)
+    - [任务五：Git 基本操作](TaskS02.md#任务五git-基本操作)
     - [任务六：标签操作](TaskS02.md#任务六标签操作)
     - [任务七：分支操作](TaskS02.md#任务七分支操作)
 - 参考资料:books:  
-  - [ProGit v2](https://git-scm.com/book/zh/v2)  
+  - [ProGit v2](https://github.com/progit/progit2-zh)  
 
 ## 第四季：团队协作
 
