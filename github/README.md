@@ -37,7 +37,7 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 大家学完本课程后，应该对 Git Bash 命令有了更深入的体会和掌握。应该能够把 Git Bash 命令使用的游刃有余，可以在项目仓库的提交历史中随意穿梭，可以玩转分支，以及变基这些高级操作，可以使用别名，定制属于自己的 Git Bash 命令，提高自己的操作效率，等等。
 
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8177.html)
-- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](README.md#第三季-Git-进阶)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](Git_plus.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS02.md)  
     - [任务一：了解 Git](TaskS02.md#任务一了解-git)
     - [任务二：Git GUI](TaskS02.md#任务二git-gui)
@@ -53,7 +53,17 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，应该能够在 Github 上展开团队协作，掌握 Github 的 Fork 以及 Pull Request 的流程，能够参与到他人的项目中。而且，能够掌握几种常规的 Git 协作方式，能够让自己身边的小伙伴，参与到自己的开源项目中。
 
-【课程还在规划和制作中】
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8367.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](git-flow.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS03.md)  
+    - [任务一：了解工作流](TaskS03.md#任务一了解工作流)  
+    - [任务二：集中式工作流](TaskS03.md#任务二集中式工作流)  
+    - [任务三：功能分支工作流](TaskS03.md#任务三功能分支工作流)  
+    - [任务四：Gitflow 工作流](TaskS03.md#任务四gitflow-工作流)  
+    - [任务五：Forking 工作流](TaskS03.md#任务五forking-工作流)  
+    - [任务六：Pull Request 总结](TaskS03.md#任务六pull-request-总结)  
+- 参考资料:books:  
+  - [Git 工作流指南](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)  
 
 ## 第五季：开源项目实战（一）
 
