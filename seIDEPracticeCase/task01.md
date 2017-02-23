@@ -11,10 +11,10 @@
 - 为上述四个网站制作 HTML 格式的 DDT 自动化测试脚本；
 - 如果不了解 Github 的用法，无法上传数据文件，可以直接在本地使用 HTML 格式的数据文件；
 - 或者使用下面已经创建好的数据文件：
-  - https://wangding.github.io/Sample/Selenium/baiduSearchData.html
-  - https://wangding.github.io/Sample/Selenium/mobileData.html
-  - https://wangding.github.io/Sample/Selenium/redmineLoginData.html
-  - https://wangding.github.io/Sample/Selenium/51ctoLensData.html
+  - http://sample.wangding.in/selenium/baidu-search-data.html
+  - http://sample.wangding.in/selenium/mobile-data.html
+  - http://sample.wangding.in/selenium/redmine-login-data.html
+  - http://sample.wangding.in/selenium/51cto-lens-data.html
   
 ## 任务二
 被测对象：  

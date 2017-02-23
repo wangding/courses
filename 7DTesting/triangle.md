@@ -2,10 +2,10 @@
 
 ## 被测程序
 
-- [法老的金字塔 v0.1](https://wangding.github.io/Sample/Testing/triangleErr1.html)  
-- [法老的金字塔 v0.2](https://wangding.github.io/Sample/Testing/triangleErr2.html)  
-- [法老的金字塔 v0.3](https://wangding.github.io/Sample/Testing/triangleErr3.html)  
-- [法老的金字塔 v1.0](https://wangding.github.io/Sample/Testing/triangle.html)  
+- [法老的金字塔 v0.1](http://sample.wangding.in/testing/triangle-error1.html)  
+- [法老的金字塔 v0.2](http://sample.wangding.in/testing/triangle-error2.html)  
+- [法老的金字塔 v0.3](http://sample.wangding.in/testing/triangle-error3.html)  
+- [法老的金字塔 v1.0](http://sample.wangding.in/testing/triangle.html)  
 
 
 ## 任务1. 黑盒测试案例设计

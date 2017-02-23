@@ -9,7 +9,7 @@
 ## 任务2 制作弹窗自动化测试脚本
 
 要求如下：
-- 被测对象：https://wangding.github.io/Sample/Selenium/alert.html
+- 被测对象：http://sample.wangding.in/selenium/alert.html
 - 手工测试页面的弹窗效果；
 - 制作警告弹窗的自动化测试脚本；
 - 制作确认弹窗的自动化测试脚本；

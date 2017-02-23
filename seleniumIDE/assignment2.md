@@ -34,7 +34,7 @@
 ## 任务4 制作 sample.html 页面的定位器自动化脚本
 
 要求如下：
-- 被测对象：https://wangding.github.io/Sample/Selenium/locator.html
+- 被测对象：http://sample.wangding.in/selenium/locator.html
 - 回放观察定位元素的自动化测试脚本；
      - 单步执行回放；
      - 合理布局窗口；
