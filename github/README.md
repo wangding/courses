@@ -65,9 +65,37 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 - 参考资料:books:  
   - [Git 工作流指南](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)  
 
-## 第五季：开源项目实战（一）
+## 第五季：stylish 网站换肤
+
+大家学会本课程后，应该能够使用 stylish 定制网站样式，让网站的风格具有个性化的特色，另外，可以去掉网站中没有的内容，让网站的用户体验更方便、更高效。
+
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8367.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](stylish.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks05.md)  
+    - [任务一：了解 stylish](tasks05.md#任务一了解工作流)  
+    - [任务二：安装 stylish](tasks05.md#任务二集中式工作流)  
+    - [任务三：one div game](tasks05.md#任务三功能分支工作流)  
+    - [任务四：css diner 通关](tasks05.md#)  
+    - [任务五：hostedredmine 学院网站换肤](tasks05.md#任务四gitflow-工作流)  
+    - [任务六：百度脑图网站换肤](tasks05.md#任务五forking-工作流)  
+    - [任务七：51CTO 网站换肤](tasks05.md#任务六pull-request-总结)  
+- 参考资料:books:  
+  - [CSS 参考手册](http://www.w3school.com.cn/cssref/index.asp)  
+
+
+【课程还在规划和制作中】
+
+## 第六季：how-to-markdown
 
 通过一个真实的案例：how-to-markdown，给大家展示一下如何参与到他人的开源项目中。
+
+【课程还在规划和制作中】
+
+## 第七季：Gitbook
+
+【课程还在规划和制作中】
+
+## 第八季：Jekyll 静态站
 
 【课程还在规划和制作中】
 
