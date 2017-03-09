@@ -12,7 +12,9 @@
 ## 任务二：安装 stylish
 
 要求：
-- 在火狐浏览器上安装 stylish 插件；  
+- 在火狐浏览器上安装 stylish 插件；   
+- 从 userstyles.org 安装 51CTO 学院样式，并体验；
+- 浏览仓库 wangding/simple-clear-style；
 
 ## 任务三：one div game
 
@@ -30,8 +32,8 @@
 ## 任务四：css diner 通关
 
 要求：
-- 打通 css diner 
-- [css 布局]通关
+- 打通 [css diner]  
+- 打通 [css 布局]  
 
 ## 任务五：hostedredmine 网站换肤
 
@@ -53,3 +55,4 @@
 [wikipedia_stylish]: https://en.wikipedia.org/wiki/Stylish
 [baidu_stylish]: http://baike.baidu.com/link?url=2KfSbd2DbiAPj1QLBxsYcSTPcMD1hoy2geCdlkZ7vitXi7aZNKqdl1SKxZ3qUml_Wat4dmgoy3tuQJ5OJpZ0Zq
 [css 布局]: http://zh.learnlayout.com/
+[css diner]: http://flukeout.github.io/
