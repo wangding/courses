@@ -12,8 +12,10 @@
 ## 任务二：安装 stylish
 
 要求：
-- 在火狐浏览器上安装 stylish 插件；   
-- 从 userstyles.org 安装 51CTO 学院样式，并体验；
+- 用开发者工具修改百度网站的背景色和网站 logo；  
+- 在火狐浏览器上安装 stylish 插件；  
+- 用 stylish 插件制作百度网站的黑色皮肤；  
+- 安装 51CTO 学院网站样式，并体验；
 - 浏览仓库 wangding/simple-clear-style；
 
 ## 任务三：one div game
