@@ -83,6 +83,90 @@ h1 {
 
 提示：请使用花括号来包围声明。
 
+明白 CSS 语法之后，你就知道我为什么让大家使用开发者工具的时候，要使用 CSS 规则窗口了，而不是计算窗口了。因为，规则窗口中的样式都是 CSS 代码的原生形态。这些代码我们可以直接搬到 stylish 中来使用。
+
+下面咱们再通过一个 one div 游戏来练习一下一些简单的 CSS 样式属性。
+
+要求：  
+对 [one-div 网页]定义如下样式：  
+- 制作垂直竖条；
+```css
+div {
+  width: 15px;
+  height: 500px;
+}
+```
+- 一条直线；
+```css
+div {
+  width: 100%;
+  height: 1px;
+}
+```
+- 制作水平长条；
+```css
+div {
+  width: 100%;
+  height: 15px;
+}
+```
+- 制作矩形；
+```css
+div {
+  width: 200px;
+  height: 50px;
+}
+```
+- 制作正方形；
+```css
+div {
+  width: 100px;
+  height: 100px;
+}
+```
+- 制作正方框；
+```css
+div {
+  border: 10px;
+  border-style: solid;
+  border-color: green;
+  background-color: white;
+}
+```
+- 制作圆形；
+```css
+div {
+  border: 10px;
+  border-style: solid;
+  border-color: green;
+  background-color: white;
+  border-radius: 50%;
+}
+```
+- 制作环形；
+```css
+div {
+  border: 10px;
+  border-style: solid;
+  border-color: green;
+  background-color: white;
+  border-radius: 50%;
+}
+```
+- 制作等腰三角；
+```css
+div {
+  border: 50px;
+  border-style: solid;
+  border-color: white;
+  box-sizing: border-box;
+  border-bottom-color: red;
+}
+```
+- 制作直角三角；
+- 制作动态效果；
+
+
 ## CSS 学习的方式和思路
 
 **LVL 1**
