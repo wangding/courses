@@ -70,20 +70,22 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 大家学会本课程后，应该能够使用 stylish 定制网站样式，让网站的风格具有个性化的特色，另外，可以去掉网站中没有的内容，让网站的用户体验更方便、更高效。
 
 - [示例代码](https://github.com/wangding/simple-clear-style/)  
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8367.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8510.html)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](stylish.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks05.md)  
     - [任务一：了解 stylish](tasks05.md#任务一了解-stylish)  
     - [任务二：安装 stylish](tasks05.md#任务二安装-stylish)  
-    - [任务三：one div game](tasks05.md#任务三功能分支工作流)  
-    - [任务四：css diner 通关](tasks05.md#)  
-    - [任务五：hostedredmine 学院网站换肤](tasks05.md#任务四gitflow-工作流)  
-    - [任务六：百度脑图网站换肤](tasks05.md#任务五forking-工作流)  
-    - [任务七：51CTO 网站换肤](tasks05.md#任务六pull-request-总结)  
+    - [任务三：one div game](tasks05.md#任务三one-div-game)  
+    - [任务四：css dinner 通关](tasks05.md#任务四css-dinner-通关)  
+    - [任务五：hostedredmine 网站换肤](tasks05.md#任务五hostedredmine-网站换肤)  
+    - [任务六：百度脑图网站换肤](tasks05.md#任务六百度脑图网站换肤)  
+    - [任务七：51CTO 网站换肤](tasks05.md#任务七51cto-学院网站换肤)  
+    - [任务八：参与项目](tasks05.md#任务八参与项目)  
+    - [任务九：自由选题](tasks05.md#任务七自由选题)  
 - 参考资料:books:  
   - [CSS 参考手册](http://www.w3school.com.cn/cssref/index.asp)  
-
-【课程还在规划和制作中】
+  - [one div](http://one-div.com/)  
+  - [CSS 禅意花园](http://www.csszengarden.com/)  
 
 ## 第六季：how-to-markdown
 
