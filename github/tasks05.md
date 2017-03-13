@@ -7,7 +7,7 @@
 要求：
 - 阅读[维基百科的 stylish 词条][wikipedia_stylish]；  
 - 阅读[百度百科的 stylish 词条][baidu_stylish]；  
-- 浏览[课程资料页面](README.md#第五季-stylish-网站换肤)；  
+- 浏览[课程资料页面](README.md#第五季stylish-网站换肤)；  
 
 ## 任务二：安装 stylish
 
