@@ -56,12 +56,12 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8367.html)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](git-flow.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS03.md)  
-    - [任务一：了解工作流](TaskS03.md#任务一了解工作流)  
-    - [任务二：集中式工作流](TaskS03.md#任务二集中式工作流)  
-    - [任务三：功能分支工作流](TaskS03.md#任务三功能分支工作流)  
-    - [任务四：Gitflow 工作流](TaskS03.md#任务四gitflow-工作流)  
-    - [任务五：Forking 工作流](TaskS03.md#任务五forking-工作流)  
-    - [任务六：Pull Request 总结](TaskS03.md#任务六pull-request-总结)  
+  - [任务一：了解工作流](TaskS03.md#任务一了解工作流)  
+  - [任务二：集中式工作流](TaskS03.md#任务二集中式工作流)  
+  - [任务三：功能分支工作流](TaskS03.md#任务三功能分支工作流)  
+  - [任务四：Gitflow 工作流](TaskS03.md#任务四gitflow-工作流)  
+  - [任务五：Forking 工作流](TaskS03.md#任务五forking-工作流)  
+  - [任务六：Pull Request 总结](TaskS03.md#任务六pull-request-总结)  
 - 参考资料:books:  
   - [Git 工作流指南](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)  
 
@@ -73,15 +73,15 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8510.html)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](stylish.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks05.md)  
-    - [任务一：了解 stylish](tasks05.md#任务一了解-stylish)  
-    - [任务二：安装 stylish](tasks05.md#任务二安装-stylish)  
-    - [任务三：one div game](tasks05.md#任务三one-div-game)  
-    - [任务四：css dinner 通关](tasks05.md#任务四css-dinner-通关)  
-    - [任务五：hostedredmine 网站换肤](tasks05.md#任务五hostedredmine-网站换肤)  
-    - [任务六：百度脑图网站换肤](tasks05.md#任务六百度脑图网站换肤)  
-    - [任务七：51CTO 网站换肤](tasks05.md#任务七51cto-学院网站换肤)  
-    - [任务八：参与项目](tasks05.md#任务八参与项目)  
-    - [任务九：自由选题](tasks05.md#任务七自由选题)  
+  - [任务一：了解 stylish](tasks05.md#任务一了解-stylish)  
+  - [任务二：安装 stylish](tasks05.md#任务二安装-stylish)  
+  - [任务三：one div game](tasks05.md#任务三one-div-game)  
+  - [任务四：css dinner 通关](tasks05.md#任务四css-dinner-通关)  
+  - [任务五：hostedredmine 网站换肤](tasks05.md#任务五hostedredmine-网站换肤)  
+  - [任务六：百度脑图网站换肤](tasks05.md#任务六百度脑图网站换肤)  
+  - [任务七：51CTO 网站换肤](tasks05.md#任务七51cto-学院网站换肤)  
+  - [任务八：参与项目](tasks05.md#任务八参与项目)  
+  - [任务九：自由选题](tasks05.md#任务七自由选题)  
 - 参考资料:books:  
   - [CSS 参考手册](http://www.w3school.com.cn/cssref/index.asp)  
   - [one div](http://one-div.com/)  
@@ -93,9 +93,20 @@ Github 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 【课程还在规划和制作中】
 
-## 第七季：Gitbook
+## 第七季：GitBook
 
-【课程还在规划和制作中】
+大家学会本课程后，应该能够使用 Git 版本控制工具以及 MarkDown 简单的纯文本标记语言，以团队协作的方式来制作电子书，能够将电子书发布到 GitBook 网站上。
+
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8684.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](gitbook.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks07.md)  
+  - [任务一：了解 GitBook](tasks07.md#任务一了解-gitbook)  
+  - [任务二：新手上路](tasks07.md#任务二新手上路)  
+  - [任务三：在线制作](tasks07.md#任务三在线制作)  
+  - [任务四：本地制作](tasks07.md#任务四本地制作)  
+  - [任务五：GitHub 集成](tasks07.md#任务五github-集成)  
+- 参考资料:books:  
+  - [GitBook 官方文档](https://toolchain.gitbook.com)  
 
 ## 第八季：Jekyll 静态站
 
