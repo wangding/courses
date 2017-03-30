@@ -34,7 +34,16 @@
 - 搜索活跃的大牛，关注他  
 - 查找感兴趣的项目，收藏它  
 
-## 任务五：Github 工具
+## 任务五：GitHub 仓库
+
+要求：
+- 浏览 [courses](https://github.com/wangding/courses) 仓库；
+- 创建 demo 仓库；
+- 为 demo 仓库启用 GitHub Pages 设置；
+- 在 demo 仓库中操作；
+- 删除 demo 仓库；
+
+## 任务六：Github 工具
 
 要求：
 - 百度搜索 Git 并下载；
@@ -44,7 +53,7 @@
 - 配置 Git 初始参数：姓名和邮箱；
 - 练习简单的 Linux Bash 命令；
 
-## 任务六：本地练习 Git
+## 任务七：本地练习 Git
 
 要求：
 - 在自己电脑的 C： 盘根目录，建立文件夹：hello-git；
@@ -58,7 +67,7 @@
 - 在 Github 上修改 README.md 文件；
 - 在本地的仓库中把上一步的修改 pull 拉下来；
 
-## 任务七：在线练习 Git
+## 任务八：在线练习 Git
 
 要求：
 - 在线练习的网址：https://try.github.io/
@@ -66,7 +75,7 @@
 - 打通所有 25 关；
 - 理解并记忆每关的命令；
 
-## 任务八：闯关练习 Git-it
+## 任务九：闯关练习 Git-it
 
 要求：
 - 安装 nodeJS；
