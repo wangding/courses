@@ -1,4 +1,4 @@
-# Github 开源之旅通关任务
+# GitHub 开源之旅通关任务
 
 # 第七季：GitBook
 
@@ -31,7 +31,7 @@
 - 在电子书中增加图片；  
 - 在电子书中增加二级目录；  OA
 
-## 任务五：Github 集成
+## 任务五：GitHub 集成
 
 要求：
 - 把 GitHub 的 MarkDown 仓库发布成 GitBook 电子书；  

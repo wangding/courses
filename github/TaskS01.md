@@ -1,25 +1,25 @@
-# Github 开源之旅通关任务
+# GitHub 开源之旅通关任务
 
 # 第一季：启程
 
 ## 任务一：了解 Github
 
 要求：
-- 阅读[维基百科的 Github 词条](https://en.wikipedia.org/wiki/GitHub)；  
-- 阅读[百度百科的 Github 词条](http://baike.baidu.com/link?url=C0P6zQ2i5GLqeW37GmJy4pnenkOULvsqYdSiNXzpnu0bxP98TAAnLa-lqU2Gpgtsv_L_a2QmrrHLmiVclxNaDq)；  
+- 阅读[维基百科的 GitHub 词条](https://en.wikipedia.org/wiki/GitHub)；  
+- 阅读[百度百科的 GitHub 词条](http://baike.baidu.com/link?url=C0P6zQ2i5GLqeW37GmJy4pnenkOULvsqYdSiNXzpnu0bxP98TAAnLa-lqU2Gpgtsv_L_a2QmrrHLmiVclxNaDq)；  
 - 浏览[课程资料页面](README.md)；  
-- 浏览 [Github 2016 年度报告](https://octoverse.github.com/)；  
+- 浏览 [GitHub 2016 年度报告](https://octoverse.github.com/)；  
 
-## 任务二：注册 Github 账户
+## 任务二：注册 GitHub 账户
 
-请注册自己的 Github 账户，具体要求如下：
+请注册自己的 GitHub 账户，具体要求如下：
 - 要有自己的真实姓名；
 - 要有自己的真实头像；
 - 要有自己的职业信息；
 - 要有自己的单位信息；
 - 要有自己的位置信息；
 
-## 任务三：Github 社交
+## 任务三：GitHub 社交
 
 要求：
 - Follow（关注）王顶  
@@ -28,7 +28,7 @@
 - Star（收藏）其他项目（可以是王顶收藏的项目）  
 - Watch（关注）courses 项目  
 
-## 任务四：Github 挖宝
+## 任务四：GitHub 挖宝
 
 要求：
 - 搜索活跃的大牛，关注他  
@@ -43,7 +43,7 @@
 - 在 demo 仓库中操作；
 - 删除 demo 仓库；
 
-## 任务六：Github 工具
+## 任务六：GitHub 工具
 
 要求：
 - 百度搜索 Git 并下载；
@@ -60,11 +60,11 @@
 - 在 hello-git 中初始化仓库；
 - 在 hello-git 中创建 README.md 文件，文件内容随意；
 - 把 README.md 文件，提交到本地仓库中；
-- 在自己的 Github 账户中创建 hello-git 空仓库；
+- 在自己的 GitHub 账户中创建 hello-git 空仓库；
 - 把自己本地的 hello-git 仓库与远程（上一步）hello-git 仓库关联上；
 - 把本地的 hello-git 仓库中的内容 push（同步）到远程 hello-git 仓库中；
-- 在 Github 的 hello-git 仓库中，验证存在文件：README.md；
-- 在 Github 上修改 README.md 文件；
+- 在 GitHub 的 hello-git 仓库中，验证存在文件：README.md；
+- 在 GitHub 上修改 README.md 文件；
 - 在本地的仓库中把上一步的修改 pull 拉下来；
 
 ## 任务八：在线练习 Git
