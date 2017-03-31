@@ -92,7 +92,15 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 通过一个真实的案例：how-to-markdown，给大家展示一下如何参与到他人的开源项目中。
 
-【课程还在规划和制作中】
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8513.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](how-to-markdown.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks06.md)  
+  - [任务一：了解 how-to-markdown](tasks06.md#任务一了解-how-to-markdown)  
+  - [任务二：开源项目简介](tasks06.md#任务二开源项目简介)  
+  - [任务三：HTM 项目介绍](tasks06.md#任务三HTM-项目介绍)  
+  - [任务四：提出问题](tasks06.md#任务四提出问题)  
+  - [任务五：基础技术](tasks06.md#任务五基础技术)  
+  - [任务六：解决问题](tasks06.md#任务六解决问题)
 
 ## 第七季：GitBook
 
