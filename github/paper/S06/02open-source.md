@@ -6,7 +6,7 @@ GitHub 是全球最大的开源社区，上面托管的项目可多了去了，�
 
 ## 语言角度
 
-对开源项目分类的最直观、最简单的分类就是编程语言。也就是说，这个项目或者这个软件是用什么编程语言开发的。
+对开源项目最直观、最简单的分类就是编程语言。也就是说，这个项目或者这个软件是用什么编程语言开发的。
 
 【打开 GitHub 网站 workshopper 组织页面】
 我们看到每个项目仓库下面都有一个带颜色的圆点，圆点的右侧写着这个项目所使用的语言。当然，可能一个项目会用多种语言混合开发，而这个项目上只显示一个圆点，那当然是项目中使用最多的的编程语言了。我们也看到文档型项目仓库所使用的语言是没有标示的，其实就是 MarkDown 语言。
@@ -22,14 +22,27 @@ GitHub 是全球最大的开源社区，上面托管的项目可多了去了，�
 
 对于初学者，我们一般都喜欢从一些规模小的项目下手，这样我们理解起来不太困难，参与这样的项目也不用花太多的时间和精力。这样的项目在 GitHub 上有吗？当然有，而且还不少，就怕我们很多小伙伴看不上眼。
 
-GitHub 没有非常直观和简单的办法让我们来快速评估一个代码仓库的规模。一般可以采用的方法是在 GitHub 网站，在仓库页面中看一个仓库目录中代码文件的数量，如果文件夹以及文件数量比较多，那么这个项目比较大。反之，则比较小。如果相比较精确的衡量项目的代码行数，我们可以把整个项目克隆到本地，然后用代码分析工具来分析项目规模。更简单的办法是我们直接通过 Shell 脚本来分析代码行数。
+GitHub 没有非常直观和简单的办法让我们来快速评估一个代码仓库的规模。一般可以采用的方法是在 GitHub 网站，在仓库页面中看一个仓库目录中代码文件的数量，如果文件夹以及文件数量比较多，那么这个项目比较大。反之，则比较小。当然这种办法只能看个大概，如果要相对比较精确的衡量项目的代码行数，我们可以把整个项目克隆到本地，然后用代码分析工具来分析项目规模。大家网上搜索一下，能搜到很多代码行数分析工具。其实，还有一种更简单的办法，我们可以直接通过 Bash 命令来分析代码行数。
 
 给大家举个例子。
+
+以 info-theory-lab-c 仓库为例。这个仓库下面放的我之前写的 C 语言的程序，有两个文件夹 capacity 和 entropy。capacity.c 是计算信道容量的程序，entropy.c 是计算信源熵的程序。计算一个代码文件的代码行数：
+
 ```bash
-find . -name "*.[ch]"
-xargs cat
-grep -v ^$
-wc -l
+wc -l capacity/capacity.c       # 计算 capacity.c 文件的代码行数
+cat capacity/capacity.c | less  # 你会发现，代码中有很多空行，也计算在里面了
+```
+
+改进一下，去掉空行。
+
+```bash
+grep -v ^$ capacity/capacity.c | wc -l   # grep 命令去掉代码文件中的空行
+```
+
+可是这个 Bash 命令只能查看一个代码文件的代码行数，如果一个项目有很多代码文件，总不能对每个代码文件都执行一遍上面的命令，得到每个代码文件的行数再去求和，这样就太麻烦了吧。
+
+```bash
+find . -name "*.[ch]" | xargs cat | grep -v ^$ | wc -l    # find 命令查找当前目录下面的所有 .c 和 .h 文件，然后计算代码行数
 ```
 
 ## 功能角度
@@ -39,28 +52,58 @@ wc -l
 功能最简单的项目仓库，甚至称不上软件。就是各种脚本类的项目，包括：Selenium IDE web 自动化测试脚本的仓库，网站样式的 CSS 脚本仓库，Shell 脚本仓库，vim 或者 git 的配置文件，等。
 
 例如：
-【有待补充】
+搜索一下 Selenium IDE 的自动化脚本的代码仓库。在 wangding/seIDE 仓库里，找 baidu/search.html 代码，找到里面的特征代码，去 GitHub 上搜索一下。（特征代码是下面示例代码的第四行）能找到一大堆这样的仓库和代码来。
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.baidu.com/" />
+<title>baidu search</title>
+</head>
+```
+
+搜索一下 stylish 的 CSS 脚本，在 wangding/simple-clear-style 仓库里，找 hostedredmine-com.css 代码，找到里面的特征代码，去 GitHub 上搜索一下。（特征代码是下面示例代码的第一行中的 url 地址）能找到一大堆这样的仓库和代码来。
+
+```css
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("hostedredmine.com") {
+#sidebar {
+    display: none;
+    width: 0%;
+}
+ 
+div#content {
+    width: 95%;
+}
+```
+
+Shell 脚本、vim 和 git 的配置文件我就不再举例说明了。
 
 其次，各种插件项目仓库，包括：vim 插件，火狐浏览器插件，等。
 
 例如：
-【有待补充】
+直接在 GitHub 上搜索 vim 关键字，在搜索结果中选择 Vim script 语言，会看到一堆 vim 插件的项目仓库。看一个 vim 插件的仓库吧，VundleVim/Vundle.vim，你会看到还有中文的帮助文档呢！
 
 再次，代码模块项目仓库，包括：nodejs 代码模块，其他语言的代码模块，等。
 
 例如：
-【有待补充】
+```bash
+npm list -g        # 列出当前安装的全局模块，找个自己感兴趣的模块，在 npmjs.com 网站上搜索该模块
+npm show date-now  # 查看 date-now 模块的信息，其实就是 package.json 里面的信息
+```
 
 还有功能不太复杂的，包括：单页面的各种网站应用，等。
 
 例如：
-【有待补充】
+chvin/react-tetris 俄罗斯方块游戏
 
-功能复杂度升个级的各类应用软件，例如：git，vscode，firefox，等。
+功能复杂度升个级的各类应用软件，例如：git，vscode，firefox，等。功能再复杂的就是服务类软件了，例如：Apache，ngix，等。终极复杂的就是平台类软件了，例如：Linux 内核等。这些项目的仓库我就不带着大家一个一个去看了，大家应该自己能找的到。
 
-功能再复杂的就是服务类软件了，例如：Apache，ngix，等。
-
-终极复杂的就是平台类软件了，例如：Linux 内核等。
+上面由简单到复杂的项目举例，大家可以根据自己目前的能力，从小项目或者适合自己的项目做起，慢慢的随着自己技术的积累，参与到更复杂的项目当中去，这个过程都是一步一步来的，谁也不可能一口吃个胖子。
 
 ## 内容角度、工程角度和主客角度
 
