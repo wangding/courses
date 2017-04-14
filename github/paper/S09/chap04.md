@@ -1,7 +1,3 @@
----
-layout: book-zh
-title: 探究操作系统
----
 
 既然我们已经知道了如何在文件系统中跳转，是时候开始 Linux 操作系统之旅了。然而在开始之前，我们先学习一些对研究
 Linux 系统有帮助的命令。
@@ -17,18 +13,18 @@ Linux 系统有帮助的命令。
 ls 可能是用户最常使用的命令了，这自有它的道理。通过它，我们可以知道目录的内容，以及各种各样重要文件和目录的
 属性。正如我们已经见到的，只要简单的输入 ls 就能看到在当前目录下所有文件和子目录的列表。
 
-    [me@linuxbox ~]$ ls
+    [wangding@LAB ~]$ ls
     Desktop Documents Music Pictures Publica Templates Videos
 
 除了当前工作目录以外，也可以指定别的目录，就像这样：
 
-    me@linuxbox ~]$ ls /usr
+    wangding@LAB ~]$ ls /usr
     bin games   kerberos    libexec  sbin   src
     etc include lib         local    share  tmp
 
 甚至可以列出多个指定目录的内容。在这个例子中，将会列出用户家目录（用字符“~”代表）和/usr 目录的内容：
 
-    [me@linuxbox ~]$ ls ~ /usr
+    [wangding@LAB ~]$ ls ~ /usr
     /home/me:
     Desktop  Documents  Music  Pictures  Public  Templates  Videos
 
@@ -38,7 +34,7 @@ ls 可能是用户最常使用的命令了，这自有它的道理。通过它�
 
 我们也可以改变输出格式，来得到更多的细节：
 
-    [me@linuxbox ~]$ ls -l
+    [wangding@LAB ~]$ ls -l
     total 56
     drwxrwxr-x 2  me  me  4096  2007-10-26  17:20  Desktop
     drwxrwxr-x 2  me  me  4096  2007-10-26  17:20  Documents
@@ -62,11 +58,11 @@ GNU 项目的命令，也支持长选项，长选项由两个中划线加上一�
 许多命令也允许把多个短选项串在一起使用。下面这个例子，ls 命令有两个选项，
 “l” 选项产生长格式输出，“t”选项按文件修改时间的先后来排序。
 
-    [me@linuxbox ~]$ ls -lt
+    [wangding@LAB ~]$ ls -lt
 
 加上长选项 “--reverse”，则结果会以相反的顺序输出：
 
-    [me@linuxbox ~]$ ls -lt --reverse
+    [wangding@LAB ~]$ ls -lt --reverse
 
 ls 命令有大量的选项。表4-1列出了最常使用的选项。
 
@@ -189,7 +185,7 @@ JPEG 压缩图像，但 Linux 却不这样要求它。可以这样调用 file �
 
 当调用 file 命令后，file 命令会打印出文件内容的简单描述。例如：
 
-    [me@linuxbox ~]$ file picture.jpg
+    [wangding@LAB ~]$ file picture.jpg
     picture.jpg: JPEG image data, JFIF standard 1.01
 
 有许多种类型的文件。事实上，在类 Unix 操作系统中比如说 Linux 中，有个普遍的观念就是“一切皆文件”。
@@ -230,7 +226,7 @@ less 命令是这样使用的：
 
 一旦运行起来，less 程序允许你前后滚动文件。例如，要查看一个定义了系统中全部用户身份的文件，输入以下命令：
 
-    [me@linuxbox ~]$ less /etc/passwd
+    [wangding@LAB ~]$ less /etc/passwd
 
 一旦 less 程序运行起来，我们就能浏览文件内容了。如果文件内容多于一页，那么我们可以上下滚动文件。按下“q”键，
 退出 less 程序。
