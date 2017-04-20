@@ -13,13 +13,12 @@
 |  5    | [redmine 项目管理](./redmine)  |  ![](images/present25.png) |
 |  6    | [在线思维导图](./mindmap) | ![](images/present100.png)  |
 |  7    | [vimperator 高效上网](./vimperator) | ![](images/present100.png)|
-|  8    | [产品设计简介](./productIntro) | ![](images/present25.png)|
-|  9    | [界面原型设计](./UIPrototype) | ![](images/present25.png)|
-|  10   | [七天学会软件测试](./7DTesting) |  ![](images/present100.png)|
-|  11   | [Github 开源之旅第一季：启程](./github) |  ![](images/present100.png)|
-|  12   | [Github 开源之旅第二季：MarkDown](./markdown) |  ![](images/present100.png)|
-|  13   | [Github 开源之旅第三季：Git 进阶](./github) |  ![](images/present100.png)|
-|  14   | [Github 开源之旅第四季：Git 团队协作](./github) |  ![](images/present100.png)|
+|  8    | [界面原型设计](./UIPrototype) | ![](images/present25.png)|
+|  9    | [七天学会软件测试](./7DTesting) |  ![](images/present100.png)|
+|  10   | [Github 开源之旅第一季：启程](./github) |  ![](images/present100.png)|
+|  11   | [Github 开源之旅第二季：MarkDown](./markdown) |  ![](images/present100.png)|
+|  12   | [Github 开源之旅第三季：Git 进阶](./github) |  ![](images/present100.png)|
+|  13   | [Github 开源之旅第四季：Git 团队协作](./github) |  ![](images/present100.png)|
 
 
 ## 课程路线
