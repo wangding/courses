@@ -1,4 +1,5 @@
 # 七天学会软件测试
+
 这门课程相当于是个目录课程，这个视频课程内容不多，主要是讲学习思路和学习方法，最好按照老师介绍的方法按部就班的学，七天下来应该能收获满满的。现在看到的这个学习资料是本课程的核心，所有的内容都是围绕这个开展的。王顶老师的软件测试 QQ 学习交流群：301862163，加群时请报上自己的真实姓名，以及正在学习的课程内容。
 
 **[《七天学会软件测试》课程视频](http://edu.51cto.com/course/course_id-8176.html)**  
@@ -177,13 +178,19 @@
 
 ## 积累项目经验
 
-如果你希望在应聘一份正式的软件测试工作之前，积累一些真实软件测试的项目经验。这里有两个方案可供选择：方案一、找一个软件测试的实习工作，我这里可能有软件测试的实习工作机会，我的 QQ 号：408542507，需要的话可以跟我联系。方案二、你可以直接在全世界最大的 Github 开源社区中，参与开源软件项目的测试工作，你在这个平台上的所有贡献，都会有历史记录，可以呈现给用人单位。
+如果你希望在应聘一份正式的软件测试工作之前，积累一些真实软件测试的项目经验。这里有两个方案可供选择：方案一、找一个软件测试的实习工作，我这里可能有软件测试的实习工作机会，我的 QQ 号：408542507，需要的话可以跟我联系。方案二、你可以直接在全世界最大的 GitHub 开源社区中，参与开源软件项目的测试工作，你在这个平台上的所有贡献，都会有历史记录，可以呈现给用人单位。
 
 如果你选择方案二，请学习下面的视频课程并完成课程中的通关任务：
 
-[Github 开源之旅第一季：启程](http://edu.51cto.com/course/course_id-7845.html)  
-[Github 开源之旅第二季：MarkDown](http://edu.51cto.com/course/course_id-8043.html)  
-[Github 开源之旅第三季：Git 进阶](http://edu.51cto.com/course/course_id-8177.html)  
-[Github 开源之旅第四季：团队协作](README.md)  
+[GitHub 开源之旅第一季：Git 入门](http://edu.51cto.com/course/course_id-7845.html)  
+[GitHub 开源之旅第二季：MarkDown](http://edu.51cto.com/course/course_id-8043.html)  
+[GitHub 开源之旅第三季：Git 进阶](http://edu.51cto.com/course/course_id-8177.html)  
+[GitHub 开源之旅第四季：团队协作](http://edu.51cto.com/course/course_id-8367.html)  
+[GitHub 开源之旅第五季：stylish 网站换肤](http://edu.51cto.com/course/course_id-8510.html)  
+[GitHub 开源之旅第六季：how-to-markdown](http://edu.51cto.com/course/course_id-8513.html)  
+[GitHub 开源之旅第七季：GitBook](http://edu.51cto.com/course/course_id-8684.html)  
+[GitHub 开源之旅第八季：Jekyll 静态站](README.md)
+
 
 课程资料页面：https://github.com/wangding/courses/blob/master/github/README.md
+
