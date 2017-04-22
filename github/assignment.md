@@ -23,7 +23,7 @@
 
 - [ ] 任务3. Follow（关注）[王顶](https://github.com/wangding/)
 - [ ] 任务4. Star（收藏）[courses 项目](https://github.com/wangding/courses/)
-- [ ] 任务5. Star（收藏）[SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)
+- [ ] 任务5. Star（收藏）[selenium-ide-doc 项目](https://github.com/wangding/selenium-ide-doc/)
 - [ ] 任务6. Follow（关注）其他人
     - 要求如下：
     - 浏览并关注王顶关注的人
@@ -34,10 +34,10 @@
     - 浏览王顶收藏的项目，选择你感兴趣的项目收藏他
     - 或者自行在 Github 上浏览搜索，选择你感兴趣的项目收藏他
 
-- [ ] 任务8. 测试 [SeleniumIDEDoc 项目](https://github.com/wangding/SeleniumIDEDoc/)
+- [ ] 任务8. 测试 [selenium-ide-doc 项目](https://github.com/wangding/selenium-ide-doc/)
     - 要求如下：
     - 对该文档做静态检查
-    - 如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目的 [issues 模块](https://github.com/wangding/SeleniumIDEDoc/issues)中提交 Labels（标记）为 bug 的 issue 。
+    - 如有错误，例如：错别字、翻译错误或语句不通顺，等。请在该项目的 [issues 模块](https://github.com/wangding/selenium-ide-doc/issues)中提交 Labels（标记）为 bug 的 issue 。
 
 ## 课程学习2
 

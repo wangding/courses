@@ -35,9 +35,9 @@
 - 在 demo1.md 文件中把课程视频中讲到**段落**、**标题**、**强调**和**列表**这些 MarkDown 语法练习一下；
 - MarkDown 实战一：多级列表实战  
   - 创建 list.md  
-  - 内容是 wangding/SeleniumIDEDoc 仓库的 [README.md]  
+  - 内容是 wangding/selenium-ide-doc 仓库的 [README.md]  
   - 只需要完成多级列表，不需要添加超链接  
-  - 多级列表的样式，需要跟 wangding/SeleniumIDEDoc 仓库的 [README.md] 文件中的样式保持一致  
+  - 多级列表的样式，需要跟 wangding/selenium-ide-doc 仓库的 [README.md] 文件中的样式保持一致  
 - 将本次任务创建的所有文件 push 推到自己的 Github MarkDown 远程仓库  
 - 在 Github 网站上查看上传的文件，检查样式是否正确，如果不正确请在本地修改，重新上传  
 
@@ -49,13 +49,13 @@
 - MarkDown 实战二  
   - 图片实战  
     - 创建 open.md  
-    - 内容是 wangding/SeleniumIDEDoc 仓库的 [Open.md]  
+    - 内容是 wangding/selenium-ide-doc 仓库的 [Open.md]  
   - 链接实战  
-    - 从 wangding/SeleniumIDEDoc 仓库下载 [Features.md] 以及该文档引用的所有图片，放到自己的 MarkDown 目录下；
+    - 从 wangding/selenium-ide-doc 仓库下载 [Features.md] 以及该文档引用的所有图片，放到自己的 MarkDown 目录下；
     - 把任务三中的 list.md 中的 “IDE 的功能”列表项及其子列表项与本地 Features.md 的相关内容关联起来；  
   - 代码块实战  
     - 创建 TestSuit.md 文件  
-    - 内容是 wangding/SeleniumIDEDoc 仓库的 [TestSuit.md]，注意代码块要求设置语法高亮  
+    - 内容是 wangding/selenium-ide-doc 仓库的 [TestSuit.md]，注意代码块要求设置语法高亮  
 - 将本次任务创建的所有文件 push 推到自己的 Github MarkDown 远程仓库
 - 在 Github 网站上查看上传的文件，检查样式是否正确，如果不正确请在本地修改，重新上传 
 
@@ -87,10 +87,10 @@
 [百度百科的 MarkDown 词条]: http://baike.baidu.com/link?url=TEREhJsIPUnfMdpMVsSJv0RVWPsHxUqmv_gF8zn9lkM6zaRmgGIb7PE0SbXX1F96oRGJ54ykjIqcHkfUUlf59DAnbFiwaFg_YCwKyBLRBZ_
 [课程资料页面]: README.md
 [Github 2016 年度报告]: https://octoverse.github.com/
-[README.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/README.md
-[Open.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/Open.md
-[Features.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/Features.md
-[TestSuit.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/TestSuite.md
-[JavaScript.md]: https://github.com/wangding/SeleniumIDEDoc/blob/master/JavaScript.md
+[README.md]: https://github.com/wangding/selenium-ide-doc/blob/master/README.md
+[Open.md]: https://github.com/wangding/selenium-ide-doc/blob/master/Open.md
+[Features.md]: https://github.com/wangding/selenium-ide-doc/blob/master/Features.md
+[TestSuit.md]: https://github.com/wangding/selenium-ide-doc/blob/master/TestSuite.md
+[JavaScript.md]: https://github.com/wangding/selenium-ide-doc/blob/master/JavaScript.md
 [在线通关任务]: http://www.markdowntutorial.com/lesson/1/
 [how-to-markdown]: https://github.com/workshopper/how-to-markdown/
