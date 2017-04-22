@@ -23,16 +23,16 @@ Selenium IDE web 自动化测试入门。王顶老师的软件测试 QQ 学习�
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/code.png" height="30">示例代码
 
-- [百度搜索](https://github.com/wangding/seIDE/tree/master/baidu)
-- [51CTO 学院](https://github.com/wangding/seIDE/tree/master/edu51cto)
-- [在线计算器](https://github.com/wangding/seIDE/tree/master/zxjsq)
-- [时间校准网](https://github.com/wangding/seIDE/tree/master/time)
-- [hostedRedmine](https://github.com/wangding/seIDE/tree/master/hostedredmine)
-- [ProcessOn](https://github.com/wangding/seIDE/tree/master/ProcessOn)
-- [ATOOL](https://github.com/wangding/seIDE/tree/master/ATOOL)
-- [定位器示例](https://github.com/wangding/seIDE/tree/master/locator)
-- [弹窗示例](https://github.com/wangding/seIDE/tree/master/alert)
-- [数据驱动示例](https://github.com/wangding/seIDE/tree/master/DDT)
+- [百度搜索](https://github.com/wangding/selenium-ide-demo/tree/master/baidu)
+- [51CTO 学院](https://github.com/wangding/selenium-ide-demo/tree/master/edu51cto)
+- [在线计算器](https://github.com/wangding/selenium-ide-demo/tree/master/zxjsq)
+- [时间校准网](https://github.com/wangding/selenium-ide-demo/tree/master/time)
+- [hostedRedmine](https://github.com/wangding/selenium-ide-demo/tree/master/hostedredmine)
+- [ProcessOn](https://github.com/wangding/selenium-ide-demo/tree/master/ProcessOn)
+- [ATOOL](https://github.com/wangding/selenium-ide-demo/tree/master/ATOOL)
+- [定位器示例](https://github.com/wangding/selenium-ide-demo/tree/master/locator)
+- [弹窗示例](https://github.com/wangding/selenium-ide-demo/tree/master/alert)
+- [数据驱动示例](https://github.com/wangding/selenium-ide-demo/tree/master/DDT)
 
 ## :hammer:工具下载
 
@@ -47,7 +47,7 @@ Selenium IDE web 自动化测试入门。王顶老师的软件测试 QQ 学习�
 - [Selenium IDE 官方资料翻译](https://github.com/wangding/SeleniumIDEDoc)  
   欢迎大家参与翻译或矫正文字。
   
-- [Selenium IDE 自动化脚本案例](https://github.com/wangding/seIDE)  
+- [Selenium IDE 自动化脚本案例](https://github.com/wangding/selenium-ide-demo)  
   欢迎大家在这里下载或分享录制好的脚本。
   
 - [CSS diner](http://flukeout.github.io/)  

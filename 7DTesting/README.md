@@ -128,13 +128,13 @@
   - [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)  
 
 - 通关任务  
-  - [seIDE web 自动化测试上篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment1.md)  
+  - [selenium-ide-demo web 自动化测试上篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment1.md)  
 
 - 示例参考  
-  - [HelloWorld1 自动化测试脚本](https://github.com/wangding/seIDE/blob/master/hello/helloWorld1.html)  
-  - [HelloWorld2 自动化测试脚本](https://github.com/wangding/seIDE/blob/master/hello/helloWorld2.html)  
-  - [百度搜索自动化测试脚本](https://github.com/wangding/seIDE/blob/master/baidu/search.html)  
-  - [hostedredmine 自动化测试脚本](https://github.com/wangding/seIDE/tree/master/hostedredmine#%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B)  
+  - [HelloWorld1 自动化测试脚本](https://github.com/wangding/selenium-ide-demo/blob/master/hello/helloWorld1.html)  
+  - [HelloWorld2 自动化测试脚本](https://github.com/wangding/selenium-ide-demo/blob/master/hello/helloWorld2.html)  
+  - [百度搜索自动化测试脚本](https://github.com/wangding/selenium-ide-demo/blob/master/baidu/search.html)  
+  - [hostedredmine 自动化测试脚本](https://github.com/wangding/selenium-ide-demo/tree/master/hostedredmine#%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B)  
 
 ## Day7：综合案例实战
 
@@ -149,7 +149,7 @@
   - [对手机号归属地查询做自动化测试](mobile.md)  
 
 - 示例参考  
-  - [手机号归属地查询自动化测试脚本](https://github.com/wangding/seIDE/blob/master/ATOOL/mobile.html)  
+  - [手机号归属地查询自动化测试脚本](https://github.com/wangding/selenium-ide-demo/blob/master/ATOOL/mobile.html)  
 
 ## 进行深入学习
 
@@ -170,8 +170,8 @@
   - 完成 [Selenium IDE web 自动化测试中篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment2.md)  
   - 完成 [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)视频课程的学习  
   - 完成 [Selenium IDE web 自动化测试下篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment3.md)  
-  - 学习 [seIDE web 自动化测试综合案例实战第一季](http://edu.51cto.com/course/course_id-7864.htm)视频课程的学习  
-  - 完成 [seIDE 综合案例实战第一季通关任务](https://github.com/wangding/courses/blob/master/seIDEPracticeCase/task01.md)  
+  - 学习 [selenium-ide-demo web 自动化测试综合案例实战第一季](http://edu.51cto.com/course/course_id-7864.htm)视频课程的学习  
+  - 完成 [selenium-ide-demo 综合案例实战第一季通关任务](https://github.com/wangding/courses/blob/master/selenium-ide-demoPracticeCase/task01.md)  
 
 - Vimperator 工具  
   - 完成 [Vimperator 黑客的上网工具](http://edu.51cto.com/course/course_id-8023.html)视频课程的学习  

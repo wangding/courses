@@ -68,10 +68,10 @@
   - HostedRedmine 网站，登录验证
   - 51CTO 学院，学习时长统计
 - 数据文件：
-  - https://github.com/wangding/seIDE/blob/master/DDT/CSV/baiduSearchData.csv
-  - https://github.com/wangding/seIDE/blob/master/DDT/CSV/mobileData.csv
-  - https://github.com/wangding/seIDE/blob/master/DDT/CSV/loginHRedmineData.csv
-  - https://github.com/wangding/seIDE/blob/master/DDT/CSV/51ctoLensData.csv
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/CSV/baiduSearchData.csv
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/CSV/mobileData.csv
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/CSV/loginHRedmineData.csv
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/CSV/51ctoLensData.csv
   
 ## 任务9 制作四个网站的 js DDT 自动化测试脚本
 
@@ -82,10 +82,10 @@
   - HostedRedmine 网站，登录验证
   - 51CTO 学院，学习时长统计
 - 数据文件：
-  - https://github.com/wangding/seIDE/blob/master/DDT/JS/baiduSearchData.js
-  - https://github.com/wangding/seIDE/blob/master/DDT/JS/mobileData.js
-  - https://github.com/wangding/seIDE/blob/master/DDT/JS/redmineLoginData.js
-  - https://github.com/wangding/seIDE/blob/master/DDT/JS/51ctoLensData.js
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/JS/baiduSearchData.js
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/JS/mobileData.js
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/JS/redmineLoginData.js
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/JS/51ctoLensData.js
   
 ## 任务10 制作四个网站的 xml DDT 自动化测试脚本
 
@@ -96,7 +96,7 @@
   - HostedRedmine 网站，登录验证
   - 51CTO 学院，学习时长统计
 - 数据文件：
-  - https://github.com/wangding/seIDE/blob/master/DDT/XML/baiduSearchData.xml
-  - https://github.com/wangding/seIDE/blob/master/DDT/XML/mobileData.xml
-  - https://github.com/wangding/seIDE/blob/master/DDT/XML/loginHRedmineData.xml
-  - https://github.com/wangding/seIDE/blob/master/DDT/XML/studyLensData.xml
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/XML/baiduSearchData.xml
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/XML/mobileData.xml
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/XML/loginHRedmineData.xml
+  - https://github.com/wangding/selenium-ide-demo/blob/master/DDT/XML/studyLensData.xml
