@@ -87,7 +87,7 @@
 [百度百科的 MarkDown 词条]: http://baike.baidu.com/link?url=TEREhJsIPUnfMdpMVsSJv0RVWPsHxUqmv_gF8zn9lkM6zaRmgGIb7PE0SbXX1F96oRGJ54ykjIqcHkfUUlf59DAnbFiwaFg_YCwKyBLRBZ_
 [课程资料页面]: README.md
 [Github 2016 年度报告]: https://octoverse.github.com/
-[README.md]: https://github.com/wangding/selenium-ide-doc/blob/master/README.md
+[README.md]: https://github.com/wangding/selenium-ide-doc/blob/master/SUMMARY.md
 [Open.md]: https://github.com/wangding/selenium-ide-doc/blob/master/Open.md
 [Features.md]: https://github.com/wangding/selenium-ide-doc/blob/master/Features.md
 [TestSuit.md]: https://github.com/wangding/selenium-ide-doc/blob/master/TestSuite.md
