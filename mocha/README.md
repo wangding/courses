@@ -26,3 +26,9 @@
 - [Mocha 官方资料](http://mochajs.org/)  
 - [Mocha GitHub 仓库](https://github.com/mochajs/mocha)  
 
+## 搭建开发环境所需软件
+
+- [VMware workstation Pro 12](http://rj.baidu.com/soft/detail/13808.html?ald)
+- [mocha.ova](http://pan.baidu.com/s/1o8a3E3o)
+- [XShell 5](http://rj.baidu.com/soft/detail/15201.html)
+
