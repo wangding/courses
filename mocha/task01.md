@@ -55,19 +55,22 @@
 ## 任务五：mocha 的基本用法
 
 要求：
-- 参考初始 date.js 代码，实现 date.js 模块的各个函数
+- 参考[初始 date.js 代码][date_js_origin]，实现 date.js 模块的各个函数
 - 编写 date.js 各个函数的测试套件及测试用例
 - 把代码提交 Git 仓库
 
 参考：
 - 初始化代码：[date.js][date_js_origin]
 - 完成后代码：[date.js][date_js_final]
+- 自动化测试脚本代码：[date.test.js][date_test_js]
 
 ## 任务六：命令行参数
 
 要求：
 - 生成 mochawesome 网页格式的报告
-- 提交 Git 仓库
+- 创建 mocha.opt 配置文件来执行自动化测试
+- 修改 package.json 通过 npm test 来执行自动化测试
+- 提交代码到 Git 仓库
 
 <!-- 本文档中的链接 -->
 [mocha_ova]: http://pan.baidu.com/s/1o8a3E3o 
@@ -75,4 +78,5 @@
 [calc_js_final]: https://github.com/wangding/mocha-demo/blob/dc22176b6e615034fe3f770328ca7425690b4ffb/calc.js
 [calc_test_js]: https://github.com/wangding/mocha-demo/blob/dc22176b6e615034fe3f770328ca7425690b4ffb/test/calc.test.js
 [date_js_origin]: https://github.com/wangding/mocha-demo/blob/cae1d4f0354c034577a93ab08eaaa9da690c8f61/date.js
-
+[date_js_final]: https://github.com/wangding/mocha-demo/blob/03f20550eaff390b014e8f5b58189b9a762123ec/date.js
+[date_test_js]: https://github.com/wangding/mocha-demo/blob/03f20550eaff390b014e8f5b58189b9a762123ec/test/date.test.js
