@@ -2,41 +2,36 @@
 
 存放开发的各门在线课程资料。
 
-## 课程状态
+## 功能导航
 
-| 编号       | 课程名称  | 进度  |  
-| :---: | -----  | :-----:|  
-|  1    | [Gravatar 全球大头贴](./gravatar)  |![](images/present100.png)|  
-|  2    | [Selenium IDE web 自动化测试入门](./seleniumIDE) | ![](images/present100.png) |
-|  3    | [产品设计简介](./productIntro)  | ![](images/present50.png)  |
-|  4    | [seIDE 综合案例实战](./seIDEPracticeCase)  |![](images/present100.png)  |
-|  5    | [redmine 项目管理](./redmine)  |  ![](images/present25.png) |
-|  6    | [在线思维导图](./mindmap) | ![](images/present100.png)  |
-|  7    | [vimperator 高效上网](./vimperator) | ![](images/present100.png)|
-|  8    | [界面原型设计](./UIPrototype) | ![](images/present25.png)|
-|  9    | [七天学会软件测试](./7DTesting) |  ![](images/present100.png)|
-|  10   | [Github 开源之旅第一季：启程](./github) |  ![](images/present100.png)|
-|  11   | [Github 开源之旅第二季：MarkDown](./markdown) |  ![](images/present100.png)|
-|  12   | [Github 开源之旅第三季：Git 进阶](./github) |  ![](images/present100.png)|
-|  13   | [Github 开源之旅第四季：Git 团队协作](./github) |  ![](images/present100.png)|
+- 观看王顶老师的在线视频课程，请移步[课程中心](http://edu.51cto.com/lecturer/index/user_id-8606427.html)
+- 给王顶老师提问或者留言，请移步[交流中心](https://github.com/wangding/courses/issues)
+- 查看或者下载各门课程资料，请直接点击上面的文件夹
+- 参与课程开发，请移步[集体备课](CONTRIBUTION.md)
 
+## 更新日志
 
-## 课程路线
-| 编号       | 路线名称  | 进度  |  
-| :---: | -----  | :-----:|  
-|  1    | [IT 新手](./newer)   | ![images](images/present0.png)  |  
-|  2    | [测试工程师](./7DTesting) | ![images](images/present100.png) |  
-|  3    | [产品工程师](./PM)     | ![images](images/present0.png) |
-|  4    | [开发工程师](./PM)     | ![images](images/present0.png) |
+2017-04-28 [基于 Mocha 自动化测试框架（上篇）](http://edu.51cto.com/course/course_id-9011.html)上线  
+2017-04-17 [GitHub 开源之旅第六季：how-to-markdown](http://edu.51cto.com/course/course_id-8513.html)上线  
+2017-04-10 [信息科学基础习题课（下篇）](http://edu.51cto.com/course/course_id-8836.html)上线  
+2017-03-19 [GitHub 开源之旅第七季：GitBook](http://edu.51cto.com/course/course_id-8684.html)上线  
+2017-03-13 [GitHub 开源之旅第五季：stylish 网站换肤](http://edu.51cto.com/course/course_id-8510.html)上线  
+2017-03-07 [信息科学基础习题课（上篇）](http://edu.51cto.com/course/course_id-8511.html)上线  
+2017-02-20 [GitHub 开源之旅第四季：Git 团队协作](http://edu.51cto.com/course/course_id-8367.html)上线  
+2017-02-14 [GitHub 开源之旅第三季：Git 进阶](http://edu.51cto.com/course/course_id-8177.html)上线  
+2017-02-31 [GitHub 开源之旅第二季：MarkDown](http://edu.51cto.com/course/course_id-8043.html)上线  
+2017-01-22 [GitHub 开源之旅第一季：Git 入门](http://edu.51cto.com/course/course_id-7845.html)上线  
+2016-12-26 [Vimperator 黑客的上网工具](http://edu.51cto.com/course/course_id-8023.html)上线  
+2016-12-19 [Selenium IDE WEB 自动化测试综合案例实战：第一季](http://edu.51cto.com/course/course_id-7864.html)上线  
+2016-11-27 [Selenium IDE WEB 自动化测试（下篇）](http://edu.51cto.com/course/course_id-7578.html)上线  
+2016-11-06 [Selenium IDE WEB 自动化测试（中篇）](http://edu.51cto.com/course/course_id-7425.html)上线  
+2016-10-11 [Selenium IDE WEB 自动化测试（上篇）](http://edu.51cto.com/course/course_id-7320.html)上线  
+2016-09-12 [在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)上线  
+2016-08-23 [信息科学基础（上篇）](http://edu.51cto.com/course/course_id-6578.html)上线  
+2016-07-14 [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)上线  
+2016-07-03 [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)上线  
+2016-06-30 [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)上线  
 
-
-## 参与项目  
-
-- [课程开发流程<有待完善>](README.md)  
-- [文档写作规范](https://github.com/wangding/course-editors-guidelines)  
-- [课程开发计划](plan.md)  
-- [Github 团队协作流程图](http://www.processon.com/view/584a4160e4b005d48b73cf55)  
-![Fork 工作流程](images/forkProcess.png)
 
 ## 目录结构
 
