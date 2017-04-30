@@ -72,6 +72,10 @@
 - 修改 package.json 通过 npm test 来执行自动化测试
 - 提交代码到 Git 仓库
 
+参考：
+- 完成后代码：[mocha.opts][mocha_opts] 
+- 完成后代码：[package.json][package_json]
+
 <!-- 本文档中的链接 -->
 [mocha_ova]: http://pan.baidu.com/s/1o8a3E3o 
 [calc_js_origin]: https://github.com/wangding/mocha-demo/blob/6340e47606d092d4e338956a486d6ad123e3286b/calc.js
@@ -80,3 +84,5 @@
 [date_js_origin]: https://github.com/wangding/mocha-demo/blob/cae1d4f0354c034577a93ab08eaaa9da690c8f61/date.js
 [date_js_final]: https://github.com/wangding/mocha-demo/blob/03f20550eaff390b014e8f5b58189b9a762123ec/date.js
 [date_test_js]: https://github.com/wangding/mocha-demo/blob/03f20550eaff390b014e8f5b58189b9a762123ec/test/date.test.js
+[mocha_opts]: https://github.com/wangding/mocha-demo/blob/5919870eb312657ba8d4056cc959c32b296881c7/test/mocha.opts
+[package_json]: https://github.com/wangding/mocha-demo/blob/5919870eb312657ba8d4056cc959c32b296881c7/package.json
