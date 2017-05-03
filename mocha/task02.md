@@ -86,10 +86,13 @@
 
 要求：
 - 安装 selenium-webdriver
-- 在 mocha-demo 目录下，创建子目录 webdriver
-- 在 webdriver 目录下，编写 hosted-redmine-login.js 测试代码
+- 编写 hosted-redmine-login.test.js 测试代码
 - 将测试代码与 mocha 整合
 - 把代码提交 Git 仓库
+
+参考：
+完成后的代码：
+- [hosted-redmine-login.test.js][hosted-redmine-login-test-js]
 
 ## 任务八：持续集成工具整合
 
@@ -101,6 +104,10 @@
 - 提交 .travis.yml 文件到 GitHub 网站，并观察持续集成的过程报告
 - 修改 clac.js 代码，引入 bug，将修改后的代码提交 GitHub 仓库
 - 观察继续集成的过程报告
+
+参考：
+完成后的代码：
+- [.travis.yml][travis_yml]
 
 <!-- 本文档中的链接 -->
 [calc_test_js_origin_task01]: https://github.com/wangding/mocha-demo/blob/dc22176b6e615034fe3f770328ca7425690b4ffb/test/calc.test.js
@@ -115,3 +122,5 @@
 [babelrc]: https://github.com/wangding/mocha-demo/blob/bbb1c62e533b8c518714dc8ff9701ac6c25d5d0e/.babelrc
 [calc_test_js_es6]: https://github.com/wangding/mocha-demo/blob/bbb1c62e533b8c518714dc8ff9701ac6c25d5d0e/test/calc.test.js
 [date_test_js_es6]: https://github.com/wangding/mocha-demo/blob/bbb1c62e533b8c518714dc8ff9701ac6c25d5d0e/test/date.test.js
+[hosted-redmine-login-test-js]: https://github.com/wangding/mocha-demo/blob/0c46b79fe422301b706dca86dc821d9f3903134c/test/hostedredmine-login.test.js
+[travis_yml]: https://github.com/wangding/mocha-demo/blob/c912a65a02cf018aebe874d9bae7e63bd2d0e537/.travis.yml
