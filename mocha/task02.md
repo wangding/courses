@@ -8,9 +8,9 @@
 - 执行 calc.test.js 测试脚本，观察执行效果
 - 把代码提交 Git 仓库
 
-参考：
-初始的代码：[calc.test.js][calc_test_js_origin_task01]
-完成后代码：[calc.test.js][calc_test_js_final_task01]
+参考：  
+初始的代码：[calc.test.js][calc_test_js_origin_task01]  
+完成后代码：[calc.test.js][calc_test_js_final_task01]  
 
 ## 任务二：测试用例钩子
 
@@ -20,9 +20,9 @@
 - 执行 calc.test.js 自动化测试脚本，观察钩子函数的执行效果
 - 把代码提交 Git 仓库 
 
-参考：
-初始的代码：[calc.test.js][calc_test_js_final_task01]
-完成后代码：[calc.test.js][calc_test_js_final_task02]
+参考：  
+初始的代码：[calc.test.js][calc_test_js_final_task01]  
+完成后代码：[calc.test.js][calc_test_js_final_task02]  
 
 ## 任务三：异步测试
 
@@ -36,9 +36,9 @@
 
 参考：  
 完成后代码：  
-- [timeout.test.js][timeout_test_js]  
-- [async.test.js][async_test_js]  
-- [promise.test.js][promise_test_js]  
+- [timeout.test.js][timeout_test_js]   
+- [async.test.js][async_test_js]    
+- [promise.test.js][promise_test_js]    
 
 ## 任务四：测试前端代码 
 
@@ -51,11 +51,11 @@
 - 用浏览器打开 index.html 页面，执行前端代码的测试
 - 把代码提交 Git 仓库
 
-参考：
-完成后的代码：
-- [add.js][add_js]
-- [index.html][index_html]
-- [tests.js][tests_js]
+参考：  
+完成后的代码：  
+- [add.js][add_js]  
+- [index.html][index_html]  
+- [tests.js][tests_js]  
 
 ## 任务五：ES6 测试脚本
 
@@ -67,11 +67,11 @@
 - 改写 mocha.opts 文件，使得 npm test 脚本能生效
 - 提交代码到 Git 仓库
 
-参考：
-完成后的代码：
-- [.babelrc][babelrc]
-- [calc.test.js][calc_test_js_es6]
-- [date.test.js][date_test_js_es6]
+参考：   
+完成后的代码：  
+- [.babelrc][babelrc]  
+- [calc.test.js][calc_test_js_es6]  
+- [date.test.js][date_test_js_es6]  
 
 ## 任务六：代码覆盖率
 
@@ -90,9 +90,9 @@
 - 将测试代码与 mocha 整合
 - 把代码提交 Git 仓库
 
-参考：
-完成后的代码：
-- [hosted-redmine-login.test.js][hosted-redmine-login-test-js]
+参考：   
+完成后的代码：   
+- [hosted-redmine-login.test.js][hosted-redmine-login-test-js]   
 
 ## 任务八：持续集成工具整合
 
@@ -105,9 +105,9 @@
 - 修改 clac.js 代码，引入 bug，将修改后的代码提交 GitHub 仓库
 - 观察继续集成的过程报告
 
-参考：
-完成后的代码：
-- [.travis.yml][travis_yml]
+参考：   
+完成后的代码：  
+- [.travis.yml][travis_yml]   
 
 <!-- 本文档中的链接 -->
 [calc_test_js_origin_task01]: https://github.com/wangding/mocha-demo/blob/dc22176b6e615034fe3f770328ca7425690b4ffb/test/calc.test.js
