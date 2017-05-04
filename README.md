@@ -11,7 +11,8 @@
 
 ## 更新日志
 
-2017-04-28 [基于 Mocha 自动化测试框架（上篇）](http://edu.51cto.com/course/course_id-9011.html)上线  
+2017-05-04 [基于 Mocha 的自动化测试框架（下篇）](http://edu.51cto.com/course/course_id-9084.html)上线  
+2017-04-28 [基于 Mocha 的自动化测试框架（上篇）](http://edu.51cto.com/course/course_id-9011.html)上线  
 2017-04-17 [GitHub 开源之旅第六季：how-to-markdown](http://edu.51cto.com/course/course_id-8513.html)上线  
 2017-04-10 [信息科学基础习题课（下篇）](http://edu.51cto.com/course/course_id-8836.html)上线  
 2017-03-19 [GitHub 开源之旅第七季：GitBook](http://edu.51cto.com/course/course_id-8684.html)上线  
