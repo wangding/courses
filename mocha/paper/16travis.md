@@ -11,18 +11,18 @@ node_modules/.bin/mocha
 npm test
 ```
 
-首先是 mocha 命令和路径，后面跟着测试脚本。这是最麻烦，最啰嗦的执行测试的方式。  
-然后，缩减到，把后面的测试脚本去掉，只留下 mocha 命令和路径，因为 mocha 会自动执行 test 目录下的所有 JavaScript 脚本。  
-再缩减，把 mocha 命令的路径改短，成为 node_module/.bin/ 隐藏目录，因为这个隐藏目录下的 mocha 是指向 node_modules/mocha/bin/mocha 的软连接  
-最后，我们给出了执行自动化测试的正确姿势是用 npm test 脚本来执行自动化测试。因为 npm test 脚本里的 mocha 自动会找 node_modules/.bin/ 下面的 mocha 程序来执行。
+首先是 mocha 命令和路径，后面跟着测试脚本。这是我们最早介绍的执行测试用例的方式。当然，这也是最麻烦和最啰嗦的方式。  
+然后，我们把 mocha 命令后面的测试脚本去掉，只留下 mocha 命令和路径，因为 mocha 会自动执行 test 目录下的所有测试脚本。  
+然后再缩减，我们把 mocha 命令的路径改成 node_module/.bin/ 隐藏目录，因为这个隐藏目录下的 mocha 是指向 node_modules/mocha/bin/mocha 的软连接。这样整个命令又进一步缩短了。  
+最后，我们给出了执行自动化测试的正确姿势，就是用 npm test 命令来执行自动化测试。因为 npm 的 test 脚本里，我们写的是 mocha 命令，这时，npm 会自动找 node_modules/.bin/ 下面的 mocha 程序来执行。这就回到了上面我们说的执行方式了，.bin 目录下的 mocha 是一个软链接，指向 mocha 程序的实际路径 node_modules/mocha/bin/mocha，然后 mocha 再去执行 test 目录下的所有自动化测试脚本。
 
-当时我们说 npm test 是执行自动化测试的正确姿势。其实，这还不算是自动化测试执行的终极形态，为什么这么说呢？因为，这个命令还是需要我们手工在命令行下面输入命令，来执行自动化测试。真正的自动化测试，连这个 npm test 测试的启动命令都不需要我们手工输入。也就是说，终极形态的自动化测试，什么时候来执行自动化测试，根本不需要人工干预。只要我们把自动化测试脚本写好之后，被测模块的代码一旦发生变化，就会立刻执行自动化测试。这才是自动化测试的终极形态，当然这就需要我们引入持续集成工具了。开源社区里面用的比较多的持续集成工具是 Travis-CI。Travis-ci 和 GitHub 版本控制系统紧密集成在一起。企业内部闭源开发环境用 Jenkins 比较多，但是原理上大同小异。本小节我们给小伙伴们讲解 Mocha 与 Travis-CI 整合应用。我们还是以之前做的 calc.js 被测项目为例来讲解。
+当时我们说 npm test 是执行自动化测试的正确姿势。其实，这还不算是自动化测试执行的终极形态，为什么这么说呢？因为，这个命令还是需要我们手工在命令行下面输入命令，来执行自动化测试。是不是需要输入 npm test 命令啊？真正的自动化测试，连这个 npm test 命令都不需要我们手工输入。也就是说，终极形态的自动化测试，什么时候来执行自动化测试，根本不需要人工干预。只要我们把自动化测试脚本写好之后，被测模块的代码一旦发生变化，就会立刻执行自动化测试。这才是自动化测试的终极形态，当然这就需要我们引入持续集成工具了。开源社区里面用的比较多的持续集成工具是 Travis-CI。Travis-ci 和 GitHub 版本控制系统紧密集成在一起。企业内部闭源开发环境用 Jenkins 比较多，但是原理上大同小异。本小节我们给小伙伴们讲解 Mocha 与 Travis-CI 整合应用。我们还是以之前做的 calc.js 被测项目为例来讲解。
 
-那废话不多说了，咱们直接开始干吧。
+那废话不多说了，咱们直接进入正题。
 
 ## 准备 GitHub 仓库
 
-我们首先需要在 GitHub 上创建一个项目仓库，项目仓库的名字叫 mocha-travis-demo，里面的内容都是空。然后在本地创建项目文件夹 mocha-travis-demo，把我们之前做的代码复制到 mocha-travis-demo 目录下面，包括 calc.js, test/calc.test.js, package.json, index.js 这四个文件就行。我们可以在本地目录手动执行以下 npm test，看看测试是否能正常执行。然后，把本地目录和远程仓库建立连接，并将代码推送到远程仓库上。到这里我们的 GitHub 仓库就算准备好了，也就是我们的仓库里，有被测模块 calc.js 也有自动化测试脚本 calc.test.js 还有 package.json 项目配置文件。
+我们首先需要在 GitHub 上创建一个项目仓库，项目仓库的名字叫 mocha-travis-demo，里面的内容都是空。然后在本地创建项目文件夹 mocha-travis-demo，git init 初始化 git 仓库。 把我们之前做的代码复制到 mocha-travis-demo 目录下面，包括 calc.js, test/calc.test.js, package.json, index.js, .gitignore 这几个文件就行。我们可以在本地目录手动执行以下 npm test，看看测试是否能正常执行。然后，把本地目录和远程仓库建立连接，并将代码推送到远程仓库上。到这里我们的 GitHub 仓库就算准备好了，也就是我们的仓库里，有被测模块 calc.js 也有自动化测试脚本 calc.test.js 还有 package.json 项目配置文件。
 
 ## 登录 travis-ci
 
