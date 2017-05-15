@@ -109,28 +109,27 @@ bash 有一个内建的帮助工具，可供每一个 shell 内部命令使用�
 
 ## apropos － 显示适当的命令
 
-也有可能搜索参考手册列表，基于某个关键字的匹配项。虽然很粗糙但有时很有用。下面是一个以"floppy"为关键词来搜索参考手册的例子：
+如果你不知道完成某个特定任务所需要命令的名称，可以使用一个关键字通过 apropos 实用程序来搜索它。apropos 命令会搜索 man 参考手册页，每个 man 参考手册页都有一个简短的描述，appropos 搜索的就是这个内容。这个信息虽然比较简单，但有时很有用。下面是一个以"type"为关键词来搜索参考手册的例子：
 
-    [wangding@LAB ~]$ apropos floppy
+    [wangding@LAB ~]$ apropos type 
     create_floppy_devices (8)   - udev callout to create all possible
     ...
 
 输出结果每行的第一个字段是手册页的名字，第二个字段展示章节。注意，man 命令加上"-k"选项，和 apropos 完成一样的功能。
 
+    [wangding@LAB ~]$ man -k type 
+
 ## whatis － 显示非常简洁的命令说明
 
 whatis 程序显示匹配特定关键字的手册页的名字和一行命令说明：
 
->
-> 最晦涩难懂的手册页
->
-> 正如我们所看到的，Linux 和类 Unix 的系统提供的手册页，只是打算作为参考手册使用，而不是教材。许多手册页都很难阅读，但是我认为由于阅读难度而能拿到特等奖的手册页应该是 bash 手册页。因为我正在为这本书做我的研究，所以我很仔细地浏览了整个 bash 手册，为的是确保我讲述了大部分的 bash 主题。当把 bash 参考手册整个打印出来，其篇幅有八十多页且内容极其紧密，但对于初学者来说，其结构安排毫无意义。
->
-> 另一方面，bash 参考手册的内容非常简明精确，同时也非常完善。所以，如果你有胆量就查看一下，并且期望有一天你能读懂它。
+    [wangding@LAB ~]$ whatis type 
+    [wangding@LAB ~]$ whatis cp
+    [wangding@LAB ~]$ whatis apropos
 
 ## info － 显示程序 Info 条目
 
-GNU 项目提供了一个命令程序手册页的替代物，称为"info"。info 内容可通过 info 阅读器程序读取。info 页是超级链接形式的，和网页很相似。这有个例子：
+正如我们刚才通过 man 命令所看到的，Linux 和类 Unix 的系统提供的手册页，只是打算作为参考手册使用，而不是教材。所以看起来比较晦涩难懂。因此 GNU 项目提供了一个命令程序手册页的替代物，称为"info"。info 内容可通过 info 阅读器程序读取。info 页是超级链接形式的，和网页很相似。这有个例子：
 
     File: coreutils.info,    Node: ls invocation,    Next: dir invocation,
      Up: Directory listing
@@ -187,19 +186,12 @@ info 程序读取 info 文件，info 文件是树型结构，分化为各个结�
 </tbody>
 </table>
 
-到目前为止，我们所讨论的大多数命令行程序，属于 GNU 项目"coreutils"包，所以输入：
-
-    [wangding@LAB ~]$ info coreutils
-
-将会显示一个包含超级链接的手册页，这些超级链接指向包含在 coreutils 包中的各个程序。
-
-## READwangding 和其它程序文档
-
-许多安装在你系统中的软件，都有自己的文档文件，这些文件位于/usr/share/doc 目录下。这些文件大多数是以文本文件的形式存储的，可用 less 阅读器来浏览。一些文件是 HTML 格式，可用网页浏览器来阅读。我们可能遇到许多以".gz"结尾的文件。这表示 gzip 压缩程序已经压缩了这些文件。gzip 软件包包括一个特殊的 less 版本，叫做 zless，zless 可以显示由gzip 压缩的文本文件的内容。
+例如：
+    [wangding@LAB ~]$ info cp
 
 ## 用别名（alias）创建你自己的命令
 
-现在是时候，感受第一次编程经历了！我们将用 alias 命令创建我们自己的命令。但在开始之前，我们需要展示一个命令行小技巧。可以把多个命令放在同一行上，命令之间用";"分开。它像这样工作：
+现在是时候，感受第一次编程经历了！我们将用 alias 命令创建一个我们自己的命令。但在开始之前，我们需要展示一个命令行小技巧。可以把多个命令放在同一行上，命令之间用";"分开。它像这样工作：
 
     command1; command2; command3...
 
@@ -226,9 +218,9 @@ info 程序读取 info 文件，info 文件是树型结构，分化为各个结�
 
 注意命令结构：
 
-    alias nawangding='string'
+    alias name``='string'
 
-在命令"alias"之后，输入“nawangding”，紧接着（没有空格）是一个等号，等号之后是一串用引号引起的字符串，字符串的内容要赋值给 nawangding。我们定义了别名之后，这个命令别名可以使用在任何地方。试一下：
+在命令"alias"之后，输入“name”，紧接着（没有空格）是一个等号，等号之后是一串用引号引起的字符串，字符串的内容要赋值给 nawangding。我们定义了别名之后，这个命令别名可以使用在任何地方。试一下：
 
     [wangding@LAB ~]$ foo
     bin   gawangdings   kerberos  lib64    local   share  tmp
