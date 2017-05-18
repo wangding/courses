@@ -121,15 +121,10 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 【课程还在规划和制作中】
 
-## 第九季：Linux Bash 入门
+## 第九季：Linux Bash 入门（上）
 
 大家学会本课程后，应该能够熟练的通过命令行操作各种发行版的 Linux 系统，为在 Linux 系统上做软件开发、测试环境搭建以及系统运维打下扎实的基础。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8684.html)
-- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](gitbook.pptx)
-- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks07.md)  
-  - [任务一：了解 GitBook](tasks07.md#任务一了解-gitbook)  
-  - [任务二：新手上路](tasks07.md#任务二新手上路)  
-  - [任务三：在线制作](tasks07.md#任务三在线制作)  
-  - [任务四：本地制作](tasks07.md#任务四本地制作)  
-  - [任务五：GitHub 集成](tasks07.md#任务五github-集成)  
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-9244.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](bash01.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks09.md)  
