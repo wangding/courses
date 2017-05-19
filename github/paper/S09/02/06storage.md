@@ -1,7 +1,4 @@
----
-layout: book-zh
-title: 存储媒介
----
+# 存储媒介
 
 在前面章节中，我们已经从文件级别看了操作数据。在这章里，我们将从设备级别来考虑数据。
 Linux 有着令人惊奇的能力来处理存储设备，不管是物理设备，比如说硬盘，还是网络设备，或者是
@@ -35,7 +32,7 @@ Linux 有着令人惊奇的能力来处理存储设备，不管是物理设备�
 
 * md5sum – 计算 MD5检验码
 
-### 挂载和卸载存储设备
+## 挂载和卸载存储设备
 
 Linux 桌面系统的最新进展已经使存储设备管理对于桌面用户来说极其容易。大多数情况下，我们
 只要把设备连接到系统中，它就能工作。在过去（比如说，2004年），这个工作必须手动完成。
@@ -118,12 +115,12 @@ Linux 桌面系统的最新进展已经使存储设备管理对于桌面用户�
 </tr>
 </table>
 
-### 查看挂载的文件系统列表
+## 查看挂载的文件系统列表
 
 这个 mount 命令被用来挂载文件系统。执行这个不带参数的命令，将会显示
 一系列当前挂载的文件系统：
 
-    [me@linuxbox ~]$ mount
+    [wangding@LAB ~]$ mount
     /dev/sda2 on / type ext3 (rw)
     proc on /proc type proc (rw)
     sysfs on /sys type sysfs (rw)
@@ -145,7 +142,7 @@ Linux 桌面系统的最新进展已经使存储设备管理对于桌面用户�
 
 第一次实验，我们将使用一张 CD-ROM。首先，在插入 CD-ROW 之前，我们将看一下系统：
 
-    [me@linuxbox ~]$ mount
+    [wangding@LAB ~]$ mount
     /dev/mapper/VolGroup00-LogVol00 on / type ext3 (rw)
     proc on /proc type proc (rw)
     sysfs on /sys type sysfs (rw)
@@ -158,7 +155,7 @@ Linux 桌面系统的最新进展已经使存储设备管理对于桌面用户�
 这个列表来自于 CentOS 5系统，使用 LVM（逻辑卷管理器）来创建它的根文件系统。正如许多现在的 Linux 发行版一样，这个
 系统试图自动挂载插入的 CD-ROM。当我们插入光盘后，我们看看下面的输出：
 
-    [me@linuxbox ~]$ mount
+    [wangding@LAB ~]$ mount
     /dev/mapper/VolGroup00-LogVol00 on / type ext3 (rw)
     proc on /proc type proc (rw)
     sysfs on /sys type sysfs (rw)
@@ -184,36 +181,36 @@ Linux 桌面系统的最新进展已经使存储设备管理对于桌面用户�
 的另一个位置。我们需要超级用户身份（使用系统相应的命令）来进行操作，并且用
 umount（注意这个命令的拼写）来卸载光盘：
 
-    [me@linuxbox ~]$ su -
+    [wangding@LAB ~]$ su -
     Password:
-    [root@linuxbox ~]# umount /dev/hdc
+    [root@LAB ~]# umount /dev/hdc
 
 下一步是创建一个新的光盘挂载点。简单地说，一个挂载点就是文件系统树中的一个目录。它没有
 什么特殊的。它甚至不必是一个空目录，即使你把设备挂载到了一个非空目录上，你也不能看到
 这个目录中原来的内容，直到你卸载这个设备。就我们的目的而言，我们将创建一个新目录：
 
-    [root@linuxbox ~]# mkdir /mnt/cdrom
+    [root@LAB ~]# mkdir /mnt/cdrom
 
 最后，我们把这个 CD-ROW 挂载到一个新的挂载点上。这个-t 选项用来指定文件系统类型：
 
-    [root@linuxbox ~]# mount -t iso9660 /dev/hdc /mnt/cdrom
+    [root@LAB ~]# mount -t iso9660 /dev/hdc /mnt/cdrom
 
 之后，我们可以通过这个新挂载点来查看 CD-ROW 的内容：
 
-    [root@linuxbox ~]# cd /mnt/cdrom
-    [root@linuxbox cdrom]# ls
+    [root@LAB ~]# cd /mnt/cdrom
+    [root@LAB cdrom]# ls
 
 注意当我们试图卸载这个 CD-ROW 时，发生了什么事情。
 
-    [root@linuxbox cdrom]# umount /dev/hdc
+    [root@LAB cdrom]# umount /dev/hdc
     umount: /mnt/cdrom: device is busy
 
 这是怎么回事呢？原因是我们不能卸载一个设备，如果某个用户或进程正在使用这个设备的话。在这种
 情况下，我们把工作目录更改到了 CD-ROW 的挂载点，这个挂载点导致设备忙碌。我们可以很容易地修复这个问题
 通过把工作目录改到其它目录而不是这个挂载点。
 
-    [root@linuxbox cdrom]# cd
-    [root@linuxbox ~]# umount /dev/hdc
+    [root@LAB cdrom]# cd
+    [root@LAB ~]# umount /dev/hdc
 
 现在这个设备成功卸载了。
 
@@ -245,7 +242,7 @@ umount（注意这个命令的拼写）来卸载光盘：
 没有卸载设备，就移除了它，就有可能没有把注定要发送到设备中的数据输送完毕。在某些情况下，
 这些数据可能包含重要的目录更新信息，这将导致文件系统损坏，这是发生在计算机中的最坏的事情之一。
 
-### 确定设备名称
+## 确定设备名称
 
 有时很难来确定设备名称。在以前，这并不是很难。一台设备总是在某个固定的位置，也不会
 挪动它。类 Unix 的系统喜欢设备那样安排。之前在开发 Unix 系统的时候，“更改一个磁盘驱动器”要用一辆
@@ -257,7 +254,7 @@ Linux 已经发展地比其祖先更加灵活。在以上事例中，我们利�
 首先，让我们看一下系统怎样来命名设备。如果我们列出目录/dev（所有设备的住所）的内容，我们
 会看到许许多多的设备：
 
-    [me@linuxbox ~]$ ls /dev
+    [wangding@LAB ~]$ ls /dev
 
 这个列表的内容揭示了一些设备命名的模式。这里有几个：
 
@@ -302,45 +299,45 @@ SCSI 磁盘。在最近的 Linux 系统中，内核把所有类似于磁盘的�
 下面的技巧来决定当可移动设备连接后，它是怎样被命名的。首先，启动一个实时查看文件/var/log/messages
 （你可能需要超级用户权限）：
 
-    [me@linuxbox ~]$ sudo tail -f /var/log/messages
+    [wangding@LAB ~]$ sudo tail -f /var/log/messages
 
 这个文件的最后几行会被显示，然后停止。下一步，插入这个可移动的设备。在
 这个例子里，我们将使用一个16MB 闪存。瞬间，内核就会发现这个设备，
 并且探测它：
 
-    Jul 23 10:07:53 linuxbox kernel: usb 3-2: new full speed USB device
+    Jul 23 10:07:53 LAB kernel: usb 3-2: new full speed USB device
     using uhci_hcd and address 2
-    Jul 23 10:07:53 linuxbox kernel: usb 3-2: configuration #1 chosen
+    Jul 23 10:07:53 LAB kernel: usb 3-2: configuration #1 chosen
     from 1 choice
-    Jul 23 10:07:53 linuxbox kernel: scsi3 : SCSI emulation for USB Mass
+    Jul 23 10:07:53 LAB kernel: scsi3 : SCSI emulation for USB Mass
     Storage devices
-    Jul 23 10:07:58 linuxbox kernel: scsi scan: INQUIRY result too short
+    Jul 23 10:07:58 LAB kernel: scsi scan: INQUIRY result too short
     (5), using 36
-    Jul 23 10:07:58 linuxbox kernel: scsi 3:0:0:0: Direct-Access Easy
+    Jul 23 10:07:58 LAB kernel: scsi 3:0:0:0: Direct-Access Easy
     Disk 1.00 PQ: 0 ANSI: 2
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] 31263 512-byte
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] 31263 512-byte
     hardware sectors (16 MB)
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] Write Protect is
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] Write Protect is
     off
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] Assuming drive
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] Assuming drive
     cache: write through
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] 31263 512-byte
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] 31263 512-byte
     hardware sectors (16 MB)
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] Write Protect is
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] Write Protect is
     off
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] Assuming drive
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] Assuming drive
     cache: write through
-    Jul 23 10:07:59 linuxbox kernel: sdb: sdb1
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] Attached SCSI
+    Jul 23 10:07:59 LAB kernel: sdb: sdb1
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] Attached SCSI
     removable disk
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: Attached scsi generic
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: Attached scsi generic
     sg3 type 0
 
 显示再次停止之后，输入 Ctrl-c，重新得到提示符。输出结果的有趣部分是一再提及“[sdb]”，
 这正好符和我们期望的 SCSI 磁盘设备名称。知道这一点后，有两行输出变得颇具启发性：
 
-    Jul 23 10:07:59 linuxbox kernel: sdb: sdb1
-    Jul 23 10:07:59 linuxbox kernel: sd 3:0:0:0: [sdb] Attached SCSI
+    Jul 23 10:07:59 LAB kernel: sdb: sdb1
+    Jul 23 10:07:59 LAB kernel: sd 3:0:0:0: [sdb] Attached SCSI
     removable disk
 
 这告诉我们这个设备名称是/dev/sdb 指整个设备，/dev/sdb1是这个设备的第一分区。
@@ -351,9 +348,9 @@ SCSI 磁盘。在最近的 Linux 系统中，内核把所有类似于磁盘的�
 
 既然知道了设备名称，我们就可以挂载这个闪存驱动器了：
 
-    [me@linuxbox ~]$ sudo mkdir /mnt/flash
-    [me@linuxbox ~]$ sudo mount /dev/sdb1 /mnt/flash
-    [me@linuxbox ~]$ df
+    [wangding@LAB ~]$ sudo mkdir /mnt/flash
+    [wangding@LAB ~]$ sudo mount /dev/sdb1 /mnt/flash
+    [wangding@LAB ~]$ df
     Filesystem      1K-blocks   Used        Available   Use%    Mounted on
     /dev/sda2       15115452    5186944     9775164     35%     /
     /dev/sda5       59631908    31777376    24776480    57%     /home
@@ -363,7 +360,7 @@ SCSI 磁盘。在最近的 Linux 系统中，内核把所有类似于磁盘的�
 
 这个设备名称会保持不变只要设备与计算机保持连接并且计算机不会重新启动。
 
-### 创建新的文件系统
+## 创建新的文件系统
 
 假若我们想要用 Linux 本地文件系统来重新格式化这个闪存驱动器，而不是它现用的 FAT32系统。
 这涉及到两个步骤：1.（可选的）创建一个新的分区布局若已存在的分区不是我们喜欢的。2.
@@ -373,14 +370,14 @@ SCSI 磁盘。在最近的 Linux 系统中，内核把所有类似于磁盘的�
 作为实验品，因为它将会被擦除！再次，请确定你指定了正确的系统设备名称。未能注意此
 警告可能导致你格式化（即擦除）错误的驱动器！
 
-### 用 fdisk 命令操作分区
+## 用 fdisk 命令操作分区
 
 这个 fdisk 程序允许我们直接在底层与类似磁盘的设备（比如说硬盘驱动器和闪存驱动器）进行交互。
 使用这个工具可以在设备上编辑，删除，和创建分区。以我们的闪存驱动器为例，
 首先我们必须卸载它（如果需要的话），然后调用 fdisk 程序，如下所示：
 
-    [me@linuxbox ~]$ sudo umount /dev/sdb1
-    [me@linuxbox ~]$ sudo fdisk /dev/sdb
+    [wangding@LAB ~]$ sudo umount /dev/sdb1
+    [wangding@LAB ~]$ sudo fdisk /dev/sdb
 
 注意我们必须指定设备名称，就整个设备而言，而不是通过分区号。这个程序启动后，我们
 将看到以下提示：
@@ -438,19 +435,19 @@ SCSI 磁盘。在最近的 Linux 系统中，内核把所有类似于磁盘的�
     partitions, please see the fdisk manual page for additional
     information.
     Syncing disks.
-    [me@linuxbox ~]$
+    [wangding@LAB ~]$
 
 如果我们已经决定保持设备不变，可在提示符下输入"q"，这将退出程序而没有写更改。我们
 可以安全地忽略这些不祥的警告信息。
 
-### 用 mkfs 命令创建一个新的文件系统
+## 用 mkfs 命令创建一个新的文件系统
 
 完成了分区编辑工作（它或许是轻量级的），是时候在我们的闪存驱动器上创建一个新的文件系统了。
 为此，我们会使用 mkfs（"make file system"的简写），它能创建各种格式的文件系统。
 在此设备上创建一个 ext3文件系统，我们使用"-t"
 选项来指定这个"ext3"系统类型，随后是我们要格式化的设备分区名称：
 
-    [me@linuxbox ~]$ sudo mkfs -t ext3 /dev/sdb1
+    [wangding@LAB ~]$ sudo mkfs -t ext3 /dev/sdb1
     mke2fs 1.40.2 (12-Jul-2007)
     Filesystem label=
     OS type: Linux
@@ -470,18 +467,18 @@ SCSI 磁盘。在最近的 Linux 系统中，内核把所有类似于磁盘的�
     Writing superblocks and filesystem accounting information: done
     This filesystem will be automatically checked every 34 mounts or
     180 days, whichever comes first. Use tune2fs -c or -i to override.
-    [me@linuxbox ~]$
+    [wangding@LAB ~]$
 
 当 ext3被选为文件系统类型时，这个程序会显示许多信息。若把这个设备重新格式化为它最初的 FAT32文件
 系统，指定"vfat"作为文件系统类型：
 
-    [me@linuxbox ~]$ sudo mkfs -t vfat /dev/sdb1
+    [wangding@LAB ~]$ sudo mkfs -t vfat /dev/sdb1
 
 任何时候添加额外的存储设备到系统中时，都可以使用这个分区和格式化的过程。虽然我们
 只以一个小小的闪存驱动器为例，同样的操作可以被应用到内部硬盘和其它可移动的存储设备上
 像 USB 硬盘驱动器。
 
-### 测试和修复文件系统
+## 测试和修复文件系统
 
 在之前讨论文件/etc/fstab 时，我们会在每行的末尾看到一些神秘的数字。每次系统启动时，
 在挂载系统之前，都会按照惯例检查文件系统的完整性。这个任务由 fsck 程序（是"file system
@@ -495,7 +492,7 @@ check"的简写）完成。每个 fstab 项中的最后一个数字指定了设�
 
 检查我们的闪存驱动器（首先应该卸载），我们能执行下面的操作：
 
-    [me@linuxbox ~]$ sudo fsck /dev/sdb1
+    [wangding@LAB ~]$ sudo fsck /dev/sdb1
     fsck 1.40.8 (13-Mar-2008)
     e2fsck 1.40.8 (13-Mar-2008)
     /dev/sdb1: clean, 11/3904 files, 1661/15608 blocks
@@ -511,25 +508,25 @@ check"的简写）完成。每个 fstab 项中的最后一个数字指定了设�
 字母。这个尤其适用，因为你可能会说出上文提到的词，若你发现自己处于这种境况下，
 被强制来运行 fsck 命令时。
 
-### 格式化软盘
+## 格式化软盘
 
 对于那些还在使用配备了软盘驱动器的计算机的用户，我们也能管理这些设备。准备一
 张可用的空白软盘要分两个步骤。首先，对这张软盘执行低级格式化，然后创建一个文件系统。
 为了完成格式化，我们使用 fdformat 程序，同时指定软盘设备名称（通常为/dev/fd0）：
 
-    [me@linuxbox ~]$ sudo fdformat /dev/fd0
+    [wangding@LAB ~]$ sudo fdformat /dev/fd0
     Double-sided, 80 tracks, 18 sec/track. Total capacity 1440 kB.
     Formatting ... done
     Verifying ... done
 
 接下来，通过 mkfs 命令，给这个软盘创建一个 FAT 文件系统：
 
-    [me@linuxbox ~]$ sudo mkfs -t msdos /dev/fd0
+    [wangding@LAB ~]$ sudo mkfs -t msdos /dev/fd0
 
 注意我们使用这个“msdos”文件系统类型来得到旧（小的）风格的文件分配表。当一个软磁盘
 被准备好之后，则可能像其它设备一样挂载它。
 
-### 直接把数据移入/出设备
+## 直接把数据移入/出设备
 
 虽然我们通常认为计算机中的数据以文件形式来组织数据，也可以“原始的”形式来考虑数据。
 如果我们看一下磁盘驱动器，例如，
@@ -560,12 +557,12 @@ check"的简写）完成。每个 fstab 项中的最后一个数字指定了设�
 
 ---
 
-### 创建 CD-ROM 映像
+## 创建 CD-ROM 映像
 
 写入一个可记录的 CD-ROM（一个 CD-R 或者是 CD-RW）由两步组成；首先，构建一个 iso 映像文件，
 这就是一个 CD-ROM 的文件系统映像，第二步，把这个映像文件写入到 CD-ROM 媒介中。
 
-#### 创建一个 CD-ROM 的映像拷贝
+### 创建一个 CD-ROM 的映像拷贝
 
 如果想要制作一张现有 CD-ROM 的 iso 映像，我们可以使用 dd 命令来读取 CD-ROW 中的所有数据块，
 并把它们复制到本地文件中。比如说我们有一张 Ubuntu
@@ -577,7 +574,7 @@ CD，用它来制作一个 iso 文件，以后我们可以用它来制作更多�
 这项技术也适用于 DVD 光盘，但是不能用于音频 CD，因为它们不使用文件系统来存储数据。
 对于音频 CD，看一下 cdrdao 命令。
 
-#### 从文件集合中创建一个映像
+### 从文件集合中创建一个映像
 
 创建一个包含目录内容的 iso 映像文件，我们使用 genisoimage 程序。为此，我们首先创建
 一个目录，这个目录中包含了要包括到此映像中的所有文件，然后执行这个 genisoimage 命令
@@ -598,12 +595,12 @@ CD，用它来制作一个 iso 文件，以后我们可以用它来制作更多�
 这创建了一个与 GNU GPL 不相兼容的协议。结果，就 fork 了这个 cdrtools 项目，
 目前新项目里面包含了 cdrecord 和 mkisofs 的替代程序，分别是 wodim 和 genisoimage。
 
-### 写入 CD-ROM 镜像
+## 写入 CD-ROM 镜像
 
 有了一个映像文件之后，我们可以把它烧写到光盘中。下面讨论的大多数命令对可
 记录的 CD-ROW 和 DVD 媒介都适用。
 
-#### 直接挂载一个 ISO 镜像
+### 直接挂载一个 ISO 镜像
 
 有一个诀窍，我们可以用它来挂载 iso 映像文件，虽然此文件仍然在我们的硬盘中，但我们
 当作它已经在光盘中了。添加 "-o loop" 选项来挂载（同时带有必需的 "-t iso9660" 文件系统类型），
@@ -616,14 +613,14 @@ CD，用它来制作一个 iso 文件，以后我们可以用它来制作更多�
 image.iso 挂载到挂载点上。映像文件被挂载之后，可以把它当作，就好像它是一张
 真正的 CD-ROM 或者 DVD。当不再需要此映像文件后，记得卸载它。
 
-#### 清除一张可重写入的 CD-ROM
+### 清除一张可重写入的 CD-ROM
 
 可重写入的 CD-RW 媒介在被重使用之前需要擦除或清空。为此，我们可以用 wodim 命令，指定
 设备名称和清空的类型。此 wodim 程序提供了几种清空类型。最小（且最快）的是 "fast" 类型：
 
     wodim dev=/dev/cdrw blank=fast
 
-#### 写入镜像
+### 写入镜像
 
 写入一个映像文件，我们再次使用 wodim 命令，指定光盘设备名称和映像文件名：
 
@@ -633,13 +630,13 @@ image.iso 挂载到挂载点上。映像文件被挂载之后，可以把它当�
 和 "－dao" 以 disk-at-once 模式写入光盘。如果你正在准备一张光盘为的是商业复制，那么应该使用这种模式。
 wodim 命令的默认模式是 track-at-once，这对于录制音乐很有用。
 
-### 拓展阅读
+## 拓展阅读
 
 我们刚才谈到了很多方法，可以使用命令行管理存储介质。看看我们所讲过命令的手册页。
 一些命令支持大量的选项和操作。此外，寻找一些如何添加硬盘驱动器到 Linux 系统（有许多）的在线教程，
 这些教程也要适用于光介质存储设备。
 
-### 友情提示
+## 友情提示
 
 通常验证一下我们已经下载的 iso 映像文件的完整性很有用处。在大多数情况下，iso 映像文件的贡献者也会提供
 一个 checksum 文件。一个 checksum 是一个神奇的数学运算的计算结果，这个数学计算会产生一个能表示目标文件内容的数字。

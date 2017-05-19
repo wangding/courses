@@ -1,7 +1,4 @@
----
-layout: book-zh
-title: 查找文件
----
+# 查找文件
 
 因为我们已经浏览了 Linux 系统，所以一件事已经变得非常清楚：一个典型的 Linux 系统包含很多文件！
 这就引发了一个问题，“我们怎样查找东西？”。虽然我们已经知道 Linux 文件系统良好的组织结构，是源自
@@ -22,13 +19,13 @@ title: 查找文件
 
 * stat – 显示文件或文件系统状态
 
-### locate - 查找文件的简单方法
+## locate - 查找文件的简单方法
 
 这个 locate 程序快速搜索路径名数据库，并且输出每个与给定字符串相匹配的文件名。比如说，
 例如，我们想要找到所有名字以“zip”开头的程序。因为我们正在查找程序，可以假定包含
 匹配程序的目录以"bin/"结尾。因此，我们试着以这种方式使用 locate 命令，来找到我们的文件：
 
-    [me@linuxbox ~]$ locate bin/zip
+    [wangding@LAB ~]$ locate bin/zip
 
 locate 命令将会搜索它的路径名数据库，输出任一个包含字符串“bin/zip”的路径名：
 
@@ -42,7 +39,7 @@ locate 命令将会搜索它的路径名数据库，输出任一个包含字符�
 如果搜索要求没有这么简单，locate 可以结合其它工具，比如说 grep 命令，来设计更加
 有趣的搜索：
 
-    [me@linuxbox ~]$ locate zip | grep bin
+    [wangding@LAB ~]$ locate zip | grep bin
     /bin/bunzip2
     /bin/bzip2
     /bin/bzip2recover
@@ -79,7 +76,7 @@ updatedb 程序。因为数据库不能被持续地更新，所以当使用 loca
 目前最新的文件不会出现。为了克服这个问题，可以手动运行 updatedb 程序，
 更改为超级用户身份，在提示符下运行 updatedb 命令。
 
-### find - 查找文件的复杂方式
+## find - 查找文件的复杂方式
 
 locate 程序只能依据文件名来查找文件，而 find 程序能基于各种各样的属性，
 搜索一个给定目录（以及它的子目录），来查找文件。我们将要花费大量的时间学习 find 命令，因为
@@ -87,27 +84,27 @@ locate 程序只能依据文件名来查找文件，而 find 程序能基于各�
 
 find 命令的最简单使用是，搜索一个或多个目录。例如，输出我们的家目录列表。
 
-    [me@linuxbox ~]$ find ~
+    [wangding@LAB ~]$ find ~
 
 对于最活跃的用户帐号，这将产生一张很大的列表。因为这张列表被发送到标准输出，
 我们可以把这个列表管道到其它的程序中。让我们使用 wc 程序来计算出文件的数量：
 
-    [me@linuxbox ~]$ find ~ | wc -l
+    [wangding@LAB ~]$ find ~ | wc -l
     47068
 
 哇，我们一直很忙！find 命令的魅力所在就是它能够被用来识别符合特定标准的文件。它通过
 （有点奇怪）应用选项，测试条件，和操作来完成搜索。我们先看一下测试条件。
 
-#### Tests
+### Tests
 
 比如说我们想要目录列表。我们可以添加以下测试条件：
 
-    [me@linuxbox ~]$ find ~ -type d | wc -l
+    [wangding@LAB ~]$ find ~ -type d | wc -l
     1695
 
 添加测试条件-type d 限制了只搜索目录。相反地，我们使用这个测试条件来限定搜索普通文件：
 
-    [me@linuxbox ~]$ find ~ -type f | wc -l
+    [wangding@LAB ~]$ find ~ -type f | wc -l
     38737
 
 这里是 find 命令支持的普通文件类型测试条件：
@@ -143,7 +140,7 @@ find 命令的最简单使用是，搜索一个或多个目录。例如，输出
 我们也可以通过加入一些额外的测试条件，根据文件大小和文件名来搜索：让我们查找所有文件名匹配
 通配符模式“*.JPG”和文件大小大于1M 的文件：
 
-    [me@linuxbox ~]$ find ~ -type f -name "*.JPG" -size +1M | wc -l
+    [wangding@LAB ~]$ find ~ -type f -name "*.JPG" -size +1M | wc -l
     840
 
 在这个例子里面，我们加入了 -name 测试条件，后面跟通配符模式。注意，我们把它用双引号引起来，
@@ -275,7 +272,7 @@ valign="top">匹配的文件或目录属于某个用户。这个用户可以通�
 
 这不是一个完整的列表。find 命令手册有更详细的说明。
 
-#### 操作符
+### 操作符
 
 即使拥有了 find 命令提供的所有测试条件，我们还需要一个更好的方式来描述测试条件之间的逻辑关系。例如，
 如果我们需要确定是否一个目录中的所有的文件和子目录拥有安全权限，怎么办呢？
@@ -283,7 +280,7 @@ valign="top">匹配的文件或目录属于某个用户。这个用户可以通�
 一种方法来结合测试条件，通过使用逻辑操作符来创建更复杂的逻辑关系。
 为了表达上述的测试条件，我们可以这样做：
 
-    [me@linuxbox ~]$ find ~ \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
+    [wangding@LAB ~]$ find ~ \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
 
 呀！这的确看起来很奇怪。这些是什么东西？实际上，这些操作符没有那么复杂，一旦你知道了它们的原理。
 这里是操作符列表：
@@ -389,7 +386,7 @@ expr1 -or expr2，并且表达式 expr1的结果为真，那么就没有必要�
 表达式 expr1 -or expr2 为真。好，这样会执行快一些。为什么这个很重要？
 它很重要是因为我们能依靠这种行为来控制怎样来执行操作。我们会很快看到...
 
-### 预定义的操作
+## 预定义的操作
 
 让我们做一些工作吧！从 find 命令得到的结果列表很有用处，但是我们真正想要做的事情是操作列表
 中的某些条目。幸运地是，find 命令允许基于搜索结果来执行操作。有许多预定义的操作和几种方式来
@@ -484,7 +481,7 @@ expr1 -or expr2，并且表达式 expr1的结果为真，那么就没有必要�
 
 这个版本的命令会打印出每个文件（-print 行为总是为真），然后测试文件类型和指定的文件扩展名。
 
-### 用户定义的行为
+## 用户定义的行为
 
 除了预定义的行为之外，我们也可以唤醒随意的命令。传统方式是通过 -exec 行为。这个
 行为像这样工作：
@@ -510,7 +507,7 @@ expr1 -or expr2，并且表达式 expr1的结果为真，那么就没有必要�
 在这个例子里面，我们搜索以字符串“foo”开头的文件名，并且对每个匹配的文件执行 ls -l 命令。
 使用 -ok 行为，会在 ls 命令执行之前提示用户。
 
-### 提高效率
+## 提高效率
 
 当 -exec 行为被使用的时候，若每次找到一个匹配的文件，它会启动一个新的指定命令的实例。
 我们可能更愿意把所有的搜索结果结合起来，再运行一个命令的实例。例如，而不是像这样执行命令：
@@ -540,7 +537,7 @@ xargs，另一种方法是，使用 find 命令自己的一个新功能。我们
 
 虽然我们得到一样的结果，但是系统只需要执行一次 ls 命令。
 
-#### xargs
+### xargs
 
 这个 xargs 命令会执行一个有趣的函数。它从标准输入接受输入，并把输入转换为一个特定命令的
 参数列表。对于我们的例子，我们可以这样使用它：
@@ -576,14 +573,14 @@ xargs，另一种方法是，使用 find 命令自己的一个新功能。我们
 >
 > 使用这项技术，我们可以保证所有文件，甚至那些文件名中包含空格的文件，都能被正确地处理。
 
-### 返回操练场
+## 返回操练场
 
 到实际使用 find 命令的时候了。我们将会创建一个操练场，来实践一些我们所学到的知识。
 
 首先，让我们创建一个包含许多子目录和文件的操练场：
 
-    [me@linuxbox ~]$ mkdir -p playground/dir-{00{1..9},0{10..99},100}
-    [me@linuxbox ~]$ touch playground/dir-{00{1..9},0{10..99},100}/file-{A..Z}
+    [wangding@LAB ~]$ mkdir -p playground/dir-{00{1..9},0{10..99},100}
+    [wangding@LAB ~]$ touch playground/dir-{00{1..9},0{10..99},100}/file-{A..Z}
 
 惊叹于命令行的强大功能！只用这两行，我们就创建了一个包含一百个子目录，每个子目录中
 包含了26个空文件的操练场。试试用 GUI 来创建它！
@@ -597,23 +594,23 @@ xargs，另一种方法是，使用 find 命令自己的一个新功能。我们
 
 在我们的操练场中，我们创建了一百个名为 file-A 的文件实例。让我们找到它们：
 
-    [me@linuxbox ~]$ find playground -type f -name 'file-A'
+    [wangding@LAB ~]$ find playground -type f -name 'file-A'
 
 注意不同于 ls 命令，find 命令的输出结果是无序的。其顺序由存储设备的布局决定。为了确定实际上
 我们拥有一百个此文件的实例，我们可以用这种方式来确认：
 
-    [me@linuxbox ~]$ find playground -type f -name 'file-A' | wc -l
+    [wangding@LAB ~]$ find playground -type f -name 'file-A' | wc -l
 
 下一步，让我们看一下基于文件的修改时间来查找文件。当创建备份文件或者以年代顺序来
 组织文件的时候，这会很有帮助。为此，首先我们将创建一个参考文件，我们将与其比较修改时间：
 
-    [me@linuxbox ~]$ touch playground/timestamp
+    [wangding@LAB ~]$ touch playground/timestamp
 
 这个创建了一个空文件，名为 timestamp，并且把它的修改时间设置为当前时间。我们能够验证
 它通过使用另一个方便的命令，stat，是一款加大马力的 ls 命令版本。这个 stat 命令会展示系统对
 某个文件及其属性所知道的所有信息：
 
-    [me@linuxbox ~]$ stat playground/timestamp
+    [wangding@LAB ~]$ stat playground/timestamp
     File: 'playground/timestamp'
     Size: 0 Blocks: 0 IO Block: 4096 regular empty file
     Device: 803h/2051d Inode: 14265061 Links: 1
@@ -624,8 +621,8 @@ xargs，另一种方法是，使用 find 命令自己的一个新功能。我们
 
 如果我们再次 touch 这个文件，然后用 stat 命令检测它，我们会发现所有文件的时间已经更新了。
 
-    [me@linuxbox ~]$ touch playground/timestamp
-    [me@linuxbox ~]$ stat playground/timestamp
+    [wangding@LAB ~]$ touch playground/timestamp
+    [wangding@LAB ~]$ stat playground/timestamp
     File: 'playground/timestamp'
     Size: 0 Blocks: 0 IO Block: 4096 regular empty file
     Device: 803h/2051d Inode: 14265061 Links: 1
@@ -636,12 +633,12 @@ xargs，另一种方法是，使用 find 命令自己的一个新功能。我们
 
 下一步，让我们使用 find 命令来更新一些操练场中的文件：
 
-    [me@linuxbox ~]$ find playground -type f -name 'file-B' -exec touch '{}' ';'
+    [wangding@LAB ~]$ find playground -type f -name 'file-B' -exec touch '{}' ';'
 
 这会更新操练场中所有名为 file-B 的文件。接下来我们会使用 find 命令来识别已更新的文件，
 通过把所有文件与参考文件 timestamp 做比较：
 
-    [me@linuxbox ~]$ find playground -type f -newer playground/timestamp
+    [wangding@LAB ~]$ find playground -type f -newer playground/timestamp
 
 搜索结果包含所有一百个文件 file-B 的实例。因为我们在更新了文件 timestamp 之后，
 touch 了操练场中名为 file-B 的所有文件，所以现在它们“新于”timestamp 文件，因此能被用
@@ -649,20 +646,20 @@ touch 了操练场中名为 file-B 的所有文件，所以现在它们“新于
 
 最后，让我们回到之前那个错误权限的例子中，把它应用于操练场里：
 
-    [me@linuxbox ~]$ find playground \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
+    [wangding@LAB ~]$ find playground \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
 
 这个命令列出了操练场中所有一百个目录和二百六十个文件（还有 timestamp 和操练场本身，共 2702 个）
 ，因为没有一个符合我们“正确权限”的定义。通过对运算符和行为知识的了解，我们可以给这个命令
 添加行为，对实战场中的文件和目录应用新的权限。
 
-    [me@linuxbox ~]$ find playground \( -type f -not -perm 0600 -exec chmod 0600 '{}' ';' \)
+    [wangding@LAB ~]$ find playground \( -type f -not -perm 0600 -exec chmod 0600 '{}' ';' \)
        -or \( -type d -not -perm 0711 -exec chmod 0700 '{}' ';' \)
 
 在日常的基础上，我们可能发现运行两个命令会比较容易一些，一个操作目录，另一个操作文件，
 而不是这一个长长的复合命令，但是很高兴知道，我们能这样执行命令。这里最重要的一点是要
 理解怎样把操作符和行为结合起来使用，来执行有用的任务。
 
-#### 选项
+### 选项
 
 最后，我们有这些选项。这些选项被用来控制 find 命令的搜索范围。当构建 find 表达式的时候，
 它们可能被其它的测试条件和行为包含：
@@ -696,7 +693,7 @@ touch 了操练场中名为 file-B 的所有文件，所以现在它们“新于
 </tr>
 </table>
 
-### 拓展阅读
+## 拓展阅读
 
 * 程序 locate，updatedb，find 和 xargs 都是 GNU 项目 findutils 软件包的一部分。
   这个 GUN 项目提供了大量的在线文档，这些文档相当出色，如果你在高安全性的

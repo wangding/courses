@@ -1,7 +1,4 @@
----
-layout: book-zh
-title: shell 环境
----
+# Shell 环境
 
 正如我们之前所讨论到的，shell 在 shell 会话中维护着大量的信息，这些信息称为 (shell) 环境。
 存储在 shell 环境中的数据被程序用来确定配置属性。虽然大多数程序用配置文件来存储程序设置，
@@ -18,26 +15,26 @@ title: shell 环境
 
 * alias - 创建命令别名
 
-### 什么存储在环境变量中？
+## 什么存储在环境变量中？
 
 shell 在环境中存储了两种基本类型的数据，虽然对于 bash 来说，很大程度上这些类型是不可
 辨别的。它们是环境变量和 shell 变量。Shell 变量是由 bash 存放的少量数据，而剩下的基本上
 都是环境变量。除了变量，shell 也存储了一些可编程的数据，命名为别名和 shell 函数。我们
 已经在第六章讨论了别名，而 shell 函数（涉及到 shell 脚本）将会在第五部分叙述。
 
-### 检查环境变量
+## 检查环境变量
 
 我们既可以用 bash 的内部命令 set，或者是 printenv 程序来查看什么存储在环境当中。set 命令可以
 显示 shell 和环境变量两者，而 printenv 只是显示环境变量。因为环境变量内容列表相当长，所以最好
 把每个命令的输出结果管道到 less 命令：
 
-    [me@linuxbox ~]$ printenv | less
+    [wangding@LAB ~]$ printenv | less
 
 执行以上命令之后，我们应该能得到类似以下内容：
 
     KDE_MULTIHEAD=false
     SSH_AGENT_PID=6666
-    HOSTNAME=linuxbox
+    HOSTNAME=LAB
     GPG_AGENT_INFO=/tmp/gpg-PdOt7g/S.gpg-agent:6689:1
     SHELL=/bin/bash
     TERM=xterm
@@ -61,30 +58,30 @@ shell 在环境中存储了两种基本类型的数据，虽然对于 bash 来�
 我们所看到的是环境变量及其数值的列表。例如，我们看到一个叫做 USER 的变量，这个变量值是
 "me"。printenv 命令也能够列出特定变量的数值：
 
-    [me@linuxbox ~]$ printenv USER
+    [wangding@LAB ~]$ printenv USER
     me
 
 当使用没有带选项和参数的 set 命令时，shell 和环境变量二者都会显示，同时也会显示定义的
 shell 函数。不同于 printenv 命令，set 命令的输出结果很礼貌地按照字母顺序排列：
 
-    [me@linuxbox ~]$ set | less
+    [wangding@LAB ~]$ set | less
 
 也可以通过 echo 命令来查看一个变量的内容，像这样：
 
-    [me@linuxbox ~]$ echo $HOME
+    [wangding@LAB ~]$ echo $HOME
     /home/me
 
 如果 shell 环境中的一个成员既不可用 set 命令也不可用 printenv 命令显示，则这个变量是别名。
 输入不带参数的 alias 命令来查看它们:
 
-    [me@linuxbox ~]$ alias
+    [wangding@LAB ~]$ alias
     alias l.='ls -d .* --color=tty'
     alias ll='ls -l --color=tty'
     alias ls='ls --color=tty'
     alias vi='vim'
     alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
-### 一些有趣的变量
+## 一些有趣的变量
 
 shell 环境中包含相当多的变量，虽然你的 shell 环境可能不同于这里展示的，但是你可能会看到
 以下变量在你的 shell 环境中：
@@ -159,7 +156,7 @@ shell 环境中包含相当多的变量，虽然你的 shell 环境可能不同�
 
 如果缺失了一些变量，不要担心，这些变量会因发行版本的不同而不同。
 
-### 如何建立 shell 环境？
+## 如何建立 shell 环境？
 
 当我们登录系统后，启动 bash 程序，并且会读取一系列称为启动文件的配置脚本，
 这些文件定义了默认的可供所有用户共享的 shell 环境。然后是读取更多位于我们自己家目录中
@@ -226,7 +223,7 @@ valign="top">如果文件 ~/.bash_profile 或文件 ~/.bash_login 都没有找�
 在普通用户看来，文件 ~/.bashrc 可能是最重要的启动文件，因为它几乎总是被读取。非登录 shell 默认
 会读取它，并且大多数登录 shell 的启动文件会以能读取 ~/.bashrc 文件的方式来书写。
 
-### 一个启动文件的内容
+## 一个启动文件的内容
 
 如果我们看一下典型的 .bash_profile 文件（来自于 CentOS 4 系统），它看起来像这样：
 
@@ -265,11 +262,11 @@ PATH 变量经常（但不总是，依赖于发行版）在 /etc/profile 启动�
 修改 PATH 变量，添加目录 $HOME/bin 到目录列表的末尾。这是一个参数展开的实例，
 参数展开我们在第八章中提到过。为了说明这是怎样工作的，试试下面的例子：
 
-    [me@linuxbox ~]$ foo="This is some"
-    [me@linuxbox ~]$ echo $foo
+    [wangding@LAB ~]$ foo="This is some"
+    [wangding@LAB ~]$ echo $foo
     This is some
-    [me@linuxbox ~]$ foo="$foo text."
-    [me@linuxbox ~]$ echo $foo
+    [wangding@LAB ~]$ foo="$foo text."
+    [wangding@LAB ~]$ echo $foo
     This is some text.
 
 使用这种技巧，我们可以把文本附加到一个变量值的末尾。通过添加字符串 $HOME/bin 到 PATH 变量值
@@ -286,11 +283,11 @@ PATH 变量经常（但不总是，依赖于发行版）在 /etc/profile 启动�
 
 这个 export 命令告诉 shell 让这个 shell 的子进程可以使用 PATH 变量的内容。
 
-### 修改 shell 环境
+## 修改 shell 环境
 
 既然我们知道了启动文件所在的位置和它们所包含的内容，我们就可以修改它们来定制自己的 shell 环境。
 
-### 我们应该修改哪个文件？
+## 我们应该修改哪个文件？
 
 按照通常的规则，添加目录到你的 PATH 变量或者是定义额外的环境变量，要把这些更改放置到
  .bash_profile 文件中（或者其替代文件中，根据不同的发行版。例如，Ubuntu 使用 .profile 文件）。
@@ -299,7 +296,7 @@ PATH 变量经常（但不总是，依赖于发行版）在 /etc/profile 启动�
 文件，比如说 profile 文件，而且在许多情况下，修改这些文件也是明智的，但是现在，我们要
 谨慎行事。
 
-### 文本编辑器
+## 文本编辑器
 
 为了编辑（例如，修改）shell 的启动文件，还有系统中大多数其它配置文件，我们使用一个叫做文本
 编辑器的程序。文件编辑器是一个，在某些方面，类似于文字处理器的程序，比如说随着鼠标的移动，
@@ -321,12 +318,12 @@ KDE 通常自带了三种编辑器，分别是（按照复杂度递增的顺序�
 vim 是我们下一章节的讨论对象。emacs 编辑器最初由 Richard Stallman 写成。emacs 是一个庞大的，多用途的，
 可做任何事情的编程环境。虽然 emacs 很容易获取，但是大多数 Linux 系统很少默认安装它。
 
-### 使用文本编辑器
+## 使用文本编辑器
 
 所有的文本编辑器都可以通过在命令行中输入编辑器的名字，加上你所想要编辑的文件来唤醒。如果所
 输入的文件名不存在，编辑器则会假定你想要创建一个新文件。下面是一个使用 gedit 的例子：
 
-    [me@linuxbox ~]$ gedit some_file
+    [wangding@LAB ~]$ gedit some_file
 
 这条命令将会启动 gedit 文本编辑器，同时加载名为 "some_file" 的文件，如果这个文件存在的话。
 
@@ -335,14 +332,14 @@ vim 是我们下一章节的讨论对象。emacs 编辑器最初由 Richard Stal
 做之前，先练习一些"安全计算"。当我们编辑一个重要的配置文件时，首先创建一个这个文件的备份
 总是一个不错的主意。这样能避免我们在编辑文件时弄乱文件。创建文件 .bashrc 的备份文件，这样做：
 
-    [me@linuxbox ~]$ cp .bashrc .bashrc.bak
+    [wangding@LAB ~]$ cp .bashrc .bashrc.bak
 
 备份文件的名字无关紧要，只要选择一个容易理解的文件名。扩展名 ".bak"，".sav"，
 ".old"，和 ".orig" 都是用来指示备份文件的流行方法。哦，记住 cp 命令会默默地重写存在的文件。
 
 现在我们有了一个备份文件，我们启动 nano 编辑器吧：
 
-    [me@linuxbox ~]$ nano .bashrc
+    [wangding@LAB ~]$ nano .bashrc
 
 一旦 nano 编辑器启动后，我们将会得到一个像下面一样的屏幕：
 
@@ -439,25 +436,25 @@ valign="top">创建一个新命令，叫做'l.'，这个命令会显示所有以
 uncommenting (取消注释)，这样你就会激活这些别名。相反地，如果你在一行的开头加上 "#" 符号，
 你可以注销掉这一行，但会保留它所包含的信息。
 
-### 激活我们的修改
+## 激活我们的修改
 
 我们对于文件 .bashrc 的修改不会生效，直到我们关闭终端会话，再重新启动一个新的会话，
 因为 .bashrc 文件只是在刚开始启动终端会话时读取。然而，我们可以强迫 bash 重新读取修改过的
  .bashrc 文件，使用下面的命令：
 
-    [me@linuxbox ~]$ source .bashrc
+    [wangding@LAB ~]$ source .bashrc
 
 运行上面命令之后，我们就应该能够看到所做修改的效果了。试试其中一个新的别名：
 
-    [me@linuxbox ~]$ ll
+    [wangding@LAB ~]$ ll
 
-### 总结
+## 总结
 
 在这一章中，我们学到了用文本编辑器来编辑配置文件的必要技巧。随着继续学习，当我们
 读到命令的手册页时，记录下命令所支持的环境变量。可能会有一个或两个宝贝。在随后的章节
 里面，我们将会学习 shell 函数，一个很强大的特性，你可以把它包含在 bash 启动文件里面，以此
 来添加你自定制的命令宝库。
 
-### 拓展阅读
+## 拓展阅读
 
 bash 手册页的 INVOCATION 部分非常详细地讨论了 bash 启动文件。

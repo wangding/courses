@@ -1,7 +1,4 @@
----
-layout: book-zh
-title: 格式化输出
----
+# 格式化输出
 
 在这章中，我们继续着手于文本相关的工具，关注那些用来格式化输出的程序，而不是改变文本自身。
 这些工具通常让文本准备就绪打印，这是我们在下一章会提到的。我们在这章中会提到的工具有：
@@ -18,16 +15,16 @@ title: 格式化输出
 
 * groff – 一个文件格式系统
 
-### 简单的格式化工具
+## 简单的格式化工具
 
 我们将先着眼于一些简单的格式工具。他们都是功能单一的程序，并且做法有一点单纯，
 但是他们能被用于小任务并且作为脚本和管道的一部分 。
 
-#### nl - 添加行号
+### nl - 添加行号
 
 nl 程序是一个相当神秘的工具，用作一个简单的任务。它添加文件的行数。在它最简单的用途中，它相当于 cat -n:
 
-    [me@linuxbox ~]$ nl distros.txt | head
+    [wangding@LAB ~]$ nl distros.txt | head
 
 像 cat，nl 既能接受多个文件作为命令行参数，也能标准输出。然而，nl 有一个相当数量的选项并支持一个简单的标记方式去允许更多复杂的方式的计算。
 
@@ -138,7 +135,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 
 下一步，我们将结合 sort, sed, nl 来生成我们改进的报告：
 
-    [me@linuxbox ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-nl.sed | nl
+    [wangding@LAB ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-nl.sed | nl
             Linux Distributions Report
             Name    Ver.    Released
             ----    ----    --------
@@ -171,12 +168,12 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 
     nl -w 3 -s ' '
 
-#### fold - 限制文件行宽
+### fold - 限制文件行宽
 
 折叠是将文本的行限制到特定的宽的过程。像我们的其他命令，fold 接受一个或多个文件及标准输入。如果我们将
 一个简单的文本流 fold，我们可以看到它工作的方式：
 
-    [me@linuxbox ~]$ echo "The quick brown fox jumped over the lazy dog."
+    [wangding@LAB ~]$ echo "The quick brown fox jumped over the lazy dog."
     | fold -w 12
     The quick br
     own fox jump
@@ -187,7 +184,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 如果没有字符设置，默认是80。注意到文本行不会因为单词边界而不会被分解。增加的 -s 选项将让 fold 分解到最后可用的空白
 字符，即会考虑单词边界。
 
-    [me@linuxbox ~]$ echo "The quick brown fox jumped over the lazy dog."
+    [wangding@LAB ~]$ echo "The quick brown fox jumped over the lazy dog."
     | fold -w 12 -s
     The quick
     brown fox
@@ -195,7 +192,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
     the lazy
     dog.
 
-#### fmt - 一个简单的文本格式器
+### fmt - 一个简单的文本格式器
 
 fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输入并且在文本流上呈现照片转换。基础来说，他填补并且将文本粘帖在
 一起并且保留了空白符和缩进。
@@ -223,7 +220,7 @@ fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输�
 我们将把这段文本复制进我们的文本编辑器并且保存文件名为 fmt-info.txt。现在，让我们重新格式这个文本并且让它成为一个50
 个字符宽的项目。我们能用 -w 选项对文件进行处理：
 
-    [me@linuxbox ~]$ fmt -w 50 fmt-info.txt | head
+    [wangding@LAB ~]$ fmt -w 50 fmt-info.txt | head
     'fmt' reads from the specified FILE arguments
     (or standard input if
     none are given), and writes to standard output.
@@ -246,7 +243,7 @@ fmt 有一些有意思的选项：
 这个 -p 选项尤为有趣。通过它，我们可以格式文件选中的部分，通过在开头使用一样的符号。
 很多编程语言使用锚标记（#）去提醒注释的开始，而且它可以通过这个选项来被格式。让我们创建一个有用到注释的程序。
 
-    [me@linuxbox ~]$ cat > fmt-code.txt
+    [wangding@LAB ~]$ cat > fmt-code.txt
     # This file contains code with comments.
 
     # This line is a comment.
@@ -260,7 +257,7 @@ fmt 有一些有意思的选项：
 我们的示例文件包含了用 “#” 开始的注释（一个 # 后跟着一个空白符）和代码。现在，使用 fmt，我们能格式注释并且
 不让代码被触及。
 
-    [me@linuxbox ~]$ fmt -w 50 -p '# ' fmt-code.txt
+    [wangding@LAB ~]$ fmt -w 50 -p '# ' fmt-code.txt
     # This file contains code with comments.
 
     # This line is a comment. Followed by another
@@ -272,11 +269,11 @@ fmt 有一些有意思的选项：
 
 注意相邻的注释行被合并了，空行和非注释行被保留了。
 
-#### pr – 格式化打印文本
+### pr – 格式化打印文本
 
 pr 程序用来把文本分页。当打印文本的时候，经常希望用几个空行把输出的页面
 
-    [me@linuxbox ~]$ pr -l 15 -w 65 distros.txt
+    [wangding@LAB ~]$ pr -l 15 -w 65 distros.txt
     2008-12-11 18:27        distros.txt         Page 1
 
     SUSE        10.2     12/07/2006
@@ -293,17 +290,17 @@ pr 程序用来把文本分页。当打印文本的时候，经常希望用几�
     Ubuntu      7.10     10/18/2007
     Ubuntu      7.04     04/19/2007
 
-#### printf – Format And Print Data
+### printf – Format And Print Data
 
     printf “format” arguments
 
-    [me@linuxbox ~]$ printf "I formatted the string: %s\n" foo
+    [wangding@LAB ~]$ printf "I formatted the string: %s\n" foo
     I formatted the string: foo
 
-    [me@linuxbox ~]$ printf "I formatted '%s' as a string.\n" foo
+    [wangding@LAB ~]$ printf "I formatted '%s' as a string.\n" foo
     I formatted 'foo' as a string.
 
-    [me@linuxbox ~]$ printf "%d, %f, %o, %s, %x, %X\n" 380 380 380 380
+    [wangding@LAB ~]$ printf "%d, %f, %o, %s, %x, %X\n" 380 380 380 380
     380 380
     380, 380.000000, 574, 380, 17c, 17C
 
@@ -341,14 +338,14 @@ precision to be output after the decimal point. For string conversion, precision
 </tr>
 </table>
 
-    [me@linuxbox ~]$ printf "%s\t%s\t%s\n" str1 str2 str3
+    [wangding@LAB ~]$ printf "%s\t%s\t%s\n" str1 str2 str3
     str1 str2 str3
 
-    [me@linuxbox ~]$ printf "Line: %05d %15.3f Result: %+15d\n" 1071
+    [wangding@LAB ~]$ printf "Line: %05d %15.3f Result: %+15d\n" 1071
     3.14156295 32589
     Line: 01071 3.142 Result: +32589
 
-    [me@linuxbox ~]$ printf "<html>\n\t<head>\n\t\t<title>%s</title>\n
+    [wangding@LAB ~]$ printf "<html>\n\t<head>\n\t\t<title>%s</title>\n
     \t</head>\n\t<body>\n\t\t<p>%s</p>\n\t</body>\n</html>\n" "Page Tit
     le" "Page Content"
     <html>
@@ -360,15 +357,15 @@ precision to be output after the decimal point. For string conversion, precision
     </body>
     </html>
 
-### Document Formatting Systems
+## Document Formatting Systems
 
 ---
 
 ---
 
-#### groff
+### groff
 
-    [me@linuxbox ~]$ zcat /usr/share/man/man1/ls.1.gz | head
+    [wangding@LAB ~]$ zcat /usr/share/man/man1/ls.1.gz | head
     .\" DO NOT MODIFY THIS FILE! It was generated by help2man 1.35.
     .TH LS "1" "April 2008" "GNU coreutils 6.10" "User Commands"
     .SH NAME
@@ -380,7 +377,7 @@ precision to be output after the decimal point. For string conversion, precision
     .\" Add any additional description here
     .PP
 
-    [me@linuxbox ~]$ man ls | head
+    [wangding@LAB ~]$ man ls | head
     LS(1) User Commands LS(1)
     NAME
     ls - list directory contents
@@ -388,7 +385,7 @@ precision to be output after the decimal point. For string conversion, precision
     SYNOPSIS
     ls [OPTION]... [FILE]...
 
-    [me@linuxbox ~]$ zcat /usr/share/man/man1/ls.1.gz | groff -mandoc -T
+    [wangding@LAB ~]$ zcat /usr/share/man/man1/ls.1.gz | groff -mandoc -T
     ascii | head
     LS(1) User Commands LS(1)
     NAME
@@ -396,7 +393,7 @@ precision to be output after the decimal point. For string conversion, precision
     SYNOPSIS
     ls [OPTION]... [FILE]...
 
-    [me@linuxbox ~]$ zcat /usr/share/man/man1/ls.1.gz | groff -mandoc |
+    [wangding@LAB ~]$ zcat /usr/share/man/man1/ls.1.gz | groff -mandoc |
     head
     %!PS-Adobe-3.0
     %%Creator: groff version 1.18.1
@@ -409,10 +406,10 @@ precision to be output after the decimal point. For string conversion, precision
     %%PageOrder: Ascend
     %%Orientation: Portrait
 
-    [me@linuxbox ~]$ zcat /usr/share/man/man1/ls.1.gz | groff -mandoc >
+    [wangding@LAB ~]$ zcat /usr/share/man/man1/ls.1.gz | groff -mandoc >
     ~/Desktop/foo.ps
 
-    [me@linuxbox ~]$ ps2pdf ~/Desktop/foo.ps ~/Desktop/ls.pdf
+    [wangding@LAB ~]$ ps2pdf ~/Desktop/foo.ps ~/Desktop/ls.pdf
 
 ---
 
@@ -435,7 +432,7 @@ precision to be output after the decimal point. For string conversion, precision
     $ a\
     .TE
 
-    [me@linuxbox ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-tbl
+    [wangding@LAB ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-tbl
     .sed | groff -t -T ascii 2>/dev/null
     +------------------------------+
     | Linux Distributions Report |
@@ -460,12 +457,12 @@ precision to be output after the decimal point. For string conversion, precision
     |Ubuntu 8.10 2008-10-30 |
     +------------------------------+
 
-    [me@linuxbox ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-tbl
+    [wangding@LAB ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-tbl
     .sed | groff -t > ~/Desktop/foo.ps
 
-### Summing Up
+## Summing Up
 
-### Further Reading
+## Further Reading
 
   <http://www.gnu.org/software/groff/manual/>
 

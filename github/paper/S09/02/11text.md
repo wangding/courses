@@ -1,7 +1,4 @@
----
-layout: book-zh
-title: 文本处理
----
+# 文本处理
 
 所有类 Unix 的操作系统都严重依赖于几种数据存储类型的文本文件。所以，
 有许多用于处理文本的工具就说的通了。在这一章中，我们将看一些被用来“切割”文本的程序。在下一章中，
@@ -33,47 +30,47 @@ title: 文本处理
 
 * aspell – 交互式拼写检查器
 
-### 文本应用程序
+## 文本应用程序
 
 到目前为止，我们已经知道了一对文本编辑器（nano 和 vim），看过一堆配置文件，并且目睹了
 许多命令的输出都是文本格式。但是文本还被用来做什么？ 它可以做很多事情。
 
-#### 文档
+### 文档
 
 许多人使用纯文本格式来编写文档。虽然很容易看到一个小的文本文件对于保存简单的笔记会
 很有帮助，但是也有可能用文本格式来编写大的文档。一个流行的方法是先用文本格式来编写一个
 大的文档，然后使用一种标记语言来描述已完成文档的格式。许多科学论文就是用这种方法编写的，
 因为基于 Unix 的文本处理系统位于支持技术学科作家所需要的高级排版布局的一流系统之列。
 
-#### 网页
+### 网页
 
 世界上最流行的电子文档类型可能就是网页了。网页是文本文档，它们使用 HTML（超文本标记语言）或者是 XML
 （可扩展的标记语言）作为标记语言来描述文档的可视格式。
 
-#### 电子邮件
+### 电子邮件
 
 从本质上来说，email 是一个基于文本的媒介。为了传输，甚至非文本的附件也被转换成文本表示形式。
 我们能看到这些，通过下载一个 email 信息，然后用 less 来浏览它。我们将会看到这条信息开始于一个标题，
 其描述了信息的来源以及在传输过程中它接受到的处理，然后是信息的正文内容。
 
-#### 打印输出
+### 打印输出
 
 在类 Unix 的系统中，输出会以纯文本格式发送到打印机，或者如果页面包含图形，其会被转换成
 一种文本格式的页面描述语言，以 PostScript 著称，然后再被发送给一款能产生图形点阵的程序，
 最后被打印出来。
 
-#### 程序源码
+### 程序源码
 
 在类 Unix 系统中会发现许多命令行程序被用来支持系统管理和软件开发，并且文本处理程序也不例外。
 许多文本处理程序被设计用来解决软件开发问题。文本处理对于软件开发者来言至关重要是因为所有的软件
 都起始于文本格式。源代码，程序员实际编写的一部分程序，总是文本格式。
 
-### 回顾一些老朋友
+## 回顾一些老朋友
 
 回到第7章（重定向），我们已经知道一些命令除了接受命令行参数之外，还能够接受标准输入。
 那时候我们只是简单地介绍了它们，但是现在我们将仔细地看一下它们是怎样被用来执行文本处理的。
 
-#### cat
+### cat
 
 这个 cat 程序具有许多有趣的选项。其中许多选项用来帮助更好的可视化文本内容。一个例子是-A 选项，
 其用来在文本中显示非打印字符。有些时候我们想知道是否控制字符嵌入到了我们的可见文本中。
@@ -84,15 +81,15 @@ title: 文本处理
 用于重定向输出的文件），然后输入我们的文本，最后按下 Enter 键来结束这一行，然后按下组合键 Ctrl-d，
 来指示 cat 程序，我们已经到达文件末尾了。在这个例子中，我们文本行的开头和末尾分别键入了一个 tab 字符以及一些空格。
 
-    [me@linuxbox ~]$ cat > foo.txt
+    [wangding@LAB ~]$ cat > foo.txt
         The quick brown fox jumped over the lazy dog.
-    [me@linuxbox ~]$
+    [wangding@LAB ~]$
 
 下一步，我们将使用带有-A 选项的 cat 命令来显示这个文本：
 
-    [me@linuxbox ~]$ cat -A foo.txt
+    [wangding@LAB ~]$ cat -A foo.txt
     ^IThe quick brown fox jumped over the lazy dog.       $
-    [me@linuxbox ~]$
+    [wangding@LAB ~]$
 
 在输出结果中我们看到，这个 tab 字符在我们的文本中由^I 字符来表示。这是一种常见的表示方法，意思是
 “Control-I”，结果证明，它和 tab 字符是一样的。我们也看到一个$字符出现在文本行真正的结尾处，
@@ -115,30 +112,30 @@ title: 文本处理
 cat 程序也包含用来修改文本的选项。最著名的两个选项是-n，其给文本行添加行号和-s，
 禁止输出多个空白行。我们这样来说明：
 
-    [me@linuxbox ~]$ cat > foo.txt
+    [wangding@LAB ~]$ cat > foo.txt
     The quick brown fox
 
     jumped over the lazy dog.
-    [me@linuxbox ~]$ cat -ns foo.txt
+    [wangding@LAB ~]$ cat -ns foo.txt
     1   The quick brown fox
     2
     3   jumped over the lazy dog.
-    [me@linuxbox ~]$
+    [wangding@LAB ~]$
 
 在这个例子里，我们创建了一个测试文件 foo.txt 的新版本，其包含两行文本，由两个空白行分开。
 经由带有-ns 选项的 cat 程序处理之后，多余的空白行被删除，并且对保留的文本行进行编号。
 然而这并不是多个进程在操作这个文本，只有一个进程。
 
-#### sort
+### sort
 
 这个 sort 程序对标准输入的内容，或命令行中指定的一个或多个文件进行排序，然后把排序
 结果发送到标准输出。使用与 cat 命令相同的技巧，我们能够演示如何用 sort 程序来处理标准输入：
 
-    [me@linuxbox ~]$ sort > foo.txt
+    [wangding@LAB ~]$ sort > foo.txt
     c
     b
     a
-    [me@linuxbox ~]$ cat foo.txt
+    [wangding@LAB ~]$ cat foo.txt
     a
     b
     c
@@ -208,7 +205,7 @@ valign="top">把每个参数看作是一个预先排好序的文件。把多个�
 通过这个选项，有可能基于数值进行排序。我们通过对 du 命令的输出结果排序来说明这个选项，du 命令可以
 确定最大的磁盘空间用户。通常，这个 du 命令列出的输出结果按照路径名来排序：
 
-    [me@linuxbox ~]$ du -s /usr/share/* | head
+    [wangding@LAB ~]$ du -s /usr/share/* | head
     252     /usr/share/aclocal
     96      /usr/share/acpi-support
     8       /usr/share/adduser
@@ -223,7 +220,7 @@ valign="top">把每个参数看作是一个预先排好序的文件。把多个�
 在这个例子里面，我们把结果管道到 head 命令，把输出结果限制为前 10 行。我们能够产生一个按数值排序的
 列表，来显示 10 个最大的空间消费者：
 
-    [me@linuxbox ~]$ du -s /usr/share/* | sort -nr | head
+    [wangding@LAB ~]$ du -s /usr/share/* | sort -nr | head
     509940         /usr/share/locale-langpack
     242660         /usr/share/doc
     197560         /usr/share/fonts
@@ -239,7 +236,7 @@ valign="top">把每个参数看作是一个预先排好序的文件。把多个�
 因为数值出现在每行的开头。但是如果我们想要基于文件行中的某个数值排序，又会怎样呢？
 例如，命令 ls -l 的输出结果：
 
-    [me@linuxbox ~]$ ls -l /usr/bin | head
+    [wangding@LAB ~]$ ls -l /usr/bin | head
     total 152948
     -rwxr-xr-x 1 root   root     34824  2008-04-04  02:42 [
     -rwxr-xr-x 1 root   root    101556  2007-11-27  06:08 a2p
@@ -247,7 +244,7 @@ valign="top">把每个参数看作是一个预先排好序的文件。把多个�
 
 此刻，忽略 ls 程序能按照文件大小对输出结果进行排序，我们也能够使用 sort 程序来完成此任务：
 
-    [me@linuxbox ~]$ ls -l /usr/bin | sort -nr -k 5 | head
+    [wangding@LAB ~]$ ls -l /usr/bin | sort -nr -k 5 | head
     -rwxr-xr-x 1 root   root   8234216  2008-04-0717:42 inkscape
     -rwxr-xr-x 1 root   root   8222692  2008-04-07 17:42 inkview
     ...
@@ -287,7 +284,7 @@ n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程�
 
 下一步，我们将试着对这个文件进行排序，并观察输出结果：
 
-    [me@linuxbox ~]$ sort distros.txt
+    [wangding@LAB ~]$ sort distros.txt
     Fedora          10     11/25/2008
     Fedora          5     03/20/2006
     Fedora          6     10/24/2006
@@ -303,7 +300,7 @@ n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程�
 一个关键值可能包括一个字段区域。如果没有指定区域（如同之前的例子），sort 程序会使用一个键值，
 其始于指定的字段，一直扩展到行尾。下面是多键值排序的语法：
 
-    [me@linuxbox ~]$ sort --key=1,1 --key=2n distros.txt
+    [wangding@LAB ~]$ sort --key=1,1 --key=2n distros.txt
     Fedora         5     03/20/2006
     Fedora         6     10/24/2006
     Fedora         7     05/31/2007
@@ -322,7 +319,7 @@ n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程�
 幸运地是，sort 程序提供了一种方式。这个 key 选项允许在字段中指定偏移量，所以我们能在字段中
 定义键值。
 
-    [me@linuxbox ~]$ sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt
+    [wangding@LAB ~]$ sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt
     Fedora         10    11/25/2008
     Ubuntu         8.10  10/30/2008
     SUSE           11.0  06/19/2008
@@ -335,7 +332,7 @@ n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程�
 
 一些文件不会使用 tabs 和空格做为字段界定符；例如，这个 /etc/passwd 文件：
 
-    [me@linuxbox ~]$ head /etc/passwd
+    [wangding@LAB ~]$ head /etc/passwd
     root:x:0:0:root:/root:/bin/bash
     daemon:x:1:1:daemon:/usr/sbin:/bin/sh
     bin:x:2:2:bin:/bin:/bin/sh
@@ -350,7 +347,7 @@ n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程�
 这个文件的字段之间通过冒号分隔开，所以我们怎样使用一个 key 字段来排序这个文件？sort 程序提供
 了一个 -t 选项来定义分隔符。按照第七个字段（帐户的默认 shell）来排序此 passwd 文件，我们可以这样做：
 
-    [me@linuxbox ~]$ sort -t ':' -k 7 /etc/passwd | head
+    [wangding@LAB ~]$ sort -t ':' -k 7 /etc/passwd | head
     me:x:1001:1001:Myself,,,:/home/me:/bin/bash
     root:x:0:0:root:/root:/bin/bash
     dhcp:x:101:102::/nonexistent:/bin/false
@@ -363,7 +360,7 @@ n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程�
 
 通过指定冒号字符做为字段分隔符，我们能按照第七个字段来排序。
 
-#### uniq
+### uniq
 
 与 sort 程序相比，这个 uniq 程序是个轻量级程序。uniq 执行一个看似琐碎的认为。当给定一个
 排好序的文件（包括标准输出），uniq 会删除任意重复行，并且把结果发送到标准输出。
@@ -377,7 +374,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 
 让我们创建一个文本文件，来实验一下：
 
-    [me@linuxbox ~]$ cat > foo.txt
+    [wangding@LAB ~]$ cat > foo.txt
     a
     b
     c
@@ -387,7 +384,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 
 记住输入 Ctrl-d 来终止标准输入。现在，如果我们对文本文件执行 uniq 命令：
 
-    [me@linuxbox ~]$ uniq foo.txt
+    [wangding@LAB ~]$ uniq foo.txt
     a
     b
     c
@@ -397,7 +394,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 
 输出结果与原始文件没有差异；重复行没有被删除。实际上，uniq 程序能完成任务，其输入必须是排好序的数据，
 
-    [me@linuxbox ~]$ sort foo.txt | uniq
+    [wangding@LAB ~]$ sort foo.txt | uniq
     a
     b
     c
@@ -439,16 +436,16 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 
 这里我们看到 uniq 被用来报告文本文件中重复行的次数，使用这个-c 选项：
 
-    [me@linuxbox ~]$ sort foo.txt | uniq -c
+    [wangding@LAB ~]$ sort foo.txt | uniq -c
             2 a
             2 b
             2 c
 
-### 切片和切块
+## 切片和切块
 
 下面我们将要讨论的三个程序用来从文件中获得文本列，并且以有用的方式重组它们。
 
-#### cut
+### cut
 
 这个 cut 程序被用来从文本行中抽取文本，并把其输出到标准输出。它能够接受多个文件参数或者
 标准输入。
@@ -487,7 +484,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 是否它足够 “整齐” 成为 cut 实例的一个好样本。如果我们使用带有 -A 选项的 cat 命令，我们能查看是否这个
 文件符号由 tab 字符分离字段的要求。
 
-    [me@linuxbox ~]$ cat -A distros.txt
+    [wangding@LAB ~]$ cat -A distros.txt
     SUSE^I10.2^I12/07/2006$
     Fedora^I10^I11/25/2008$
     SUSE^I11.0^I06/19/2008$
@@ -508,7 +505,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 看起来不错。字段之间仅仅是单个 tab 字符，没有嵌入空格。因为这个文件使用了 tab 而不是空格，
 我们将使用 -f 选项来抽取一个字段：
 
-    [me@linuxbox ~]$ cut -f 3 distros.txt
+    [wangding@LAB ~]$ cut -f 3 distros.txt
     12/07/2006
     11/25/2008
     06/19/2008
@@ -531,7 +528,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 我们已经抽取了一个字段，幸运地是其包含地日期长度相同，所以通过从每行中抽取年份，我们能展示怎样
 来抽取字符：
 
-    [me@linuxbox ~]$ cut -f 3 distros.txt | cut -c 7-10
+    [wangding@LAB ~]$ cut -f 3 distros.txt | cut -c 7-10
     2006
     2008
     2007
@@ -559,14 +556,14 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 任意区间内的字符。例如，我们能够使用以下命令来从列表中抽取发行年份，通过展开
 此文件，再使用 cut 命令，来抽取从位置 23 开始到行尾的每一个字符：
 >
->  _[me@linuxbox ~]$ expand distros.txt \| cut -c 23-_
+>  _[wangding@LAB ~]$ expand distros.txt \| cut -c 23-_
 >
 > Coreutils 软件包也提供了 unexpand 程序，用 tab 来代替空格。
 
 当操作字段的时候，有可能指定不同的字段分隔符，而不是 tab 字符。这里我们将会从/etc/passwd 文件中
 抽取第一个字段：
 
-    [me@linuxbox ~]$ cut -d ':' -f 1 /etc/passwd | head
+    [wangding@LAB ~]$ cut -d ':' -f 1 /etc/passwd | head
     root
     daemon
     bin
@@ -580,7 +577,7 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 
 使用-d 选项，我们能够指定冒号做为字段分隔符。
 
-#### paste
+### paste
 
 这个 paste 命令的功能正好与 cut 相反。它会添加一个或多个文本列到文件中，而不是从文件中抽取文本列。
 它通过读取多个文件，然后把每个文件中的字段整合成单个文本流，输入到标准输出。类似于 cut 命令，
@@ -590,13 +587,13 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 从我们之前使用 sort 的工作中，首先我们将产生一个按照日期排序的发行版列表，并把结果
 存储在一个叫做 distros-by-date.txt 的文件中：
 
-    [me@linuxbox ~]$ sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt > distros-by-date.txt
+    [wangding@LAB ~]$ sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt > distros-by-date.txt
 
 下一步，我们将会使用 cut 命令从文件中抽取前两个字段（发行版名字和版本号），并把结果存储到
 一个名为 distro-versions.txt 的文件中：
 
-    [me@linuxbox ~]$ cut -f 1,2 distros-by-date.txt > distros-versions.txt
-    [me@linuxbox ~]$ head distros-versions.txt
+    [wangding@LAB ~]$ cut -f 1,2 distros-by-date.txt > distros-versions.txt
+    [wangding@LAB ~]$ head distros-versions.txt
     Fedora     10
     Ubuntu     8.10
     SUSE       11.0
@@ -610,8 +607,8 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 
 最后的准备步骤是抽取发行日期，并把它们存储到一个名为 distro-dates.txt 文件中：
 
-    [me@linuxbox ~]$ cut -f 3 distros-by-date.txt > distros-dates.txt
-    [me@linuxbox ~]$ head distros-dates.txt
+    [wangding@LAB ~]$ cut -f 3 distros-by-date.txt > distros-dates.txt
+    [wangding@LAB ~]$ head distros-dates.txt
     11/25/2008
     10/30/2008
     06/19/2008
@@ -627,7 +624,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 和版本号的前面，这样就创建了一个年代列表。通过使用 paste 命令，然后按照期望的顺序来安排它的
 参数，就能很容易完成这个任务。
 
-    [me@linuxbox ~]$ paste distros-dates.txt distros-versions.txt
+    [wangding@LAB ~]$ paste distros-dates.txt distros-versions.txt
     11/25/2008	Fedora     10
     10/30/2008	Ubuntu     8.10
     06/19/2008	SUSE       11.0
@@ -639,7 +636,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
     05/31/2007	Fedora     7
     04/19/2007	Ubuntu     7.04
 
-#### join
+### join
 
 在某些方面，join 命令类似于 paste，它会往文件中添加列，但是它使用了独特的方法来完成。
 一个 join 操作通常与关系型数据库有关联，在关系型数据库中来自多个享有共同关键域的表格的
@@ -673,9 +670,9 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 为了说明 join 程序，我们需要创建一对包含共享键值的文件。为此，我们将使用我们的 distros.txt 文件。
 从这个文件中，我们将构建额外两个文件，一个包含发行日期（其会成为共享键值）和发行版名称：
 
-    [me@linuxbox ~]$ cut -f 1,1 distros-by-date.txt > distros-names.txt
-    [me@linuxbox ~]$ paste distros-dates.txt distros-names.txt > distros-key-names.txt
-    [me@linuxbox ~]$ head distros-key-names.txt
+    [wangding@LAB ~]$ cut -f 1,1 distros-by-date.txt > distros-names.txt
+    [wangding@LAB ~]$ paste distros-dates.txt distros-names.txt > distros-key-names.txt
+    [wangding@LAB ~]$ head distros-key-names.txt
     11/25/2008 Fedora
     10/30/2008 Ubuntu
     06/19/2008 SUSE
@@ -689,9 +686,9 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 
 第二个文件包含发行日期和版本号：
 
-    [me@linuxbox ~]$ cut -f 2,2 distros-by-date.txt > distros-vernums.txt
-    [me@linuxbox ~]$ paste distros-dates.txt distros-vernums.txt > distros-key-vernums.txt
-    [me@linuxbox ~]$ head distros-key-vernums.txt
+    [wangding@LAB ~]$ cut -f 2,2 distros-by-date.txt > distros-vernums.txt
+    [wangding@LAB ~]$ paste distros-dates.txt distros-vernums.txt > distros-key-vernums.txt
+    [wangding@LAB ~]$ head distros-key-vernums.txt
     11/25/2008 10
     10/30/2008 8.10
     06/19/2008 11.0
@@ -706,7 +703,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 现在我们有两个具有共享键值（ “发行日期” 数据域 ）的文件。有必要指出，为了使 join 命令
 能正常工作，所有文件必须按照关键数据域排序。
 
-    [me@linuxbox ~]$ join distros-key-names.txt distros-key-vernums.txt | head
+    [wangding@LAB ~]$ join distros-key-names.txt distros-key-vernums.txt | head
     11/25/2008 Fedora 10
     10/30/2008 Ubuntu 8.10
     06/19/2008 SUSE 11.0
@@ -721,23 +718,23 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 也要注意，默认情况下，join 命令使用空白字符做为输入字段的界定符，一个空格作为输出字段
 的界定符。这种行为可以通过指定的选项来修改。详细信息，参考 join 命令手册。
 
-### 比较文本
+## 比较文本
 
 通常比较文本文件的版本很有帮助。对于系统管理员和软件开发者来说，这个尤为重要。
 一名系统管理员可能，例如，需要拿现有的配置文件与先前的版本做比较，来诊断一个系统错误。
 同样的，一名程序员经常需要查看程序的修改。
 
-#### comm
+### comm
 
 这个 comm 程序会比较两个文本文件，并且会显示每个文件特有的文本行和共有的文把行。
 为了说明问题，通过使用 cat 命令，我们将会创建两个内容几乎相同的文本文件：
 
-    [me@linuxbox ~]$ cat > file1.txt
+    [wangding@LAB ~]$ cat > file1.txt
     a
     b
     c
     d
-    [me@linuxbox ~]$ cat > file2.txt
+    [wangding@LAB ~]$ cat > file2.txt
     b
     c
     d
@@ -745,7 +742,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 
 下一步，我们将使用 comm 命令来比较这两个文件：
 
-    [me@linuxbox ~]$ comm file1.txt file2.txt
+    [wangding@LAB ~]$ comm file1.txt file2.txt
     a
             b
             c
@@ -757,12 +754,12 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 1，2 或 3。这些选项使用的时候，指定了要隐藏的列。例如，如果我们只想输出两个文件共享的文本行，
 我们将隐藏第一列和第二列的输出结果：
 
-    [me@linuxbox ~]$ comm -12 file1.txt file2.txt
+    [wangding@LAB ~]$ comm -12 file1.txt file2.txt
     b
     c
     d
 
-#### diff
+### diff
 
 类似于 comm 程序，diff 程序被用来监测文件之间的差异。然而，diff 是一款更加复杂的工具，它支持
 许多输出格式，并且一次能处理许多文本文件。软件开发员经常使用 diff 程序来检查不同程序源码
@@ -772,7 +769,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 
 如果我们使用 diff 程序，来查看我们之前的文件实例：
 
-    [me@linuxbox ~]$ diff file1.txt file2.txt
+    [wangding@LAB ~]$ diff file1.txt file2.txt
     1d0
     < a
     4a4
@@ -808,7 +805,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 
 当使用上下文模式（带上 -c 选项），我们将看到这些：
 
-    [me@linuxbox ~]$ diff -c file1.txt file2.txt
+    [wangding@LAB ~]$ diff -c file1.txt file2.txt
     *** file1.txt    2008-12-23 06:40:13.000000000 -0500
     --- file2.txt   2008-12-23 06:40:34.000000000 -0500
     ***************
@@ -861,7 +858,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 
 这个统一模式相似于上下文模式，但是更加简洁。通过 -u 选项来指定它：
 
-    [me@linuxbox ~]$ diff -u file1.txt file2.txt
+    [wangding@LAB ~]$ diff -u file1.txt file2.txt
     --- file1.txt 2008-12-23 06:40:13.000000000 -0500
     +++ file2.txt 2008-12-23 06:40:34.000000000 -0500
     @@ -1,4 +1,4 @@
@@ -896,7 +893,7 @@ paste 接受多个文件参数和 ／ 或标准输入。为了说明 paste 是�
 </tr>
 </table>
 
-#### patch
+### patch
 
 这个 patch 程序被用来把更改应用到文本文件中。它接受从 diff 程序的输出，并且通常被用来
 把较老的文件版本转变为较新的文件版本。让我们考虑一个著名的例子。Linux 内核是由一个
@@ -925,10 +922,10 @@ old_file 和 new_file 部分不是单个文件就是包含文件的目录。这�
 
 我们将使用测试文件来说明：
 
-    [me@linuxbox ~]$ diff -Naur file1.txt file2.txt > patchfile.txt
-    [me@linuxbox ~]$ patch < patchfile.txt
+    [wangding@LAB ~]$ diff -Naur file1.txt file2.txt > patchfile.txt
+    [wangding@LAB ~]$ patch < patchfile.txt
     patching file file1.txt
-    [me@linuxbox ~]$ cat file1.txt
+    [wangding@LAB ~]$ cat file1.txt
     b
     c
     d
@@ -940,18 +937,18 @@ old_file 和 new_file 部分不是单个文件就是包含文件的目录。这�
 
 patch 程序有大量的选项，而且还有额外的实用程序可以被用来分析和编辑补丁。
 
-### 运行时编辑
+## 运行时编辑
 
 我们对于文本编辑器的经验是它们主要是交互式的，意思是我们手动移动光标，然后输入我们的修改。
 然而，也有非交互式的方法来编辑文本。有可能，例如，通过单个命令把一系列修改应用到多个文件中。
 
-#### tr
+### tr
 
 这个 tr 程序被用来更改字符。我们可以把它看作是一种基于字符的查找和替换操作。
 换字是一种把字符从一个字母转换为另一个字母的过程。例如，把小写字母转换成大写字母就是
 换字。我们可以通过 tr 命令来执行这样的转换，如下所示：
 
-    [me@linuxbox ~]$ echo "lowercase letters" | tr a-z A-Z
+    [wangding@LAB ~]$ echo "lowercase letters" | tr a-z A-Z
     LOWERCASE LETTERS
 
 正如我们所见，tr 命令操作标准输入，并把结果输出到标准输出。tr 命令接受两个参数：要被转换的字符集以及
@@ -967,7 +964,7 @@ patch 程序有大量的选项，而且还有额外的实用程序可以被用�
 大多数情况下，两个字符集应该长度相同；然而，有可能第一个集合大于第二个，尤其如果我们
 想要把多个字符转换为单个字符：
 
-    [me@linuxbox ~]$ echo "lowercase letters" | tr [:lower:] A
+    [wangding@LAB ~]$ echo "lowercase letters" | tr [:lower:] A
     AAAAAAAAA AAAAAAA
 
 除了换字之外，tr 命令能允许字符从输入流中简单地被删除。在之前的章节中，我们讨论了转换
@@ -980,7 +977,7 @@ MS-DOS 文本文件为 Unix 风格文本的问题。为了执行这个转换，�
 是转换后的结果。这种形式的命令使用转义序列 \r 来代表回车符。查看 tr
 命令所支持地完整的转义序列和字符类别列表，试试下面的命令：
 
-    [me@linuxbox ~]$ tr --help
+    [wangding@LAB ~]$ tr --help
 
 >
 > ROT13: 不那么秘密的编码环
@@ -1006,19 +1003,19 @@ MS-DOS 文本文件为 Unix 风格文本的问题。为了执行这个转换，�
 
 tr 也可以完成另一个技巧。使用-s 选项，tr 命令能“挤压”（删除）重复的字符实例：
 
-    [me@linuxbox ~]$ echo "aaabbbccc" | tr -s ab
+    [wangding@LAB ~]$ echo "aaabbbccc" | tr -s ab
     abccc
 
 这里我们有一个包含重复字符的字符串。通过给 tr 命令指定字符集“ab”，我们能够消除字符集中
 字母的重复实例，然而会留下不属于字符集的字符（“c”）无更改。注意重复的字符必须是相邻的。
 如果它们不相邻：
 
-    [me@linuxbox ~]$ echo "abcabcabc" | tr -s ab
+    [wangding@LAB ~]$ echo "abcabcabc" | tr -s ab
     abcabcabc
 
 那么挤压会没有效果。
 
-#### sed
+### sed
 
 名字 sed 是 stream editor（流编辑器）的简称。它对文本流进行编辑，要不是一系列指定的文件，
 要不就是标准输入。sed 是一款强大的，并且有些复杂的程序（有整本内容都是关于 sed 程序的书籍），
@@ -1027,7 +1024,7 @@ tr 也可以完成另一个技巧。使用-s 选项，tr 命令能“挤压”�
 总之，sed 的工作方式是要不给出单个编辑命令（在命令行中）要不就是包含多个命令的脚本文件名，
 然后它就按行来执行这些命令。这里有一个非常简单的 sed 实例：
 
-    [me@linuxbox ~]$ echo "front" | sed 's/front/back/'
+    [wangding@LAB ~]$ echo "front" | sed 's/front/back/'
     back
 
 在这个例子中，我们使用 echo 命令产生了一个单词的文本流，然后把它管道给 sed 命令。sed，依次，
@@ -1038,7 +1035,7 @@ sed 中的命令开始于单个字符。在上面的例子中，这个替换命�
 和替代字符串，斜杠字符做为分隔符。分隔符的选择是随意的。按照惯例，经常使用斜杠字符，
 但是 sed 将会接受紧随命令之后的任意字符做为分隔符。我们可以按照这种方式来执行相同的命令：
 
-    [me@linuxbox ~]$ echo "front" | sed 's_front_back_'
+    [wangding@LAB ~]$ echo "front" | sed 's_front_back_'
     back
 
 通过紧跟命令之后使用下划线字符，则它变成界定符。sed 可以设置界定符的能力，使命令的可读性更强，
@@ -1048,13 +1045,13 @@ sed 中的大多数命令之前都会带有一个地址，其指定了输入流�
 然后会对输入流的每一行执行编辑命令。最简单的地址形式是一个行号。我们能够添加一个地址
 到我们例子中：
 
-    [me@linuxbox ~]$ echo "front" | sed '1s/front/back/'
+    [wangding@LAB ~]$ echo "front" | sed '1s/front/back/'
     back
 
 给我们的命令添加地址 1，就导致只对仅有一行文本的输入流的第一行执行替换操作。如果我们指定另一
 个数字：
 
-    [me@linuxbox ~]$ echo "front" | sed '2s/front/back/'
+    [wangding@LAB ~]$ echo "front" | sed '2s/front/back/'
     front
 
 我们看到没有执行这个编辑命令，因为我们的输入流没有第二行。地址可以用许多方式来表达。这里是
@@ -1103,7 +1100,7 @@ valign="top">匹配由数字 first 代表的文本行，然后随后的每个在
 
 通过使用这一章中早前的 distros.txt 文件，我们将演示不同种类的地址表示法。首先，一系列行号：
 
-    [me@linuxbox ~]$ sed -n '1,5p' distros.txt
+    [wangding@LAB ~]$ sed -n '1,5p' distros.txt
     SUSE           10.2     12/07/2006
     Fedora         10       11/25/2008
     SUSE           11.0     06/19/2008
@@ -1116,7 +1113,7 @@ valign="top">匹配由数字 first 代表的文本行，然后随后的每个在
 
 下一步，我们将试用一下正则表达式：
 
-    [me@linuxbox ~]$ sed -n '/SUSE/p' distros.txt
+    [wangding@LAB ~]$ sed -n '/SUSE/p' distros.txt
     SUSE         10.2     12/07/2006
     SUSE         11.0     06/19/2008
     SUSE         10.3     10/04/2007
@@ -1127,7 +1124,7 @@ valign="top">匹配由数字 first 代表的文本行，然后随后的每个在
 
 最后，我们将试着否定上面的操作，通过给这个地址添加一个感叹号：
 
-    [me@linuxbox ~]$ sed -n '/SUSE/!p' distros.txt
+    [wangding@LAB ~]$ sed -n '/SUSE/!p' distros.txt
     Fedora         10       11/25/2008
     Ubuntu         8.04     04/24/2008
     Fedora         8        11/08/2007
@@ -1201,7 +1198,7 @@ distros.txt 文件。我们以前讨论过 distros.txt 文件中的日期字段�
 文件中的日期格式是 MM/DD/YYYY，但如果格式是 YYYY-MM-DD 会更好一些（利于排序）。手动修改
 日期格式不仅浪费时间而且易出错，但是有了 sed，只需一步就能完成修改：
 
-    [me@linuxbox ~]$ sed 's/\([0-9]\{2\}\)\/\([0-9]\{2\}\)\/\([0-9]\{4\}\)$/\3-\1-\2/' distros.txt
+    [wangding@LAB ~]$ sed 's/\([0-9]\{2\}\)\/\([0-9]\{2\}\)\/\([0-9]\{4\}\)$/\3-\1-\2/' distros.txt
     SUSE           10.2     2006-12-07
     Fedora         10       2008-11-25
     SUSE           11.0     2008-06-19
@@ -1261,13 +1258,13 @@ s 命令的另一个功能是使用可选标志，其跟随替代字符串。一
 指示 sed 对某个文本行全范围地执行查找和替代操作，不仅仅是对第一个实例，这是默认行为。
 这里有个例子：
 
-    [me@linuxbox ~]$ echo "aaabbbccc" | sed 's/b/B/'
+    [wangding@LAB ~]$ echo "aaabbbccc" | sed 's/b/B/'
     aaaBbbccc
 
 我们看到虽然执行了替换操作，但是只针对第一个字母 “b” 实例，然而剩余的实例没有更改。通过添加 g 标志，
 我们能够更改所有的实例：
 
-    [me@linuxbox ~]$ echo "aaabbbccc" | sed 's/b/B/g'
+    [wangding@LAB ~]$ echo "aaabbbccc" | sed 's/b/B/g'
     aaaBBBccc
 
 目前为止，通过命令行我们只让 sed 执行单个命令。使用-f 选项，也有可能在一个脚本文件中构建更加复杂的命令。
@@ -1283,7 +1280,7 @@ s 命令的另一个功能是使用可选标志，其跟随替代字符串。一
 
 我们将把 sed 脚本保存为 distros.sed 文件，然后像这样运行它：
 
-    [me@linuxbox ~]$ sed -f distros.sed distros.txt
+    [wangding@LAB ~]$ sed -f distros.sed distros.txt
     Linux Distributions Report
     SUSE	10.2	2006-12-07
     FEDORA	10	    2008-11-25
@@ -1302,7 +1299,7 @@ s 命令的另一个功能是使用可选标志，其跟随替代字符串。一
 正如我们所见，我们的脚本文件产生了期望的结果，但是它是如何做到的呢？让我们再看一下我们的脚本文件。
 我们将使用 cat 来给每行文本编号：
 
-    [me@linuxbox ~]$ cat -n distros.sed
+    [wangding@LAB ~]$ cat -n distros.sed
     1 # sed script to produce Linux distributions report
     2
     3 1 i\
@@ -1354,7 +1351,7 @@ awk 程序通常逐行处理文本文件，这点类似于 sed，awk 使用了�
 之后跟随编辑命令的概念相似。虽然关于 awk 和 perl 的内容都超出了本书所讨论的范围，
 但是对于 Linux 命令行用户来说，它们都是非常好的技能。
 
-#### aspell
+### aspell
 
 我们要查看的最后一个工具是 aspell，一款交互式的拼写检查器。这个 aspell 程序是早先 ispell 程序
 的继承者，大多数情况下，它可以被用做一个替代品。虽然 aspell 程序大多被其它需要拼写检查能力的
@@ -1368,12 +1365,12 @@ awk 程序通常逐行处理文本文件，这点类似于 sed，awk 使用了�
 这里的 textfile 是要检查的文件名。作为一个实际例子，让我们创建一个简单的文本文件，叫做 foo.txt，
 包含一些故意的拼写错误：
 
-    [me@linuxbox ~]$ cat > foo.txt
+    [wangding@LAB ~]$ cat > foo.txt
     The quick brown fox jimped over the laxy dog.
 
 下一步我们将使用 aspell 来检查文件：
 
-    [me@linuxbox ~]$ aspell check foo.txt
+    [wangding@LAB ~]$ aspell check foo.txt
 
 因为 aspell 在检查模式下是交互的，我们将看到像这样的一个屏幕：
 
@@ -1397,7 +1394,7 @@ awk 程序通常逐行处理文本文件，这点类似于 sed，awk 使用了�
  “laxy”。如果我们选择替代物 “lazy”，aspell 会替换 “laxy” 并且终止。一旦 aspell 结束操作，我们
 可以检查我们的文件，会看到拼写错误的单词已经更正了。
 
-    [me@linuxbox ~]$ cat foo.txt
+    [wangding@LAB ~]$ cat foo.txt
     The quick brown fox jumped over the lazy dog.
 
 除非由命令行选项 -\-dont-backup 告诉 aspell，否则通过追加扩展名.bak 到文件名中,
@@ -1405,7 +1402,7 @@ aspell 会创建一个包含原始文本的备份文件。
 
 为了炫耀 sed 的编辑本领，我们将还原拼写错误，从而能够重用我们的文件：
 
-    [me@linuxbox ~]$ sed -i 's/lazy/laxy/; s/jumped/jimped/' foo.txt
+    [wangding@LAB ~]$ sed -i 's/lazy/laxy/; s/jumped/jimped/' foo.txt
 
 这个 sed 选项-i，告诉 sed 在适当位置编辑文件，意思是不要把编辑结果发送到标准输出中。sed 会把更改应用到文件中，
 以此重新编写文件。我们也看到可以把多个 sed 编辑命令放在同一行，编辑命令之间由分号分隔开来。
@@ -1424,7 +1421,7 @@ aspell 会创建一个包含原始文本的备份文件。
 
 现在，如果我们试图拼写检查我们修改的文件，我们会遇到一个问题。如果我们这样做：
 
-    [me@linuxbox ~]$ aspell check foo.txt
+    [wangding@LAB ~]$ aspell check foo.txt
 
 我们会得到这些：
 
@@ -1448,7 +1445,7 @@ aspell 会创建一个包含原始文本的备份文件。
 aspell 会认为 HTML 标志的内容是拼写错误。通过包含-H（HTML）检查模式选项，这个问题能够
 解决，像这样：
 
-    [me@linuxbox ~]$ aspell -H check foo.txt
+    [wangding@LAB ~]$ aspell -H check foo.txt
 
 这会导致这样的结果：
 
@@ -1481,7 +1478,7 @@ aspell 会认为 HTML 标志的内容是拼写错误。通过包含-H（HTML）�
 
 ---
 
-### 总结归纳
+## 总结归纳
 
 在这一章中，我们已经查看了一些操作文本的命令行工具。在下一章中，我们会再看几个命令行工具。
 诚然，看起来不能立即显现出怎样或为什么你可能使用这些工具为日常的基本工具，
@@ -1489,7 +1486,7 @@ aspell 会认为 HTML 标志的内容是拼写错误。通过包含-H（HTML）�
 了解决实际问题的基本工具箱。这将是确定无疑的，当我们学习 shell 脚本的时候，
 到时候这些工具将真正体现出它们的价值。
 
-### 拓展阅读
+## 拓展阅读
 
 GNU 项目网站包含了本章中所讨论工具的许多在线指南。
 
@@ -1523,7 +1520,7 @@ GNU 项目网站包含了本章中所讨论工具的许多在线指南。
 
 * 试试用 google 搜索 “sed one liners”, “sed cheat sheets” 关键字
 
-### 友情提示
+## 友情提示
 
 有一些更有趣的文本操作命令值得。在它们之间有：split（把文件分割成碎片），
 csplit（基于上下文把文件分割成碎片），和 sdiff（并排合并文件差异）。
