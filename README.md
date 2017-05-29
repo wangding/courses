@@ -11,6 +11,7 @@
 
 ## 更新日志
 
+2017-05-28 [JavaScript 开发系列：JavaScript 异步编程](http://edu.51cto.com/course/course_id-9392.html)上线  
 2017-05-19 [GitHub 开源之旅第九季：Linux Bash 入门（上）](http://edu.51cto.com/course/course_id-9244.html)上线  
 2017-05-04 [基于 Mocha 的自动化测试框架（下篇）](http://edu.51cto.com/course/course_id-9084.html)上线  
 2017-04-28 [基于 Mocha 的自动化测试框架（上篇）](http://edu.51cto.com/course/course_id-9011.html)上线  
