@@ -1,33 +1,25 @@
 # 网络系统
 
-当谈及到网络系统层面，几乎任何东西都能由 Linux 来实现。Linux 被用来创建各式各样的网络系统和装置，包括防火墙，路由器，名称服务器，网络连接式存储设备等等。
+各位小伙伴大家好，咱们接着前面的课程，继续讲解 GitHub 开源之旅第九季：Linux Bash 入门，现在咱们讲解第四个话题：柴米油盐之网络系统。
 
-被用来配置和操作网络系统的命令数目，就如网络系统一样巨大。我们仅仅会关注一些最经常使用到的命令。我们要研究的命令包括那些被用来监测网络和传输文件的命令。另外，我们还会探讨用来远端登录的 ssh 程序。这章会介绍：
+说到网络功能，好像没有什么是 Linux 不能做的。Linux 系统被用来创建各式各样的网络系统或者网络装置，包括：防火墙，路由器，域名服务器，网络存储，等等。当然，很多互联网公司或者创业公司，用 Linux 作为网站服务器或者数据库服务器，这更是稀松平常的事情了。
+
+Linux 有丰富和大量的网络操作命令。本次课我们仅介绍一些最常使用的命令。我们要讲解的命令包括那些被用来监测网络和传输文件的命令。另外，我们还会探讨用来远端登录的 ssh 程序。要介绍的命令列表如下：
 
 - ping - 发送 ICMP ECHO_REQUEST 软件包到网络主机
-- traceroute - 打印到一台网络主机的路由数据包
 - netstat - 打印网络连接，路由表，接口统计数据，伪装连接，和多路广播成员
-- ftp - 因特网文件传输程序
 - wget - 非交互式网络下载器
 - ssh - OpenSSH SSH 客户端（远程登录程序）
 
-我们假定你已经知道了一点网络系统背景知识。在这个因特网时代，每个计算机用户需要理解基本的网络系统概念。为了能够充分利用这一章节的内容，我们应该熟悉以下术语：
+我们假定你已经多少知道了一点网络知识。在这个互联网时代，每个人多少都需要懂一些基本的网络概念。这里我们假设小伙伴们至少知道：
 
-- IP (网络协议)地址
-- 主机和域名
-- URI（统一资源标识符）
-
-请查看下面的“拓展阅读”部分，有几篇关于这些术语的有用文章。
-
----
-
-注意：一些将要讲到的命令可能（取决于系统发行版）需要从系统发行版的仓库中安装额外的软件包，并且一些命令可能需要超级用户权限才能执行。
-
----
+- 什么是 IP 地址
+- 什么是主机和域名
+- 什么是 URL
 
 ## 检查和监测网络
 
-即使你不是一名系统管理员，检查一个网络的性能和运作情况也是经常有帮助的。
+即使你不是一名系统管理员，检查一下网络的性能或者运作情况也是经常有帮助的。
 
 ### ping
 
@@ -39,50 +31,15 @@
 
 ---
 
-例如，看看我们能否连接到网站 linuxcommand.org（我们最喜欢的网站之一），我们可以这样使用 ping 命令：
+例如，看看我们能否连接到网站 www.baidu.com，我们可以这样使用 ping 命令：
 
-    [wangding@LAB ~]$ ping linuxcommand.org
+    [wangding@LAB ~]$ ping www.baidu.com
 
 一旦启动，ping 命令会持续在特定的时间间隔内（默认是一秒）发送数据包，直到它被中断：
 
     [wangding@LAB ~]$ ping linuxcommand.org
-    PING linuxcommand.org (66.35.250.210) 56(84) bytes of data.
-    64 bytes from vhost.sourceforge.net (66.35.250.210): icmp\_seq=1
-    ttl=43 time=107 ms
-    64 bytes from vhost.sourceforge.net (66.35.250.210): icmp\_seq=2
-    ttl=43 time=108 ms
-    64 bytes from vhost.sourceforge.net (66.35.250.210): icmp\_seq=3
-    ttl=43 time=106 ms
-    64 bytes from vhost.sourceforge.net (66.35.250.210): icmp\_seq=4
-    ttl=43 time=106 ms
-    64 bytes from vhost.sourceforge.net (66.35.250.210): icmp\_seq=5
-    ttl=43 time=105 ms
-    ...
 
 按下组合键 Ctrl-c，中断这个命令之后，ping 打印出运行统计信息。一个正常工作的网络会报告零个数据包丢失。一个成功执行的“ping”命令会意味着网络的各个部件（网卡，电缆，路由，网关）都处于正常的工作状态。
-
-### traceroute
-
-这个 traceroute 程序（一些系统使用相似的 tracepath 程序来代替）会显示从本地到指定主机要经过的所有“跳数”的网络流量列表。例如，看一下到达 slashdot.org 网站，需要经过的路由器，我们将这样做：
-
-    [wangding@LAB ~]$ traceroute slashdot.org
-
-命令输出看起来像这样：
-
-    traceroute to slashdot.org (216.34.181.45), 30 hops max, 40 byte
-    packets
-    1 ipcop.localdomain (192.168.1.1) 1.066 ms 1.366 ms 1.720 ms
-    2 * * *
-    3 ge-4-13-ur01.rockville.md.bad.comcast.net (68.87.130.9) 14.622
-    ms 14.885 ms 15.169 ms
-    4 po-30-ur02.rockville.md.bad.comcast.net (68.87.129.154) 17.634
-    ms 17.626 ms 17.899 ms
-    5 po-60-ur03.rockville.md.bad.comcast.net (68.87.129.158) 15.992
-    ms 15.983 ms 16.256 ms
-    6 po-30-ar01.howardcounty.md.bad.comcast.net (68.87.136.5) 22.835
-    ...
-
-从输出结果中，我们可以看到连接测试系统到 slashdot.org 网站需要经由16个路由器。对于那些提供标识信息的路由器，我们能看到它们的主机名，IP 地址和性能数据，这些数据包括三次从本地到此路由器的往返时间样本。对于那些没有提供标识信息的路由器（由于路由器配置，网络拥塞，防火墙等方面的原因），我们会看到几个星号，正如行中所示。
 
 ### netstat
 
@@ -121,90 +78,9 @@ netstat 程序被用来检查各种各样的网络设置和统计数据。通过
 
 netstat 程序有许多选项，我们仅仅讨论了几个。查看 netstat 命令的手册，可以得到所有选项的完整列表。
 
-## 网络中传输文件
+## 远程下载文件
 
-网络有什么用处呢？除非我们知道了怎样通过网络来传输文件。有许多程序可以用来在网络中传送数据。我们先讨论两个命令，随后的章节里再介绍几个命令。
-
-### ftp
-
-ftp 命令属于真正的“经典”程序之一，它的名字来源于其所使用的协议，就是文件传输协议。FTP 被广泛地用来从因特网上下载文件。大多数，并不是所有的，网络浏览器都支持 FTP，你经常可以看到它们的 URI 以协议 ftp://开头。在出现网络浏览器之前，ftp 程序已经存在了。ftp 程序可用来与 FTP 服务器进行通信，FTP 服务器就是存储文件的计算机，这些文件能够通过网络下载和上传。
-
-FTP（它的原始形式）并不是安全的，因为它会以明码形式发送帐号的姓名和密码。这就意味着这些数据没有加密，任何嗅探网络的人都能看到。由于此种原因，几乎因特网中所有 FTP 服务器都是匿名的。一个匿名服务器能允许任何人使用注册名“anonymous”和无意义的密码登录系统。
-
-在下面的例子中，我们将展示一个典型的会话，从匿名 FTP 服务器，其名字是 fileserver，的/pub/_images/Ubuntu-8.04的目录下，使用 ftp 程序下载一个 Ubuntu 系统映像文件。
-
-    [wangding@LAB ~]$ ftp fileserver
-    Connected to fileserver.localdomain.
-    220 (vsFTPd 2.0.1)
-    Name (fileserver:me): anonymous
-    331 Please specify the password.
-    Password:
-    230 Login successful.
-    Remote system type is UNIX.
-    Using binary mode to transfer files.
-    ftp> cd pub/cd\_images/Ubuntu-8.04
-    250 Directory successfully changed.
-    ftp> ls
-    200 PORT command successful. Consider using PASV.
-    150 Here comes the directory listing.
-    -rw-rw-r-- 1 500 500 733079552 Apr 25 03:53 ubuntu-8.04- desktop-i386.iso
-    226 Directory send OK.
-    ftp> lcd Desktop
-    Local directory now /home/me/Desktop
-    ftp> get ubuntu-8.04-desktop-i386.iso
-    local: ubuntu-8.04-desktop-i386.iso remote: ubuntu-8.04-desktop-
-    i386.iso
-    200 PORT command successful. Consider using PASV.
-    150 Opening BINARY mode data connection for ubuntu-8.04-desktop-
-    i386.iso (733079552 bytes).
-    226 File send OK.
-    733079552 bytes received in 68.56 secs (10441.5 kB/s)
-    ftp> bye
-
-这里是对会话期间所输入命令的解释说明：
-
-<table class="multi">
-<caption class="cap">表17-1:</caption>
-<tr>
-<th class="title">命令</th>
-<th class="title">意思</th>
-</tr>
-<tr>
-<td valign="top" width="35%">ftp fileserver</td>
-<td valign="top">唤醒 ftp 程序，让它连接到 FTP 服务器，fileserver。</td>
-</tr>
-<tr>
-<td valign="top">anonymous</td>
-<td valign="top">登录名。输入登录名后，将出现一个密码提示。一些服务器将会接受空密码，其它一些则会要求一个邮件地址形式的密码。如果是这种情况，试着输入 “user@example.com”。 </td>
-</tr>
-<tr>
-<td valign="top">cd pub/cd_images/Ubuntu-8.04 </td>
-<td valign="top">跳转到远端系统中，要下载文件所在的目录下，注意在大多数匿名的 FTP 服务器中，支持公共下载的文件都能在目录 pub 下找到 </td>
-</tr>
-<tr>
-<td valign="top">ls</td>
-<td valign="top">列出远端系统中的目录。</td>
-</tr>
-<tr>
-<td valign="top">lcd Desktop</td>
-<td valign="top">跳转到本地系统中的 ~/Desktop 目录下。在实例中，ftp 程序在工作目录 ~ 下被唤醒。这个命令把工作目录改为 ~/Desktop </td>
-</tr>
-<tr>
-<td valign="top">get ubuntu-8.04-desktop-i386.iso </td>
-<td valign="top">告诉远端系统传送文件到本地。因为本地系统的工作目录已经更改到了 ~/Desktop，所以文件会被下载到此目录。 </td>
-</tr>
-<tr>
-<td valign="top">bye</td>
-<td
-valign="top">退出远端服务器，结束 ftp 程序会话。也可以使用命令 quit 和 exit。</td>
-</tr>
-</table>
-
-在 “ftp>” 提示符下，输入 “help”，会显示所支持命令的列表。使用 ftp 登录到一台授予了用户足够权限的服务器中，则可以执行很多普通的文件管理任务。虽然很笨拙，但它真能工作。
-
-### lftp - 更好的 ftp
-
-ftp 并不是唯一的命令行形式的 FTP 客户端。实际上，还有很多。其中比较好（也更流行的）是 lftp 程序，由 Alexander Lukyanov 编写完成。虽然 lftp 工作起来与传统的 ftp 程序很相似，但是它带有额外的便捷特性，包括多协议支持（包括 HTTP），若下载失败会自动地重新下载，后台处理，用 tab 按键来补全路径名，还有很多。
+远程下载文件，以前常用的命令是 ftp，当然，前提是需要有 ftp 服务器。现在我们用的更多的是 wget，wget 既可以从 ftp 服务器上下载文件，也可以从 http 的 web 服务器上下载文件。更重要的是 wget 支持断点续传。
 
 ### wget
 
@@ -329,7 +205,7 @@ SSH 由两部分组成。SSH 服务器运行在远端主机上运行，在端口
 >
 > 这个 xload 命令在远端执行之后，它的窗口就会出现在本地。在某些系统中，你可能需要使用 “－Y” 选项，而不是 “－X” 选项来完成这个操作。
 
-### scp 和 sftp
+### scp 
 
 这个 OpenSSH 软件包也包含两个程序，它们可以利用 SSH 加密通道在网络间复制文件。第一个，scp（安全复制）被用来复制文件，与熟悉的 cp 程序非常相似。最显著的区别就是源或者目标路径名要以远端主机的名字，后跟一个冒号字符开头。例如，如果我们想要从远端系统，remote-sys，的家目录下复制文档 document.txt，到我们本地系统的当前工作目录下，可以这样操作：
 
@@ -343,29 +219,3 @@ SSH 由两部分组成。SSH 服务器运行在远端主机上运行，在端口
 
     [wangding@LAB ~]$ scp bob@remote-sys:document.txt .
 
-第二个 SSH 文件复制命令是 sftp，正如其名字所示，它是 ftp 程序的安全替代品。sftp 工作起来与我们之前使用的 ftp 程序很相似；然而，它不用明码形式来传递数据，它使用加密的 SSH 通道。sftp 有一个重要特性强于传统的 ftp 命令，就是 sftp 不需要远端系统中运行 FTP 服务器。它仅仅要求 SSH 服务器。这意味着任何一台能用 SSH 客户端连接的远端机器，也可当作类似于 FTP 的服务器来使用。这里是一个样本会话：
-
-    [wangding@LAB ~]$ sftp remote-sys
-    Connecting to remote-sys...
-    wangding@remote-sys's password:
-    sftp> ls
-    ubuntu-8.04-desktop-i386.iso
-    sftp> lcd Desktop
-    sftp> get ubuntu-8.04-desktop-i386.iso
-    Fetching /home/me/ubuntu-8.04-desktop-i386.iso to ubuntu-8.04-
-    desktop-i386.iso
-    /home/me/ubuntu-8.04-desktop-i386.iso 100% 699MB 7.4MB/s 01:35
-    sftp> bye
-
----
-
-小贴示：这个 SFTP 协议被许多 Linux 发行版中的图形化文件管理器支持。使用Nautilus (GNOME), 或者是 Konqueror (KDE)，我们都能在位置栏中输入以 sftp:// 开头的 URI， 来操作存储在运行着 SSH 服务器的远端系统中的文件。
-
----
-
->
-> _Windows 中的 SSH 客户端_
->
-> 比方说你正坐在一台 Windows 机器前面，但是你需要登录到你的 Linux 服务器中，去完成一些实际的工作，那该怎么办呢？当然是得到一个 Windows 平台下的 SSH 客户端！有很多这样的工具。最流行的可能就是由 Simon Tatham 和他的团队开发的 PuTTY 了。这个 PuTTY 程序能够显示一个终端窗口，而且允许 Windows 用户在远端主机中打开一个 SSH（或者 telnet）会话。这个程序也提供了 scp 和 sftp 程序的类似物。
->
-> PuTTY 可在链接 <http://www.chiark.greenend.org.uk/~sgtatham/putty/> 处得到。
