@@ -1,24 +1,19 @@
 # 格式化输出
 
-在这章中，我们继续着手于文本相关的工具，关注那些用来格式化输出的程序，而不是改变文本自身。
-这些工具通常让文本准备就绪打印，这是我们在下一章会提到的。我们在这章中会提到的工具有：
+各位小伙伴大家好，咱们接着前面的课程，继续讲解 GitHub 开源之旅第九季：Linux Bash 入门，现在咱们讲解第六个话题：白头到老之格式化输出。
 
-* nl – 添加行号
+在这章中，我们继续着手于文本相关的工具，关注那些用来格式化输出的程序，而不是改变文本自身。这些工具通常让文本准备就绪打印，这是我们在下一章会提到的。我们在这章中会提到的工具有：
 
-* fold – 限制文件列宽
-
-* fmt – 一个简单的文本格式转换器
-
-* pr – 让文本为打印做好准备
-
-* printf – 格式化数据并打印出来
-
-* groff – 一个文件格式系统
+- nl – 添加行号
+- fold – 限制文件列宽
+- fmt – 一个简单的文本格式转换器
+- pr – 让文本为打印做好准备
+- printf – 格式化数据并打印出来
+- groff – 一个文件格式系统
 
 ## 简单的格式化工具
 
-我们将先着眼于一些简单的格式工具。他们都是功能单一的程序，并且做法有一点单纯，
-但是他们能被用于小任务并且作为脚本和管道的一部分 。
+我们将先着眼于一些简单的格式工具。他们都是功能单一的程序，并且做法有一点单纯，但是他们能被用于小任务并且作为脚本和管道的一部分 。
 
 ### nl - 添加行号
 
@@ -26,12 +21,7 @@ nl 程序是一个相当神秘的工具，用作一个简单的任务。它添�
 
     [wangding@LAB ~]$ nl distros.txt | head
 
-像 cat，nl 既能接受多个文件作为命令行参数，也能标准输出。然而，nl 有一个相当数量的选项并支持一个简单的标记方式去允许更多复杂的方式的计算。
-
-nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。这允许nl在计算的时候去重设（再一次开始）可数的序列。用到那些选项
-的时候，可以设置一个特殊的开始值，并且在某个可限定的程度上还能设置它的格式。一个逻辑页面被进一步分为 header,body 和 footer
-这样的元素。在每一个部分中，数行数可以被重设，并且/或被设置成另外一个格式。如果nl同时处理多个文件，它会把他们当成一个单一的
-文本流。文本流中的部分被一些相当古怪的标记的存在加进了文本：
+像 cat，nl 既能接受多个文件作为命令行参数，也能标准输出。然而，nl 有一个相当数量的选项并支持一个简单的标记方式去允许更多复杂的方式的计算。nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。这允许nl在计算的时候去重设（再一次开始）可数的序列。用到那些选项的时候，可以设置一个特殊的开始值，并且在某个可限定的程度上还能设置它的格式。一个逻辑页面被进一步分为 header,body 和 footer 这样的元素。在每一个部分中，数行数可以被重设，并且/或被设置成另外一个格式。如果nl同时处理多个文件，它会把他们当成一个单一的文本流。文本流中的部分被一些相当古怪的标记的存在加进了文本：
 
 <table class="multi">
 <caption class="cap">Table 22-1: nl 标记</caption>
@@ -53,9 +43,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 </tr>
 </table>
 
-每一个上述的标记元素肯定在自己的行中独自出现。在处理完一个标记元素之后，nl 把它从文本流中删除。
-
-这里有一些常用的 nl 选项：
+每一个上述的标记元素肯定在自己的行中独自出现。在处理完一个标记元素之后，nl 把它从文本流中删除。这里有一些常用的 nl 选项：
 
 <table class="multi">
 <caption class="cap">表格 22-2: 常用 nl 选项 </caption>
@@ -109,9 +97,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 </tr>
 </table>
 
-坦诚的说，我们大概不会那么频繁地去数行数，但是我们能用 nl 去查看我们怎么将多个工具结合在一个去完成更复杂的任务。
-我们将在之前章节的基础上做一个 Linux 发行版的报告。因为我们将使用 nl，包含它的 header/body/footer 标记将会十分有用。
-我们将把它加到上一章的 sed 脚本来做这个。使用我们的文本编辑器，我们将脚本改成一下并且把它保存成 distros-nl.sed:
+坦诚的说，我们大概不会那么频繁地去数行数，但是我们能用 nl 去查看我们怎么将多个工具结合在一个去完成更复杂的任务。我们将在之前章节的基础上做一个 Linux 发行版的报告。因为我们将使用 nl，包含它的 header/body/footer 标记将会十分有用。我们将把它加到上一章的 sed 脚本来做这个。使用我们的文本编辑器，我们将脚本改成一下并且把它保存成 distros-nl.sed:
 
     # sed script to produce Linux distributions report
     1 i\
@@ -130,8 +116,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
     \
     End Of Report
 
-这个脚本现在加入了 nl 的逻辑页面标记并且在报告的最后加了一个 footer。记得我们在我们的标记中必须两次使用反斜杠，
-因为他们通常被 sed 解释成一个转义字符。
+这个脚本现在加入了 nl 的逻辑页面标记并且在报告的最后加了一个 footer。记得我们在我们的标记中必须两次使用反斜杠，因为他们通常被 sed 解释成一个转义字符。
 
 下一步，我们将结合 sort, sed, nl 来生成我们改进的报告：
 
@@ -156,9 +141,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
         15  Ubuntu  8.04    2008-04-24
             End Of Report
 
-我们的报告是一串命令的结果，首先，我们给名单按发行版本和版本号（表格1和2处）进行排序，然后我们用 sed 生产结果，
-增加了 header（包括了为 nl 增加的逻辑页面标记）和 footer。最后，我们按默认用 nl 生成了结果，只数了属于逻辑页面的 body 部分的
-文本流的行数。
+我们的报告是一串命令的结果，首先，我们给名单按发行版本和版本号（表格1和2处）进行排序，然后我们用 sed 生产结果，增加了 header（包括了为 nl 增加的逻辑页面标记）和 footer。最后，我们按默认用 nl 生成了结果，只数了属于逻辑页面的 body 部分的文本流的行数。
 
 我们能够重复命令并且实验不同的 nl 选项。一些有趣的方式：
 
@@ -170,8 +153,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 
 ### fold - 限制文件行宽
 
-折叠是将文本的行限制到特定的宽的过程。像我们的其他命令，fold 接受一个或多个文件及标准输入。如果我们将
-一个简单的文本流 fold，我们可以看到它工作的方式：
+折叠是将文本的行限制到特定的宽的过程。像我们的其他命令，fold 接受一个或多个文件及标准输入。如果我们将一个简单的文本流 fold，我们可以看到它工作的方式：
 
     [wangding@LAB ~]$ echo "The quick brown fox jumped over the lazy dog."
     | fold -w 12
@@ -180,9 +162,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
     ed over the
     lazy dog.
 
-这里我们看到了 fold 的行为。这个用 echo 命令发送的文本用 -w 选项分解成块。在这个例子中，我们设定了行宽为12个字符。
-如果没有字符设置，默认是80。注意到文本行不会因为单词边界而不会被分解。增加的 -s 选项将让 fold 分解到最后可用的空白
-字符，即会考虑单词边界。
+这里我们看到了 fold 的行为。这个用 echo 命令发送的文本用 -w 选项分解成块。在这个例子中，我们设定了行宽为12个字符。如果没有字符设置，默认是80。注意到文本行不会因为单词边界而不会被分解。增加的 -s 选项将让 fold 分解到最后可用的空白字符，即会考虑单词边界。
 
     [wangding@LAB ~]$ echo "The quick brown fox jumped over the lazy dog."
     | fold -w 12 -s
@@ -194,8 +174,7 @@ nl 在计算文件行数的时候支持一个叫“逻辑页面”的概念 。�
 
 ### fmt - 一个简单的文本格式器
 
-fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输入并且在文本流上呈现照片转换。基础来说，他填补并且将文本粘帖在
-一起并且保留了空白符和缩进。
+fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输入并且在文本流上呈现照片转换。基础来说，他填补并且将文本粘帖在一起并且保留了空白符和缩进。
 
 为了解释，我们将需要一些文本。让我们抄一些 fmt 主页上的东西吧：
 
@@ -217,8 +196,7 @@ fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输�
     Plass in “Breaking Paragraphs Into Lines”, ‘Software—Practice &
     Experience’ 11, 11 (November 1981), 1119–1184.
 
-我们将把这段文本复制进我们的文本编辑器并且保存文件名为 fmt-info.txt。现在，让我们重新格式这个文本并且让它成为一个50
-个字符宽的项目。我们能用 -w 选项对文件进行处理：
+我们将把这段文本复制进我们的文本编辑器并且保存文件名为 fmt-info.txt。现在，让我们重新格式这个文本并且让它成为一个 50 个字符宽的项目。我们能用 -w 选项对文件进行处理：
 
     [wangding@LAB ~]$ fmt -w 50 fmt-info.txt | head
     'fmt' reads from the specified FILE arguments
@@ -230,9 +208,7 @@ fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输�
     with different indentation are not joined; tabs
     are expanded on input and introduced on output.
 
-好，这真是一个奇怪的结果。大概我们应该认真的阅读这段文本，因为它恰好解释了发生了什么：
-
-默认情况下，输出会保留空行，单词之间的空格，和缩进；持续输入的具有不同缩进的文本行不会连接在一起；tab 字符在输入时会展开，输出时复原 。
+好，这真是一个奇怪的结果。大概我们应该认真的阅读这段文本，因为它恰好解释了发生了什么。默认情况下，输出会保留空行，单词之间的空格，和缩进；持续输入的具有不同缩进的文本行不会连接在一起；tab 字符在输入时会展开，输出时复原 。
 
 所以，fmt 会保留第一行的缩进。幸运的是，fmt 提供了一个选项来更正这种行为：
 
@@ -240,8 +216,7 @@ fmt 程序同样折叠文本，外加很多功能。它接受文本或标准输�
 
 fmt 有一些有意思的选项：
 
-这个 -p 选项尤为有趣。通过它，我们可以格式文件选中的部分，通过在开头使用一样的符号。
-很多编程语言使用锚标记（#）去提醒注释的开始，而且它可以通过这个选项来被格式。让我们创建一个有用到注释的程序。
+这个 -p 选项尤为有趣。通过它，我们可以格式文件选中的部分，通过在开头使用一样的符号。很多编程语言使用锚标记（#）去提醒注释的开始，而且它可以通过这个选项来被格式。让我们创建一个有用到注释的程序。
 
     [wangding@LAB ~]$ cat > fmt-code.txt
     # This file contains code with comments.
@@ -254,8 +229,7 @@ fmt 有一些有意思的选项：
     And another line of code.
     And another.
 
-我们的示例文件包含了用 “#” 开始的注释（一个 # 后跟着一个空白符）和代码。现在，使用 fmt，我们能格式注释并且
-不让代码被触及。
+我们的示例文件包含了用 “#” 开始的注释（一个 # 后跟着一个空白符）和代码。现在，使用 fmt，我们能格式注释并且不让代码被触及。
 
     [wangding@LAB ~]$ fmt -w 50 -p '# ' fmt-code.txt
     # This file contains code with comments.
@@ -315,14 +289,9 @@ pr 程序用来把文本分页。当打印文本的时候，经常希望用几�
 <tr>
 <td valign="top" width="25%">flags</td>
 <td valign="top">There are five different flags:
-<p># – Use the “alternate format” for output. This varies by data
-type. For o (octal number) conversion, the output is prefixed with
-0. For x and X (hexadecimal number) conversions, the output is
-prefixed with 0x or 0X respectively.</p>
-<p>0–(zero) Pad the output with zeros. This means that the field will
-be filled with leading zeros, as in “000380”.</p>
-<p>- – (dash) Left-align the output. By default, printf right-aligns
-output.</p>
+<p># – Use the “alternate format” for output. This varies by data type. For o (octal number) conversion, the output is prefixed with 0. For x and X (hexadecimal number) conversions, the output is prefixed with 0x or 0X respectively.</p>
+<p>0–(zero) Pad the output with zeros. This means that the field will be filled with leading zeros, as in “000380”.</p>
+<p>- – (dash) Left-align the output. By default, printf right-aligns output.</p>
 <p>‘ ’ – (space) Produce a leading space for positive numbers.</p>
 <p>+ – (plus sign) Sign positive numbers. By default, printf only signs negative numbers.</p>
 </td>
@@ -333,8 +302,7 @@ output.</p>
 </tr>
 <tr>
 <td valign="top">.precision</td>
-<td valign="top">For floating point numbers, specify the number of digits of
-precision to be output after the decimal point. For string conversion, precision specifies the number of characters to output.</td>
+<td valign="top">For floating point numbers, specify the number of digits of precision to be output after the decimal point. For string conversion, precision specifies the number of characters to output.</td>
 </tr>
 </table>
 
@@ -459,21 +427,3 @@ precision to be output after the decimal point. For string conversion, precision
 
     [wangding@LAB ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-tbl
     .sed | groff -t > ~/Desktop/foo.ps
-
-## Summing Up
-
-## Further Reading
-
-  <http://www.gnu.org/software/groff/manual/>
-
-  <http://docs.freebsd.org/44doc/usd/19.memacros/paper.pdf>
-
-  <http://docs.freebsd.org/44doc/usd/20.meref/paper.pdf>
-
-  <http://plan9.bell-labs.com/10thEdMan/tbl.pdf>
-
-  <http://en.wikipedia.org/wiki/TeX>
-
-  <http://en.wikipedia.org/wiki/Donald_Knuth>
-
-  <http://en.wikipedia.org/wiki/Typesetting>
