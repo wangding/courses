@@ -2,27 +2,27 @@
 
 各位小伙伴大家好，咱们接着前面的课程，继续讲解 GitHub 开源之旅第九季：Linux Bash 入门，现在咱们讲解第五个话题：七年之痒之正则表达式。
 
-接正如你所见到的，Linux 系统中，文本数据起着举足轻重的作用。所以下来的三个话题，我们将会介绍一些用来操作文本的工具。分别是：正则表达式、文本处理和格式化输出。正则表达式是一个比较神奇，而且比较基础性的技术，我们先来学习这个技术。
+接正如你所见到的，Linux 系统中，文本数据起着举足轻重的作用。所以接下来的三个话题，分别是：正则表达式、文本处理和格式化输出，我们将会介绍一些用来操作文本的工具。正则表达式是一个比较神奇，而且比较基础性的技术，我们先来学习这个技术。
 
 正则表达式到底是什么呢？简单来说，正则表达式是一种符号表示法，用来识别文本模式。在某种程度上，它与 shell 通配符比较相似。但正则表达式功能更强大。许多命令行工具和大多数的编程语言都支持正则表达式，来解决文本操作问题。但是，并不是所有系统的正则表达式规则都是一样的，这里面我们先讲一些基本的正则表达式语法，然后再讲一些扩展的正则表达式语法。具体使用时，小伙伴们要视具体情况而定。
 
 ## grep
 
-我们将使用的主要程序是我们的老朋友，grep 程序，它会用到正则表达式。实际上，“grep”这个名字来自于短语“global regular expression print”，所以我们能看出 grep 程序和正则表达式有关联。本质上，grep 程序会在文本文件中查找一个指定的正则表达式，并把匹配行输出到标准输出。
+我们将用到的主要程序是我们的老朋友，grep 命令，它会用到正则表达式。实际上，“grep”这个名字来自于短语“global regular expression print”，所以我们能看出 grep 程序和正则表达式有关联。本质上，grep 程序会在文本文件中查找一个指定的正则表达式，并把匹配行输出到标准输出。
 
 到目前为止，我们已经使用 grep 程序查找了固定的字符串，就像这样:
 
-    [wangding@LAB ~]$ ls /usr/bin | grep zip
+    [wangding@LAB ~]$ ls /usr/bin | grep bus
 
-这个命令会列出，位于目录 /usr/bin 中，文件名中包含子字符串“zip”的所有文件。
+这个命令会列出，位于目录 /usr/bin 中，文件名中包含子字符串“bus”的所有文件。
 
-这个 grep 程序以这样的方式来接受选项和参数：
+grep 命令的格式如下：
 
     grep [options] regex [file...]
 
-这里的 regx 是指一个正则表达式。
+这里的 regex 是指一个正则表达式。
 
-这是一个常用的 grep 选项列表：
+常用的 grep 选项列表如 PPT 上所示：
 
 <table class="multi">
 <caption class="cap">表20-1: grep 选项</caption>
@@ -71,25 +71,19 @@
 
 我们能够对我们的文件列表执行简单的搜索，像这样：
 
-    [wangding@LAB ~]$ grep bzip dirlist*.txt
-    dirlist-bin.txt:bzip2
-    dirlist-bin.txt:bzip2recover
+    [wangding@LAB ~]$ grep bus dirlist*
 
-在这个例子里，grep 程序在所有列出的文件中搜索字符串 bzip，然后找到两个匹配项，其都在文件 dirlist-bin.txt 中。如果我们只是对包含匹配项的文件列表，而不是对匹配项本身感兴趣的话，我们可以指定-l 选项：
+在这个例子里，grep 程序在所有列出的文件中搜索字符串 bus，然后找到若干个匹配项，都在文件 dirlist-bin.txt 和 dirlist-usr-bin.txt 两个文件中。如果我们只是对包含匹配项的文件感兴趣，而不是对匹配项本身感兴趣的话，我们可以指定 -l 选项：
 
-    [wangding@LAB ~]$ grep -l bzip dirlist*.txt
-    dirlist-bin.txt
+    [wangding@LAB ~]$ grep -l bus dirlist*
 
-相反地，如果我们只想查看不包含匹配项的文件列表，我们可以这样操作：
+相反地，如果我们想查看不包含匹配项的文件列表，我们可以这样操作：
 
-    [wangding@LAB ~]$ grep -L bzip dirlist*.txt
-    dirlist-sbin.txt
-    dirlist-usr-bin.txt
-    dirlist-usr-sbin.txt
+    [wangding@LAB ~]$ grep -L bus dirlist*
 
 ## 元字符和文本
 
-它可能看起来不明显，但是我们的 grep 程序一直使用了正则表达式，虽然是非常简单的例子。这个正则表达式“bzip”意味着，匹配项所在行至少包含4个字符，并且按照字符 “b”, “z”, “i”, 和 “p”的顺序出现在匹配行的某处，字符之间没有其它的字符。字符串“bzip”中的所有字符都是原义字符，因为它们匹配本身。除了原义字符之外，正则表达式也可能包含元字符，其被用来指定更复杂的匹配项。正则表达式元字符由以下字符组成：
+到目前为止，我们还没有发挥 grep 的强大威力呢。因为我们使用的正则表达式，其实是最简单的一种，这个正则表达式“bus”意味着，匹配项所在行至少包含 3 个字符，并且按照字符 “b”, “u”, 和 “s”的顺序出现在匹配行的某处，字符之间没有其它的字符。字符串“bus”中的所有字符都是原义字符，因为它们匹配本身。这其实是一种精确匹配。除了原义字符之外，正则表达式也可以包含元字符，用来指定更复杂的匹配项。掌握了这些元字符，才能充分发挥正则表达式的强大威力。换句话说，正则表达式最强大的是，第二种形式：模糊匹配。只有包含了元字符，我们的正则表达式才能进行模糊匹配，否则只能进行精确匹配。元字符并不多，各有各的用途。掌握正则表达式，其实就是掌握这些元字符分别代表什么，然后在此基础上，碰到实际问题时，灵活运用这些元字符。
 
     ^ $ . [ ] { } - ? * + ( ) | \
 
@@ -105,72 +99,26 @@
 
 我们将要查看的第一个元字符是圆点字符，其被用来匹配任意字符。如果我们在正则表达式中包含它，它将会匹配在此位置的任意一个字符。这里有个例子：
 
-    [wangding@LAB ~]$ grep -h '.zip' dirlist*.txt
-    bunzip2
-    bzip2
-    bzip2recover
-    gunzip
-    gzip
-    funzip
-    gpg-zip
-    preunzip
-    prezip
-    prezip-bin
-    unzip
-    unzipsfx
+    [wangding@LAB ~]$ grep -h '.bus' dirlist*
 
-我们在文件中查找包含正则表达式“.zip”的文本行。对于搜索结果，有几点需要注意一下。注意没有找到这个 zip 程序。这是因为在我们的正则表达式中包含的圆点字符把所要求的匹配项的长度增加到四个字符，并且字符串“zip”只包含三个字符，所以这个 zip 程序不匹配。另外，如果我们的文件列表中有一些文件的扩展名是.zip，则它们也会成为匹配项，因为文件扩展名中的圆点符号也会被看作是“任意字符”。
+我们在文件中查找包含正则表达式“.bus”的文本行。对于搜索结果，有几点需要注意一下。注意没有找到这个 bus 程序。这是因为在我们的正则表达式中包含的圆点字符把所要求的匹配项的长度增加到四个字符，并且字符串“bus”只包含三个字符，所以这个 zip 程序不匹配。另外，如果我们的文件列表中有一些文件的扩展名是.bus，则它们也会成为匹配项，因为文件扩展名中的圆点符号也会被看作是“任意字符”。
 
 ## 锚点
 
 在正则表达式中，插入符号和美元符号被看作是锚点。这意味着正则表达式只有在文本行的开头或末尾被找到时，才算发生一次匹配。
 
-    [wangding@LAB ~]$ grep -h '^zip' dirlist*.txt
-    zip
-    zipcloak
-    zipgrep
-    zipinfo
-    zipnote
-    zipsplit
-    [wangding@LAB ~]$ grep -h 'zip$' dirlist*.txt
-    gunzip
-    gzip
-    funzip
-    gpg-zip
-    preunzip
-    prezip
-    unzip
-    zip
-    [wangding@LAB ~]$ grep -h '^zip$' dirlist*.txt
-    zip
+    [wangding@LAB ~]$ grep -h '^bus' dirlist*
+    [wangding@LAB ~]$ grep -h 'bus$' dirlist*
 
-这里我们分别在文件列表中搜索行首，行尾以及行首和行尾同时包含字符串“zip”（例如，zip 独占一行）的匹配行。注意正则表达式‘^$’（行首和行尾之间没有字符）会匹配空行。
-
->
-> 字谜助手
->
-> 到目前为止，甚至凭借我们有限的正则表达式知识，我们已经能做些有意义的事情了。
->
-> 我妻子喜欢玩字谜游戏，有时候她会因为一个特殊的问题，而向我求助。类似这样的问题，“一个有五个字母的单词，它的第三个字母是‘j’，最后一个字母是‘r’，是哪个单词？”这类问题会让我动脑筋想想。
->
-> 你知道你的 Linux 系统中带有一本英文字典吗？千真万确。看一下 /usr/share/dict 目录，你就能找到一本，或几本。存储在此目录下的字典文件，其内容仅仅是一个长长的单词列表，每行一个单词，按照字母顺序排列。在我的系统中，这个文件仅包含98,000个单词。为了找到可能的上述字谜的答案，我们可以这样做：
->
->     [wangding@LAB ~]$ grep -i '^..j.r$' /usr/share/dict/words
->     Major
->     major
->
-> 使用这个正则表达式，我们能在我们的字典文件中查找到包含五个字母，且第三个字母是“j”，最后一个字母是“r”的所有单词。
+这里我们分别在文件列表中搜索行首，行尾以及行首和行尾同时包含字符串“bus”（例如，bus 独占一行）的匹配行。注意正则表达式‘^$’（行首和行尾之间没有字符）会匹配空行。
 
 ## 中括号表达式和字符类
 
 除了能够在正则表达式中的给定位置匹配任意字符之外，通过使用中括号表达式，我们也能够从一个指定的字符集合中匹配一个单个的字符。通过中括号表达式，我们能够指定一个字符集合（包含在不加中括号的情况下会被解释为元字符的字符）来被匹配。在这个例子里，使用了一个两个字符的集合：
 
-    [wangding@LAB ~]$ grep -h '[bg]zip' dirlist*.txt
-    bzip2
-    bzip2recover
-    gzip
+    [wangding@LAB ~]$ grep -h '^[dg]bus' dirlist*
 
-我们匹配包含字符串“bzip”或者“gzip”的任意行。
+我们匹配包含字符串“dbus”或者“gbus”的任意行。
 
 一个字符集合可能包含任意多个字符，并且元字符被放置到中括号里面后会失去了它们的特殊含义。然而，在两种情况下，会在中括号表达式中使用元字符，并且有着不同的含义。第一个元字符是插入字符，其被用来表示否定；第二个是连字符字符，其被用来表示一个字符范围。
 
@@ -178,18 +126,9 @@
 
 如果在正则表示式中的第一个字符是一个插入字符，则剩余的字符被看作是不会在给定的字符位置出现的字符集合。通过修改之前的例子，我们试验一下：
 
-    [wangding@LAB ~]$ grep -h '[^bg]zip' dirlist*.txt
-    bunzip2
-    gunzip
-    funzip
-    gpg-zip
-    preunzip
-    prezip
-    prezip-bin
-    unzip
-    unzipsfx
+    [wangding@LAB ~]$ grep -h '[^dg]bus' dirlist*
 
-通过激活否定操作，我们得到一个文件列表，它们的文件名都包含字符串“zip”，并且“zip”的前一个字符是除了“b”和“g”之外的任意字符。注意文件 zip 没有被发现。一个否定的字符集仍然在给定位置要求一个字符，但是这个字符必须不是否定字符集的成员。
+通过激活否定操作，我们得到一个文件列表，它们的文件名都包含字符串“bus”，并且“bus”的前一个字符是除了“d”和“g”之外的任意字符。注意文件 bus 没有被发现。一个否定的字符集仍然在给定位置要求一个字符，但是这个字符必须不是否定字符集的成员。
 
 这个插入字符如果是中括号表达式中的第一个字符的时候，才会唤醒否定功能；否则，它会失去它的特殊含义，变成字符集中的一个普通字符。
 
@@ -197,201 +136,29 @@
 
 如果我们想要构建一个正则表达式，它可以在我们的列表中找到每个以大写字母开头的文件，我们可以这样做：
 
-    [wangding@LAB ~]$ grep -h '^[ABCDEFGHIJKLMNOPQRSTUVWXZY]' dirlist*.txt
+    [wangding@LAB ~]$ grep -h '^[ABCDEFGHIJKLMNOPQRSTUVWXYZ]' dirlist*
 
 这只是一个在正则表达式中输入26个大写字母的问题。但是输入所有字母非常令人烦恼，所以有另外一种方式：
 
-    [wangding@LAB ~]$ grep -h '^[A-Z]' dirlist*.txt
-    MAKEDEV
-    ControlPanel
-    GET
-    HEAD
-    POST
-    X
-    X11
-    Xorg
-    MAKEFLOPPIES
-    NetworkManager
-    NetworkManagerDispatcher
+    [wangding@LAB ~]$ grep -h '^[A-Z]' dirlist*
 
-通过使用一个三个符区域，我们能够缩写26个字母。任意字符的区域都能按照这种方式表达，包括多个区域，比如下面这个表达式就匹配了所有以字母和数字开头的文件名：
+通过使用一个三个符区域，我们能够缩写 26 个字母。任意字符的区域都能按照这种方式表达，包括多个区域，比如下面这个表达式就匹配了所有以字母和数字开头的文件名：
 
-    [wangding@LAB ~]$ grep -h '^[A-Za-z0-9]' dirlist*.txt
+    [wangding@LAB ~]$ grep -h '^[A-Za-z0-9]' dirlist*
 
 在字符区域中，我们看到这个连字符被特殊对待，所以我们怎样在一个正则表达式中包含一个连字符呢？方法就是使连字符成为表达式中的第一个字符。考虑一下这两个例子：
 
-    [wangding@LAB ~]$ grep -h '[A-Z]' dirlist*.txt
+    [wangding@LAB ~]$ grep -h '[A-Z]' dirlist*
 
 这会匹配包含一个大写字母的文件名。然而：
 
-    [wangding@LAB ~]$ grep -h '[-AZ]' dirlist*.txt
+    [wangding@LAB ~]$ grep -h '[-AZ]' dirlist*
 
 上面的表达式会匹配包含一个连字符，或一个大写字母“A”，或一个大写字母“Z”的文件名。
 
-## POSIX 字符集
+## 扩展的正则表达式
 
-传统的字符区域是一个易于理解和有效的方法，用来处理快速指定字符集合的问题。不幸的是，它们不总是工作。到目前为止，虽然我们在使用 grep 程序的时候没有遇到任何问题，但是我们可能在使用其它程序的时候会遭遇困难。
-
-回到第5章，我们看看通配符怎样被用来完成路径名展开操作。在那次讨论中，我们说过在某种程度上，那个字符区域被使用的方式几乎与在正则表达式中的用法一样，但是有一个问题：
-
-    [wangding@LAB ~]$ ls /usr/sbin/[ABCDEFGHIJKLMNOPQRSTUVWXYZ]*
-    /usr/sbin/MAKEFLOPPIES
-    /usr/sbin/NetworkManagerDispatcher
-    /usr/sbin/NetworkManager
-
-（依赖于不同的 Linux 发行版，我们将得到不同的文件列表，有可能是一个空列表。这个例子来自于 Ubuntu）这个命令产生了期望的结果——只有以大写字母开头的文件名，但是：
-
-    [wangding@LAB ~]$ ls /usr/sbin/[A-Z]*
-    /usr/sbin/biosdecode
-    /usr/sbin/chat
-    /usr/sbin/chgpasswd
-    /usr/sbin/chpasswd
-    /usr/sbin/chroot
-    /usr/sbin/cleanup-info
-    /usr/sbin/complain
-    /usr/sbin/console-kit-daemon
-
-通过这个命令我们得到整个不同的结果（只显示了一部分结果列表）。为什么会是那样？说来话长，但是这个版本比较简短：
-
-追溯到 Unix 刚刚开发的时候，它只知道 ASCII 字符，并且这个特性反映了事实。在 ASCII 中，前32个字符（数字0－31）都是控制码（如 tabs，backspaces，和回车）。随后的32个字符（32－63）包含可打印的字符，包括大多数的标点符号和数字0到9。再随后的32个字符（64－95）包含大写字符和一些更多的标点符号。最后的31个字符（96－127）包含小写字母和更多的标点符号。基于这种安排方式，系统使用这种排序规则的 ASCII：
-
-    ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-
-这个不同于正常的字典顺序，其像这样：
-
-    aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ
-
-随着 Unix 系统的知名度在美国之外的国家传播开来，就需要支持不在 U.S.英语范围内的字符。于是就扩展了这个 ASCII 字符表，使用了整个8位，添加了字符（数字128－255），这样就容纳了更多的语言。
-
-为了支持这种能力，POSIX 标准介绍了一种叫做 locale 的概念，其可以被调整，来为某个特殊的区域，选择所需的字符集。通过使用下面这个命令，我们能够查看到我们系统的语言设置：
-
-    [wangding@LAB ~]$ echo $LANG
-    en_US.UTF-8
-
-通过这个设置，POSIX 相容的应用程序将会使用字典排列顺序而不是 ASCII 顺序。这就解释了上述命令的行为。
-当[A-Z]字符区域按照字典顺序解释的时候，包含除了小写字母“a”之外的所有字母，因此得到这样的结果。
-
-为了部分地解决这个问题，POSIX 标准包含了大量的字符集，其提供了有用的字符区域。下表中描述了它们：
-
-<table class="multi">
-<caption class="cap">表20-2: POSIX 字符集 </caption>
-<tr>
-<th class="title">字符集</th>
-<th class="title">说明</th>
-</tr>
-<tr>
-<td valign="top" width="25%">[:alnum:] </td>
-<td valign="top">字母数字字符。在 ASCII 中，等价于：[A-Za-z0-9] </td>
-</tr>
-<tr>
-<td valign="top">[:word:] </td>
-<td valign="top">与[:alnum:]相同, 但增加了下划线字符。 </td>
-</tr>
-<tr>
-<td valign="top">[:alpha:] </td>
-<td valign="top">字母字符。在 ASCII 中，等价于：[A-Za-z] </td>
-</tr>
-<tr>
-<td valign="top">[:blank:] </td>
-<td valign="top">包含空格和 tab 字符。</td>
-</tr>
-<tr>
-<td valign="top">[:cntrl:] </td>
-<td valign="top">ASCII 的控制码。包含了0到31，和127的 ASCII 字符。</td>
-</tr>
-<tr>
-<td valign="top">[:digit:] </td>
-<td valign="top">数字0到9</td>
-</tr>
-<tr>
-<td valign="top">[:graph:]</td>
-<td valign="top">可视字符。在 ASCII 中，它包含33到126的字符。 </td>
-</tr>
-<tr>
-<td valign="top">[:lower:] </td>
-<td valign="top">小写字母。</td>
-</tr>
-<tr>
-<td valign="top">[:punct:] </td>
-<td valign="top">标点符号字符。在 ASCII 中，等价于：</td>
-</tr>
-<tr>
-<td valign="top">[:print:] </td>
-<td valign="top">可打印的字符。在[:graph:]中的所有字符，再加上空格字符。</td>
-</tr>
-<tr>
-<td valign="top">[:space:] </td>
-<td valign="top">空白字符，包括空格，tab，回车，换行，vertical tab, 和 form feed.在 ASCII 中，等价于：[ \t\r\n\v\f] </td>
-</tr>
-<tr>
-<td valign="top">[:upper:] </td>
-<td valign="top">大写字母。</td>
-</tr>
-<tr>
-<td valign="top">[:xdigit:] </td>
-<td valign="top">用来表示十六进制数字的字符。在 ASCII 中，等价于：[0-9A-Fa-f] </td>
-</tr>
-</table>
-
-甚至通过字符集，仍然没有便捷的方法来表达部分区域，比如[A-M]。
-
-通过使用字符集，我们重做上述的例题，看到一个改进的结果：
-
-    [wangding@LAB ~]$ ls /usr/sbin/[[:upper:]]*
-    /usr/sbin/MAKEFLOPPIES
-    /usr/sbin/NetworkManagerDispatcher
-    /usr/sbin/NetworkManager
-
-记住，然而，这不是一个正则表达式的例子，而是 shell 正在执行路径名展开操作。我们在这里展示这个例子，是因为 POSIX 规范的字符集适用于二者。
-
->
-> 恢复到传统的排列顺序
->
-> 通过改变环境变量 LANG 的值，你可以选择让你的系统使用传统的（ASCII）排列规则。如上所示，这个 LANG 变量包含了语种和字符集。这个值最初由你安装 Linux 系统时所选择的安装语言决定。
->
-> 使用 locale 命令，来查看 locale 的设置。
->
->      [wangding@LAB ~]$ locale
->
->      LANG=en_US.UTF-8
->
->      LC_CTYPE="en_US.UTF-8"
->
->      LC_NUMERIC="en_US.UTF-8"
->
->      LC_TIME="en_US.UTF-8"
->
->      LC_COLLATE="en_US.UTF-8"
->
->      LC_MONETARY="en_US.UTF-8"
->
->      LC_MESSAGES="en_US.UTF-8"
->
->      LC_PAPER="en_US.UTF-8"
->
->      LC_NAME="en_US.UTF-8"
->
->      LC_ADDRESS="en_US.UTF-8"
->
->      LC_TELEPHONE="en_US.UTF-8"
->
->      LC_MEASUREMENT="en_US.UTF-8"
->
->      LC_IDENTIFICATION="en_US.UTF-8"
->
->      LC_ALL=
->
-> 把这个 LANG 变量设置为 POSIX，来更改 locale，使其使用传统的 Unix 行为。
->
->  _[wangding@LAB ~]$ export LANG=POSIX_
->
-> 注意这个改动使系统为它的字符集使用 U.S.英语（更准确地说，ASCII），所以要确认一下这是否是你真正想要的效果。通过把这条语句添加到你的.bashrc 文件中，你可以使这个更改永久有效。
->
->  _export LANG=POSIX_
-
-## POSIX 基本的 Vs.扩展的正则表达式
-
-就在我们认为这已经非常令人困惑了，我们却发现 POSIX 把正则表达式的实现分成了两类：基本正则表达式（BRE）和扩展的正则表达式（ERE）。既服从 POSIX 规范又实现了BRE 的任意应用程序，都支持我们目前研究的所有正则表达式特性。我们的 grep 程序就是其中一个。
+我们把正则表达式的实现分成了两大类：基本正则表达式（BRE）和扩展的正则表达式（ERE）。刚才讲的所有正则表达式的元符号都是 BRE，现在咱们介绍 ERE 范畴的元符号。
 
 BRE 和 ERE 之间有什么区别呢？这是关于元字符的问题。BRE 可以辨别以下元字符：
 
@@ -405,45 +172,21 @@ BRE 和 ERE 之间有什么区别呢？这是关于元字符的问题。BRE 可�
 
 因为我们将要讨论的下一个特性是 ERE 的一部分，我们将要使用一个不同的 grep 程序。照惯例，一直由 egrep 程序来执行这项操作，但是 GUN 版本的 grep 程序也支持扩展的正则表达式，当使用了-E 选项之后。
 
->
-> 在 20 世纪 80 年代，Unix 成为一款非常流行的商业操作系统，但是到了1988年，Unix 世界一片混乱。许多计算机制造商从 Unix 的创建者 AT&T 那里得到了许可的 Unix 源码，并且供应各种版本的操作系统。然而，在他们努力创造产品差异化的同时，每个制造商都增加了专用的更改和扩展。这就开始限制了软件的兼容性。
->
-> 专有软件供应商一如既往，每个供应商都试图玩嬴游戏“锁定”他们的客户。这个 Unix 历史上的黑暗时代，就是今天众所周知的 “the Balkanization”。
->
-> 然后进入 IEEE（ 电气与电子工程师协会 ）时代。在上世纪 80 年代中叶，IEEE 开始制定一套标准，其将会定义 Unix 系统（ 以及类 Unix 的系统 ）如何执行。这些标准，正式成为 IEEE 1003，定义了应用程序编程接口（ APIs ），shell 和一些实用程序，其将会在标准的类 Unix 操作系统中找到。“POSIX” 这个名字，象征着可移植的操作系统接口（为了时髦一点，添加了末尾的 “X” ），是由 Richard Stallman 建议的（ 是的，的确是 Richard Stallman ），后来被 IEEE 采纳。
+## 替换
 
-## Alternation
+我们将要讨论的扩展表达式的第一个特性叫做替换。就像中括号表达式允许从一系列指定的字符之间匹配单个字符那样，可选允许从一系列字符串或者是其它的正则表达式中选择匹配项。首先，让我们试一个普通的字符串匹配：
 
-我们将要讨论的扩展表达式的第一个特性叫做 alternation（交替），其是一款允许从一系列表达式之间选择匹配项的实用程序。就像中括号表达式允许从一系列指定的字符之间匹配单个字符那样，alternation 允许从一系列字符串或者是其它的正则表达式中选择匹配项。为了说明问题，我们将会结合 echo 程序来使用 grep 命令。首先，让我们试一个普通的字符串匹配：
+    [wangding@LAB ~]$ grep -hE 'bus|zip' dirlist*
 
-    [wangding@LAB ~]$ echo "AAA" | grep AAA
-    AAA
-    [wangding@LAB ~]$ echo "BBB" | grep AAA
-    [wangding@LAB ~]$
+这里我们看到正则表达式'bus|zip'，这意味着“匹配字符串 bus 或者是字符串 zip”。注意因为这是一个扩展的特性，我们给 grep 命令（虽然我们能以 egrep 程序来代替）添加了-E 选项，并且我们把这个正则表达式用单引号引起来，为的是阻止 shell 把竖杠线元字符解释为一个管道操作符。可选并不局限于两种选择：为了把替换项和其它正则表达式元素结合起来，我们可以使用括号 () 来分离替换。
 
-一个相当直截了当的例子，我们把 echo 的输出管道给 grep，然后看到输出结果。当出现一个匹配项时，我们看到它会打印出来；当没有匹配项时，我们看到没有输出结果。现在我们将添加 alternation，以竖杠线元字符为标记：
+    [wangding@LAB ~]$ grep -Eh '^(bus|zip)' dirlist*
 
-    [wangding@LAB ~]$ echo "AAA" | grep -E 'AAA|BBB'
-    AAA
-    [wangding@LAB ~]$ echo "BBB" | grep -E 'AAA|BBB'
-    BBB
-    [wangding@LAB ~]$ echo "CCC" | grep -E 'AAA|BBB'
-    [wangding@LAB ~]$
+这个表达式将会在我们的列表中匹配以“bus”，或“zip”开头的文件名。如果我们删除了圆括号，这个表达式的意思：
 
-这里我们看到正则表达式'AAA|BBB'，这意味着“匹配字符串 AAA 或者是字符串 BBB”。注意因为这是一个扩展的特性，我们给 grep 命令（虽然我们能以 egrep 程序来代替）添加了-E 选项，并且我们把这个正则表达式用单引号引起来，为的是阻止 shell 把竖杠线元字符解释为一个 pipe 操作符。Alternation 并不局限于两种选择：
+    [wangding@LAB ~]$ grep -Eh '^bus|zip' dirlist*
 
-    [wangding@LAB ~]$ echo "AAA" | grep -E 'AAA|BBB|CCC'
-    AAA
-
-为了把 alternation 和其它正则表达式元素结合起来，我们可以使用()来分离 alternation。
-
-    [wangding@LAB ~]$ grep -Eh '^(bz|gz|zip)' dirlist*.txt
-
-这个表达式将会在我们的列表中匹配以“bz”，或“gz”，或“zip”开头的文件名。如果我们删除了圆括号，这个表达式的意思：
-
-    [wangding@LAB ~]$ grep -Eh '^bz|gz|zip' dirlist*.txt
-
-会变成匹配任意以“bz”开头，或包含“gz”，或包含“zip”的文件名。
+会变成匹配任意以“bus”开头，或包含“zip”的文件名。
 
 ## 限定符
 
