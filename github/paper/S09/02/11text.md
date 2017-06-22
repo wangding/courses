@@ -2,7 +2,7 @@
 
 各位小伙伴大家好，咱们接着前面的课程，继续讲解 GitHub 开源之旅第九季：Linux Bash 入门，现在咱们讲解第五个话题：七年之痒之文本处理。
 
-所有类 Unix 的操作系统，都严重依赖，文本文件这种数据存储类型。所以，Linux 中有许多用于处理文本的工具。本次课程，我们将介绍一批，用来处理文本文件的工具和命令。对一些讲过的命令做进一步的深入讲解，同时会介绍一些新命令：
+Linux 操作系统，都严重依赖，文本文件这种数据存储类型。所以，Linux 中有许多用于处理文本的工具。本次课程，我们将介绍一批，用来处理文本文件的工具和命令。对一些讲过的命令做进一步的深入讲解，同时会介绍一些新命令：
 
 - cat – 连接文件并且打印到标准输出
 - sort – 给文本行排序
@@ -43,18 +43,20 @@
 
 ## 回顾一些老朋友
 
-回到第7章（重定向），我们已经知道一些命令除了接受命令行参数之外，还能够接受标准输入。那时候我们只是简单地介绍了它们，但是现在我们将仔细地看一下它们是怎样被用来执行文本处理的。
+在前面的课程中，我们已经知道一些命令除了接受命令行参数之外，还能够接受标准输入。那时候我们只是简单地介绍了它们，但是现在我们将仔细地看一下它们是怎样被用来执行文本处理的。
 
 ### cat
 
-这个 cat 程序具有许多有趣的选项。其中许多选项用来帮助更好的可视化文本内容。一个例子是-A 选项，其用来在文本中显示非打印字符。有些时候我们想知道是否控制字符嵌入到了我们的可见文本中。最常用的控制字符是 tab 字符（而不是空格）和回车字符，在 MS-DOS 风格的文本文件中回车符经常作为结束符出现。另一种常见情况是文件中包含末尾带有空格的文本行。让我们创建一个测试文件，用 cat 程序作为一个简单的文字处理器。为此，我们将键入 cat 命令（随后指定了用于重定向输出的文件），然后输入我们的文本，最后按下 Enter 键来结束这一行，然后按下组合键 Ctrl-d，来指示 cat 程序，我们已经到达文件末尾了。在这个例子中，我们文本行的开头和末尾分别键入了一个 tab 字符以及一些空格。下一步，我们将使用带有-A 选项的 cat 命令来显示这个文本：
+其实 cat 程序还有许多有趣的选项。其中许多选项用来帮助更好的可视化文本内容。
+
+-A 选项，用来在文本中显示非打印字符。有些时候我们想知道是否控制字符嵌入到了我们的可见文本中。最常用的控制字符是 tab 字符和回车字符。另一种常见情况是文件中包含末尾带有空格的文本行。
 
     [wangding@LAB ~]$ cat -A wangding.txt
     [wangding@LAB ~]$
 
-在输出结果中我们看到，这个 tab 字符在我们的文本中由^I 字符来表示。这是一种常见的表示方法，意思是“Control-I”，结果证明，它和 tab 字符是一样的。我们也看到一个$字符出现在文本行真正的结尾处，表明我们的文本包含末尾的空格。
+在输出结果中我们看到，这个 tab 字符在我们的文本中由 ^I 字符来表示。这是一种常见的表示方法，意思是“Control-I”，结果证明，它和 tab 字符是一样的。我们也看到一个 $ 字符出现在文本行真正的结尾处，表明我们的文本包含末尾的空格。
 
-cat 程序也包含用来修改文本的选项。最著名的两个选项是-n，其给文本行添加行号和-s，禁止输出多个空白行。我们这样来说明：
+cat 程序也包含用来修改文本的选项。最著名的两个选项是 -n，其给文本行添加行号和 -s，禁止输出多个空白行。我们这样来说明：
 
     [wangding@LAB ~]$ cat -ns wangding.txt
     [wangding@LAB ~]$
@@ -135,45 +137,18 @@ valign="top">把每个参数看作是一个预先排好序的文件。把多个�
 虽然以上大多数选项的含义是不言自喻的，但是有些也不是。首先，让我们看一下 -n 选项，被用做数值排序。通过这个选项，有可能基于数值进行排序。我们通过对 du 命令的输出结果排序来说明这个选项，du 命令可以确定最大的磁盘空间用户。通常，这个 du 命令列出的输出结果按照路径名来排序：
 
     [wangding@LAB ~]$ du -s /usr/share/* | head
-    252     /usr/share/aclocal
-    96      /usr/share/acpi-support
-    8       /usr/share/adduser
-    196     /usr/share/alacarte
-    344     /usr/share/alsa
-    8       /usr/share/alsa-base
-    12488   /usr/share/anthy
-    8       /usr/share/apmd
-    21440   /usr/share/app-install
-    48      /usr/share/application-registry
 
 在这个例子里面，我们把结果管道到 head 命令，把输出结果限制为前 10 行。我们能够产生一个按数值排序的列表，来显示 10 个最大的空间消费者：
 
     [wangding@LAB ~]$ du -s /usr/share/* | sort -nr | head
-    509940         /usr/share/locale-langpack
-    242660         /usr/share/doc
-    197560         /usr/share/fonts
-    179144         /usr/share/gnome
-    146764         /usr/share/myspell
-    144304         /usr/share/gimp
-    135880         /usr/share/dict
-    76508          /usr/share/icons
-    68072          /usr/share/apps
-    62844          /usr/share/foomatic
 
 通过使用此 -nr 选项，我们产生了一个反向的数值排序，最大数值排列在第一位。这种排序起作用是因为数值出现在每行的开头。但是如果我们想要基于文件行中的某个数值排序，又会怎样呢？例如，命令 ls -l 的输出结果：
 
     [wangding@LAB ~]$ ls -l /usr/bin | head
-    total 152948
-    -rwxr-xr-x 1 root   root     34824  2008-04-04  02:42 [
-    -rwxr-xr-x 1 root   root    101556  2007-11-27  06:08 a2p
-    ...
 
 此刻，忽略 ls 程序能按照文件大小对输出结果进行排序，我们也能够使用 sort 程序来完成此任务：
 
     [wangding@LAB ~]$ ls -l /usr/bin | sort -nr -k 5 | head
-    -rwxr-xr-x 1 root   root   8234216  2008-04-0717:42 inkscape
-    -rwxr-xr-x 1 root   root   8222692  2008-04-07 17:42 inkview
-    ...
 
 sort 程序的许多用法都涉及到处理表格数据，例如上面 ls 命令的输出结果。如果我们把数据库这个术语应用到上面的表格中，我们会说每行是一条记录，并且每条记录由多个字段组成，例如文件属性，链接数，文件名，文件大小等等。sort 程序能够处理独立的字段。在数据库术语中，我们能够指定一个或者多个关键字段，来作为排序的关键值。在上面的例子中，我们指定n 和 r 选项来执行相反的数值排序，并且指定 -k 5，让 sort 程序使用第五字段作为排序的关键值。
 
@@ -204,22 +179,12 @@ sort 程序的许多用法都涉及到处理表格数据，例如上面 ls 命�
 下一步，我们将试着对这个文件进行排序，并观察输出结果：
 
     [wangding@LAB ~]$ sort linux.txt
-    Fedora          10     11/25/2008
-    Fedora          5     03/20/2006
-    Fedora          6     10/24/2006
-    Fedora          7     05/31/2007
-    Fedora          8     11/08/2007
-    ...
 
 恩，大部分正确。问题出现在 Fedora 的版本号上。因为在字符集中 “1” 出现在 “5” 之前，版本号 “10” 在最顶端，然而版本号 “9” 却掉到底端。
 
 为了解决这个问题，我们必须依赖多个键值来排序。我们想要对第一个字段执行字母排序，然后对第三个字段执行数值排序。sort 程序允许多个 -k 选项的实例，所以可以指定多个排序关键值。事实上，一个关键值可能包括一个字段区域。如果没有指定区域（如同之前的例子），sort 程序会使用一个键值，其始于指定的字段，一直扩展到行尾。下面是多键值排序的语法：
 
-    [wangding@LAB ~]$ sort --key=1,1 --key=2n linux.txt
-    Fedora         5     03/20/2006
-    Fedora         6     10/24/2006
-    Fedora         7     05/31/2007
-    ...
+    [wangding@LAB ~]$ sort -k 1,1 -k 2n linux.txt
 
 虽然为了清晰，我们使用了选项的长格式，但是 -k 1,1 -k 2n 格式是等价的。在第一个 key 选项的实例中，我们指定了一个字段区域。因为我们只想对第一个字段排序，我们指定了 1,1，意味着“始于并且结束于第一个字段。”在第二个实例中，我们指定了 2n，意味着第二个字段是排序的键值，并且按照数值排序。一个选项字母可能被包含在一个键值说明符的末尾，其用来指定排序的种类。这些选项字母和 sort 程序的全局选项一样：b（忽略开头的空格），n（数值排序），r（逆向排序），等等。
 
@@ -239,28 +204,11 @@ sort 程序的许多用法都涉及到处理表格数据，例如上面 ls 命�
 
     [wangding@LAB ~]$ head /etc/passwd
     root:x:0:0:root:/root:/bin/bash
-    daemon:x:1:1:daemon:/usr/sbin:/bin/sh
-    bin:x:2:2:bin:/bin:/bin/sh
-    sys:x:3:3:sys:/dev:/bin/sh
-    sync:x:4:65534:sync:/bin:/bin/sync
-    games:x:5:60:games:/usr/games:/bin/sh
-    man:x:6:12:man:/var/cache/man:/bin/sh
-    lp:x:7:7:lp:/var/spool/lpd:/bin/sh
-    mail:x:8:8:mail:/var/mail:/bin/sh
-    news:x:9:9:news:/var/spool/news:/bin/sh
 
 这个文件的字段之间通过冒号分隔开，所以我们怎样使用一个 key 字段来排序这个文件？sort 程序提供了一个 -t 选项来定义分隔符。按照第七个字段（帐户的默认 shell）来排序此 passwd 文件，我们可以这样做：
 
     [wangding@LAB ~]$ sort -t ':' -k 7 /etc/passwd | head
     me:x:1001:1001:Myself,,,:/home/me:/bin/bash
-    root:x:0:0:root:/root:/bin/bash
-    dhcp:x:101:102::/nonexistent:/bin/false
-    gdm:x:106:114:Gnome Display Manager:/var/lib/gdm:/bin/false
-    hplip:x:104:7:HPLIP system user,,,:/var/run/hplip:/bin/false
-    klog:x:103:104::/home/klog:/bin/false
-    messagebus:x:108:119::/var/run/dbus:/bin/false
-    polkituser:x:110:122:PolicyKit,,,:/var/run/PolicyKit:/bin/false
-    pulse:x:107:116:PulseAudio daemon,,,:/var/run/pulse:/bin/false
 
 通过指定冒号字符做为字段分隔符，我们能按照第七个字段来排序。
 
@@ -380,84 +328,25 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
 
     [wangding@LAB ~]$ cat -A linux.txt
     SUSE^I10.2^I12/07/2006$
-    Fedora^I10^I11/25/2008$
-    SUSE^I11.0^I06/19/2008$
-    Ubuntu^I8.04^I04/24/2008$
-    Fedora^I8^I11/08/2007$
-    SUSE^I10.3^I10/04/2007$
-    Ubuntu^I6.10^I10/26/2006$
-    Fedora^I7^I05/31/2007$
-    Ubuntu^I7.10^I10/18/2007$
-    Ubuntu^I7.04^I04/19/2007$
-    SUSE^I10.1^I05/11/2006$
-    Fedora^I6^I10/24/2006$
-    Fedora^I9^I05/13/2008$
-    Ubuntu^I6.06^I06/01/2006$
-    Ubuntu^I8.10^I10/30/2008$
-    Fedora^I5^I03/20/2006$
 
 看起来不错。字段之间仅仅是单个 tab 字符，没有嵌入空格。因为这个文件使用了 tab 而不是空格，我们将使用 -f 选项来抽取一个字段：
 
     [wangding@LAB ~]$ cut -f 3 linux.txt
     12/07/2006
-    11/25/2008
-    06/19/2008
-    04/24/2008
-    11/08/2007
-    10/04/2007
-    10/26/2006
-    05/31/2007
-    10/18/2007
-    04/19/2007
-    05/11/2006
-    10/24/2006
-    05/13/2008
-    06/01/2006
-    10/30/2008
-    03/20/2006
 
 因为我们的 linux 文件是由 tab 分隔开的，最好用 cut 来抽取字段而不是字符。这是因为一个由 tab 分离的文件，每行不太可能包含相同的字符数，这就使计算每行中字符的位置变得困难或者是不可能。在以上事例中，然而，我们已经抽取了一个字段，幸运地是其包含地日期长度相同，所以通过从每行中抽取年份，我们能展示怎样来抽取字符：
 
     [wangding@LAB ~]$ cut -f 3 linux.txt | cut -c 7-10
     2006
-    2008
-    2007
-    2006
-    2007
-    2006
-    2008
-    2006
-    2008
-    2006
 
 通过对我们的列表再次运行 cut 命令，我们能够抽取从位置7到10的字符，其对应于日期字段的年份。这个 7-10 表示法是一个区间的例子。cut 命令手册包含了一个如何指定区间的完整描述。
-
->
-> 展开 Tabs
->
-> linux.txt 的文件格式很适合使用 cut 程序来抽取字段。但是如果我们想要 cut 程序按照字符，而不是字段来操作一个文件，那又怎样呢？这要求我们用相应数目的空格来代替 tab 字符。幸运地是，GNU 的 Coreutils 软件包有一个工具来解决这个问题。这个程序名为 expand，它既可以接受一个或多个文件参数，也可以接受标准输入，并且把修改过的文本送到标准输出。
->
-> 如果我们通过 expand 来处理 linux.txt 文件，我们能够使用 cut -c 命令来从文件中抽取任意区间内的字符。例如，我们能够使用以下命令来从列表中抽取发行年份，通过展开此文件，再使用 cut 命令，来抽取从位置 23 开始到行尾的每一个字符：
->
->  _[wangding@LAB ~]$ expand linux.txt \| cut -c 23-_
->
-> Coreutils 软件包也提供了 unexpand 程序，用 tab 来代替空格。
 
 当操作字段的时候，有可能指定不同的字段分隔符，而不是 tab 字符。这里我们将会从/etc/passwd 文件中抽取第一个字段：
 
     [wangding@LAB ~]$ cut -d ':' -f 1 /etc/passwd | head
     root
-    daemon
-    bin
-    sys
-    sync
-    games
-    man
-    lp
-    mail
-    news
 
-使用-d 选项，我们能够指定冒号做为字段分隔符。
+使用 -d 选项，我们能够指定冒号做为字段分隔符。
 
 ### paste
 
@@ -472,44 +361,17 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
     [wangding@LAB ~]$ cut -f 1,2 linux-by-date.txt > linux-versions.txt
     [wangding@LAB ~]$ head linux-versions.txt
     Fedora     10
-    Ubuntu     8.10
-    SUSE       11.0
-    Fedora     9
-    Ubuntu     8.04
-    Fedora     8
-    Ubuntu     7.10
-    SUSE       10.3
-    Fedora     7
-    Ubuntu     7.04
 
 最后的准备步骤是抽取发行日期，并把它们存储到一个名为 distro-dates.txt 文件中：
 
     [wangding@LAB ~]$ cut -f 3 linux-by-date.txt > linux-dates.txt
     [wangding@LAB ~]$ head linux-dates.txt
     11/25/2008
-    10/30/2008
-    06/19/2008
-    05/13/2008
-    04/24/2008
-    11/08/2007
-    10/18/2007
-    10/04/2007
-    05/31/2007
-    04/19/2007
 
 现在我们拥有了我们所需要的文本了。为了完成这个过程，使用 paste 命令来把日期列放到发行版名字和版本号的前面，这样就创建了一个年代列表。通过使用 paste 命令，然后按照期望的顺序来安排它的参数，就能很容易完成这个任务。
 
     [wangding@LAB ~]$ paste linux-dates.txt linux-versions.txt
     11/25/2008	Fedora     10
-    10/30/2008	Ubuntu     8.10
-    06/19/2008	SUSE       11.0
-    05/13/2008	Fedora     9
-    04/24/2008	Ubuntu     8.04
-    11/08/2007	Fedora     8
-    10/18/2007	Ubuntu     7.10
-    10/04/2007	SUSE       10.3
-    05/31/2007	Fedora     7
-    04/19/2007	Ubuntu     7.04
 
 ### join
 
@@ -541,15 +403,6 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
     [wangding@LAB ~]$ paste linux-dates.txt linux-names.txt > linux-key-names.txt
     [wangding@LAB ~]$ head linux-key-names.txt
     11/25/2008 Fedora
-    10/30/2008 Ubuntu
-    06/19/2008 SUSE
-    05/13/2008 Fedora
-    04/24/2008 Ubuntu
-    11/08/2007 Fedora
-    10/18/2007 Ubuntu
-    10/04/2007 SUSE
-    05/31/2007 Fedora
-    04/19/2007 Ubuntu
 
 第二个文件包含发行日期和版本号：
 
@@ -557,29 +410,11 @@ uniq 程序是一个传统的 Unix 工具，经常与 sort 程序一块使用，
     [wangding@LAB ~]$ paste linux-dates.txt linux-vernums.txt > linux-key-vernums.txt
     [wangding@LAB ~]$ head linux-key-vernums.txt
     11/25/2008 10
-    10/30/2008 8.10
-    06/19/2008 11.0
-    05/13/2008 9
-    04/24/2008 8.04
-    11/08/2007 8
-    10/18/2007 7.10
-    10/04/2007 10.3
-    05/31/2007 7
-    04/19/2007 7.04
 
 现在我们有两个具有共享键值（ “发行日期” 数据域 ）的文件。有必要指出，为了使 join 命令能正常工作，所有文件必须按照关键数据域排序。
 
     [wangding@LAB ~]$ join linux-key-names.txt linux-key-vernums.txt | head
     11/25/2008 Fedora 10
-    10/30/2008 Ubuntu 8.10
-    06/19/2008 SUSE 11.0
-    05/13/2008 Fedora 9
-    04/24/2008 Ubuntu 8.04
-    11/08/2007 Fedora 8
-    10/18/2007 Ubuntu 7.10
-    10/04/2007 SUSE 10.3
-    05/31/2007 Fedora 7
-    04/19/2007 Ubuntu 7.04
 
 也要注意，默认情况下，join 命令使用空白字符做为输入字段的界定符，一个空格作为输出字段的界定符。这种行为可以通过指定的选项来修改。详细信息，参考 join 命令手册。
 
