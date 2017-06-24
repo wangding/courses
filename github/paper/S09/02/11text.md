@@ -829,168 +829,24 @@ s 命令的另一个功能是使用可选标志，其跟随替代字符串。一
 
 目前为止，通过命令行我们只让 sed 执行单个命令。使用-f 选项，也有可能在一个脚本文件中构建更加复杂的命令。为了演示，我们将使用 sed 和 linux.txt 文件来生成一个报告。我们的报告以开头标题，修改过的日期，以及大写的发行版名称为特征。为此，我们需要编写一个脚本，所以我们将打开文本编辑器，然后输入以下文字：
 
-    # sed script to produce Linux distributions report
-    1 i\
-    \
-    Linux Distributions Report\
     s/\([0-9]\{2\}\)\/\([0-9]\{2\}\)\/\([0-9]\{4\}\)$/\3-\1-\2/
     y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
 
 我们将把 sed 脚本保存为 linux.sed 文件，然后像这样运行它：
 
     [wangding@LAB ~]$ sed -f linux.sed linux.txt
-    Linux Distributions Report
 
-正如我们所见，我们的脚本文件产生了期望的结果，但是它是如何做到的呢？让我们再看一下我们的脚本文件。我们将使用 cat 来给每行文本编号：
+正如我们所见，我们的脚本文件产生了期望的结果，但是它是如何做到的呢？让我们再看一下我们的脚本文件。
 
-    [wangding@LAB ~]$ cat -n linux.sed
-    1 # sed script to produce Linux distributions report
-    2
-    3 1 i\
-    4 \
-    5 Linux Distributions Report\
-    6
-    7 s/\([0-9]\{2\}\)\/\([0-9]\{2\}\)\/\([0-9]\{4\}\)$/\3-\1-\2/
-    8 y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
+    wangding@LAB ~]$ cat -n linux.sed
+    1 s/\([0-9]\{2\}\)\/\([0-9]\{2\}\)\/\([0-9]\{4\}\)$/\3-\1-\2/
+    2 y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
 
-我们脚本文件的第一行是一条注释。如同 Linux 系统中的许多配置文件和编程语言一样，注释以#字符开始，然后是人类可读的文本。注释可以被放到脚本中的任意地方（虽然不在命令本身之中），且对任何可能需要理解和／或维护脚本的人们都很有帮助。
-
-第二行是一个空行。正如注释一样，添加空白行是为了提高程序的可读性。
-
-许多 sed 命令支持行地址。这些行地址被用来指定对输入文本的哪一行执行操作。行地址可能被表示为单独的行号，行号范围，以及特殊的行号“$”，它表示输入文本的最后一行。
-
-从第三行到第六行所包含地文本要被插入到地址 1 处，也就是输入文本的第一行中。这个 i 命令之后是反斜杠回车符，来产生一个转义的回车符，或者就是所谓的连行符。这个序列能够被用在许多环境下，包括 shell 脚本，从而允许把回车符嵌入到文本流中，而没有通知解释器（在这是指 sed 解释器）已经到达了文本行的末尾。这个 i 命令，同样地，命令 a（追加文本，而不是插入文本）和 c（取代文本）命令都允许多个文本行，只要每个文本行，除了最后一行，以一个连行符结束。实际上，脚本的第六行是插入文本的末尾，它以一个普通的回车符结尾，而不是一个连行符，通知解释器 i 命令结束了。
-
----
-
-注意：一个连行符由一个反斜杠字符其后紧跟一个回车符组成。它们之间不允许有空白字符。
-
----
-
-第七行是我们的查找和替代命令。因为命令之前没有添加地址，所以输入流中的每一行文本
+第一行是我们的查找和替代命令。因为命令之前没有添加地址，所以输入流中的每一行文本
 都得服从它的操作。
 
-第八行执行小写字母到大写字母的字符替换操作。注意不同于 tr 命令，这个 sed 中的 y 命令不支持字符区域（例如，[a-z]），也不支持 POSIX 字符集。再说一次，因为 y 命令之前不带地址，所以它会操作输入流的每一行。
-
->
-> 喜欢 sed 的人们也会喜欢。。。
->
-> sed 是一款非常强大的程序，它能够针对文本流完成相当复杂的编辑任务。它最常用于简单的行任务，而不是长长的脚本。许多用户喜欢使用其它工具，来执行较大的工作。在这些工具中最著名的是 awk 和 perl。它们不仅仅是工具，像这里介绍的程序，且延伸到完整的编程语言领域。特别是 perl，经常被用来代替 shell 脚本，来完成许多系统管理任务，同时它也是一款非常流行网络开发语言。awk 更专用一些。其具体优点是其操作表格数据的能力。awk 程序通常逐行处理文本文件，这点类似于 sed，awk 使用了一种方案，其与 sed 中地址之后跟随编辑命令的概念相似。虽然关于 awk 和 perl 的内容都超出了本书所讨论的范围，但是对于 Linux 命令行用户来说，它们都是非常好的技能。
-
-### aspell
-
-我们要查看的最后一个工具是 aspell，一款交互式的拼写检查器。这个 aspell 程序是早先 ispell 程序的继承者，大多数情况下，它可以被用做一个替代品。虽然 aspell 程序大多被其它需要拼写检查能力的程序使用，但它也可以作为一个独立的命令行工具使用。它能够智能地检查各种类型的文本文件，包括 HTML 文件，C/C++ 程序，电子邮件和其它种类的专业文本。
-
-拼写检查一个包含简单的文本文件，可以这样使用 aspell:
-
-    aspell check textfile
-
-这里的 textfile 是要检查的文件名。作为一个实际例子，让我们创建一个简单的文本文件，叫做 foo.txt，包含一些故意的拼写错误：
-
-    [wangding@LAB ~]$ cat > foo.txt
-    The quick brown fox jimped over the laxy dog.
-
-下一步我们将使用 aspell 来检查文件：
-
-    [wangding@LAB ~]$ aspell check foo.txt
-
-因为 aspell 在检查模式下是交互的，我们将看到像这样的一个屏幕：
-
-    The quick brown fox jimped over the laxy dog.
-    1)jumped                        6)wimped
-    2)gimped                        7)camped
-    3)comped                        8)humped
-    4)limped                        9)impede
-    5)pimped                        0)umped
-    i)Ignore                        I)Ignore all
-    r)Replace                       R)Replace all
-    a)Add                           l)Add Lower
-    b)Abort                         x)Exit
-    ?
-
-在显示屏的顶部，我们看到我们的文本中有一个拼写可疑且高亮显示的单词。在中间部分，我们看到十个拼写建议，序号从 0 到 9，然后是一系列其它可能的操作。最后，在最底部，我们看到一个提示符，准备接受我们的选择。
-
-如果我们按下 1 按键，aspell 会用单词 “jumped” 代替错误单词，然后移动到下一个拼写错的单词，就是 “laxy”。如果我们选择替代物 “lazy”，aspell 会替换 “laxy” 并且终止。一旦 aspell 结束操作，我们可以检查我们的文件，会看到拼写错误的单词已经更正了。
-
-    [wangding@LAB ~]$ cat foo.txt
-    The quick brown fox jumped over the lazy dog.
-
-除非由命令行选项 -\-dont-backup 告诉 aspell，否则通过追加扩展名.bak 到文件名中，aspell 会创建一个包含原始文本的备份文件。
-
-为了炫耀 sed 的编辑本领，我们将还原拼写错误，从而能够重用我们的文件：
-
-    [wangding@LAB ~]$ sed -i 's/lazy/laxy/; s/jumped/jimped/' foo.txt
-
-这个 sed 选项-i，告诉 sed 在适当位置编辑文件，意思是不要把编辑结果发送到标准输出中。sed 会把更改应用到文件中，以此重新编写文件。我们也看到可以把多个 sed 编辑命令放在同一行，编辑命令之间由分号分隔开来。
-
-下一步，我们将看一下 aspell 怎样来解决不同种类的文本文件。使用一个文本编辑器，例如 vim（胆大的人可能想用 sed），我们将添加一些 HTML 标志到文件中：
-
-    <html>
-        <head>
-              <title>Mispelled HTML file</title>
-        </head>
-        <body>
-              <p>The quick brown fox jimped over the laxy dog.</p>
-        </body>
-    </html>
-
-现在，如果我们试图拼写检查我们修改的文件，我们会遇到一个问题。如果我们这样做：
-
-    [wangding@LAB ~]$ aspell check foo.txt
-
-我们会得到这些：
-
-    <html>
-        <head>
-              <title>Mispelled HTML file</title>
-        </head>
-        <body>
-              <p>The quick brown fox jimped over the laxy dog.</p>
-        </body>
-    </html>
-    1) HTML                     4) Hamel
-    2) ht ml                    5) Hamil
-    3) ht-ml                    6) hotel
-    i) Ignore                   I) Ignore all
-    r) Replace                  R) Replace all
-    a) Add                      l) Add Lower
-    b) Abort                    x) Exit
-    ?
-
-aspell 会认为 HTML 标志的内容是拼写错误。通过包含-H（HTML）检查模式选项，这个问题能
-解决，像这样：
-
-    [wangding@LAB ~]$ aspell -H check foo.txt
-
-这会导致这样的结果：
-
-    <html>
-        <head>
-              <title><b>Mispelled</b> HTML file</title>
-        </head>
-        <body>
-              <p>The quick brown fox jimped over the laxy dog.</p>
-        </body>
-    </html>
-    1) Mi spelled              6) Misapplied
-    2) Mi-spelled              7) Miscalled
-    3) Misspelled              8) Respelled
-    4) Dispelled               9) Misspell
-    5) Spelled                 0) Misled
-    i) Ignore                  I) Ignore all
-    r) Replace                 R) Replace all
-    a) Add                     l) Add Lower
-    b) Abort                   x) Exit
-    ?
-
-这个 HTML 标志被忽略了，并且只会检查文件中非标志部分的内容。在这种模式下，HTML 标志的内容被忽略了，不会进行拼写检查。然而，ALT 标志的内容，会被检查。
-
----
-
-注意：默认情况下，aspell 会忽略文本中 URL 和电子邮件地址。通过命令行选项，可以重写此行为。也有可能指定哪些标志进行检查及跳过。详细内容查看 aspell 命令手册。
-
----
+第二行执行小写字母到大写字母的字符替换操作。注意不同于 tr 命令，这个 sed 中的 y 命令不支持字符区域（例如，[a-z]），也不支持 POSIX 字符集。再说一次，因为 y 命令之前不带地址，所以它会操作输入流的每一行。
 
 ## 总结归纳
 
-在这一章中，我们已经查看了一些操作文本的命令行工具。在下一章中，我们会再看几个命令行工具。诚然，看起来不能立即显现出怎样或为什么你可能使用这些工具为日常的基本工具，虽然我们已经展示了一些半实际的命令用法的例子。我们将在随后的章节中发现这些工具组成了解决实际问题的基本工具箱。这将是确定无疑的，当我们学习 shell 脚本的时候，到时候这些工具将真正体现出它们的价值。
+好，各位小伙伴，本小节的全部内容就讲到这里，我们稍微总结一下，本小节介绍的文本处理工具，分成了四大类来做的介绍：第一类是排序类，第二类是切片和切块，第三类是比较文本，第四类是运行时编辑。总共介绍了 11 个命令，其实是 12 个命令，最后有一个 aspell 做拼写检查的程序。因为不太实用，所以就没有介绍。现在，咱们一块看一下通关任务。完成这四次视频课程的小伙伴们，请完成以下通关任务。
