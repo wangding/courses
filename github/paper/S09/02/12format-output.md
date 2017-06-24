@@ -86,7 +86,7 @@ nl 程序是一个相当神秘的工具，用作一个简单的任务。它添�
 <tr>
 <td valign="top">-s string </td>
 <td valign="top">在没一个行的末尾加字符作分割符号。默认是单个的 tab。</td>
-</tr>
+ /tr>
 <tr>
 <td valign="top">-v number </td>
 <td valign="top">将每一个逻辑页面的第一行设置成数字。默认是一。</td>
