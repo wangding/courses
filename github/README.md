@@ -128,3 +128,11 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-9244.html)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](bash01.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks09.md)  
+
+## 第九季：Linux Bash 入门（下）
+
+大家学会本课程后，应该能够熟练的通过命令行操作各种发行版的 Linux 系统，为在 Linux 系统上做软件开发、测试环境搭建以及系统运维打下扎实的基础。
+
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10195.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](bash02.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks09-2.md)  
