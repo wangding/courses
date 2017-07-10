@@ -4,13 +4,14 @@
 
 ## 功能导航
 
-- 观看王顶老师的在线视频课程，请移步[课程中心](http://edu.51cto.com/lecturer/index/user_id-8606427.html)
+- 观看王顶老师的在线视频课程，请移步[课程中心](http://edu.51cto.com/lecturer/8606427.html)
 - 给王顶老师提问或者留言，请移步[交流中心](https://github.com/wangding/courses/issues)
 - 查看或者下载各门课程资料，请直接点击上面的文件夹
 - 参与课程开发，请移步[集体备课](CONTRIBUTION.md)
 
 ## 更新日志
 
+2017-07-10 [GitHub 开源之旅第八季：Jekyll 静态站](http://edu.51cto.com/course/10440.html)上线  
 2017-06-25 [GitHub 开源之旅第九季：Linux Bash 入门（下）](http://edu.51cto.com/course/course_id-10195.html)上线  
 2017-05-28 [JavaScript 开发系列：JavaScript 异步编程](http://edu.51cto.com/course/course_id-9392.html)上线  
 2017-05-19 [GitHub 开源之旅第九季：Linux Bash 入门（上）](http://edu.51cto.com/course/course_id-9244.html)上线  

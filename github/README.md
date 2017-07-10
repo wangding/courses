@@ -119,7 +119,11 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 ## 第八季：Jekyll 静态站
 
-【课程还在规划和制作中】
+大家学会本课程后，我们会掌握如何在 GitHub 上搭建一个博客网站，你可以从中掌握 GitHub 的 Pages 功能，以及 Jekyll 软件的基本用法。更重要的是，你会掌握一种建立网站的全新思路。
+
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10440.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](jekyll.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks08.md)  
 
 ## 第九季：Linux Bash 入门（上）
 
