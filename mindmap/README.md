@@ -4,13 +4,16 @@
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
-- [ProcessOn 思维导图入门](http://edu.51cto.com/course/course_id-6453.html)
-- [在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)
+- [ProcessOn 思维导图入门](http://edu.51cto.com/course/course_id-6453.html)  
+- [百度脑图入门](http://edu.51cto.com/course/10714.html)  
+- [在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
 
-- [ProcessOn 思维导图入门](PDT301 ProcessOn思维导图入门.pptx)
-- [在线思维导图进阶](在线思维导图进阶.pptx)
+- [ProcessOn 思维导图入门](processon.pptx)  
+- [百度脑图入门](naotu-baidu.pptx)
+- [在线思维导图进阶](在线思维导图进阶.pptx)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="30">作业任务
+- [百度脑图入门通关任务](task.md)
 - [在线思维导图通关任务](assignment.md)
