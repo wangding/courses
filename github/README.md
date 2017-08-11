@@ -140,3 +140,12 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 - [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10195.html)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](bash02.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks09-2.md)  
+
+
+## 第十一季：搭建 Git 服务器
+
+大家学会本课程后，应该能够在企业内部，根据团队的规模和开发需求，搭建四种协议 Git 服务器的任意一种。
+
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10755.html)
+- [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](git-server.pptx)
+- [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks11.md)  

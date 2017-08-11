@@ -11,6 +11,7 @@
 
 ## 更新日志
 
+2017-08-11 [GitHub 开源之旅第十一季：搭建 Git 服务器](http://edu.51cto.com/course/10755.html)上线  
 2017-08-07 [百度脑图入门](http://edu.51cto.com/course/10714.html)上线  
 2017-07-10 [GitHub 开源之旅第八季：Jekyll 静态站](http://edu.51cto.com/course/10440.html)上线  
 2017-06-25 [GitHub 开源之旅第九季：Linux Bash 入门（下）](http://edu.51cto.com/course/course_id-10195.html)上线  
