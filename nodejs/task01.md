@@ -201,8 +201,18 @@ Mandatory arguments to long options are mandatory for short options too.
   - 在 musicPlayer 类中发出 error 事件，在 musicPlayer 的实例上进行异常捕获，或者在进程级别上进行异常捕获  
 - 编写 06-event-name.js 脚本，实现事件名称管理   
 
-## 任务六：流：最强大和最易误解的功能
+## 任务十：流：最强大和最易误解的功能
 
 要求：  
 - 阅读 [流 API 资料](http://nodejs.cn/api/stream.html)  
+- 阅读 [流 资料](http://javascript.ruanyifeng.com/nodejs/stream.html)  
+- 创建 09-stream 目录  
+- 编写 01-stdin-stdout.js 脚本  
+- 编写 02-static-http-server.js 脚本  
+- 编写 02-static-http-server-stream.js 脚本  
+- 编写 03-readable-push.js 脚本  
+- 编写 03-readable-pull.js 脚本  
+- 编写 03-my-readable.js 脚本  
+- 编写 04-green-stream.js 脚本  
+  - 阅读 [ANSI 转义码资料](https://en.wikipedia.org/wiki/ANSI_escape_code)  
 
