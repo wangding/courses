@@ -12,8 +12,9 @@
 
 - [ProcessOn 思维导图入门](processon.pptx)  
 - [百度脑图入门](naotu-baidu.pptx)
-- [在线思维导图进阶](在线思维导图进阶.pptx)  
+- [在线思维导图进阶](advanced.pptx)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="30">作业任务
-- [百度脑图入门通关任务](task.md)
-- [在线思维导图通关任务](assignment.md)
+- [ProcessOn 思维导入门通关任务](task-processon.md)  
+- [百度脑图入门通关任务](task-baidu.md)
+- [在线思维导图通关任务](task-advanced.md)
