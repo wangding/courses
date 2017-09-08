@@ -14,7 +14,7 @@
 - 浏览并探索百度脑图文件管理界面
 - 浏览并探索百度脑图编辑界面
 - 用百度脑图创建一个个人发展规划的脑图
-- 导入[百度脑图入门课程大纲](naotu-baidu.km)
+- 导入百度脑图入门课程大纲，在百度网盘下载[naotu-baidu.km](https://pan.baidu.com/s/1ge4o0TX)  
 
 参考：  
 - [个人发展规划](http://processon.com/view/584eb7c7e4b031ce5459e95c)  
