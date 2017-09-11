@@ -27,7 +27,7 @@ Node.js 应用开发。王顶老师的 QQ 学习交流群：301862163，加群�
 ## :books:参考资料
 
 - [Node.js 中文 API](http://nodejs.cn/api/)  
-- [Node.js 阮继锋](http://javascript.ruanyifeng.com/nodejs/basic.html)  
+- [Node.js 阮一锋](http://javascript.ruanyifeng.com/nodejs/basic.html)  
 - 电子书百度网盘链接: http://pan.baidu.com/s/1nuU6C8h 提取密码: h6jc
 
 ## :hammer:搭建开发环境所需软件
