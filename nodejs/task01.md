@@ -15,6 +15,7 @@
 要求：  
 - 下载并安装 vmware workstation Pro 12（**已经安装 vmware workstation，略过此任务**）  
 - 下载并导入 [mocha.ova](http://pan.baidu.com/s/1o8a3E3o) 开发环境  
+  - 说明：\*.ova 是 Open Virtualization Archive 三个单词的首字母缩写，是 [Open Virtualization Format](https://en.wikipedia.org/wiki/Open_Virtualization_Format) 镜像的单文件版本  
 - 下载并安装 xshell 5  
 - 配置 mocha 虚拟机的网卡 IP 地址  
 - 配置 mocha 虚拟机的 git 参数，包括：user.name 和 user.email  
