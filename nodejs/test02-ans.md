@@ -113,7 +113,7 @@ process.memoryUsage().heapUsed
 ```
 15. 如何查看 v8 管理的绑定到 JS 对象上的 C++ 对象的内存？  
 ```
-process.memoryUsage().extemal
+process.memoryUsage().external
 ```
 16. 如何获得命令行参数？
 ```
