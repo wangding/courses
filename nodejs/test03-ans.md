@@ -36,6 +36,7 @@ toString('codingName');
 7. 在网页中内嵌图片的 HTML 代码是怎样的？
 ```
 <img src='data:[MIME-type][;charset=<encoding>[;base64],<data>]' />
+在 HTML 中嵌入图片的好处是，减少页面 HTTP 请求的数量。
 ```
 8. 调用文件模块的语句是怎样的?
 ```
@@ -54,21 +55,21 @@ var http = require('http');
 ```
 bit map
 ```
-12. 如何从网页上获取一个位图？
+12. 如何从 linux 命令行获取网页上的图片？
 ```
 在命令行输入：wget URL
 ```
-13. 怎样保存文件到 Windows 本机上？
+13. 在 xshell 的 linux 命令行，怎样保存文件到 Windows 本机上？
 ```
 在命令行输入：sz fileName
 ```
 14. 位图二进制文件格式是怎样的？  
 ```
-头信息+数据部分
+头信息 + 数据部分
 ```
 15. 写入二进制数据用的是什么方法？
 ```
-write 方法
+buf.writeXXX
 ```
 
 
@@ -89,7 +90,7 @@ require() 引用模块,export 暴露模块接口,module 代表当前模块
 ```
 4. npm 是什么的缩写？有什么作用？
 ```
-缩写于 Node Packaged Modules,是node.js的模块管理器
+缩写于 Node Packaged Modules, 是 node.js 的模块管理器
 ```
 5. 如何安装要使用的第三方模块？
 ```
@@ -118,9 +119,9 @@ module.exports = value;
 ```
 module.exports = function(){};
 ```
-11. node.js 中require()返回的是什么？
+11. node.js 中 require() 返回的是什么？
 ```
-是 exports 对象,或者是 module.exports 变量
+是 exports 对象，或者是 module.exports 变量
 ```
 12. 画图表示怎样加载一组相关的模块？  
 ![加载一组模块](./images/groupModule.png)
