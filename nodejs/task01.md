@@ -145,15 +145,15 @@ Mandatory arguments to long options are mandatory for short options too.
   - 获取图片的宽度、高度和颜色深度三个信息，并打印在控制台上  
 - 编写 05-bitmap-write.js 脚本，实现以下功能：  
   - 写一个 64 * 64 像素，颜色深度为 32 位的位图文件  
-  - 位图的所有像素的红色  
+  - 位图的所有像素为红色  
 
 ## 任务八：全局之模块管理
 
 要求：  
 - 阅读 [module API 资料](http://nodejs.cn/api/modules.html)  
 - 阅读 [module 资料](http://javascript.ruanyifeng.com/nodejs/module.html)  
-- 编写 01-third-module.js 脚本，实现以下功能：  
 - 创建 07-module 目录  
+- 编写 01-third-module.js 脚本，实现以下功能：  
   - 导入 date-now 模块  
   - 调用 date-now 模块的 now 方法，在控制台打印 now 的运行结果  
   - 安装 date-now 模块，运行程序  
