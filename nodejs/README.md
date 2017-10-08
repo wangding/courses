@@ -5,7 +5,7 @@ Node.js 应用开发。王顶老师的 QQ 学习交流群：301862163，加群�
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
 - [Node.js 应用开发（上）](http://edu.51cto.com/course/course_id-10935.html)  
-- [Node.js 应用开发（中）](http://edu.51cto.com/course/course_id-.html)  
+- [Node.js 应用开发（中）](http://edu.51cto.com/course/course_id-11204.html)  
 - [Node.js 应用开发（下）](http://edu.51cto.com/course/course_id-.html)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
