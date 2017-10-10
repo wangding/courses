@@ -5,6 +5,7 @@
 ## 任务一：回调函数  
 
 要求：
+- 阅读 [JavaScript 四种异步编程方式](http://www.ruanyifeng.com/blog/2012/12/asynchronous＿javascript.html)  
 - 实现 callback01.js 简单的异步操作和回调  
 - 实现 callback02.js 耗时操作的模拟  
 - 实现 callback03.js 耗时操作模拟代码的升级  
@@ -35,6 +36,7 @@
 ## 任务四：Promise
 
 要求：
+- 阅读 [Promise 对象](http://javascript.ruanyifeng.com/advanced/promise.html#toc9)  
 - 编写 promise01.js 实现 github api 的请求  
 - 编写 promise02.js 实现自定义 promise 对象  
 
@@ -45,8 +47,9 @@
 ## 任务五：异步操作的流程控制 
 
 要求：
-- 编写 flow01.js 实现串行操作  
-- 编写 flow02.js 实现并行操作  
+- 阅读[异步流程控制](http://javascript.ruanyifeng.com/advanced/promise.html#toc5)
+- 编写 flow01.js 实现并行操作  
+- 编写 flow02.js 实现串行操作  
 - 编写 flow03.js 实现混合操作  
 
 参考：
