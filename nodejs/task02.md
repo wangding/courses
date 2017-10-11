@@ -5,6 +5,7 @@
 要求：  
 - 阅读[文件 API 资料](http://nodejs.cn/api/fs.html)  
 - 阅读[文件资料](http://javascript.ruanyifeng.com/nodejs/fs.html)  
+- 将 fs 模块中的函数分类整理成思维导图，附：[参考答案](http://naotu.baidu.com/file/74c2915d47a4e7ae561b9f57940865c3?token=743a4bf398643762)  
 - 创建 10-file-system 目录 
 - 编写 01-my-cat-async.js 脚本  
 - 编写 01-my-cat-lower.js 脚本  
