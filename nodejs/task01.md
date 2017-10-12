@@ -22,7 +22,9 @@
 - 浏览 [vim 参考资料](https://github.com/wangding/note/blob/master/office/vim.md)，掌握 vim 的使用      
 - 浏览 [vim 配置文件](https://github.com/wangding/tools/blob/master/.vimrc)，了解开发环境中自定义的快捷键  
 - 创建 nodejs-demo 目录
-- 把 [.tern-project](.tern-project) 代码自动补全配置文件，放到 nodejs-demo 目录下
+- 把 [.tern-project](.tern-project) 代码自动补全配置文件，放到 nodejs-demo 目录下，操作方法如下：
+  - 在 nodejs-demo 目录下，运行 `wget http://sample.wangding.in/nodejs/tern-project`  
+  - 在 nodejs-demo 目录下，运行 `mv tern-project .tern-project`  
 - 阅读[Node.js 简介](http://javascript.ruanyifeng.com/nodejs/basic.html)  
 - 创建 01-introduction 目录
 - 编写 01-hello-world.js  
