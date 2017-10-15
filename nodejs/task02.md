@@ -85,13 +85,18 @@
 - 编写 01-basic-server.js 脚本  
   - 设置状态码  
   - 设置响应头字段信息  
-- 编写 02-static-http-server.js 脚本，运行以下命令，获取静态页面：  
-  - `wget http://sample.wangding.in/nodejs/index.html`
-  - `wget http://sample.wangding.in/web/one-div.html`
-  - `wget http://sample.wangding.in/testing/triangle.html`
-  - `wget http://sample.wangding.in/testing/triangle.css`
-  - `wget http://sample.wangding.in/testing/triangle.js`
-  - `wget https://raw.githubusercontent.com/fex-team/kityminder/dev/favicon.ico`
+- 编写 02-static-http-server.js 脚本，实现以下功能：
+  - 用命令行参数指定静态文件服务的根路径，要求：  
+    - 支持绝对路径，例如：`./02-static-http-server.js ../13-http`  
+    - 支持相对路径，例如：`./02-static-http-server.js ~/wd`  
+  - 文件找不到时，脚本程序不能崩溃，应该给客户端返回 404 错误或者 404 错误页面  
+  - 运行以下命令，获取静态页面，对脚本程序进行测试：  
+    - `wget http://sample.wangding.in/nodejs/index.html`  
+    - `wget http://sample.wangding.in/web/one-div.html`  
+    - `wget http://sample.wangding.in/testing/triangle.html`  
+    - `wget http://sample.wangding.in/testing/triangle.css`  
+    - `wget http://sample.wangding.in/testing/triangle.js`  
+    - `wget https://raw.githubusercontent.com/fex-team/kityminder/dev/favicon.ico`
 - 编写 03-form.js 脚本  
   - 实现查询和增加待办事项的功能  
   - 实现删除和修改代办事项的功能  
