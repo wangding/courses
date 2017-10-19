@@ -12,12 +12,20 @@
 - 编写 01-my-cat-mix.js 脚本  
 - 编写 01-my-cat-stream.js 脚本  
 - 编写 01-my-cat-sync.js 脚本  
-- 编写 01-my-cp.js 脚本  
+- 编写 01-my-cp.js 脚本，要求如下：  
+  - 除了能复制文件内容，还需要复制文件权限  
+  - 用 fs 模块的底层 API 实现 01-my-cp-low.js  
+  - 用 fs 模块的同步 API 实现 01-my-cp-sync.js  
+  - 用 fs 模块的异步 API 实现 01-my-cp-async.js  
+  - 用 fs 模块的底层和高级 API 实现 01-my-cp-mix.js  
+  - 用 fs 模块的流 API 实现 01-My-cp-stream.js  
 - 编写 01-my-mv.js 脚本  
 - 编写 01-my-rm.js 脚本  
 - 编写 01-my-touch.js 脚本  
 - 编写 02-my-ls.js 脚本  
-- 编写 02-my-mkdir.js 脚本  
+- 编写 02-my-mkdir.js 脚本，要求如下：  
+  - 用 fs 模块的同步 API 实现 02-my-mkdir-sync.js  
+  - 用 fs 模块的异步 API 实现 02-my-mkdir-async.js  
 - 编写 02-my-rm-dir.js 脚本  
 - 编写 03-my-ln.js 脚本  
 - 编写 03-read-lnk.js 脚本  
@@ -36,15 +44,21 @@
 - 编写 01-server.js 脚本  
 - 编写 02-my-telnet.js 脚本  
 - 阅读 [dgram API 资料](http://nodejs.cn/api/dgram.html)  
-- 创建 12-udp 目录
+- 创建 12-udp 目录  
 - 编写 01-server.js 脚本  
 - 编写 02-my-nc.js 脚本  
 - 阅读 [http API 资料](http://nodejs.cn/api/http.html)  
 - 阅读 [http 资料](http://javascript.ruanyifeng.com/nodejs/http.html)  
-- 创建 13-http 目录
+- 创建 13-http 目录  
 - 编写 01-server.js 脚本  
 - 编写 02-my-crul.js 脚本  
 - 编写 03-get-weather.js 脚本  
+- 编写 03-get-repos.js 脚本，实现以下功能：  
+  - 获取某个账户的所有 GitHub 仓库的数量和名称  
+  - API 地址：`https://api.github.com/search/repositories?q=user:wangding`  
+  - API 参考：https://developer.github.com/v3/
+  - 运行效果如下图所示：  
+  - ![github-api，王顶，408542507@qq.com](./images/github-api.png)  
 - 编写 04-post.js 脚本  
 - 阅读 [dns API 资料](http://nodejs.cn/api/net.html)  
 - 创建 14-dns 目录
