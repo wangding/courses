@@ -92,32 +92,44 @@ rmdirSync() 和 rmdir()
 ```
 ln [-s] srcfileName lnkfileName
 ```
-22. 编程实现链接功能时，实现硬链接和符号链接分别用到了哪个方法?
+22. 编程实现链接功能时，实现硬链接和符号链接分别用到了哪个方法？
 ```
 硬链接：linkSync() 和 link()
 符号链接：symlinkSync() 和 symlink()
 ```
-23. 修改文件所有者信息的 Linux 命令是什么?
+23. 修改文件所有者信息的 Linux 命令是什么？
 ```
 chown 缩写于 change owner
 ```
-24. 编程实现 chown 命令的功能时，可以用哪个方法?
+24. 编程实现 chown 命令的功能时，可以用哪个方法？
 ```
 chownSync() 和 chown()
 ```
-25. 修改文件权限的 Linux 命令是什么?
+25. 修改文件权限的 Linux 命令是什么？
 ```
 chmod 缩写于 change mode
 ```
-26. 编程实现 chmod 命令的功能时，可以用哪个方法?
+26. 编程实现 chmod 命令的功能时，可以用哪个方法？
 ```
 chmodSync() 和 chmod()
 ```
-27. 查看文件详细信息的 Linux 命令是什么?
+27. 查看文件详细信息的 Linux 命令是什么？
 ```
 stat fileName （来源于 status ）
 ```
-28. 编程实现 stat 命令的功能时，可以用哪个方法?
+28. 编程实现 stat 命令的功能时，可以用哪个方法？
 ```
 statSync() 和 stat()
+```
+29. 实现监视一个目录或一个文件的程序，可以用哪个方法？
+```
+watch()
+```
+30. 用管道的方式查看某进程的 ID 号的 Linux 命令是怎样的？
+```
+ps aux | grep matchString
+```
+31. fs 模块的同步方法适用什么样的场合？
+```
+文件比较小，文件数量比较少的场合
 ```
