@@ -52,7 +52,9 @@
 - 创建 13-http 目录  
 - 编写 01-server.js 脚本  
 - 编写 02-my-crul.js 脚本  
-- 编写 03-get-weather.js 脚本  
+- 编写 03-get-weather.js 脚本，实现以下功能：  
+  - 调用天气预报 API，实现城市天气查询：https://www.jisuapi.com/api/weather/  
+  - 用 GET 方法请求天气信息  
 - 编写 03-get-repos.js 脚本，实现以下功能：  
   - 获取某个账户的所有 GitHub 仓库的数量和名称  
   - API 地址：`https://api.github.com/search/repositories?q=user:wangding`  
@@ -60,6 +62,9 @@
   - 运行效果如下图所示：  
   - ![github-api，王顶，408542507@qq.com](./images/github-api.png)  
 - 编写 04-post.js 脚本  
+- 编写 04-post-weather.js 脚本，实现以下功能：
+  - 调用天气预报 API，实现城市天气查询：https://www.jisuapi.com/api/weather/  
+  - 用 POST 方法请求天气信息  
 - 阅读 [dns API 资料](http://nodejs.cn/api/net.html)  
 - 创建 14-dns 目录
 - 编写 01-dns.js 脚本  
