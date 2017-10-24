@@ -75,10 +75,20 @@
 - 阅读 [child_process API 资料](http://nodejs.cn/api/child_process.html)  
 - 阅读 [child_process 资料](http://javascript.ruanyifeng.com/nodejs/child-process.html)  
 - 创建 15-child-process 目录  
-- 编写 01-exec-file.js 脚本  
+- 编写 01-exec-file.js 脚本，请实现以下功能：  
+  - 可以执行任何一个外部程序  
+  - 命令行参数中有需要执行的外部程序以及外部程序的参数  
+  - 如果没有命令行参数，执行 cat 命令，打印 01-exec-file.js 脚本文件内容  
+  - 外部程序运行的正确信息打印在控制台上  
+  - 外部程序运行的错误信息打印在控制台上  
+  - 测试用例 1：执行 `./01-exec-file.js`，预期结果：控制台打印 01-exec-file.js 文件内容  
+  - 测试用例 2：执行 `./01-exec-file.js mkdir abc`，预期结果：当前目录下创建 abc 文件夹  
+  - 测试用例 3：执行 `./01-exec-file.js mkdir abc`, 预期结果：报错，abc 文件夹已存在  
+  - 测试用例 4：执行 `./01-exec-file.js ls -l / /usr /var`，预期结果：长格式输出根目录、/usr 和 /var 三个目录的内容  
+  - 测试用例 5：执行 `./01-exec-file.js abc`，预期结果：报错，Error: spawn abc ENOENT  
+- 编写 02-spawn-v1.js 脚本  
 - 编写 02-child.js 脚本  
 - 编写 02-exec-file.js 脚本  
-- 编写 02-spawn-v1.js 脚本  
 - 编写 02-spawn-v2.js 脚本  
 - 编写 02-spawn-v3.js 脚本  
 - 编写 02-spawn-v4.js 脚本  
@@ -106,8 +116,8 @@
   - 设置响应头字段信息  
 - 编写 02-static-http-server.js 脚本，实现以下功能：
   - 用命令行参数指定静态文件服务的根路径，要求：  
-    - 支持绝对路径，例如：`./02-static-http-server.js ../13-http`  
-    - 支持相对路径，例如：`./02-static-http-server.js ~/wd`  
+    - 支持相对路径，例如：`./02-static-http-server.js ../13-http`  
+    - 支持绝对路径，例如：`./02-static-http-server.js ~/wd`  
   - 文件找不到时，脚本程序不能崩溃，应该给客户端返回 404 错误或者 404 错误页面  
   - 运行以下命令，获取静态页面，对脚本程序进行测试：  
     - `wget http://sample.wangding.in/nodejs/index.html`  
