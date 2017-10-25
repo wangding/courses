@@ -129,6 +129,14 @@
 - 编写 03-form.js 脚本  
   - 实现查询和增加待办事项的功能  
   - 实现删除和修改代办事项的功能  
+- 编写 03-form-cmd.js 脚本，要求实现以下功能：  
+  - 基于 03-form.js 程序框架  
+  - 用户在表单中提交 linux 命令  
+  - 服务程序利用子进程技术执行 linux 命令  
+  - 服务程序将 linux 命令的运行结果返回到网页上  
+  - 命令运行结果要求能够正确的换行显示  
+  - 程序的运行效果，如下图所示：  
+  - ![form-cmd，王顶，node.js，408542507@qq.com](./images/form-cmd.gif)  
 - 阅读[理解 RESTful 架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)  
 - 阅读 [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)  
 - 编写 04-rest-api.js 脚本  
