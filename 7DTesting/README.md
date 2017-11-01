@@ -12,7 +12,7 @@
   - 会用思维导图工具梳理知识点，做学习笔记  
 
 - 视频课程  
-  - [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)（**只需要学习前四个视频**）  
+  - [ProcessOn 在线思维导图入门](https://ke.qq.com/course/232896)（**只需要学习前四个视频**）  
 
 - 通关任务  
   - [入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)（**只需要完成任务 2 和任务 6**）  
@@ -22,9 +22,9 @@
   - [个人学习计划](http://processon.com/view/584eb7c7e4b031ce5459e95c)  
 
 - **选做任务**  
-  - 完成 [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)课程剩余视频的学习  
+  - 完成 [ProcessOn 在线思维导图入门](https://ke.qq.com/course/232896)课程剩余视频的学习  
   - 完成所有[入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)  
-  - 学习[在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)视频课程  
+  - 学习[在线思维导图进阶](https://ke.qq.com/course/232900)视频课程  
   - 完成[进阶任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#进阶任务)  
 
 ## Day2：软件测试基础
@@ -85,8 +85,8 @@
   - 能够对产品需求规格说明书做静态检查  
 
 - 视频课程
-  - [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)  
-  - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
+  - [产品设计简介](https://ke.qq.com/course/234708)  
+  - [界面原型设计](https://ke.qq.com/course/234713)  
   - [需求测试](http://edu.51cto.com/lesson/id-20608.html)  
 
 - 通关任务  
@@ -125,7 +125,7 @@
   - 掌握 Selenium IDE web 自动化测试工具的使用  
   
 - 视频课程  
-  - [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)  
+  - [Selenium IDE web 自动化测试（上）](https://ke.qq.com/course/232231)  
 
 - 通关任务  
   - [selenium-ide-demo web 自动化测试上篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment1.md)  
@@ -160,21 +160,19 @@
 
 - 软件测试基础  
   - 完成[软件测试基础](http://edu.51cto.com/course/course_id-1026.html)中其他视频课程的学习  
-  - 完成[软件测试大全](http://edu.51cto.com/course/course_id-8246.html)课程的学习  
-
 - 在线项目管理工具  
   - 完成 Day3：在线项目管理工具中的选做任务  
 
 - web 自动化测试工具
-  - 完成 [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)视频课程的学习  
+  - 完成 [Selenium IDE web 自动化测试（中）](https://ke.qq.com/course/232657)视频课程的学习  
   - 完成 [Selenium IDE web 自动化测试中篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment2.md)  
-  - 完成 [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)视频课程的学习  
+  - 完成 [Selenium IDE web 自动化测试（下）](https://ke.qq.com/course/232711)视频课程的学习  
   - 完成 [Selenium IDE web 自动化测试下篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment3.md)  
-  - 学习 [selenium-ide-demo web 自动化测试综合案例实战第一季](http://edu.51cto.com/course/course_id-7864.htm)视频课程的学习  
+  - 学习 [selenium-ide-demo web 自动化测试综合案例实战第一季](https://ke.qq.com/course/233031)视频课程的学习  
   - 完成 [selenium-ide-demo 综合案例实战第一季通关任务](https://github.com/wangding/courses/blob/master/selenium-ide-demoPracticeCase/task01.md)  
 
 - Vimperator 工具  
-  - 完成 [Vimperator 黑客的上网工具](http://edu.51cto.com/course/course_id-8023.html)视频课程的学习  
+  - 完成 [Vimperator 黑客的上网工具](https://ke.qq.com/course/231600)视频课程的学习  
 
 ## 积累项目经验
 
@@ -182,14 +180,14 @@
 
 如果你选择方案二，请学习下面的视频课程并完成课程中的通关任务：
 
-[GitHub 开源之旅第一季：Git 入门](http://edu.51cto.com/course/course_id-7845.html)  
-[GitHub 开源之旅第二季：MarkDown](http://edu.51cto.com/course/course_id-8043.html)  
-[GitHub 开源之旅第三季：Git 进阶](http://edu.51cto.com/course/course_id-8177.html)  
-[GitHub 开源之旅第四季：团队协作](http://edu.51cto.com/course/course_id-8367.html)  
-[GitHub 开源之旅第五季：stylish 网站换肤](http://edu.51cto.com/course/course_id-8510.html)  
-[GitHub 开源之旅第六季：how-to-markdown](http://edu.51cto.com/course/course_id-8513.html)  
-[GitHub 开源之旅第七季：GitBook](http://edu.51cto.com/course/course_id-8684.html)  
-[GitHub 开源之旅第八季：Jekyll 静态站](README.md)
+[GitHub 开源之旅第一季：Git 入门](https://ke.qq.com/course/225248)  
+[GitHub 开源之旅第二季：MarkDown](https://ke.qq.com/course/225259)  
+[GitHub 开源之旅第三季：Git 进阶](https://ke.qq.com/course/226116)  
+[GitHub 开源之旅第四季：团队协作](https://ke.qq.com/course/226121)  
+[GitHub 开源之旅第五季：stylish 网站换肤](https://ke.qq.com/course/226828)  
+[GitHub 开源之旅第六季：how-to-markdown](https://ke.qq.com/course/227010)  
+[GitHub 开源之旅第七季：GitBook](https://ke.qq.com/course/227227)  
+[GitHub 开源之旅第八季：Jekyll 静态站](https://ke.qq.com/course/229345)
 
 
 课程资料页面：https://github.com/wangding/courses/blob/master/github/README.md

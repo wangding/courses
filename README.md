@@ -11,7 +11,7 @@
 
 ## 更新日志
 
-2017-10-01 [node.js 应用开发（中）](http://edu.51cto.com/course/11204.html)上线  
+2017-10-01 [node.js 应用开发（中）](https://ke.qq.com/course/252061)上线  
 2017-09-05 [node.js 应用开发（上）](https://ke.qq.com/course/244604)上线  
 2017-08-11 [GitHub 开源之旅第十一季：搭建 Git 服务器](https://ke.qq.com/course/232908)上线  
 2017-08-07 [百度脑图入门](https://ke.qq.com/course/231603)上线  

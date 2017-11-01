@@ -6,7 +6,7 @@ Vimperator 是 Firefox 浏览器的插件，它的大部分灵感来自 Vim 文�
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
-- [Vimperator 黑客的上网工具](http://edu.51cto.com/course/course_id-8023.html)  
+- [Vimperator 黑客的上网工具](https://ke.qq.com/course/231600)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">课程 PPT
 

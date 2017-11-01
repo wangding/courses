@@ -4,9 +4,9 @@ Selenium IDE web 自动化测试入门。王顶老师的软件测试 QQ 学习�
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
-- [Selenium IDE web 自动化测试（上）](http://edu.51cto.com/course/course_id-7320.html)  
-- [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)
-- [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)
+- [Selenium IDE web 自动化测试（上）](https://ke.qq.com/course/232231)  
+- [Selenium IDE web 自动化测试（中）](https://ke.qq.com/course/232657)
+- [Selenium IDE web 自动化测试（下）](https://ke.qq.com/course/232711)
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
 

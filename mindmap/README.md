@@ -4,9 +4,9 @@
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
-- [ProcessOn 思维导图入门](http://edu.51cto.com/course/course_id-6453.html)  
-- [百度脑图入门](http://edu.51cto.com/course/10714.html)  
-- [在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)  
+- [ProcessOn 思维导图入门](https://ke.qq.com/course/232896)  
+- [百度脑图入门](https://ke.qq.com/course/231603)  
+- [在线思维导图进阶](https://ke.qq.com/course/232900)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
 

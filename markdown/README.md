@@ -9,10 +9,10 @@ Github 开源之旅第二季：MarkDown。第一季的课程中已经带着小�
 
 ## 前置课程:books:
 
-- [Github 开源之旅第一季：启程](http://edu.51cto.com/course/course_id-7845.html)  
-- [在线思维导图进阶：进阶功能六-MarkDown](http://edu.51cto.com/index.php?do=lesson&id=126049)  
+- [Github 开源之旅第一季：启程](https://ke.qq.com/course/225248)  
+- [在线思维导图进阶：进阶功能六-MarkDown](https://ke.qq.com/course/232900)  
 
-## [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="28">](http://edu.51cto.com/course/course_id-8043.html)
+## [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="28">](https://ke.qq.com/course/225259)
 
 ## [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="28"/>](MarkDown.pptx)
 

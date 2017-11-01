@@ -10,7 +10,7 @@
   - 会用思维导图工具梳理知识点，做学习笔记  
 
 - 视频课程  
-  - [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)（**只需要学习前四个视频**）  
+  - [ProcessOn 在线思维导图入门](https://ke.qq.com/course/232896)（**只需要学习前四个视频**）  
 
 - 通关任务  
   - [入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)（**只需要完成任务 2 和任务 6**）  
@@ -20,9 +20,9 @@
   - [个人学习计划](http://processon.com/view/584eb7c7e4b031ce5459e95c)  
 
 - **选做任务**  
-  - 完成 [ProcessOn 在线思维导图入门](http://edu.51cto.com/course/course_id-6453.html)课程剩余视频的学习  
+  - 完成 [ProcessOn 在线思维导图入门](https://ke.qq.com/course/232896)课程剩余视频的学习  
   - 完成所有[入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)  
-  - 学习[在线思维导图进阶](http://edu.51cto.com/course/course_id-7126.html)视频课程  
+  - 学习[在线思维导图进阶](https://ke.qq.com/course/232900)视频课程  
   - 完成[进阶任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#进阶任务)  
 
 ## Day2：产品设计简介
@@ -34,7 +34,7 @@
   - 掌握软件产品的组成  
 
 - 视频课程  
-  - [产品设计简介](http://edu.51cto.com/course/course_id-6407.html)  
+  - [产品设计简介](https://ke.qq.com/course/234708)  
 
 - 通关任务  
   - 把课程视频的内容用在线思维导图工具整理出学习笔记并发布  
@@ -53,7 +53,7 @@
   - 了解界面原型设计的工具分类  
 
 - 视频课程
-  - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
+  - [界面原型设计](https://ke.qq.com/course/234713)  
 
 - 通关任务  
   - 把界面原型设计课程视频的内容用在线思维导图工具整理出学习笔记并发布
@@ -68,7 +68,7 @@
   - 掌握墨刀工具的使用  
 
 - 视频课程
-  - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
+  - [界面原型设计](https://ke.qq.com/course/234713)  
 
 - 通关任务  
   - 把产品设计课程视频的内容用在线思维导图工具整理出学习笔记并发布
@@ -86,7 +86,7 @@
   - 能够对产品需求规格说明书做静态检查  
 
 - 视频课程
-  - [界面原型设计](http://edu.51cto.com/course/course_id-6438.html)  
+  - [界面原型设计](https://ke.qq.com/course/234713)  
 
 - 通关任务  
   - 把产品设计课程视频的内容用在线思维导图工具整理出学习笔记并发布
@@ -142,18 +142,16 @@
 
 - 软件测试基础  
   - 完成[软件测试基础](http://edu.51cto.com/course/course_id-1026.html)中其他视频课程的学习  
-  - 完成[软件测试大全](http://edu.51cto.com/course/course_id-8246.html)课程的学习  
-
 - 在线项目管理工具  
   - 完成 Day3：在线项目管理工具中的选做任务  
 
 - web 自动化测试工具
-  - 完成 [Selenium IDE web 自动化测试（中）](http://edu.51cto.com/course/course_id-7425.html)视频课程的学习  
+  - 完成 [Selenium IDE web 自动化测试（中）](https://ke.qq.com/course/232657)视频课程的学习  
   - 完成 [Selenium IDE web 自动化测试中篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment2.md)  
-  - 完成 [Selenium IDE web 自动化测试（下）](http://edu.51cto.com/course/course_id-7578.html)视频课程的学习  
+  - 完成 [Selenium IDE web 自动化测试（下）](https://ke.qq.com/course/232711)视频课程的学习  
   - 完成 [Selenium IDE web 自动化测试下篇通关任务](https://github.com/wangding/courses/blob/master/seleniumIDE/assignment3.md)  
-  - 学习 [seIDE web 自动化测试综合案例实战第一季](http://edu.51cto.com/course/course_id-7864.htm)视频课程的学习  
+  - 学习 [seIDE web 自动化测试综合案例实战第一季](https://ke.qq.com/course/233031)视频课程的学习  
   - 完成 [seIDE 综合案例实战第一季通关任务](https://github.com/wangding/courses/blob/master/seIDEPracticeCase/task01.md)  
 
 - Vimperator 工具  
-  - 完成 [Vimperator 黑客的上网工具](http://edu.51cto.com/course/course_id-8023.html)视频课程的学习  
+  - 完成 [Vimperator 黑客的上网工具]((https://ke.qq.com/course/231600))视频课程的学习  

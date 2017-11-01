@@ -11,7 +11,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学完成本课程后，在 GitHub 上安家落户，可以把本地的文档或者代码，放到 GitHub 上。自己一个人能玩起来，就达到目标了。先不用说参与别人的项目，或者让别人参与自己的项目，这些目标在第四季课程中再来实现。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-7845.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/225248)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](Github.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS01.md)  
     - [任务一：了解 Github](TaskS01.md#任务一了解-github)  
@@ -37,7 +37,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学完本课程后，应该对 Git Bash 命令有了更深入的体会和掌握。应该能够把 Git Bash 命令使用的游刃有余，可以在项目仓库的提交历史中随意穿梭，可以玩转分支，以及变基这些高级操作，可以使用别名，定制属于自己的 Git Bash 命令，提高自己的操作效率，等等。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8177.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/226116)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](Git_plus.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS02.md)  
     - [任务一：了解 Git](TaskS02.md#任务一了解-git)
@@ -54,7 +54,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，应该能够在 GitHub 上展开团队协作，掌握 GitHub 的 Fork 以及 Pull Request 的流程，能够参与到他人的项目中。而且，能够掌握几种常规的 Git 协作方式，能够让自己身边的小伙伴，参与到自己的开源项目中。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8367.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/226121)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](git-flow.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](TaskS03.md)  
   - [任务一：了解工作流](TaskS03.md#任务一了解工作流)  
@@ -71,7 +71,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 大家学会本课程后，应该能够使用 stylish 定制网站样式，让网站的风格具有个性化的特色，另外，可以去掉网站中没有的内容，让网站的用户体验更方便、更高效。
 
 - [示例代码](https://github.com/wangding/simple-clear-style/)  
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8510.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">]((https://ke.qq.com/course/226828))
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](stylish.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks05.md)  
   - [任务一：了解 stylish](tasks05.md#任务一了解-stylish)  
@@ -106,7 +106,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，应该能够使用 Git 版本控制工具以及 MarkDown 简单的纯文本标记语言，以团队协作的方式来制作电子书，能够将电子书发布到 GitBook 网站上。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-8684.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/227227)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](gitbook.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks07.md)  
   - [任务一：了解 GitBook](tasks07.md#任务一了解-gitbook)  
@@ -121,7 +121,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，我们会掌握如何在 GitHub 上搭建一个博客网站，你可以从中掌握 GitHub 的 Pages 功能，以及 Jekyll 软件的基本用法。更重要的是，你会掌握一种建立网站的全新思路。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10440.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/229345)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](jekyll.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks08.md)  
 
@@ -129,7 +129,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，应该能够熟练的通过命令行操作各种发行版的 Linux 系统，为在 Linux 系统上做软件开发、测试环境搭建以及系统运维打下扎实的基础。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/course_id-9244.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/230588)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](bash01.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks09.md)  
 
@@ -137,7 +137,7 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，应该能够熟练的通过命令行操作各种发行版的 Linux 系统，为在 Linux 系统上做软件开发、测试环境搭建以及系统运维打下扎实的基础。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10195.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/230595)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](bash02.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks09-2.md)  
 
@@ -146,6 +146,6 @@ GitHub 是世界上最大的开源社区。如何利用开源社区中丰富的�
 
 大家学会本课程后，应该能够在企业内部，根据团队的规模和开发需求，搭建四种协议 Git 服务器的任意一种。
 
-- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](http://edu.51cto.com/course/10755.html)
+- [课程视频<img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="15">](https://ke.qq.com/course/232908)
 - [课程 PPT<img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="15"/>](git-server.pptx)
 - [通关任务<img src="https://raw.githubusercontent.com/wangding/courses/master/images/homework.png" height="15"/>](tasks11.md)  

@@ -4,8 +4,8 @@
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/video.png" height="30">课程视频
 
-- [基于 Mocha 的自动化测试框架（上）](http://edu.51cto.com/course/course_id-9011.html)  
-- [基于 Mocha 的自动化测试框架（下）](http://edu.51cto.com/course/course_id-9084.html)  
+- [基于 Mocha 的自动化测试框架（上）](https://ke.qq.com/course/231593)  
+- [基于 Mocha 的自动化测试框架（下）](https://ke.qq.com/course/231595)  
 
 ## <img src="https://raw.githubusercontent.com/wangding/courses/master/images/presentation.png" height="30">幻灯片
 
