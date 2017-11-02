@@ -129,7 +129,8 @@
 - 编写 03-form.js 脚本，实现查询和增加待办事项的功能  
 - 编写 03-form-html.js 脚本，实现 03-form.js 的功能，但是有以下要求：  
   - 将 03-form.js 脚本中的 HTML 代码，保存在单独的文件中 template.html，内容如下：  
-  ```html
+  - 03-form-html.js 程序读取 template.html 模板文件，并将占位符 % 替换为具体的待办事项数据  
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -146,8 +147,7 @@
     <ul>%</ul>
   </body>
 </html>
-  ```
-  - 03-form-html.js 程序读取 template.html 模板文件，并将占位符 % 替换为具体的待办事项数据  
+```
 - 编写 03-form-cmd.js 脚本，要求实现以下功能：  
   - 基于 03-form.js 程序框架  
   - 用户在表单中提交 linux 命令  
