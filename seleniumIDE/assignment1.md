@@ -3,7 +3,11 @@
 ## 任务0 环境准备
 
 要求如下：
-- 安装最新的火狐浏览器；  
+- 下载并安装火狐浏览器，注意一下火狐浏览器的版本问题；
+  - 不要安装最新版本的火狐浏览器  
+  - 最新版本的火狐浏览器可能和 Selenium IDE 插件不兼容  
+  - 火狐浏览器的版本最好不要超过 50  
+  - 火狐浏览器各个版本的下载地址：http://ftp.mozilla.org/pub/firefox/releases/  
 - 安装 Selenium IDE 插件；  
 - 安装 Firebug 插件；  
 - 安装 Vimperator 插件；  
