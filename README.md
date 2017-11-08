@@ -4,7 +4,7 @@
 
 ## 功能导航
 
-- 观看王顶老师的在线视频课程，请移步[课程中心](http://edu.51cto.com/lecturer/8606427.html)
+- 观看王顶老师的在线视频课程，请移步[课程中心](https://wangding.ke.qq.com/)
 - 给王顶老师提问或者留言，请移步[交流中心](https://github.com/wangding/courses/issues)
 - 查看或者下载各门课程资料，请直接点击上面的文件夹
 - 参与课程开发，请移步[集体备课](CONTRIBUTION.md)
