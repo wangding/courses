@@ -42,9 +42,9 @@ Selenium IDE web 自动化测试入门。王顶老师的软件测试 QQ 学习�
 ## :books:学习资料
 
 - [Selenium IDE 官方资料](http://www.seleniumhq.org/docs/02_selenium_ide.jsp)  
-  Selenium IDE 最权威的资料。如果英文网站打不开，请点击 [这里](https://github.com/wangding/selenium-ide-doc/blob/master/images/selenium-ide-doc.png)。
+  Selenium IDE 最权威的资料。如果英文网站打不开，请点击 [这里](https://github.com/wangding/selenium-ide-doc/blob/master/images/seleniumIDEDoc.png)。
   
-- [Selenium IDE 官方资料翻译](https://github.com/wangding/selenium-ide-doc)  
+- [Selenium IDE 官方资料翻译](http://selenium.wangding.in)  
   欢迎大家参与翻译或矫正文字。
   
 - [Selenium IDE 自动化脚本案例](https://github.com/wangding/selenium-ide-demo)  
