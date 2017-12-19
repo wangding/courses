@@ -15,7 +15,7 @@
   - [ProcessOn 在线思维导图入门](https://ke.qq.com/course/232896)（**只需要学习前四个视频**）  
 
 - 通关任务  
-  - [入门任务](https://github.com/wangding/courses/blob/master/mindmap/assignment.md#入门任务)（**只需要完成任务 2 和任务 6**）  
+  - [入门任务](https://github.com/wangding/courses/blob/master/mindmap/task-processon.md#入门任务)（**只需要完成任务 2 和任务 6**）  
 
 - 示例参考  
   - [思维导图学习笔记](http://processon.com/view/57ceb4fee4b0942d7a555b18)  
