@@ -11,6 +11,17 @@
 
 ## 更新日志
 
+2019-06-22 [Selenium IDE 3.9 用户手册](https://selenium.wangding.in/)翻译上线  
+2019-04-24 [jsnotepad](https://np.wangding.in/)上线  
+2019-04-24 [B 站账户](https://space.bilibili.com/420780095)开通  
+2019-03-30 [矩形计算器](https://wangding.github.io/rectangle/)上线  
+2018-12-17 [SPA 富应用开发通关任务](https://spa.wangding.in/)上线  
+2018-06-20 [admin](https://admin.wangding.in/)上线  
+2018-06-17 [信息科学基础在线实验](https://info-lab.wangding.in/)上线  
+2018-06-04 [Node.js 应用开发通关任务](https://nodejs.wangding.in/)上线  
+2018-05-22 [SPA 富应用开发课程案例](https://fe.wangding.in/)上线  
+2018-04-25 [信息科学基础实验手册](https://manual.wangding.in/)上线  
+2017-11-20 [Selenium IDE 2.9 用户手册](https://selenium.wangding.in/2.9/)翻译上线  
 2017-10-01 [node.js 应用开发（中）](https://ke.qq.com/course/252061)上线  
 2017-09-05 [node.js 应用开发（上）](https://ke.qq.com/course/244604)上线  
 2017-08-11 [GitHub 开源之旅第十一季：搭建 Git 服务器](https://ke.qq.com/course/232908)上线  
