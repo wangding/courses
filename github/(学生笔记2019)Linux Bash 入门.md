@@ -1,10 +1,4 @@
----
-layout: post
-title:  "生产力工具：shell 与 Bash 脚本"
-date:   2019-06-30 23:58:25 +0800
----
-
-# 生产力工具：shell 与 Bash 脚本
+# 生产力工具：shell 与 Bash 脚本入门
 
 
 
@@ -30,7 +24,7 @@ C语言编程网：  http://c.biancheng.net/shell/
 
 <!-- TOC -->
 
-- [生产力工具：shell 与 Bash 脚本](#生产力工具shell-与-bash-脚本)
+- [生产力工具：shell 与 Bash 脚本入门](#生产力工具shell-与-bash-脚本入门)
 - [我为什么学 shell](#我为什么学-shell)
     - [什么是 shell 与 BASH](#什么是-shell-与-bash)
     - [学 shell 与 BASH 立竿见影的好处](#学-shell-与-bash-立竿见影的好处)
