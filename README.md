@@ -11,6 +11,8 @@
 
 ## 更新日志
 
+2019-09-12 [Selenium IDE WEB 自动化测试（上篇）](https://ke.qq.com/course/232231)升级到 v3.9  
+2019-08-28 [思维导图实战](https://edu.51cto.com/course/19391.html)上线  
 2019-06-22 [Selenium IDE 3.9 用户手册](https://selenium.wangding.in/)翻译上线  
 2019-04-24 [jsnotepad](https://np.wangding.in/)上线  
 2019-04-24 [B 站账户](https://space.bilibili.com/420780095)开通  
