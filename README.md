@@ -28,6 +28,7 @@
 
 ## 更新日志
 
+- 2020-06-08 [Node.js 自动化测试](https://www.bilibili.com/video/BV1o7411L7L1?p=://study.163.com/course/introduction.htm?courseId=1210126425)
 - 2020-06-01 [SPA 富应用开发](https://www.bilibili.com/video/BV1o7411L7L1?p=1)
 - 2020-03-18 [思否编程公开课：Node.js 代码调试](https://ke.sifou.com/course/1650000021972874)
 - 2019-09-23 剪辑制作[界面原型设计](https://ke.qq.com/course/234713)
